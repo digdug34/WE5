@@ -1,0 +1,5665 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+ 
+    
+   
+   <TranscendenceModule>
+
+
+
+
+    
+
+
+	<!-- Lamplighter Archcannon -->
+
+	<ItemType UNID="&itLamplighter;"
+			name=				"Lamplighter archcannon"
+			level=				"10"
+			value=				"600000"
+			mass=				"5500"
+			frequency=			"notrandom"
+			attributes=			"MajorItem; Military; Antimatter; NotForSale; CWFleet"
+
+			description=		"Commissioned by Admiral Decker, this Commonwealth secret weapon is the most powerful weapon created by humans."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"antimatter:6d12; WMD5"
+				fireRate=			"15"
+				missileSpeed=		"50"
+				lifetime=			"60"
+				powerUse=			"2000"
+				hitPoints=			"30"
+				sound=				"&snRecoillessCannon;"
+				hitEffect=			"&efAntimatterHitEffect;"
+				>
+
+			<Effect>
+				<Starburst
+						style=			"flare"
+						spikeCount=		"8"
+						spikeLength=	"20-30"
+						primaryColor=	"0xff, 0xff, 0x80"
+						secondaryColor=	"0xff, 0xff, 0x80"
+						/>
+			
+				<ParticleComet
+						particleCount=	"200"
+						primaryColor=	"0xff, 0xff, 0x80"
+						
+						width=			"8"
+						length=			"120"
+						/>
+			</Effect>
+		</Weapon>
+
+	</ItemType>
+	
+	<!-- Project Lamplighter Prototype -->
+
+	<ItemType UNID="&itLamplighterPrototype;"
+			name=				"Project Lamplighter prototype"
+			level=				"10"
+			value=				"600000"
+			mass=				"5500"
+			frequency=			"notrandom"
+			unknownType=		"&itUnknownLamplighterPrototype;"
+			attributes=			"MajorItem; Military; LamplighterPrototype; Antimatter; NotForSale"
+
+			description=		"This prototype is designed to test the antimatter blast chamber of the Project Lamplighter weapon."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				failureChance=		"10"
+
+				damage=				"antimatter:4d12; WMD5"
+				fireRate=			"15"
+				missileSpeed=		"60"
+				lifetime=			"40"
+				powerUse=			"3000"
+				hitPoints=			"15"
+				sound=				"&snRecoillessCannon;"
+				hitEffect=			"&efAntimatterHitEffect;"
+				>
+
+			<Effect>
+				<Starburst
+						style=			"plain"
+						spikeCount=		"8"
+						spikeLength=	"20-30"
+						primaryColor=	"0xff, 0xff, 0x80"
+						secondaryColor=	"0xff, 0xff, 0x80"
+						/>
+			
+				<ParticleComet
+						particleCount=	"200"
+						primaryColor=	"0xff, 0xff, 0x80"
+						
+						width=			"8"
+						length=			"120"
+						/>
+			</Effect>
+		</Weapon>
+
+	</ItemType>
+
+
+<!-- Slicer Cannon -->
+
+	<ItemType UNID="&itSlicerCannon;"
+			name=				"PM6 Slicer cannon"
+			level=				"6"
+			value=				"15000"
+			mass=				"4000"
+			frequency=			"notrandom"
+			attributes=			"EI; EnergyWeapon; MajorItem; theSlicer"
+
+			description=		"A modified particle cannon firing crisscrossing beams."
+
+			sortName=			"slicer cannon, PM6"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				damage=				"particle:1d8+1"
+				fireRate=			"5"
+				lifetime=			"30"
+				powerUse=			"350"
+
+sound=				"&snLaserCannon;"
+				>
+			<Effect>
+				<Beam
+						beamType=		"particle"
+						primaryColor=	"0x5f, 0xf1, 0x2a"
+						secondaryColor=	"0x5f, 0xf1, 0x2a"
+						intensity=		"1"
+						/>
+			</Effect>
+
+			<Configuration aimTolerance="5" alternating="true">
+				<Shot posAngle="90" posRadius="20" angle="-3"/>
+				<Shot posAngle="270" posRadius="20" angle="3"/>
+			</Configuration>
+		</Weapon>
+	</ItemType>
+
+
+<!--- Enemy Weapons --->
+
+<!--	NB:light, as the Makayev Slam Cannon upon which it is based is light.	-->
+
+	<!-- Dwarg Xiphon Cannon -->
+
+	<ItemType UNID="&itDwargXiphonCannon;"
+			name=				"Dwarg xiphon cannon"
+			level=				"4"
+			value=				"4500"
+			mass=				"3000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"Dwarg; MajorItem; NotForSale; BlastCannon"
+			unknownType=		"&itUnknownBlastCannon;"
+			description=		"This blast weapon is mounted on a small swivelling platform, enabling it to fire in a 20 degree arc."
+			sortName=			"Dwarg.1.30"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				minFireArc=			"350"
+				maxFireArc=			"10"
+				damage=				"blast:3d6; momentum2; WMD1"
+				fireRate=			"20"
+				missileSpeed=		"50"
+				lifetime=			"50"
+				powerUse=			"120"
+
+				directional=		"true"
+				sound=				"&snRecoillessCannon;"
+				>
+			<Effect>
+				<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
+			</Effect>
+		</Weapon>
+	</ItemType>
+
+<!--	NB: level -1	-->
+	
+	<!-- Dwarg Xiphon Cannon -->
+
+	<ItemType UNID="&itDwargXiphonCannon4;"
+			name=				"Dwarg light xiphon cannon"
+			level=				"3"
+			value=				"2500"
+			mass=				"3000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"Dwarg; MajorItem; NotForSale; BlastCannon"
+			unknownType=		"&itUnknownBlastCannon;"
+			description=		"This blast weapon is mounted on a small swivelling platform, enabling it to fire in a 20 degree arc."
+			sortName=			"Dwarg.1.30"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				minFireArc=			"350"
+				maxFireArc=			"10"
+				damage=				"blast:2d6; momentum2; WMD1"
+				fireRate=			"20"
+				missileSpeed=		"50"
+				lifetime=			"50"
+				powerUse=			"80"
+
+				directional=		"true"
+				sound=				"&snRecoillessCannon;"
+				>
+			<Effect>
+				<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
+			</Effect>
+		</Weapon>
+	</ItemType>
+
+<!--	NB: level +1	-->
+	
+	<!-- Dwarg Xiphon Cannon -->
+
+	<ItemType UNID="&itDwargXiphonCannon5;"
+			name=				"Dwarg heavy xiphon cannon"
+			level=				"5"
+			value=				"9000"
+			mass=				"3000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"Dwarg; MajorItem; NotForSale; BlastCannon"
+			unknownType=		"&itUnknownBlastCannon;"
+			description=		"This blast weapon is mounted on a small swivelling platform, enabling it to fire in a 20 degree arc."
+			sortName=			"Dwarg.1.30"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				minFireArc=			"350"
+				maxFireArc=			"10"
+				damage=				"blast:6d6; momentum2; WMD1"
+				fireRate=			"20"
+				missileSpeed=		"50"
+				lifetime=			"50"
+				powerUse=			"200"
+
+				directional=		"true"
+				sound=				"&snRecoillessCannon;"
+				>
+			<Effect>
+				<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
+			</Effect>
+		</Weapon>
+	</ItemType>
+
+<!--	NB:special fragmenting	-->
+
+	<!-- Dwarg Xiphon Cannon -->
+
+	<ItemType UNID="&itDwargXiphonCannon2;"
+			name=				"Dwarg xiphon flak cannon"
+			level=				"4"
+			value=				"4500"
+			mass=				"3000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"Dwarg; MajorItem; NotForSale; BlastCannon"
+			unknownType=		"&itUnknownBlastCannon;"
+			description=		"This blast weapon is mounted on a small swivelling platform, enabling it to fire in a 20 degree arc."
+			sortName=			"Dwarg.1.30"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				minFireArc=			"350"
+				maxFireArc=			"10"
+				damage=				"blast:3d6; momentum2; WMD1"
+				fireRate=			"20"
+				missileSpeed=		"50"
+				lifetime=			"50"
+				powerUse=			"120"
+
+				directional=		"true"
+				sound=				"&snRecoillessCannon;"
+				>
+			<Effect>
+				<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
+			</Effect>
+			<Fragment 
+					type=			"missile"
+					count=			"10"
+					lifetime=		"8"
+					damage=			"blast:1d4+2; momentum2; WMD1"
+					missileSpeed=	"24"
+					>
+
+				<Effect>
+					<Image
+							imageID=			"&rsMissiles;" 
+							imageX=				"96" 
+							imageY=				"0" 
+							imageWidth=			"16" 
+							imageHeight=		"16"
+							imageFrameCount=	"2"
+							imageTicksPerFrame=	"2"
+							/>
+				</Effect>
+			</Fragment>
+		</Weapon>
+	</ItemType>
+
+<!--	NB:heavy walking fire	-->
+
+	<!-- Dwarg Xiphon Cannon -->
+
+	<ItemType UNID="&itDwargXiphonCannon3;"
+			name=				"Dwarg xiphon walking cannon"
+			level=				"4"
+			value=				"4500"
+			mass=				"4000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"Dwarg; MajorItem; NotForSale; BlastCannon"
+			unknownType=		"&itUnknownBlastCannon;"
+			description=		"This blast weapon is mounted on a small swivelling platform, enabling it to fire in a 20 degree arc."
+			sortName=			"Dwarg.1.30"
+			>
+
+<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				repeating=			"3"
+				damage=				"blast:3d6; momentum2; WMD1"
+				fireRate=			"20"
+				missileSpeed=		"50"
+				lifetime=			"50"
+				powerUse=			"120"
+
+				directional=		"true"
+				sound=				"&snRecoillessCannon;"
+				>
+			<Effect>
+				<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
+			</Effect>
+		</Weapon>
+		<Events>
+			<onFireWeapon>
+				(block (angle)
+					(setq angle aFireAngle)
+
+					(if (eq aFireRepeat 0)
+						(setq angle (subtract angle 12))
+					)
+					(if (eq aFireRepeat 1)
+						(setq angle (subtract angle 4))
+					)
+					(if (eq aFireRepeat 2)
+						(setq angle (add angle 4))
+					)
+					(if (eq aFireRepeat 3)
+						(setq angle (add angle 12))
+					)
+					(setq shot (sysCreateWeaponFire aWeaponType gSource aFirePos angle (typGetDataField aWeaponType "speed") aTargetObj nil aWeaponBonus))
+					(objIncVel shot (objGetVel gSource))
+				)
+			</onFireWeapon>
+		</Events>
+	</ItemType>
+
+	<!-- Cnidocyst Cannon -->
+
+	<ItemType UNID="&itDwargCnidocystCannon;"
+			name=				"Dwarg cnidocyst cannon"
+			level=				"5"
+			value=				"5000"
+			mass=				"3000"
+			attributes=			"Dwarg; MajorItem; NotForSale; Ion; Ammo; EMP"
+			frequency=			"rare"
+			unknownType=		"&itUnknownIonCannon3;"
+			description=		"Dwarg masters use this cannon to paralyze their targets."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				fireRate=			"15"
+				powerUse=			"20"
+				>
+
+			<Missiles>
+				<Missile ammoID="&itDwargCnidocystNoduleVirtual;"
+						type=			"missile"
+
+						damage=			"ion:0"
+						missileSpeed=	"50"
+						lifetime=		"120"
+						sound=			"&snRecoillessCannon;"
+						>
+				</Missile>
+			</Missiles>
+
+		</Weapon>
+		<StaticData>
+			<VirtualLauncher>
+				&itDwargCnidocystCannon2;
+			</VirtualLauncher>
+			<WE_ammotable>
+				(&trDwargCnidocystAmmo;)
+			</WE_ammotable>
+		</StaticData>
+		<Invoke installedOnly="true">
+			(block nil
+				; save the source and the item
+				(setq weSource gSource)
+				(setq weItem gItem)
+				(scrShowScreen gScreen "&WE_dsAmmoPriority;")
+			)
+		</Invoke>	
+		<Events>
+			<OnInstall>
+				(WE_initializeUnlauncher)
+			</OnInstall>
+			<OnFireWeapon>
+				(WE_fireUnlauncher)
+			</OnFireWeapon>
+			<OnUpdate>
+				(WE_VirtualAmmoUpdate)
+			</OnUpdate>
+		</Events>
+	</ItemType>
+
+<!-- Cnidocyst Cannon -->
+
+	<ItemType UNID="&itDwargCnidocystCannon2;"
+			name=				"Dwarg cnidocyst launcher"
+			virtual= 			"true"
+			>
+
+		<Weapon
+				fireRate=			"15"
+				powerUse=			"20"
+				launcher= "true"
+				>
+
+			<Missiles>
+				<Missile ammoID="&itDwargCnidocystNodule;"
+						type=			"missile"
+
+						damage=			"ion:4d6; EMP4"
+						missileSpeed=	"50"
+						lifetime=		"180"
+						maneuverability="1"
+
+						sound=			"&snRecoillessCannon;"
+						>
+
+					<Effect>
+						<Starburst
+								style=			"lightningStar"
+								spikeCount=		"2d6+2"
+								spikeLength=	"2d10"
+								primaryColor=	"0xa0, 0xf0, 0xff"
+								secondaryColor=	"0xf0, 0xf0, 0xff"
+								/>
+					</Effect>
+
+				</Missile>
+				<Missile ammoID="&itDwargCnidocystNodule2;"
+						type=			"missile"
+
+						damage=			"ion:4d6; blinding3"
+						missileSpeed=	"50"
+						lifetime=		"180"
+						maneuverability="1"
+
+						sound=			"&snRecoillessCannon;"
+						>
+
+					<Effect>
+						<Starburst
+								style=			"lightningStar"
+								spikeCount=		"2d6+2"
+								spikeLength=	"2d10"
+								primaryColor=	"0xc0, 0x15, 0xff"
+								secondaryColor=	"0xf0, 0xf0, 0xff"
+								/>
+					</Effect>
+
+				</Missile>
+				<Missile ammoID="&itDwargCnidocystNodule3;"
+						type=			"missile"
+
+						damage=			"ion:4d6; device2"
+						missileSpeed=	"50"
+						lifetime=		"180"
+						maneuverability="1"
+
+						sound=			"&snRecoillessCannon;"
+						>
+
+					<Effect>
+						<Starburst
+								style=			"lightningStar"
+								spikeCount=		"2d6+2"
+								spikeLength=	"2d10"
+								primaryColor=	"0xff, 0xe1, 0x15"
+								secondaryColor=	"0xf0, 0xf0, 0xff"
+								/>
+					</Effect>
+
+				</Missile>
+				<Missile ammoID="&itDwargCnidocystNodule4;"
+						type=			"missile"
+
+						damage=			"ion:6d6; EMP1"
+						missileSpeed=	"40"
+						lifetime=		"150"
+						maneuverability="1"
+
+						sound=			"&snRecoillessCannon;"
+						>
+
+					<Effect>
+						<Starburst
+								style=			"lightningStar"
+								spikeCount=		"3d6+2"
+								spikeLength=	"4d10"
+								primaryColor=	"0x15, 0x73, 0xff"
+								secondaryColor=	"0xf0, 0xf0, 0xff"
+								/>
+					</Effect>
+
+				</Missile>
+			</Missiles>
+
+		</Weapon>
+		
+	</ItemType>
+
+<!--	NB:std	-->
+
+	<!-- Dwarg behemoth Cannon -->
+
+	<ItemType UNID="&itDwargBehemothCannon;"
+			name=				"Dwarg behemoth cannon"
+			level=				"6"
+			value=				"20000"
+			mass=				"6000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"Dwarg; MajorItem; Military; NotForSale; ThermoCannon"
+			unknownType=		"&itUnknownThermoCannon6;"
+			description=		"Dwarg behemoths use this thermonuclear cannon."
+			sortName=			"Dwarg.1.20"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"thermo:3d12; momentum2; WMD5"
+				fireRate=			"20"
+				missileSpeed=		"50"
+				lifetime=			"80"
+				hitPoints=			"15"
+				powerUse=			"250"
+
+				fireEffect=			"&efMediumCannonFlash;"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<MoltenBolt
+						width=				"6"
+						length=				"24"
+						growth=				"3"
+						primaryColor=		"0xea, 0xed, 0xae"
+						secondaryColor=		"0xc0, 0xc2, 0x85"
+						/>
+			</Effect>
+			
+			<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsExplosionsAG48;"
+						imageX="0"
+						imageY="0"
+						imageWidth="48"
+						imageHeight="48"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+			</HitEffect>
+		</Weapon>
+	</ItemType>
+
+<!--	NB: level -1	-->
+
+	<!-- Dwarg behemoth Cannon -->
+
+	<ItemType UNID="&itDwargBehemothCannon4;"
+			name=				"Dwarg behemoth culverin"
+			level=				"5"
+			value=				"10000"
+			mass=				"6000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"Dwarg; MajorItem; Military; NotForSale; ThermoCannon"
+			unknownType=		"&itUnknownThermoCannon6;"
+			description=		"Dwarg behemoths use this thermonuclear cannon."
+			sortName=			"Dwarg.1.20"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"thermo:3d6; momentum2; WMD5"
+				fireRate=			"20"
+				missileSpeed=		"50"
+				lifetime=			"80"
+				hitPoints=			"15"
+				powerUse=			"250"
+
+				fireEffect=			"&efMediumCannonFlash;"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<MoltenBolt
+						width=				"6"
+						length=				"24"
+						growth=				"3"
+						primaryColor=		"0xea, 0xed, 0xae"
+						secondaryColor=		"0xc0, 0xc2, 0x85"
+						/>
+			</Effect>
+			
+			<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsExplosionsAG48;"
+						imageX="0"
+						imageY="0"
+						imageWidth="48"
+						imageHeight="48"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+			</HitEffect>
+		</Weapon>
+	</ItemType>
+
+<!--	NB: level -1	-->
+	
+	<!-- Dwarg behemoth Cannon -->
+
+	<ItemType UNID="&itDwargBehemothCannon5;"
+			name=				"Dwarg advanced behemoth cannon"
+			level=				"7"
+			value=				"40000"
+			mass=				"6000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"Dwarg; MajorItem; Military; NotForSale; ThermoCannon"
+			unknownType=		"&itUnknownThermoCannon6;"
+			description=		"Dwarg behemoths use this thermonuclear cannon."
+			sortName=			"Dwarg.1.20"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"thermo:3d12; momentum2; WMD5"
+				fireRate=			"15"
+				missileSpeed=		"50"
+				lifetime=			"80"
+				hitPoints=			"15"
+				powerUse=			"500"
+
+				fireEffect=			"&efMediumCannonFlash;"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<MoltenBolt
+						width=				"6"
+						length=				"24"
+						growth=				"3"
+						primaryColor=		"0xea, 0xed, 0xae"
+						secondaryColor=		"0xc0, 0xc2, 0x85"
+						/>
+			</Effect>
+			
+			<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsExplosionsAG48;"
+						imageX="0"
+						imageY="0"
+						imageWidth="48"
+						imageHeight="48"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+			</HitEffect>
+		</Weapon>
+	</ItemType>
+
+<!--	NB:light (short range) but swivels	-->
+
+	<!-- Dwarg behemoth Cannon -->
+
+	<ItemType UNID="&itDwargBehemothCannon2;"
+			name=				"Dwarg behemoth carronade"
+			level=				"6"
+			value=				"20000"
+			mass=				"5000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"Dwarg; MajorItem; Military; NotForSale; ThermoCannon"
+			unknownType=		"&itUnknownThermoCannon6;"
+			description=		"Dwarg behemoths use this thermonuclear cannon. This short barreled variant has been modified to swivel like a xiphon cannon"
+			sortName=			"Dwarg.1.20"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				minFireArc=			"350"
+				maxFireArc=			"10"
+				damage=				"thermo:3d12; momentum2; WMD5"
+				fireRate=			"20"
+				missileSpeed=		"40"
+				lifetime=			"60"
+				hitPoints=			"15"
+				powerUse=			"200"
+
+				fireEffect=			"&efMediumCannonFlash;"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<MoltenBolt
+						width=				"6"
+						length=				"24"
+						growth=				"3"
+						primaryColor=		"0xea, 0xed, 0xae"
+						secondaryColor=		"0xc0, 0xc2, 0x85"
+						/>
+			</Effect>
+			
+			<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsExplosionsAG48;"
+						imageX="0"
+						imageY="0"
+						imageWidth="48"
+						imageHeight="48"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+			</HitEffect>
+		</Weapon>
+	</ItemType>
+
+<!--	NB:heavy	-->
+
+	<!-- Dwarg behemoth Cannon -->
+
+	<ItemType UNID="&itDwargBehemothCannon3;"
+			name=				"Dwarg behemoth basilisk"
+			level=				"6"
+			value=				"20000"
+			mass=				"10000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"Dwarg; MajorItem; Military; NotForSale; ThermoCannon"
+			unknownType=		"&itUnknownThermoCannon6;"
+			description=		"Dwarg behemoths use this thermonuclear cannon."
+			sortName=			"Dwarg.1.20"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"thermo:3d20; momentum2; WMD5"
+				fireRate=			"30"
+				missileSpeed=		"60"
+				lifetime=			"100"
+				hitPoints=			"15"
+				powerUse=			"400"
+
+				fireEffect=			"&efMediumCannonFlash;"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<MoltenBolt
+						width=				"6"
+						length=				"24"
+						growth=				"3"
+						primaryColor=		"0xea, 0xed, 0xae"
+						secondaryColor=		"0xc0, 0xc2, 0x85"
+						/>
+			</Effect>
+			
+			<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsExplosionsAG48;"
+						imageX="0"
+						imageY="0"
+						imageWidth="48"
+						imageHeight="48"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+			</HitEffect>
+		</Weapon>
+	</ItemType>
+
+	<!-- Gaian Demolition Cannon -->
+
+	<ItemType UNID="&itGaianDemolitionCannon;"
+			name=				"Gaian demolition cannon"
+			level=				"9"
+			value=				"150000"
+			mass=				"20000"
+			frequency=			"veryrare"
+			numberAppearing=	"1"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; ThermoCannon; Howitzer; Gaian"
+			unknownType=		"&itUnknownThermoCannon3;"
+			description=		"These immense cannons are used by the Gaian Terraformers for their vast engineering projects. The technology to power the cannon is known only to the Gaians."
+
+			charges=			"120"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				deviceSlots=		"2"
+				damage=				"thermo:35d10; WMD7"
+				fireRate=			"60"
+				lifetime=			"60"
+				powerUse=			"3500"
+				charges=			"true"
+				hitpoints= "35"
+				vaporTrailLength=	"16"
+				vaporTrailWidth=	"110"
+				vaporTrailWidthInc=	"5"
+				vaporTrailColor=	"0xff, 0x66, 0x00"
+				
+				sound=				"&snRecoillessCannon;"
+				>
+				
+				<Effect>
+				<Beam
+						beamType=			"heavyblaster"
+						primaryColor=		"0xfe, 0xfe, 0x75"
+						secondaryColor=		"0xc9, 0x64, 0x3a"
+						intensity=			"12"
+						/>
+						<SmokeTrail
+							spread=			"3-6"
+							particleLifetime="5"
+							emitDuration=	"40"
+							emitRate=		"26-32"
+							emitSpeed=		"60-70"
+							>
+						<ParticleEffect>
+							<Particle
+									style=			"smoke"
+									maxWidth=		"3-5"
+									/>
+						</ParticleEffect>
+					</SmokeTrail>
+			</Effect>
+			
+				<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsExplosionsAG96;" 
+						imageX="0" 
+						imageY="0" 
+						imageWidth="96" 
+						imageHeight="96"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+				
+			</HitEffect>
+		</Weapon>
+
+	</ItemType>
+
+<!--	NB: level -1	-->
+
+	<!-- Gaian Demolition Cannon -->
+
+	<ItemType UNID="&itGaianDemolitionCannon2;"
+			name=				"Gaian lesser demolition cannon"
+			level=				"8"
+			value=				"75000"
+			mass=				"20000"
+			frequency=			"veryrare"
+			numberAppearing=	"1"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; ThermoCannon; Howitzer; Gaian"
+			unknownType=		"&itUnknownThermoCannon3;"
+			description=		"These immense cannons are used by the Gaian Terraformers for their vast engineering projects. The technology to power the cannon is known only to the Gaians."
+
+			charges=			"120"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				deviceSlots=		"2"
+				damage=				"thermo:17d10; WMD7"
+				fireRate=			"60"
+				lifetime=			"60"
+				powerUse=			"2000"
+				charges=			"true"
+				hitpoints= "35"
+				vaporTrailLength=	"16"
+				vaporTrailWidth=	"110"
+				vaporTrailWidthInc=	"5"
+				vaporTrailColor=	"0xff, 0x66, 0x00"
+				
+				sound=				"&snRecoillessCannon;"
+				>
+				
+				<Effect>
+				<Beam
+						beamType=			"heavyblaster"
+						primaryColor=		"0xfe, 0xfe, 0x75"
+						secondaryColor=		"0xc9, 0x64, 0x3a"
+						intensity=			"12"
+						/>
+						<SmokeTrail
+							spread=			"3-6"
+							particleLifetime="5"
+							emitDuration=	"40"
+							emitRate=		"26-32"
+							emitSpeed=		"60-70"
+							>
+						<ParticleEffect>
+							<Particle
+									style=			"smoke"
+									maxWidth=		"3-5"
+									/>
+						</ParticleEffect>
+					</SmokeTrail>
+			</Effect>
+			
+				<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsExplosionsAG96;" 
+						imageX="0" 
+						imageY="0" 
+						imageWidth="96" 
+						imageHeight="96"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+				
+			</HitEffect>
+		</Weapon>
+
+	</ItemType>
+
+<!--	NB: level +1	-->
+
+	<!-- Gaian Demolition Cannon -->
+
+	<ItemType UNID="&itGaianDemolitionCannon3;"
+			name=				"Gaian greater demolition cannon"
+			level=				"10"
+			value=				"450000"
+			mass=				"20000"
+			frequency=			"veryrare"
+			numberAppearing=	"1"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; ThermoCannon; Howitzer; Gaian"
+			unknownType=		"&itUnknownThermoCannon3;"
+			description=		"These immense cannons are used by the Gaian Terraformers for their vast engineering projects. The technology to power the cannon is known only to the Gaians."
+
+			charges=			"120"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				deviceSlots=		"2"
+				damage=				"thermo:55d10; WMD7"
+				fireRate=			"60"
+				lifetime=			"60"
+				powerUse=			"5000"
+				charges=			"true"
+				hitpoints= "35"
+				vaporTrailLength=	"16"
+				vaporTrailWidth=	"110"
+				vaporTrailWidthInc=	"5"
+				vaporTrailColor=	"0xff, 0x66, 0x00"
+				
+				sound=				"&snRecoillessCannon;"
+				>
+				
+				<Effect>
+				<Beam
+						beamType=			"heavyblaster"
+						primaryColor=		"0xfe, 0xfe, 0x75"
+						secondaryColor=		"0xc9, 0x64, 0x3a"
+						intensity=			"12"
+						/>
+						<SmokeTrail
+							spread=			"3-6"
+							particleLifetime="5"
+							emitDuration=	"40"
+							emitRate=		"26-32"
+							emitSpeed=		"60-70"
+							>
+						<ParticleEffect>
+							<Particle
+									style=			"smoke"
+									maxWidth=		"3-5"
+									/>
+						</ParticleEffect>
+					</SmokeTrail>
+			</Effect>
+			
+				<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsExplosionsAG96;" 
+						imageX="0" 
+						imageY="0" 
+						imageWidth="96" 
+						imageHeight="96"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+			</HitEffect>
+		</Weapon>
+
+	</ItemType>
+
+			<!-- Mosin-Nagant Supercannon -->
+
+	<ItemType UNID="&itTunguska;"
+			name=				"Mosin-Nagant Supercannon"
+			level=				"9"
+			value=				"120000"
+			mass=				"18000"
+			frequency=			"rare"
+			charges=			"60"
+			unknownType=		"&itUnknownThermoCannon3;"
+			attributes=			"MajorItem; Military; ThermoCannon; Ammo; Howitzer; Gaian"
+			description=		"The Mosin-Nagant Supercannon is a massive thermocannon, however each cannon has only 60 shells, and cannot be recharged. Each projectile is fragmenting and autotargeting."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				fireRate=			"15"
+				powerUse=			"900"
+				charges=			"true"
+				>
+
+			<Missiles>
+				<Missile 
+						type=			"missile"
+
+						damage=			"thermo:4d12+8; momentum7; WMD7"
+						missileSpeed=	"40"
+						lifetime=		"50"
+						hitPoints=		"30"
+						failsafe=		"5"
+
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						
+						>
+
+					<Effect>
+				<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+					</Effect>
+					
+					<HitEffect 
+							sound=	"&snArmorHit1;"
+							>
+						<ParticleExplosion
+								particleCount=		"2d4"
+								particleSpeed=		"25"
+								particleLifetime=	"40"
+								>
+							<Image imageID="&rsDebris1;" imageX="0" imageY="0" imageWidth="4" imageHeight="4" imageFrameCount="8" imageTicksPerFrame="3"/>
+						</ParticleExplosion>
+					</HitEffect>
+
+					<Fragment 
+							count=				"4d4"
+							type=				"missile"
+							
+							damage=				"thermo:4d12+8; momentum7; WMD7"
+							missileSpeed=		"50"
+							lifetime=			"50"
+							autoAcquireTarget=	"true"
+							maneuverability ="2"
+							hitPoints=			"50"
+							directional=		"true"
+							>
+							
+						<Effect>
+							<Image imageID="&rsMissiles3;" imageX="48" imageY="0" imageWidth="16" imageHeight="16" />
+						</Effect>
+						
+					</Fragment>
+					
+					<Fragment 
+							count=			"1"
+							type=			"radius"
+							canHitSource=	"true"
+							interaction="0"
+							damage=			"thermo:10d24; momentum3; WMD7"
+							minRadius=		"1"
+							maxRadius=		"6"
+							missileSpeed=	"0"
+							lifetime=		"40"
+							>
+
+						<Effect>
+							<Flare
+									style=				"fadingBlast"
+									radius=				"300"
+									primaryColor=		"0xff, 0xff, 0xf0"
+								/>
+						</Effect>
+					</Fragment>
+				</Missile>
+			</Missiles>
+		</Weapon>
+	</ItemType>
+
+<!--	NB:std	-->
+
+	<!-- Sunflare Cannon -->
+
+	<ItemType UNID="&itSunflareCannon;"
+			name=				"Heliotrope sunflare cannon"
+			level=				"5"
+			value=				"8500"
+			mass=				"6000"
+			frequency=			"veryrare"
+			numberAppearing=	"1"
+			attributes=			"EnergyWeapon; MajorItem; NotForSale; Heliotropes; Particle"
+			unknownType=		"&itUnknownParticleCannon2;"
+			description=		"Heliotropes developed this heavy ion particle cannon. Its blast is almost as destructive as a solar eruption."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				damage=				"particle:6d8; WMD2"
+				fireRate=			"30"
+				lifetime=			"40"
+				powerUse=			"200"
+
+	sound=				"&snLaserCannon;"
+				>
+			<Effect>
+				<Beam
+						beamType=			"heavyblaster"
+						primaryColor=		"0xe6, 0xff, 0x6f"
+						secondaryColor=		"0xff, 0x8c, 0x00"
+						intensity=			"10"
+						/>
+			</Effect>
+		</Weapon>
+	</ItemType>
+
+<!--	NB: level -1	-->
+
+	<!-- Sunflare Cannon -->
+
+	<ItemType UNID="&itSunflareCannon4;"
+			name=				"Heliotrope sunburst cannon"
+			level=				"4"
+			value=				"4500"
+			mass=				"6000"
+			frequency=			"veryrare"
+			numberAppearing=	"1"
+			attributes=			"EnergyWeapon; MajorItem; NotForSale; Heliotropes; Particle"
+			unknownType=		"&itUnknownParticleCannon2;"
+			description=		"Heliotropes developed this heavy ion particle cannon. Its blast is almost as destructive as a solar eruption. The sunburst cannon is less powerful than the sunflare cannon."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				damage=				"particle:3d8; WMD2"
+				fireRate=			"30"
+				lifetime=			"40"
+				powerUse=			"200"
+
+	sound=				"&snLaserCannon;"
+				>
+			<Effect>
+				<Beam
+						beamType=			"heavyblaster"
+						primaryColor=		"0xe6, 0xff, 0x6f"
+						secondaryColor=		"0xff, 0x8c, 0x00"
+						intensity=			"6"
+						/>
+			</Effect>
+		</Weapon>
+	</ItemType>
+
+<!--	NB: level +1	-->
+
+	<!-- Sunflare Cannon -->
+
+	<ItemType UNID="&itSunflareCannon5;"
+			name=				"Heliotrope nova cannon"
+			level=				"6"
+			value=				"16500"
+			mass=				"6000"
+			frequency=			"veryrare"
+			numberAppearing=	"1"
+			attributes=			"EnergyWeapon; MajorItem; NotForSale; Heliotropes; Particle"
+			unknownType=		"&itUnknownParticleCannon2;"
+			description=		"Heliotropes developed this heavy ion particle cannon. Its blast is almost as destructive as a solar eruption. The nova cannon is more powerful than the sunflare cannon."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				damage=				"particle:12d8; WMD2"
+				fireRate=			"30"
+				lifetime=			"40"
+				powerUse=			"200"
+
+	sound=				"&snLaserCannon;"
+				>
+			<Effect>
+				<Beam
+						beamType=			"heavyblaster"
+						primaryColor=		"0xe6, 0xff, 0x6f"
+						secondaryColor=		"0xff, 0x8c, 0x00"
+						intensity=			"18"
+						/>
+			</Effect>
+		</Weapon>
+	</ItemType>
+
+<!--	NB:light (because of higher roundoff)	-->
+
+	<!-- Sunflare Cannon (graphical effects based on a design by jimj316) -->
+
+	<ItemType UNID="&itSunflareCannon2;"
+			name=				"Heliotrope corona cannon"
+			level=				"5"
+			value=				"8500"
+			mass=				"6000"
+			frequency=			"veryrare"
+			numberAppearing=	"1"
+			attributes=			"EnergyWeapon; MajorItem; NotForSale; Heliotropes; Particle"
+			unknownType=		"&itUnknownParticleCannon2;"
+			description=		"Heliotropes developed this heavy ion particle cannon. Its blast is almost as destructive as a solar eruption."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				repeating=			"8"
+
+				damage=				"particle:1d5"
+				missileSpeed=			"50-100"
+				maneuverability=		"1"
+				directional="true"
+				fireRate=			"30"
+				lifetime=			"40"
+				powerUse=			"200"
+
+				vaporTrailLength="16"
+				vaporTrailWidth="110"
+				vaporTrailWidthInc="5"
+				vaporTrailColor="0xe6, 0xff, 0x6f"
+				multiTarget=      "true"
+				autoAcquireTarget=   "true"
+				sound=				"&snLaserCannon;"
+				>
+			<Configuration aimTolerance="5">
+				<Shot angle="3d5-9"/>
+			</Configuration>
+		</Weapon>
+	</ItemType>
+
+<!--	NB:heavy	-->
+
+	<!-- Sunflare Cannon -->
+
+	<ItemType UNID="&itSunflareCannon3;"
+			name=				"Heliotrope sunstorm cannon"
+			level=				"5"
+			value=				"8500"
+			mass=				"6000"
+			frequency=			"veryrare"
+			numberAppearing=	"1"
+			attributes=			"EnergyWeapon; MajorItem; NotForSale; Heliotropes; Particle"
+			unknownType=		"&itUnknownParticleCannon2;"
+			description=		"Heliotropes developed this heavy ion particle cannon. Its blast is almost as destructive as a solar eruption."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				damage=				"particle:6d8; WMD2"
+				repeating=			"2"
+				fireRate=			"40"
+				lifetime=			"40"
+				powerUse=			"600"
+
+	sound=				"&snLaserCannon;"
+				>
+			<Effect>
+				<Beam
+						beamType=			"heavyblaster"
+						primaryColor=		"0xe6, 0xff, 0x6f"
+						secondaryColor=		"0xff, 0x8c, 0x00"
+						intensity=			"10"
+						/>
+			</Effect>
+			<Fragment 
+					count=			"2d6+1"
+					type=			"beam"
+					damage=			"particle:2d8; WMD2"
+					lifetime=		"5"
+					>
+				<Effect>
+					<Beam
+							beamType=			"heavyblaster"
+							primaryColor=		"0xe6, 0xff, 0x6f"
+							secondaryColor=		"0xff, 0x8c, 0x00"
+							intensity=			"5"
+							/>
+				</Effect>
+			</Fragment>
+		</Weapon>
+	</ItemType>
+
+	<!-- Absolution cannon -->
+
+	<ItemType UNID="&itAbsolutionCannon;"
+			name=				"Penitent cannon"
+			level=				"4"
+			value=				"4000"
+			mass=				"2000"
+			frequency=			"rare"
+			attributes=			"Alien; EnergyWeapon; MajorItem; NotForSale; Oracus; DarkAcid"
+			unknownType=		"&itUnknownAlienDevice;"
+			description=		"Very little is known about these exotic, dark-matter weapons. The Order of Penitence uses these weapons in their ships."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"dark acid:1d8; WMD1"
+				fireRate=			"45"
+				missileSpeed=		"45"
+				lifetime=			"40"
+				powerUse=			"200"
+
+				sound=				"&snRecoillessCannon;"
+				hitEffect=			"&efDarkAcidHitEffect;"
+				>
+
+			<Effect>
+				<Image imageID="&rsMissiles4;" imageX="0" imageY="48" imageWidth="16" imageHeight="16" imageFrameCount="8" imageTicksPerFrame="1"/>
+			</Effect>
+
+		</Weapon>
+		
+		<Events>
+			<OnDamageShields>
+				(WE_DarkWeaponsOnShieldsHitCheck) 
+			</OnDamageShields>
+		</Events>
+	</ItemType>
+
+<!--	NB: level -1; level 3 dark matter simply isn't viable	-->
+	
+	<!-- Absolution cannon -->
+
+	<ItemType UNID="&itAbsolutionCannon2;"
+			name=				"Absolution cannon"
+			level=				"3"
+			value=				"2000"
+			mass=				"2000"
+			frequency=			"rare"
+			attributes=			"Alien; EnergyWeapon; MajorItem; NotForSale; Oracus; Singularity"
+			unknownType=		"&itUnknownAlienDevice;"
+			description=		"Very little is known about these exotic, dark-matter weapons. The Order of Penitence uses these weapons in their ships."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"singularity:1d8; Shield4; WMD1"
+				fireRate=			"45"
+				missileSpeed=		"45"
+				lifetime=			"40"
+				powerUse=			"200"
+
+				sound=				"&snRecoillessCannon;"
+				hitEffect=			"&efSpaceTimeHitEffect;"
+				>
+
+			<Effect>
+				<Flare
+						style=			"fadingBlast"
+						radius=			"32"
+						primaryColor=	"0x00, 0x40, 0x40"
+						lifetime=		"40"
+						/>
+			</Effect>
+		</Weapon>
+	</ItemType>
+
+<!--	NB: level +1	-->
+	
+	<!-- Absolution cannon -->
+
+	<ItemType UNID="&itAbsolutionCannon3;"
+			name=				"Heirophant cannon"
+			level=				"5"
+			value=				"8000"
+			mass=				"2000"
+			frequency=			"rare"
+			attributes=			"Alien; EnergyWeapon; MajorItem; NotForSale; Oracus; DarkLightning"
+			unknownType=		"&itUnknownAlienDevice;"
+			description=		"Very little is known about these exotic, dark-matter weapons. The Order of Penitence uses these weapons in their ships."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				damage=				"dark lightning:1d8"
+				fireRate=			"15"
+				powerUse=			"300"
+
+				sound=				"&snRecoillessCannon;"
+				hitEffect=			"&efDarkLightningHitEffect;"
+				>
+
+			<Effect>
+				<Beam
+						beamType=			"lightning"
+						primaryColor=		"0xf9, 0xbe, 0xff"
+						secondaryColor=		"0x5a, 0x79, 0xbb"
+						intensity=			"8"
+						/>
+			</Effect>
+
+		</Weapon>
+		
+		<Events>
+			<OnDamageShields>
+				(WE_DarkWeaponsOnShieldsHitCheck) 
+			</OnDamageShields>
+		</Events>
+	</ItemType>
+
+	<!-- Hellfire Repeater -->
+
+	<ItemType UNID="&ithellfire;"
+			name=				"Hellfire repeater"
+			level=				"5"
+			value=				"9000"
+			mass=				"1000"
+			frequency=			"rare"
+			attributes=			"Alien; EnergyWeapon; MajorItem; NotForSale; Oracus; DarkFire"
+			unknownType=		"&itUnknownAlienDevice;"
+			description=		"This dark matter weapon is used by the followers of Oracus."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				
+				repeating=			"3"
+				damage=				"dark fire:1d2; WMD1"
+				fireRate=			"40"
+				missileSpeed=		"40"
+				lifetime=			"60"
+				powerUse=			"900"
+				interaction=		"50"
+				
+				sound=				"&snLaserCannon;"
+				hitEffect=			"&efDarkFireHitEffect;"
+				>
+			<Exhaust
+					creationRate=	"10"
+					lifetime=		"150"
+					drag=			"80">
+
+				<Image imageID="&rsMissiles4;" imageX="0" imageY="32" imageWidth="16" imageHeight="16" imageFrameCount="8" imageTicksPerFrame="10"/>
+			</Exhaust>							
+		</Weapon>
+		<Events>
+			<OnDamageShields>
+				(WE_DarkWeaponsOnShieldsHitCheck) 
+			</OnDamageShields>
+		</Events>
+	</ItemType>
+<!-- Talisman Cannon -->
+
+	<ItemType UNID="&ittalisman;"
+			name=				"Talisman Cannon"
+			level=				"4"
+			value=				"5000"
+			mass=				"1000"
+			frequency=			"rare"
+			attributes=			"Alien; EnergyWeapon; MajorItem; NotForSale; Oracus; DarkLightning"
+			unknownType=		"&itUnknownAlienDevice;"
+			description=		"This dark matter weapon is used by the followers of Oracus."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				
+				
+				damage=				"dark lightning:1d8; WMD2"
+				fireRate=			"30"
+				missileSpeed=		"60"
+				interaction=		"50"
+				lifetime=			"80"
+				powerUse=			"900"
+				fireEffect=			"&efMediumCannonFlash;"
+								
+				sound=				"&snLaserCannon;"
+				hitEffect=			"&efDarkLightningHitEffect;"
+				>						
+			<Effect>
+				<Image imageID="&rstorps;" imageX="0" imageY="60" imageWidth="20" imageHeight="20" imageFrameCount="4" imageTicksPerFrame="2"/>
+			</Effect>
+		</Weapon>
+		<Events>
+			<OnDamageShields>
+				(WE_DarkWeaponsOnShieldsHitCheck) 
+			</OnDamageShields>
+		</Events>
+	</ItemType>
+
+<!--	NB: level +1	-->
+
+	<!-- Oracus tears -->
+	
+	<ItemType UNID="&itInfernobeam;"
+			name=				"Inferno beam"
+			level=				"5"
+			value=				"7000"
+			mass=				"2500"
+			frequency=			"rare"
+			attributes=			"Alien; EnergyWeapon; MajorItem; NotForSale; Oracus; DarkFire"
+			unknownType=		"&itUnknownAlienDevice;"
+			description=		"This dark matter weapon is used by the followers of Oracus."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+				<Weapon
+				type=				"beam"
+
+				damage=				"dark fire:1d6+1"
+				fireRate=			"10"
+				lifetime=			"30"
+				powerUse=			"10"
+				 
+				sound=				"&snLaserCannon;"
+				hitEffect=			"&efDarkFireHitEffect;"
+				>
+			<Effect>
+				<Beam
+						beamType=			"heavyblaster"
+						primaryColor=		"0xff, 0x00, 0x00"
+						secondaryColor=		"0xaa, 0xaa, 0xaa"
+				intensity=			"10"
+						/>
+			</Effect>
+		</Weapon>
+		
+		<Events>
+			<OnDamageShields>
+				(WE_DarkWeaponsOnShieldsHitCheck) 
+			</OnDamageShields>
+		</Events>
+	</ItemType>
+
+	<!-- Particle Bolt Cannon -->
+
+	<ItemType UNID="&itParticleBoltCannon;"
+			name=				"Nandao bolt cannon"
+			level=				"6"
+			value=				"16000"
+			mass=				"2000"
+			frequency=			"uncommon"
+			numberAppearing=	"1"
+			attributes=			"MajorItem; Military; Specialty; Particle; sungSlavers; Ammo; NotForSale"
+			
+			description=		"The Nandao bolt cannon fires a sublight pulse of heavy ions, causing damage similar to that of particle beam weapons, with much greater energy density. This weapon requires and uses only Nandao bolt cartridges."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				fireRate=			"30"
+				powerUse=			"60"
+				 
+				>
+
+			<Missiles>
+				<Missile ammoID="&itNandaoVirtualAmmo;"
+						type=			"missile"
+
+						lifetime=		"120"
+						damage=			"particle:0"
+						missileSpeed=	"60"
+						>
+				</Missile>
+			</Missiles>
+		</Weapon>
+		<StaticData>
+			<VirtualLauncher>
+				&itParticleBoltCannon2;
+			</VirtualLauncher>
+			<WE_ammotable>
+				(&trNandaoBoltAmmo;)
+			</WE_ammotable>
+		</StaticData>
+		<Invoke installedOnly="true">
+			(block nil
+				; save the source and the item
+				(setq weSource gSource)
+				(setq weItem gItem)
+				(scrShowScreen gScreen "&WE_dsAmmoPriority;")
+			)
+		</Invoke>	
+		<Events>
+			<OnInstall>
+				(WE_initializeUnlauncher)
+			</OnInstall>
+			<OnFireWeapon>
+				(WE_fireUnlauncher)
+			</OnFireWeapon>
+			<OnUpdate>
+				(WE_VirtualAmmoUpdate)
+			</OnUpdate>
+		</Events>
+	</ItemType>
+
+	<!-- Particle Bolt Cannon -->
+
+	<ItemType UNID="&itParticleBoltCannon2;"
+			name=				"Bushido Nandao bolt launcher"
+			virtual=			"True"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				fireRate=			"30"
+				powerUse=			"60"
+				launcher="true"
+				>
+
+			<Missiles>
+				<Missile ammoID="&itParticleBoltCartridge;"
+						type=			"missile"
+
+						lifetime=		"120"
+						damage=			"particle:12d8+6; WMD4"
+						hitPoints=		"15"
+
+						missileSpeed=	"60"
+						sound=			"&snRecoillessCannon;"
+						>
+
+					<Effect>
+						<Image imageID="&rsMissiles4;" imageX="0" imageY="64" imageWidth="16" imageHeight="16" imageFrameCount="4" imageTicksPerFrame="2"/>
+						
+						<Starburst
+								spikeCount=		"1d6+2"
+								spikeLength=	"2d20"
+								primaryColor=	"0x80, 0xff, 0x80"
+								secondaryColor=	"0x00, 0xff, 0x00"
+								/>
+					</Effect>
+
+				</Missile>
+				<Missile ammoID="&itParticleFlareCartridge;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"particle:12d8; momentum2; WMD3"
+						missileSpeed=	"60"
+						hitPoints=		"15"
+						
+						sound=			"&snRecoillessCannon;"
+						>
+				<Fragment
+							count=			"1"
+							type=			"radius"
+
+							damage=			"particle:12d8; momentum2; WMD3"
+							minRadius=		"1"
+							maxRadius=		"4"
+							missileSpeed=	"0"
+							lifetime=		"8"
+							>
+							
+						<Effect>
+							<Flare
+									style=				"fadingBlast"
+									radius=				"170"
+									primaryColor=		"0x00, 0xc0, 0x00"
+								/>
+						</Effect>
+					</Fragment>
+					<Effect>
+						<Image imageID="&rsMissiles4;" imageX="0" imageY="64" imageWidth="16" imageHeight="16" imageFrameCount="4" imageTicksPerFrame="2"/>
+						
+						<Starburst
+								spikeCount=		"1d6+2"
+								spikeLength=	"2d20"
+								primaryColor=	"0x80, 0xff, 0x80"
+								secondaryColor=	"0x00, 0xff, 0x00"
+								/>
+					</Effect>
+
+				</Missile>
+					<Missile ammoID="&itParticleFragmentingCartridge;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:12d8; momentum2; WMD3"
+						missileSpeed=	"60"
+						hitPoints=		"15"
+					
+						sound=			"&snRecoillessCannon;"
+						>
+						
+						
+				<Fragment
+							count=			"18d6"
+							type=			"missile"
+							lifetime=		"20"
+							damage=			"particle:1d6+2; WMD3"
+							missileSpeed=	"5-38"
+							
+							>
+					
+						<Effect>
+							<ImageAndTail 
+									imageID=			"&rsMissiles4;" 
+									imageX=				"0" 
+									imageY=				"0" 
+									imageWidth=			"16" 
+									imageHeight=		"16"
+									imageFrameCount=	"4"
+									imageTicksPerFrame=	"1"
+									
+									length=				"64"
+									width=				"3"
+									primaryColor=		"0xff, 0xff, 0xff"
+									secondaryColor=		"0x00, 0xc2, 0x00"
+									/>
+						</Effect>
+					</Fragment>
+					<Effect>
+						<Image imageID="&rsMissiles4;" imageX="0" imageY="64" imageWidth="16" imageHeight="16" imageFrameCount="4" imageTicksPerFrame="2"/>
+						
+						<Starburst
+								spikeCount=		"1d6+2"
+								spikeLength=	"2d20"
+								primaryColor=	"0x80, 0xff, 0x80"
+								secondaryColor=	"0x00, 0xff, 0x00"
+								/>
+					</Effect>
+
+				</Missile>
+				<Missile ammoID="&itParticleFluxCartridge;"
+						type=			"missile"
+
+						damage=			"particle:12d8+1; WMD3"
+						missileSpeed=	"60"
+						lifetime=		"120"
+						hitPoints=		"15"
+
+						failsafe=		"3"
+
+						
+						sound=			"&snRecoillessCannon;"
+						>
+
+			
+
+					<Fragment 
+							count=				"32"
+							type=				"beam"
+
+							damage=				"particle:2d8+8; WMD3"
+							lifetime=			"3"
+
+							beamType=			"heavyblaster"
+							primaryColor=		"0xe6, 0xff, 0x6f"
+							secondaryColor=		"0x00, 0xff, 0x00"
+							intensity=			"8"
+							/>
+					<Fragment 
+							count=			"1"
+							type=			"radius"
+
+							damage=			"thermo:6d12; momentum6; WMD7"
+							minRadius=		"3"
+							maxRadius=		"6"
+							missileSpeed=	"0"
+							>
+
+						<Effect>
+							<Flare
+									style=			"fadingBlast"
+									radius=			"170"
+									primaryColor=	"0xff, 0xff, 0xf0"
+									lifetime=		"8"
+									/>
+						</Effect>
+					</Fragment>
+						<Effect>
+						<Image imageID="&rsMissiles4;" imageX="0" imageY="64" imageWidth="16" imageHeight="16" imageFrameCount="4" imageTicksPerFrame="2"/>
+						
+						<Starburst
+								spikeCount=		"1d6+2"
+								spikeLength=	"2d20"
+								primaryColor=	"0x80, 0xff, 0x80"
+								secondaryColor=	"0x00, 0xff, 0x00"
+								/>
+					</Effect>
+					</Missile>
+			</Missiles>
+
+		</Weapon>
+	</ItemType>	
+
+	<!-- Qianlong Archcannon -->
+
+	<ItemType UNID="&itQianlongArchcannon;"
+			name=				"Qianlong archcannon"
+			level=				"9"
+			value=				"190000"
+			mass=				"2500"
+			frequency=			"notrandom"
+			attributes=			"MajorItem; Military; NotForSale; qianlongArchcannon; sungSlavers; Antimatter; Ammo"
+
+			description=		"The pinnacle of Sung Slaver technology, the Qianlong archcannon fires anti-matter shells that can quickly destroy its target. The Qianlong archcannon uses longzhu spheres as a power source."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"antimatter:6d12; WMD7"
+				fireRate=			"15"
+				missileSpeed=		"40"
+				hitPoints=			"5"
+				lifetime=			"113"
+				powerUse=			"100"
+				charges=			"true"
+
+				sound=				"&snRecoillessCannon;"
+				hitEffect=			"&efAntimatterHitEffect;"
+				>
+
+			<Effect>
+				<Starburst
+						spikeCount=		"1d6+2"
+						spikeLength=	"4d20"
+						primaryColor=	"0xff, 0xff, 0x80"
+						secondaryColor=	"0xff, 0xff, 0x00"
+						/>
+			</Effect>
+
+		</Weapon>
+		
+		<Events>
+			<OnAIUpdate>
+				(if (and (leq (itmGetCharges gItem) 128)
+						(objGetItems gSource "u +LongzhuSphere;"))
+					(block Nil
+						(setq aCharges 128)
+						(objFireItemEvent gSource gItem "Recharge")
+						(objRemoveItem gSource (itmCreate &itLongzhuSphere; 1))
+						)
+					)
+			</OnAIUpdate>
+			
+			<Recharge>
+				; aCharges = amount to recharge
+				; Returns the amount recharged
+				(block (rechargeNeeded)
+					(setq rechargeNeeded (min aCharges (subtract 256 (itmGetCharges gItem))))
+					(if (gr rechargeNeeded 0)
+						(shpRechargeItem gSource gItem rechargeNeeded)
+						)
+					rechargeNeeded
+					)
+			</Recharge>
+		</Events>
+
+	</ItemType>
+	
+	
+
+
+	<!-- Ares Launcher -->
+
+	<ItemType UNID="&itAresLauncher;"
+			name=				"Ares launcher"
+			level=				"8"
+			value=				"75000"
+			mass=				"4000"
+			frequency=			"rare"
+			attributes=			"MajorItem; Military; NotForSale; Ares; Launcher; Ammo"
+
+			description=		"These cannons can launch a thermonuclear shell at more than 60% of lightspeed."
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="480" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				fireRate=			"40"
+				powerUse=			"200"
+				launcher=			"true"
+				>
+
+			<Missiles>
+				<Missile ammoID="&itWarhammerNuke;"
+						type=			"missile"
+						lifetime=		"480"
+						damage=			"thermo:2d12; WMD7"
+						missileSpeed=	"30"
+						hitPoints=		"30"
+
+						fragmentCount=	"1"
+						failsafe=		"15"
+
+						hitEffect=		"&efFragmentationExplosIon;"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="64"
+						vaporTrailWidth="400"
+						vaporTrailWidthInc="25"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+
+					<Effect>
+						<Image imageID="&rsMissiles;" imageX="0" imageY="32" imageWidth="16" imageHeight="16" imageFrameCount="12" imageTicksPerFrame="3"/>
+					</Effect>
+
+					<Fragment 
+							type=			"area"
+
+							damage=			"thermo:2d12; WMD7"
+							expansionSpeed=	"25"
+							missileSpeed=	"0"
+							lifetime=		"24"
+							>
+
+						<Effect>
+							<Shockwave
+									fadeStart=	"70"
+									>
+								<Image imageID=				"&rsShockwave1;"
+										imageX=				"0" 
+										imageY=				"0" 
+										imageWidth=			"512" 
+										imageHeight=		"128"
+										imageFrameCount=	"1"
+										imageTicksPerFrame=	"1"/>
+							</Shockwave>
+						</Effect>
+					</Fragment>
+
+				</Missile>
+					
+				<Missile ammoID="&itMicronuke;"
+						type=			"missile"
+						lifetime=		"180"
+						damage=			"thermo:3d12; WMD3"
+						missileSpeed=	"60"
+						hitPoints=		"20"
+
+						fragmentCount=	"1"
+						failsafe=		"6"
+
+						hitEffect=		"&efFragmentationExplosIon;"
+						sound=			"&snMissileLauncher;"
+						>
+
+					<Effect>
+						<Image imageID="&rsMissiles;" imageX="0" imageY="32" imageWidth="16" imageHeight="16" imageFrameCount="12" imageTicksPerFrame="3"/>
+					</Effect>
+
+					<Fragment 
+							type=			"area"
+
+							damage=			"thermo:1d12; WMD3"
+							expansionSpeed=	"35"
+							missileSpeed=	"0"
+							lifetime=		"24"
+							>
+
+						<Effect>
+							<Shockwave
+									fadeStart=	"70"
+									>
+								<Image imageID=				"&rsShockwave1;"
+										imageX=				"0" 
+										imageY=				"0" 
+										imageWidth=			"512" 
+										imageHeight=		"128"
+										imageFrameCount=	"1"
+										imageTicksPerFrame=	"1"/>
+							</Shockwave>
+						</Effect>
+					</Fragment>
+
+				</Missile>
+			</Missiles>
+
+		</Weapon>
+
+	</ItemType>
+
+
+		
+	<!-- Ares Micronuke Cannon -->
+
+	<ItemType UNID="&itMicronukeCannon;"
+			name=				"Ares micronuke cannon"
+			level=				"8"
+			value=				"65000"
+			mass=				"4000"
+			frequency=			"uncommon"
+			attributes=			"MajorItem; Military; NotForSale; Ares; ThermoCannon; Ammo"
+
+			description=		"These cannons can launch a thermonuclear shell at more than 60% of lightspeed."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				fireRate=			"40"
+				powerUse=			"200"
+				>
+
+			<Missiles>
+				<Missile ammoID="&itMicronuke;"
+						type=			"missile"
+						lifetime=		"180"
+						damage=			"thermo:3d12; WMD3"
+						missileSpeed=	"60"
+						hitPoints=		"20"
+						fragmentCount=	"1"
+						failsafe=		"6"
+
+						hitEffect=		"&efFragmentationExplosIon;"
+						sound=			"&snMissileLauncher;"
+						>
+
+					<Effect>
+						<Image imageID="&rsMissiles;" imageX="0" imageY="32" imageWidth="16" imageHeight="16" imageFrameCount="12" imageTicksPerFrame="3"/>
+					</Effect>
+
+					<Fragment 
+							type=			"area"
+
+							damage=			"thermo:1d12; WMD3"
+							expansionSpeed=	"35"
+							missileSpeed=	"0"
+							lifetime=		"24"
+							>
+
+						<Effect>
+							<Shockwave>
+								<Image imageID=				"&rsShockwave1;"
+										imageX=				"0" 
+										imageY=				"0" 
+										imageWidth=			"512" 
+										imageHeight=		"128"
+										imageFrameCount=	"1"
+										imageTicksPerFrame=	"1"/>
+							</Shockwave>
+						</Effect>
+					</Fragment>
+
+				</Missile>
+			</Missiles>
+
+		</Weapon>
+
+	</ItemType>
+
+
+	
+	<!-- Enemy ammunitions-->
+	
+	
+	<!-- Micronuke -->
+
+	<ItemType UNID="&itMicronuke;"
+			name=				"Ares micronuke"
+			level=				"7"
+			value=				"350"
+			mass=				"20"
+			attributes=			"Consumable; Military; Missile; NotForSale; Ares"
+			frequency=			"common"
+			numberAppearing=	"12d20"
+
+			description=		"Micronukes are launched by the Ares micronuke cannon."
+
+			sortName=			"Ares.30"
+			>
+
+		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+		
+			<!-- Ares Warhammer nuke -->
+
+	<ItemType UNID="&itWarhammerNuke;"
+			name=				"Ares Warhammer nuke"
+			level=				"9"
+			value=				"1000"
+			mass=				"300"
+			attributes=			"Consumable; Military; Missile; NotForSale; Ares"
+			frequency=			"rare"
+			numberAppearing=	"1d6"
+
+			description=		"These long-range thermonuclear missiles are fired by Ares launchers."
+
+			sortName=			"Ares.10"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	
+
+
+
+	<ItemType UNID="&itCentauriCLAW;"
+		name=            "CLAW cannon"
+		level=            "3"
+		value=            "2800"
+		mass=            "6000"
+		frequency=         "rare"
+		attributes=         "centauriWarlords; MajorItem; NotForSale; Cannon"
+		showReference=      "true"
+		unknownType=		"&itUnknownKineticCannon2;"
+		description=      "Centauri warlords create these weapons by linking together two DK10 Arbalest cannons. The CLAW cannon requires two device slots to install."
+
+		sortName=         "CLAW cannon, Centauri"
+		>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=			"missile"
+				deviceSlots=		"2"
+
+				repeating=		"3"
+				damage=			"kinetic:1d6+1; momentum1"
+				fireRate=		"35"
+				missileSpeed=		"50"
+				lifetime=		"30"
+				powerUse=		"100"
+
+				sound=			"&snRecoillessCannon;"
+			>
+
+			<Configuration aimTolerance="5">
+				<Shot posAngle="90" posRadius="13" />
+				<Shot posAngle="270" posRadius="13" />
+			</Configuration>
+
+			<Effect>
+				<Bolt
+						length=            "16"
+						width=            "3"
+						primaryColor=      "0xcd, 0xf3, 0xff"
+						secondaryColor=      "0x8f, 0xa9, 0xb2"
+				/>
+			</Effect>
+
+		</Weapon>
+	</ItemType>
+
+   <!-- Centauri CLAW cannon -->
+
+   <ItemType UNID="&itCentauriCLAW3;"
+         name=            "turbo CLAW cannon"
+         level=            "3"
+         value=            "2800"
+         mass=            "6000"
+         frequency=         "rare"
+         attributes=         "centauriWarlords; MajorItem; NotForSale; Cannon"
+         showReference=      "true"
+         unknownType=		"&itUnknownKineticCannon2;"
+         description=      "The Centauri warlord's favorite weapon is a massive dual kinetic-cannon. The heavy CLAW cannon requires two device slots to install."
+
+         sortName=         "CLAW cannon, Centauri turbo"
+         >
+
+      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+      <Weapon
+            type=            "missile"
+            deviceSlots=      "2"
+
+            damage=            "kinetic:1d6+1; momentum1"
+            fireRate=         "6"
+            missileSpeed=      "50"
+            interaction=      "50"
+            lifetime=         "20"
+            powerUse=         "100"
+
+            sound=            "&snRecoillessCannon;"
+            >
+
+         <Configuration aimTolerance="5">
+            <Shot posAngle="90" posRadius="13" />
+            <Shot posAngle="270" posRadius="13" />
+         </Configuration>
+
+         <Effect>
+            <Bolt
+                  length=            "40"
+                  width=            "4"
+                  primaryColor=      "0xcd, 0xf3, 0xff"
+                  secondaryColor=      "0x8f, 0xa9, 0xb2"
+                  />
+         </Effect>
+
+      </Weapon>
+   </ItemType>
+
+   <ItemType UNID="&itCentauriHeavyCLAW;"
+         name=            "heavy CLAW cannon"
+         level=            "3"
+         value=            "2800"
+         mass=            "6000"
+         frequency=         "rare"
+         attributes=         "centauriWarlords; MajorItem; NotForSale; Cannon"
+         showReference=      "true"
+         unknownType=		"&itUnknownKineticCannon2;"
+         description=      "The Centauri warlord's favorite weapon is a massive dual kinetic-cannon. The heavy CLAW cannon requires two device slots to install."
+
+         sortName=         "CLAW cannon, Centauri heavy"
+         >
+
+      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+      <Weapon
+            type=            "missile"
+            deviceSlots=      "2"
+
+            damage=            "kinetic:1d8+3; momentum1"
+            fireRate=         "15"
+            missileSpeed=      "50"
+            interaction=      "50"
+            lifetime=         "20"
+            powerUse=         "100"
+
+            sound=            "&snRecoillessCannon;"
+            >
+
+         <Configuration aimTolerance="5">
+            <Shot posAngle="90" posRadius="13" />
+            <Shot posAngle="270" posRadius="13" />
+         </Configuration>
+
+         <Effect>
+            <Bolt
+                  length=            "40"
+                  width=            "4"
+                  primaryColor=      "0xcd, 0xf3, 0xff"
+                  secondaryColor=      "0x8f, 0xa9, 0xb2"
+                  />
+         </Effect>
+
+      </Weapon>
+   </ItemType>
+
+
+   <!-- Centauri Recoilless -->
+
+   <ItemType UNID="&itCentauriRecoilless;"
+         name=            "Centauri recoilless"
+         level=            "1"
+         value=            "350"
+         mass=            "2500"
+         frequency=         "uncommon"
+         attributes=         "centauriWarlords; MajorItem; NotForSale; Cannon; LightWeapon"
+         showReference=      "true"
+         unknownType=		"&itUnknownKineticCannon8;"
+         description=      "Centauri raiders use twin recoilless cannons, firing light rounds."
+
+         sortName=         "recoilless cannon, Centauri"
+         >
+
+      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+      <Weapon
+            type=            "missile"
+
+            damage=            "kinetic:1d3+1; momentum1"
+            fireRate=         "12"
+            missileSpeed=      "30"
+            interaction=      "30"
+            lifetime=         "40"
+            powerUse=         "10"
+
+            sound=            "&snRecoillessCannon;"
+            >
+
+         <Configuration aimTolerance="5">
+            <Shot posAngle="90" posRadius="13" />
+            <Shot posAngle="270" posRadius="13" />
+         </Configuration>
+
+         <Effect>
+            <Bolt
+                  length=            "12"
+                  width=            "2"
+                  primaryColor=      "0xcd, 0xf3, 0xff"
+                  secondaryColor=      "0x8f, 0xa9, 0xb2"
+                  />
+         </Effect>
+
+      </Weapon>
+   </ItemType>
+
+   <!-- Centauri Recoilless -->
+
+   <ItemType UNID="&itCentauriRecoilless2;"
+         name=            "Centauri turbo recoilless"
+         level=            "1"
+         value=            "350"
+         mass=            "2500"
+         frequency=         "uncommon"
+         attributes=         "centauriWarlords; MajorItem; NotForSale; Cannon"
+         showReference=      "true"
+         unknownType=		"&itUnknownKineticCannon8;"
+         description=      "Centauri raiders use twin recoilless cannons, firing light rounds."
+
+         sortName=         "recoilless cannon, Centauri"
+         >
+
+      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+      <Weapon
+            type=            "missile"
+
+            damage=            "kinetic:1d3+1; momentum1"
+            repeating=         "1"
+            fireRate=         "15"
+            missileSpeed=      "30"
+            interaction=      "30"
+            lifetime=         "40"
+            powerUse=         "15"
+
+            sound=            "&snRecoillessCannon;"
+            >
+
+         <Configuration aimTolerance="5">
+            <Shot posAngle="90" posRadius="13" />
+            <Shot posAngle="270" posRadius="13" />
+         </Configuration>
+
+         <Effect>
+            <Bolt
+                  length=            "12"
+                  width=            "2"
+                  primaryColor=      "0xcd, 0xf3, 0xff"
+                  secondaryColor=      "0x8f, 0xa9, 0xb2"
+                  />
+         </Effect>
+
+      </Weapon>
+   </ItemType>
+
+   <!-- Centauri Recoilless -->
+
+   <ItemType UNID="&itCentauriRecoilless3;"
+         name=            "Centauri ER recoilless"
+         level=            "1"
+         value=            "350"
+         mass=            "2500"
+         frequency=         "uncommon"
+         attributes=         "centauriWarlords; MajorItem; NotForSale; Cannon"
+         showReference=      "true"
+         unknownType=		"&itUnknownKineticCannon8;"
+         description=      "Centauri raiders use twin recoilless cannons, firing light rounds."
+
+         sortName=         "recoilless cannon, Centauri"
+         >
+
+      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+      <Weapon
+            type=            "missile"
+
+            damage=            "kinetic:1d3+1; momentum1"
+            fireRate=         "15"
+            missileSpeed=      "50"
+            interaction=      "30"
+            lifetime=         "50"
+            powerUse=         "15"
+
+            sound=            "&snRecoillessCannon;"
+            >
+
+         <Configuration aimTolerance="5">
+            <Shot posAngle="90" posRadius="13" />
+            <Shot posAngle="270" posRadius="13" />
+         </Configuration>
+
+         <Effect>
+            <Bolt
+                  length=            "12"
+                  width=            "2"
+                  primaryColor=      "0xcd, 0xf3, 0xff"
+                  secondaryColor=      "0x8f, 0xa9, 0xb2"
+                  />
+         </Effect>
+
+      </Weapon>
+   </ItemType>
+
+<!-- TK10 Trident Cannon -->
+
+	<ItemType UNID="&itCentauriBASH;"
+			name=				"Centauri BASH Cannon"
+			level=				"3"
+			value=				"3000"
+			mass=				"8500"
+			frequency=			"rare"
+			attributes=			"centauriWarlords; MajorItem; NotForSale; Cannon"
+			showReference=		"true"
+			unknownType=		"&itUnknownKineticCannon2;"
+			description=		"Centauris make these cannons by linking together two TK10 Trident cannons."
+			>
+		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+
+		<Weapon
+				type=				"missile"
+
+				
+				damage=				"kinetic:1d3+1; momentum1"
+				fireRate=			"15"
+				missileSpeed=		"40"
+				interaction=		"30"
+				lifetime=			"40"
+				powerUse=			"20"
+				sound=				"&snRecoillessCannon;"
+				>
+				<Configuration aimTolerance="5">
+				<Shot posAngle="315" posRadius="10" angle="-4"/>
+				<Shot posAngle="315" posRadius="10" angle="0"/>
+				<Shot posAngle="315" posRadius="10" angle="4"/>
+				<Shot posAngle="45" posRadius="10" angle="-4"/>
+				<Shot posAngle="45" posRadius="10" angle="0"/>
+				<Shot posAngle="45" posRadius="10" angle="4"/>
+				</Configuration>
+			<Effect>
+				<Bolt
+						length=				"12"
+						width=				"5"
+						primaryColor=		"0xcd, 0xf3, 0xff"
+						secondaryColor=		"0x8f, 0xa9, 0xff"
+						/>
+			</Effect>
+		</Weapon>
+	</ItemType>
+
+
+   <!-- Urak Mass Driver -->
+
+   <ItemType UNID="&itUrakMassDriver;"
+         name=            "Urak mass driver"
+         level=            "2"
+         value=            "800"
+         mass=            "4000"
+         frequency=         "rare"
+         attributes=         "MajorItem; NotForSale; Urak; Cannon"
+         unknownType=		"&itUnknownKineticCannon;"
+         description=      "The Urak mass driver is a short-range dual kinetic cannon that shoots heavy metal slugs."
+
+         sortName=         "Urak.1.30"
+         >
+
+      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+      <Weapon
+            type=            "missile"
+
+            damage=            "kinetic:1d6; momentum1"
+            fireRate=         "10"
+            missileSpeed=      "40"
+            lifetime=         "40"
+            powerUse=         "20"
+
+            sound=            "&snRecoillessCannon;"
+            >
+
+         <Configuration aimTolerance="5">
+            <Shot posAngle="90" posRadius="12" angle="3d5-9"/>
+            <Shot posAngle="270" posRadius="12" angle="3d5-9"/>
+         </Configuration>
+         
+         <Effect>
+            <Bolt
+                  length=            "16"
+                  width=            "3"
+                  primaryColor=      "0xcd, 0xf3, 0xff"
+                  secondaryColor=      "0x8f, 0xa9, 0xb2"
+                  />
+         </Effect>
+
+      </Weapon>
+
+   </ItemType>
+
+<!--	NB: Level +1	-->
+
+   <!-- Urak Mass Driver -->
+
+   <ItemType UNID="&itUrakMassDriver4;"
+         name=            "Urak civilian mass driver"
+         level=            "1"
+         value=            "400"
+         mass=            "4000"
+         frequency=         "rare"
+         attributes=         "MajorItem; NotForSale; Urak; Cannon; MinerGear"
+         unknownType=		"&itUnknownKineticCannon;"
+         description=      "The Urak mass driver is a short-range dual kinetic cannon that shoots heavy metal slugs."
+
+         sortName=         "Urak.1.30"
+         >
+
+      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+      <Weapon
+            type=            "missile"
+
+            damage=            "kinetic:1d3+1; momentum1; mining2"
+            fireRate=         "10"
+            missileSpeed=      "30"
+            lifetime=         "40"
+            powerUse=         "10"
+
+            sound=            "&snRecoillessCannon;"
+            >
+
+         <Configuration aimTolerance="5">
+            <Shot posAngle="90" posRadius="12" angle="3d5-9"/>
+            <Shot posAngle="270" posRadius="12" angle="3d5-9"/>
+         </Configuration>
+         
+         <Effect>
+            <Bolt
+                  length=            "16"
+                  width=            "3"
+                  primaryColor=      "0xcd, 0xf3, 0xff"
+                  secondaryColor=      "0x8f, 0xa9, 0xb2"
+                  />
+         </Effect>
+
+      </Weapon>
+
+   </ItemType>
+
+<!--	NB: level +1	-->
+
+   <!-- Urak Mass Driver -->
+
+   <ItemType UNID="&itUrakMassDriver5;"
+         name=            "Urak heavy mass driver"
+         level=            "3"
+         value=            "1800"
+         mass=            "8000"
+         frequency=         "rare"
+         attributes=         "MajorItem; NotForSale; Urak; Cannon"
+         unknownType=		"&itUnknownKineticCannon;"
+         description=      "The Urak mass driver is a short-range dual kinetic cannon that shoots heavy metal slugs."
+
+         sortName=         "Urak.1.30"
+         >
+
+      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+      <Weapon
+            type=            "missile"
+
+            damage=            "kinetic:2d6; momentum1"
+            fireRate=         "10"
+            missileSpeed=      "50"
+            lifetime=         "40"
+            powerUse=         "20"
+
+            sound=            "&snRecoillessCannon;"
+            >
+
+         <Configuration aimTolerance="5">
+            <Shot posAngle="90" posRadius="12" angle="3d3-6"/>
+            <Shot posAngle="270" posRadius="12" angle="3d3-6"/>
+         </Configuration>
+         
+         <Effect>
+            <Bolt
+                  length=            "16"
+                  width=            "3"
+                  primaryColor=      "0xcd, 0xf3, 0xff"
+                  secondaryColor=      "0x8f, 0xa9, 0xb2"
+                  />
+         </Effect>
+
+      </Weapon>
+
+   </ItemType>
+
+   <!-- Urak Mass Driver -->
+
+   <ItemType UNID="&itUrakMassDriver2;"
+         name=            "Urak high velocity mass driver"
+         level=            "2"
+         value=            "800"
+         mass=            "4000"
+         frequency=         "rare"
+         attributes=         "MajorItem; NotForSale; Urak; Cannon"
+         unknownType=		"&itUnknownKineticCannon;"
+         description=      "The Urak mass driver is a short-range dual kinetic cannon that shoots heavy metal slugs."
+
+         sortName=         "Urak.1.30"
+         >
+
+      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+      <Weapon
+            type=            "missile"
+
+            damage=            "kinetic:1d6+1; momentum1"
+            fireRate=         "12"
+            missileSpeed=      "60"
+            lifetime=         "25"
+            powerUse=         "20"
+
+            sound=            "&snRecoillessCannon;"
+            >
+
+         <Configuration aimTolerance="5">
+            <Shot posAngle="90" posRadius="12" angle="3d3-6"/>
+            <Shot posAngle="270" posRadius="12" angle="3d3-6"/>
+         </Configuration>
+         
+         <Effect>
+            <Bolt
+                  length=            "16"
+                  width=            "3"
+                  primaryColor=      "0xcd, 0xf3, 0xff"
+                  secondaryColor=      "0x8f, 0xa9, 0xb2"
+                  />
+         </Effect>
+
+      </Weapon>
+
+   </ItemType>
+
+   <!-- Urak Mass Driver -->
+
+   <ItemType UNID="&itUrakMassDriver3;"
+         name=            "Urak repeating mass driver"
+         level=            "2"
+         value=            "800"
+         mass=            "4000"
+         frequency=         "rare"
+         attributes=         "MajorItem; NotForSale; Urak; Cannon"
+         unknownType=		"&itUnknownKineticCannon;"
+         description=      "The Urak mass driver is a short-range dual kinetic cannon that shoots heavy metal slugs."
+
+         sortName=         "Urak.1.30"
+         >
+
+      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+      <Weapon
+            type=            "missile"
+
+            damage=            "kinetic:1d6; momentum1"
+            repeating=         "3"
+            fireRate=         "35"
+            missileSpeed=      "40"
+            lifetime=         "40"
+            powerUse=         "20"
+
+            sound=            "&snRecoillessCannon;"
+            >
+
+         <Configuration aimTolerance="5">
+            <Shot posAngle="90" posRadius="12" angle="3d5-9"/>
+            <Shot posAngle="270" posRadius="12" angle="3d5-9"/>
+         </Configuration>
+         
+         <Effect>
+            <Bolt
+                  length=            "16"
+                  width=            "3"
+                  primaryColor=      "0xcd, 0xf3, 0xff"
+                  secondaryColor=      "0x8f, 0xa9, 0xb2"
+                  />
+         </Effect>
+
+      </Weapon>
+
+   </ItemType>
+
+   <!-- Urak Howitzer -->
+
+   <ItemType UNID="&itUrakHowitzer;"
+         name=            "Urak howitzer"
+         level=            "5"
+         value=            "9000"
+         mass=            "4500"
+         frequency=         "veryrare"
+         numberAppearing=   "1"
+         attributes=         "MajorItem; NotForSale; Urak; BlastCannon; Howitzer"
+         unknownType=		"&itUnknownBlastCannon2;"
+         description=      "Urak howitzers fire high-explosive shells that explode on proximity to their target."
+
+         sortName=         "Urak.1.10"
+         >
+
+      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+      <Weapon
+            type=            "missile"
+            fragmentCount=      "1d5+5"
+
+            damage=            "blast:4d12; momentum3; WMD3"
+            fireRate=         "35"
+            missileSpeed=      "50"
+            hitPoints=         "10"
+            lifetime=         "90"
+            powerUse=         "120"
+            recoil=            "2"
+
+            directional=      "true"
+            fireEffect=         "&efMediumCannonFlash;"
+            hitEffect=         "&efFragmentationExplosIon;"
+            sound=            "&snRecoillessCannon;"
+            >
+
+         <Effect>
+            <MoltenBolt
+                  width=            "5"
+                  length=            "20"
+                  growth=            "3"
+                  primaryColor=      "0xea, 0xed, 0xae"
+                  secondaryColor=      "0xc0, 0xc2, 0x85"
+                  />
+         </Effect>
+
+         <Fragment
+               type=         "missile"
+               lifetime=      "4"
+               damage=         "blast:1d4+4; momentum2; WMD3"
+               missileSpeed=   "32-48"
+               >
+               
+            <Effect>
+               <ImageAndTail
+                     imageID=         "&rsMissiles;"
+                     imageX=            "96"
+                     imageY=            "0"
+                     imageWidth=         "16"
+                     imageHeight=      "16"
+                     imageFrameCount=   "2"
+                     imageTicksPerFrame=   "2"
+                     
+                     length=            "48"
+                     width=            "3"
+                     primaryColor=      "0xff, 0xff, 0xff"
+                     secondaryColor=      "0xc0, 0xc2, 0x85"
+                     />
+            </Effect>
+         </Fragment>
+      </Weapon>
+
+   </ItemType>
+
+<!--	NB: level -1	-->
+
+   <!-- Urak Howitzer -->
+
+   <ItemType UNID="&itUrakHowitzer4;"
+         name=            "antiquated Urak howitzer"
+         level=            "4"
+         value=            "4500"
+         mass=            "4500"
+         frequency=         "veryrare"
+         numberAppearing=   "1"
+         attributes=         "MajorItem; NotForSale; Urak; BlastCannon; Howitzer"
+         unknownType=		"&itUnknownBlastCannon2;"
+         description=      "Urak howitzers fire high-explosive shells that explode on proximity to their target."
+
+         sortName=         "Urak.1.10"
+         >
+
+      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+      <Weapon
+            type=            "missile"
+            fragmentCount=      "1d5+5"
+
+            damage=            "blast:2d12; momentum3; WMD3"
+            fireRate=         "35"
+            missileSpeed=      "50"
+            hitPoints=         "10"
+            lifetime=         "90"
+            powerUse=         "120"
+            recoil=            "2"
+
+            directional=      "true"
+            fireEffect=         "&efMediumCannonFlash;"
+            hitEffect=         "&efFragmentationExplosIon;"
+            sound=            "&snRecoillessCannon;"
+            >
+
+         <Effect>
+            <MoltenBolt
+                  width=            "5"
+                  length=            "20"
+                  growth=            "3"
+                  primaryColor=      "0xea, 0xed, 0xae"
+                  secondaryColor=      "0xc0, 0xc2, 0x85"
+                  />
+         </Effect>
+
+         <Fragment
+               type=         "missile"
+               lifetime=      "4"
+               damage=         "blast:1d4+2; momentum2; WMD3"
+               missileSpeed=   "32-48"
+               >
+               
+            <Effect>
+               <ImageAndTail
+                     imageID=         "&rsMissiles;"
+                     imageX=            "96"
+                     imageY=            "0"
+                     imageWidth=         "16"
+                     imageHeight=      "16"
+                     imageFrameCount=   "2"
+                     imageTicksPerFrame=   "2"
+                     
+                     length=            "48"
+                     width=            "3"
+                     primaryColor=      "0xff, 0xff, 0xff"
+                     secondaryColor=      "0xc0, 0xc2, 0x85"
+                     />
+            </Effect>
+         </Fragment>
+      </Weapon>
+
+   </ItemType>
+   
+   <!-- Urak Howitzer -->
+
+   <ItemType UNID="&itUrakHowitzer5;"
+         name=            "advanced Urak howitzer"
+         level=            "6"
+         value=            "18000"
+         mass=            "4500"
+         frequency=         "veryrare"
+         numberAppearing=   "1"
+         attributes=         "MajorItem; NotForSale; Urak; BlastCannon; Howitzer"
+         unknownType=		"&itUnknownBlastCannon2;"
+         description=      "Urak howitzers fire high-explosive shells that explode on proximity to their target."
+
+         sortName=         "Urak.1.10"
+         >
+
+      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+      <Weapon
+            type=            "missile"
+            fragmentCount=      "1d5+5"
+
+            damage=            "blast:8d12; momentum3; WMD3"
+            fireRate=         "35"
+            missileSpeed=      "50"
+            hitPoints=         "10"
+            lifetime=         "120"
+            powerUse=         "200"
+            recoil=            "2"
+
+            directional=      "true"
+            fireEffect=         "&efMediumCannonFlash;"
+            hitEffect=         "&efFragmentationExplosIon;"
+            sound=            "&snRecoillessCannon;"
+            >
+
+         <Effect>
+            <MoltenBolt
+                  width=            "5"
+                  length=            "20"
+                  growth=            "3"
+                  primaryColor=      "0xea, 0xed, 0xae"
+                  secondaryColor=      "0xc0, 0xc2, 0x85"
+                  />
+         </Effect>
+
+         <Fragment
+               type=         "missile"
+               lifetime=      "4"
+               damage=         "blast:1d8+8; momentum2; WMD3"
+               missileSpeed=   "32-48"
+               >
+               
+            <Effect>
+               <ImageAndTail
+                     imageID=         "&rsMissiles;"
+                     imageX=            "96"
+                     imageY=            "0"
+                     imageWidth=         "16"
+                     imageHeight=      "16"
+                     imageFrameCount=   "2"
+                     imageTicksPerFrame=   "2"
+                     
+                     length=            "48"
+                     width=            "3"
+                     primaryColor=      "0xff, 0xff, 0xff"
+                     secondaryColor=      "0xc0, 0xc2, 0x85"
+                     />
+            </Effect>
+         </Fragment>
+      </Weapon>
+
+   </ItemType>
+
+   <!-- Urak Howitzer -->
+
+   <ItemType UNID="&itUrakHowitzer2;"
+         name=            "Urak spread howitzer"
+         level=            "5"
+         value=            "9000"
+         mass=            "4500"
+         frequency=         "veryrare"
+         numberAppearing=   "1"
+         attributes=         "MajorItem; NotForSale; Urak; BlastCannon; Howitzer"
+         unknownType=		"&itUnknownBlastCannon2;"
+         description=      "Urak howitzers fire high-explosive shells that explode on proximity to their target."
+
+         sortName=         "Urak.1.10"
+         >
+
+      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+      <Weapon
+            type=            "missile"
+
+            damage=            "blast:1d8; momentum3; WMD3"
+            fireRate=         "35"
+            repeating=      "2"
+            missileSpeed=      "50"
+            hitPoints=         "5"
+            lifetime=         "90"
+            powerUse=         "120"
+            recoil=            "1"
+
+            directional=      "true"
+            fireEffect=         "&efMediumCannonFlash;"
+            hitEffect=         "&efFragmentationExplosIon;"
+            sound=            "&snRecoillessCannon;"
+            >
+
+         <Effect>
+            <MoltenBolt
+                  width=            "5"
+                  length=            "20"
+                  growth=            "3"
+                  primaryColor=      "0xea, 0xed, 0xae"
+                  secondaryColor=      "0xc0, 0xc2, 0x85"
+                  />
+         </Effect>
+
+         <Configuration aimTolerance="5">
+            <Shot posAngle="10" posRadius="20" angle="1d3-1"/>
+            <Shot posAngle="350" posRadius="20" angle="1d3-1"/>
+         </Configuration>
+      </Weapon>
+
+   </ItemType>
+
+   <!-- Urak Howitzer -->
+
+   <ItemType UNID="&itUrakHowitzer3;"
+         name=            "Urak light howitzer"
+         level=            "5"
+         value=            "9000"
+         mass=            "4500"
+         frequency=         "veryrare"
+         numberAppearing=   "1"
+         attributes=         "MajorItem; NotForSale; Urak; BlastCannon; Howitzer; lightWeapon"
+         unknownType=		"&itUnknownBlastCannon2;"
+         description=      "Urak howitzers fire high-explosive shells that explode on proximity to their target."
+
+         sortName=         "Urak.1.10"
+         >
+
+      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+      <Weapon
+            type=            "missile"
+            fragmentCount=      "1d3+5"
+
+            damage=            "blast:1d12+2; momentum3; WMD3"
+            repeating=         "3"
+            fireRate=         "40"
+            missileSpeed=      "50"
+            hitPoints=         "10"
+            lifetime=         "90"
+            powerUse=         "120"
+            recoil=            "2"
+
+            directional=      "true"
+            fireEffect=         "&efMediumCannonFlash;"
+            hitEffect=         "&efFragmentationExplosIon;"
+            sound=            "&snRecoillessCannon;"
+            >
+
+         <Effect>
+            <MoltenBolt
+                  width=            "5"
+                  length=            "20"
+                  growth=            "3"
+                  primaryColor=      "0xea, 0xed, 0xae"
+                  secondaryColor=      "0xc0, 0xc2, 0x85"
+                  />
+         </Effect>
+
+         <Fragment
+               type=         "missile"
+               lifetime=      "4"
+               damage=         "blast:1d4+2; momentum2; WMD3"
+               missileSpeed=   "32-48"
+               >
+               
+            <Effect>
+               <ImageAndTail
+                     imageID=         "&rsMissiles;"
+                     imageX=            "96"
+                     imageY=            "0"
+                     imageWidth=         "16"
+                     imageHeight=      "16"
+                     imageFrameCount=   "2"
+                     imageTicksPerFrame=   "2"
+                     
+                     length=            "48"
+                     width=            "3"
+                     primaryColor=      "0xff, 0xff, 0xff"
+                     secondaryColor=      "0xc0, 0xc2, 0x85"
+                     />
+            </Effect>
+         </Fragment>
+      </Weapon>
+
+   </ItemType>
+
+   <!-- Urak Mass Driver, Advanced -->
+
+   <ItemType UNID="&itUrakMassDriverAdvanced;"
+         name=            "advanced Urak mass driver"
+         level=            "4"
+         value=            "5000"
+         mass=            "4500"
+         frequency=         "rare"
+         attributes=         "MajorItem; NotForSale; Urak; BlastCannon"
+         unknownType=		"&itUnknownBlastCannon2;"
+         description=      "The advanced version of the Urak mass driver fires high-explosive shells."
+
+         sortName=         "Urak.1.20"
+         >
+
+      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+      <Weapon
+            type=            "missile"
+
+            damage=            "blast:1d4+4; momentum1; WMD3"
+            fireRate=         "12"
+            missileSpeed=      "40"
+            lifetime=         "60"
+            powerUse=         "20"
+
+            sound=            "&snRecoillessCannon;"
+            >
+
+         <Configuration aimTolerance="5">
+            <Shot posAngle="90" posRadius="12" angle="3d5-9"/>
+            <Shot posAngle="270" posRadius="12" angle="3d5-9"/>
+         </Configuration>
+         
+         <Effect>
+            <ImageAndTail
+                  imageID=         "&rsMissiles;"
+                  imageX=            "96"
+                  imageY=            "0"
+                  imageWidth=         "16"
+                  imageHeight=      "16"
+                  imageFrameCount=   "2"
+                  imageTicksPerFrame=   "2"
+                  
+                  length=            "30"
+                  width=            "3"
+                  primaryColor=      "0xff, 0xff, 0xff"
+                  secondaryColor=      "0xc0, 0xc2, 0x85"
+                  />
+         </Effect>
+
+      </Weapon>
+
+   </ItemType>
+   
+   <!-- Urak Mass Driver, Advanced -->
+
+   <ItemType UNID="&itUrakMassDriverAdvanced4;"
+         name=            "oversized Urak mass driver"
+         level=            "3"
+         value=            "2500"
+         mass=            "4500"
+         frequency=         "rare"
+         attributes=         "MajorItem; NotForSale; Urak; BlastCannon"
+         unknownType=		"&itUnknownBlastCannon2;"
+         description=      "The advanced version of the Urak mass driver fires high-explosive shells."
+
+         sortName=         "Urak.1.20"
+         >
+
+      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+      <Weapon
+            type=            "missile"
+
+            damage=            "blast:1d4+1; momentum1; WMD2"
+            fireRate=         "12"
+            missileSpeed=      "40"
+            lifetime=         "60"
+            powerUse=         "20"
+
+            sound=            "&snRecoillessCannon;"
+            >
+
+         <Configuration aimTolerance="5">
+            <Shot posAngle="90" posRadius="12" angle="3d5-9"/>
+            <Shot posAngle="270" posRadius="12" angle="3d5-9"/>
+         </Configuration>
+         
+         <Effect>
+            <ImageAndTail
+                  imageID=         "&rsMissiles;"
+                  imageX=            "96"
+                  imageY=            "0"
+                  imageWidth=         "16"
+                  imageHeight=      "16"
+                  imageFrameCount=   "2"
+                  imageTicksPerFrame=   "2"
+                  
+                  length=            "30"
+                  width=            "3"
+                  primaryColor=      "0xff, 0xff, 0xff"
+                  secondaryColor=      "0xc0, 0xc2, 0x85"
+                  />
+         </Effect>
+
+      </Weapon>
+
+   </ItemType>
+   
+     <!-- Urak Mass Driver, Advanced -->
+
+   <ItemType UNID="&itUrakMassDriverAdvanced5;"
+         name=            "extreme Urak mass driver"
+         level=            "5"
+         value=            "15000"
+         mass=            "4500"
+         frequency=         "rare"
+         attributes=         "MajorItem; NotForSale; Urak; BlastCannon"
+         unknownType=		"&itUnknownBlastCannon2;"
+         description=      "The advanced version of the Urak mass driver fires high-explosive shells."
+
+         sortName=         "Urak.1.20"
+         >
+
+      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+      <Weapon
+            type=            "missile"
+
+            damage=            "blast:2d4+8; momentum1; WMD3"
+            fireRate=         "12"
+            missileSpeed=      "40"
+            lifetime=         "60"
+            powerUse=         "20"
+
+            sound=            "&snRecoillessCannon;"
+            >
+
+         <Configuration aimTolerance="5">
+            <Shot posAngle="90" posRadius="12" angle="3d5-9"/>
+            <Shot posAngle="270" posRadius="12" angle="3d5-9"/>
+         </Configuration>
+         
+         <Effect>
+            <ImageAndTail
+                  imageID=         "&rsMissiles;"
+                  imageX=            "96"
+                  imageY=            "0"
+                  imageWidth=         "16"
+                  imageHeight=      "16"
+                  imageFrameCount=   "2"
+                  imageTicksPerFrame=   "2"
+                  
+                  length=            "30"
+                  width=            "3"
+                  primaryColor=      "0xff, 0xff, 0xff"
+                  secondaryColor=      "0xc0, 0xc2, 0x85"
+                  />
+         </Effect>
+
+      </Weapon>
+
+   </ItemType>
+
+   <!-- Urak Mass Driver, Advanced -->
+
+   <ItemType UNID="&itUrakMassDriverAdvanced2;"
+         name=            "hypervelocity Urak mass driver"
+         level=            "4"
+         value=            "5000"
+         mass=            "4500"
+         frequency=         "rare"
+         attributes=         "MajorItem; NotForSale; Urak; BlastCannon"
+         unknownType=		"&itUnknownBlastCannon2;"
+         description=      "The advanced version of the Urak mass driver fires high-explosive shells."
+
+         sortName=         "Urak.1.20"
+         >
+
+      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+      <Weapon
+            type=            "missile"
+
+            damage=            "blast:1d5+5; momentum1; WMD3"
+            fireRate=         "12"
+            missileSpeed=      "80"
+            lifetime=         "30"
+            powerUse=         "20"
+
+            sound=            "&snRecoillessCannon;"
+            >
+
+         <Configuration aimTolerance="5">
+            <Shot posAngle="90" posRadius="12" angle="3d3-6"/>
+            <Shot posAngle="270" posRadius="12" angle="3d3-6"/>
+         </Configuration>
+         
+         <Effect>
+            <ImageAndTail
+                  imageID=         "&rsMissiles;"
+                  imageX=            "96"
+                  imageY=            "0"
+                  imageWidth=         "16"
+                  imageHeight=      "16"
+                  imageFrameCount=   "2"
+                  imageTicksPerFrame=   "2"
+                  
+                  length=            "30"
+                  width=            "3"
+                  primaryColor=      "0xff, 0xff, 0xff"
+                  secondaryColor=      "0xc0, 0xc2, 0x85"
+                  />
+         </Effect>
+
+      </Weapon>
+
+   </ItemType>
+
+   <!-- Urak Mass Driver, Advanced -->
+
+   <ItemType UNID="&itUrakMassDriverAdvanced3;"
+         name=            "Turbo Urak mass driver"
+         level=            "4"
+         value=            "5000"
+         mass=            "4500"
+         frequency=         "rare"
+         attributes=         "MajorItem; NotForSale; Urak; BlastCannon"
+         unknownType=		"&itUnknownBlastCannon2;"
+         description=      "The advanced version of the Urak mass driver fires high-explosive shells."
+
+         sortName=         "Urak.1.20"
+         >
+
+      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+      <Weapon
+            type=            "missile"
+
+            damage=            "blast:1d6; momentum1; WMD3"
+            fireRate=         "6"
+            missileSpeed=      "40"
+            lifetime=         "60"
+            powerUse=         "20"
+
+            sound=            "&snRecoillessCannon;"
+            >
+
+         <Configuration aimTolerance="5">
+            <Shot posAngle="90" posRadius="12" angle="3d5-9"/>
+            <Shot posAngle="270" posRadius="12" angle="3d5-9"/>
+         </Configuration>
+         
+         <Effect>
+            <ImageAndTail
+                  imageID=         "&rsMissiles;"
+                  imageX=            "96"
+                  imageY=            "0"
+                  imageWidth=         "16"
+                  imageHeight=      "16"
+                  imageFrameCount=   "2"
+                  imageTicksPerFrame=   "2"
+                  
+                  length=            "30"
+                  width=            "3"
+                  primaryColor=      "0xff, 0xff, 0xff"
+                  secondaryColor=      "0xc0, 0xc2, 0x85"
+                  />
+         </Effect>
+
+      </Weapon>
+
+   </ItemType>
+
+
+
+	<!-- Ares Lightning Cannon -->
+
+	<ItemType UNID="&itLightningCannon;"
+			name=				"Ares lightning cannon"
+			level=				"7"
+			value=				"45000"
+			mass=				"3000"
+			frequency=			"uncommon"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; Ares; Ion"
+			unknownType=			"&itUnknownIonCannon5;"
+			description=		"During the Syrtis War the lightning cannons of the Orthodoxy were devastating to the Earth Fleet."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				damage=				"ion:4d6+2"
+				fireRate=			"15"
+				lifetime=			"30"
+				powerUse=			"350"
+
+				sound=				"&snLaserCannon;"
+				>
+				
+			<Effect>
+				<Beam
+						beamType=		"lightning"
+						primaryColor=	"0xa0, 0xf0, 0xff"
+						secondaryColor=	"0x00, 0xa9, 0xff"
+						intensity=		"8"
+						/>
+			</Effect>
+		</Weapon>
+	</ItemType>
+	
+	<!-- Ares Lightning Cannon -->
+
+	<ItemType UNID="&itLightningCannon7;"
+			name=				"Syrtis lightning cannon"
+			level=				"6"
+			value=				"35000"
+			mass=				"3000"
+			frequency=			"uncommon"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; Ares; Ion"
+			unknownType=			"&itUnknownIonCannon5;"
+			description=		"This antique may have actually seen service in the Syrtis War against the Commonwealth."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				damage=				"ion:2d6+2"
+				fireRate=			"15"
+				lifetime=			"30"
+				powerUse=			"100"
+
+				sound=				"&snLaserCannon;"
+				>
+				
+			<Effect>
+				<Beam
+						beamType=		"lightning"
+						primaryColor=	"0xa0, 0xf0, 0xff"
+						secondaryColor=	"0x00, 0xa9, 0xff"
+						intensity=		"8"
+						/>
+			</Effect>
+		</Weapon>
+	</ItemType>
+	
+	<!-- Ares Lightning Cannon -->
+
+	<ItemType UNID="&itLightningCannon8;"
+			name=				"Ares fourth generation lightning cannon"
+			level=				"8"
+			value=				"85000"
+			mass=				"3000"
+			frequency=			"uncommon"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; Ares; Ion"
+			unknownType=			"&itUnknownIonCannon5;"
+			description=		"This advanced lightning cannon may keep the dated Sandstorm relevant in the modern era."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				damage=				"ion:5d6+4"
+				fireRate=			"15"
+				lifetime=			"30"
+				powerUse=			"550"
+
+				sound=				"&snLaserCannon;"
+				>
+				
+			<Effect>
+				<Beam
+						beamType=		"lightning"
+						primaryColor=	"0xa0, 0xf0, 0xff"
+						secondaryColor=	"0x00, 0xa9, 0xff"
+						intensity=		"8"
+						/>
+			</Effect>
+		</Weapon>
+	</ItemType>
+	
+	<!-- Ares Lightning Cannon -->
+
+	<ItemType UNID="&itLightningCannon9;"
+			name=				"Ares advanced lightning cannon"
+			level=				"9"
+			value=				"145000"
+			mass=				"3000"
+			frequency=			"uncommon"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; Ares; Ion"
+			unknownType=			"&itUnknownIonCannon5;"
+			description=		"During the Syrtis War the lightning cannons of the Orthodoxy were devastating to the Earth Fleet."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				damage=				"ion:6d6+2"
+				fireRate=			"15"
+				lifetime=			"30"
+				powerUse=			"350"
+
+				sound=				"&snLaserCannon;"
+				>
+				
+			<Effect>
+				<Beam
+						beamType=		"lightning"
+						primaryColor=	"0xa0, 0xf0, 0xff"
+						secondaryColor=	"0x00, 0xa9, 0xff"
+						intensity=		"8"
+						/>
+			</Effect>
+		</Weapon>
+	</ItemType>
+
+	<!-- Ares Lightning Cannon -->
+
+	<ItemType UNID="&itLightningCannon2;"
+			name=				"Ares heavy lightning cannon"
+			level=				"7"
+			value=				"45000"
+			mass=				"3000"
+			frequency=			"uncommon"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; Ares; Ion"
+			unknownType=			"&itUnknownIonCannon5;"
+			description=		"During the Syrtis War the lightning cannons of the Orthodoxy were devastating to the Earth Fleet."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				damage=				"ion:6d6"
+				fireRate=			"20"
+				lifetime=			"30"
+				powerUse=			"500"
+				sound=				"&snLaserCannon;"
+				>
+				
+			<Effect>
+				<Beam
+						beamType=		"lightning"
+						primaryColor=	"0xa0, 0xff, 0xff"
+						secondaryColor=	"0x00, 0xff, 0xff"
+						intensity=		"8"
+						/>
+			</Effect>
+		</Weapon>
+	</ItemType>
+
+	<!-- Ares Lightning Cannon -->
+	
+	<ItemType UNID="&itLightningCannon3;"
+			name=				"Ares ER lightning cannon"
+			level=				"7"
+			value=				"45000"
+			mass=				"3000"
+			frequency=			"uncommon"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; Ares; Ion"
+			unknownType=			"&itUnknownIonCannon5;"
+			description=		"During the Syrtis War the lightning cannons of the Orthodoxy were devastating to the Earth Fleet."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				damage=				"ion:4d6+2"
+				fireRate=			"20"
+				lifetime=			"40"
+				powerUse=			"500"
+				sound=				"&snLaserCannon;"
+				>
+				
+			<Effect>
+				<Beam
+						beamType=		"lightning"
+						primaryColor=	"0xa0, 0xf0, 0xff"
+						secondaryColor=	"0x00, 0xff, 0xa9"
+						intensity=		"8"
+						/>
+			</Effect>
+		</Weapon>
+	</ItemType>
+
+	<!-- Ares Lightning Cannon -->
+
+	<ItemType UNID="&itLightningCannon4;"
+			name=				"Ares rapid lightning cannon"
+			level=				"7"
+			value=				"45000"
+			mass=				"3000"
+			frequency=			"uncommon"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; Ares; Ion"
+			unknownType=			"&itUnknownIonCannon5;"
+			description=		"During the Syrtis War the lightning cannons of the Orthodoxy were devastating to the Earth Fleet."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				damage=				"ion:2d6"
+				fireRate=			"6"
+				lifetime=			"30"
+				powerUse=			"350"
+
+				sound=				"&snLaserCannon;"
+				>
+				
+			<Effect>
+				<Beam
+						beamType=		"lightning"
+						primaryColor=	"0xa0, 0xf0, 0xff"
+						secondaryColor=	"0x00, 0xa9, 0xff"
+						intensity=		"8"
+						/>
+			</Effect>
+		</Weapon>
+	</ItemType>
+
+   <!-- Ares Lightning Cannon -->
+
+   <ItemType UNID="&itLightningCannon5;"
+         name=            "Ares turbo lightning cannon"
+			level=				"7"
+			value=				"45000"
+			mass=				"3000"
+			frequency=			"uncommon"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; Ares; Ion"
+			unknownType=			"&itUnknownIonCannon5;"
+			description=		"During the Syrtis War the lightning cannons of the Orthodoxy were devastating to the Earth Fleet."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				damage=				"ion:4d6+2"
+				fireRate=			"15"
+				lifetime=			"30"
+				powerUse=			"500"
+
+				counter=			"capacitor"
+				counterActivate=		"-5"
+				counterUpdate=			"2"
+				counterUpdateRate=		"6"
+
+				sound=				"&snLaserCannon;"
+				>
+				
+			<Effect>
+				<Beam
+						beamType=		"lightning"
+						primaryColor=	"0xa0, 0xf0, 0xff"
+						secondaryColor=	"0x00, 0xa9, 0xff"
+						intensity=		"8"
+						/>
+			</Effect>
+		</Weapon>
+	</ItemType>
+
+	<!-- Ares Lightning Cannon -->
+
+	<ItemType UNID="&itLightningCannon6;"
+		name=			"Ares thunderbolt cannon"
+		level=			"7"
+		value=			"45000"
+		mass=			"3000"
+		frequency=		"uncommon"
+		attributes=		"EnergyWeapon; Military; MajorItem; NotForSale; Ares; Ion"
+		unknownType=		"&itUnknownIonCannon5;"
+		description=	"During the Syrtis War the lightning cannons of the Orthodoxy were devastating to the Earth Fleet."
+		>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=			"beam"
+
+				damage=			"ion:1d6"
+				fireRate=		"20"
+				lifetime=		"30"
+				powerUse=		"500"
+
+				sound=			"&snLaserCannon;"
+				>
+			<Effect>
+				<Beam
+						beamType=		"lightning"
+						primaryColor=	"0xa0, 0xa0, 0xff"
+						secondaryColor=	"0x00, 0x00, 0xff"
+						intensity=		"8"
+						/>
+			</Effect>
+			<Configuration aimTolerance="5">
+				<Shot posAngle="0" posRadius="0" angle="0"/>
+				<Shot posAngle="0" posRadius="0" angle="-2"/>
+				<Shot posAngle="0" posRadius="0" angle="-1"/>
+				<Shot posAngle="0" posRadius="0" angle="1"/>
+				<Shot posAngle="0" posRadius="0" angle="2"/>
+			</Configuration>
+		</Weapon>
+
+	</ItemType>
+
+	<!-- Ares positron cannon -->
+
+	<ItemType UNID="&itAresArchcannon;"
+			name=				"Ares positron cannon"
+			level=				"9"
+			value=				"200000"
+			mass=				"1500"
+			frequency=			"uncommon"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; positron; Ares"
+			unknownType=			"&itUnknownPositronWeapon;"
+			description=		"Ares engineers created this weapon after the Commonwealth developed defenses against their lightning cannon."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"positron:4d8; shield:8"
+				fireRate=			"15"
+				missileSpeed=		"80"
+				interaction=		"0"
+				lifetime=			"60"
+				powerUse=			"1000"
+
+				sound=				"&snLaserCannon;"
+				>
+
+			<Image imageID="&rsMissiles4;" imageX="0" imageY="16" imageWidth="16" imageHeight="16" imageFrameCount="2" imageTicksPerFrame="4"/>
+
+			<Exhaust
+					creationRate=	"10"
+					lifetime=		"70"
+					drag=			"80">
+
+				<Image imageID="&rsMissiles4;" imageX="0" imageY="32" imageWidth="16" imageHeight="16" imageFrameCount="8" imageTicksPerFrame="10"/>
+			</Exhaust>
+		</Weapon>
+	</ItemType>
+
+<!--	NB: level -1	-->
+	
+	<!-- Ares positron cannon -->
+
+	<ItemType UNID="&itAresArchcannon5;"
+			name=				"Ares prototype positron cannon"
+			level=				"8"
+			value=				"100000"
+			mass=				"1500"
+			frequency=			"rare"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; positron; Ares"
+			unknownType=			"&itUnknownPositronWeapon;"
+			description=		"Ares engineers created this weapon after the Commonwealth developed defenses against their lightning cannon. It is unusual to see one of the first limited production run still in service."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"positron:3d8; shield:6"
+				fireRate=			"15"
+				missileSpeed=		"75"
+				interaction=		"0"
+				lifetime=			"60"
+				powerUse=			"1000"
+
+				sound=				"&snLaserCannon;"
+				>
+
+			<Image imageID="&rsMissiles4;" imageX="0" imageY="16" imageWidth="16" imageHeight="16" imageFrameCount="2" imageTicksPerFrame="4"/>
+
+			<Exhaust
+					creationRate=	"10"
+					lifetime=		"70"
+					drag=			"80">
+
+				<Image imageID="&rsMissiles4;" imageX="0" imageY="32" imageWidth="16" imageHeight="16" imageFrameCount="8" imageTicksPerFrame="10"/>
+			</Exhaust>
+		</Weapon>
+	</ItemType>
+
+<!--	NB: level +1	-->
+
+	<!-- Ares positron cannon -->
+
+	<ItemType UNID="&itAresArchcannon6;"
+			name=				"Ares positron archcannon"
+			level=				"10"
+			value=				"400000"
+			mass=				"1500"
+			frequency=			"uncommon"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; positron; Ares"
+			unknownType=			"&itUnknownPositronWeapon;"
+			description=		"Ares engineers created this weapon after the Commonwealth developed defenses against their lightning cannon."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"positron:8d8; shield:8"
+				fireRate=			"15"
+				missileSpeed=		"80"
+				interaction=		"0"
+				lifetime=			"60"
+				powerUse=			"2000"
+
+				sound=				"&snLaserCannon;"
+				>
+
+			<Image imageID="&rsMissiles4;" imageX="0" imageY="16" imageWidth="16" imageHeight="16" imageFrameCount="2" imageTicksPerFrame="4"/>
+
+			<Exhaust
+					creationRate=	"10"
+					lifetime=		"70"
+					drag=			"80">
+
+				<Image imageID="&rsMissiles4;" imageX="0" imageY="32" imageWidth="16" imageHeight="16" imageFrameCount="8" imageTicksPerFrame="10"/>
+			</Exhaust>
+		</Weapon>
+	</ItemType>
+
+	<!-- Positron Beam Weapon -->
+
+	<ItemType UNID="&itAresArchcannon2;"
+			name=				"Ares rapid positron cannon "
+			level=				"9"
+			value=				"200000"
+			mass=				"1500"
+			frequency=			"uncommon"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; positron; Ares"
+			unknownType=			"&itUnknownPositronWeapon;"
+			description=		"Ares engineers created this weapon after the Commonwealth developed defenses against their lightning cannon."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"positron:3d8; shield:8"
+				fireRate=			"12"
+				missileSpeed=			"90"
+				interaction=			"0"
+				lifetime=			"50"
+				powerUse=			"800"
+
+				sound=				"&snLaserCannon;"
+				>
+
+			<Image imageID="&rsMissiles4;" imageX="0" imageY="16" imageWidth="16" imageHeight="16" imageFrameCount="2" imageTicksPerFrame="4"/>
+
+			<Exhaust
+					creationRate=	"10"
+					lifetime=		"60"
+					drag=			"80">
+
+				<Image imageID="&rsMissiles4;" imageX="0" imageY="32" imageWidth="16" imageHeight="16" imageFrameCount="8" imageTicksPerFrame="10"/>
+			</Exhaust>
+		</Weapon>
+	</ItemType>
+
+	<!-- Positron Beam Weapon -->
+
+	<ItemType UNID="&itAresArchcannon3;"
+			name=				"Ares heavy positron cannon"
+			level=				"9"
+			value=				"200000"
+			mass=				"2000"
+			frequency=			"uncommon"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; positron; Ares"
+			unknownType=			"&itUnknownPositronWeapon;"
+			description=		"Ares engineers created this weapon after the Commonwealth developed defenses against their lightning cannon."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"positron:5d8; shield:8"
+				fireRate=			"20"
+				missileSpeed=			"70"
+				interaction=			"0"
+				lifetime=			"70"
+				powerUse=			"1200"
+
+				sound=				"&snLaserCannon;"
+				>
+
+			<Image imageID="&rsMissiles4;" imageX="0" imageY="16" imageWidth="16" imageHeight="16" imageFrameCount="2" imageTicksPerFrame="4"/>
+
+			<Exhaust
+					creationRate=	"10"
+					lifetime=		"80"
+					drag=			"80">
+
+				<Image imageID="&rsMissiles4;" imageX="0" imageY="32" imageWidth="16" imageHeight="16" imageFrameCount="8" imageTicksPerFrame="10"/>
+			</Exhaust>
+		</Weapon>
+	</ItemType>
+
+	<!-- Positron Beam Weapon -->
+
+	<ItemType UNID="&itAresArchcannon4;"
+			name=				"Ares turbo positron cannon"
+			level=				"9"
+			value=				"200000"
+			mass=				"1500"
+			frequency=			"rare"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; positron; Ares"
+			unknownType=			"&itUnknownPositronWeapon;"
+			description=		"Ares engineers created this weapon after the Commonwealth developed defenses against their lightning cannon."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"positron:4d8; shield:8"
+				fireRate=			"6"
+				missileSpeed=			"80"
+				interaction=			"0"
+				lifetime=			"60"
+				powerUse=			"1000"
+
+				counter=         "capacitor"
+				counterActivate=   "-5"
+				counterUpdate=      "2"
+				counterUpdateRate=   "6"
+
+				sound=				"&snLaserCannon;"
+				>
+
+			<Image imageID="&rsMissiles4;" imageX="0" imageY="16" imageWidth="16" imageHeight="16" imageFrameCount="2" imageTicksPerFrame="4"/>
+
+			<Exhaust
+					creationRate=	"10"
+					lifetime=		"40"
+					drag=			"80">
+
+				<Image imageID="&rsMissiles4;" imageX="0" imageY="32" imageWidth="16" imageHeight="16" imageFrameCount="8" imageTicksPerFrame="10"/>
+			</Exhaust>
+		</Weapon>
+	</ItemType>
+
+<!-- Positron Stardust -->
+
+	<ItemType UNID="&itstardust;"
+			name=				"Ares Stardust cannon"
+			level=				"9"
+			value=				"160000"
+			mass=				"3500"
+			frequency=			"veryrare"
+			attributes=			"EnergyWeapon; Military; MajorItem; DigdugWeapons; Positron; Ares"
+			unknownType=			"&itUnknownPositronWeapon;"
+			description=		"The stardust cannon is a positron beam weapon, less powerful than a howitzer, it was designed for skirmish combat and not for assaulting fortified bases."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"particles"
+				damage=				"positron:3d6; WMD1"
+				fireRate=			"10"
+				missileSpeed=		"100"
+				lifetime=			"48"
+				powerUse=			"2200"
+
+				sound=				"&snLaserCannon;"
+				particleCount=		"1d5+3"
+				particleSpreadAngle="8"
+				>
+
+			<Effect>
+				<Starburst
+						style=			"morningStar"
+						spikeCount=		"15"
+						spikeLength=	"3-8"
+						primaryColor=	"0x66, 0x33, 0x33"
+						secondaryColor=	"0xff, 0xff, 0x80"
+						/>
+	
+			</Effect>
+		</Weapon>
+	</ItemType>
+
+	<!-- Ares Lightning Turret -->
+
+	<ItemType UNID="&itLightningTurret;"
+			name=				"Ares lightning turret"
+			level=				"8"
+			value=				"75000"
+			mass=				"6000"
+			frequency=			"veryrare"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; Ion; OmniWeapon; Ares"
+			unknownType=			"&itUnknownIonCannon6;"
+			description=		"This omnidirectional turret combines two lightning cannons."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				omnidirectional=	"true"
+				configuration=		"alternating"
+				damage=				"ion:4d6+2"
+				fireRate=			"3"
+				lifetime=			"40"
+				powerUse=			"1000"
+
+				counter=			"capacitor"
+				counterActivate=	"-5"
+				counterUpdate=		"2"
+				counterUpdateRate=	"6"
+
+				sound=				"&snLaserCannon;"
+				>
+			<Effect>
+				<Beam
+						beamType=		"lightning"
+						primaryColor=	"0xa0, 0xf0, 0xff"
+						secondaryColor=	"0x00, 0xa9, 0xff"
+						intensity=		"8"
+						/>
+			</Effect>
+		</Weapon>
+	</ItemType>
+
+	<!-- Ares Lightning Turret -->
+
+	<ItemType UNID="&itLightningTurret2;"
+			name=				"Ares lightning miniturret"
+			level=				"8"
+			value=				"75000"
+			mass=				"6000"
+			frequency=			"veryrare"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; Ion; OmniWeapon; Ares"
+			unknownType=			"&itUnknownIonCannon6;"
+			description=		"This omnidirectional turret combines two lightning cannons."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				omnidirectional=	"true"
+				damage=				"ion:4d6+2"
+				fireRate=			"6"
+				lifetime=			"40"
+				powerUse=			"1000"
+
+				counter=			"capacitor"
+				counterActivate=	"-5"
+				counterUpdate=		"2"
+				counterUpdateRate=	"6"
+
+				sound=				"&snLaserCannon;"
+				>
+			<Effect>
+				<Beam
+						beamType=		"lightning"
+						primaryColor=	"0xa0, 0xf0, 0xff"
+						secondaryColor=	"0x00, 0xa9, 0xff"
+						intensity=		"8"
+						/>
+			</Effect>
+		</Weapon>
+	</ItemType>
+
+   <!-- Ares Lightning Turret -->
+
+   <ItemType UNID="&itLightningTurret3;"
+			name=				"Ares storm turret"
+			level=				"8"
+			value=				"75000"
+			mass=				"6000"
+			frequency=			"veryrare"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; Ion; OmniWeapon; Ares"
+			unknownType=			"&itUnknownIonCannon6;"
+			description=		"This omnidirectional turret combines two lightning cannons."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				omnidirectional=	"true"
+				configuration=		"dual"
+				damage=				"ion:4d6+2"
+				fireRate=			"8"
+				lifetime=			"40"
+				powerUse=			"1000"
+
+				counter=			"capacitor"
+				counterActivate=	"-10"
+				counterUpdate=		"2"
+				counterUpdateRate=	"6"
+
+				sound=				"&snLaserCannon;"
+				>
+			<Effect>
+				<Beam
+						beamType=		"lightning"
+						primaryColor=	"0xa0, 0xf0, 0xff"
+						secondaryColor=	"0x00, 0xa9, 0xff"
+						intensity=		"8"
+						/>
+			</Effect>
+		</Weapon>
+	</ItemType>
+   
+    <!-- Ares Lightning Turret -->
+
+   <ItemType UNID="&itLightningTurret4;"
+			name=				"Ares arc lightning turret"
+			level=				"8"
+			value=				"75000"
+			mass=				"6000"
+			frequency=			"veryrare"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; Ion; OmniWeapon; Ares"
+			unknownType=			"&itUnknownIonCannon6;"
+			description=		"This omnidirectional turret combines two lightning cannons."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				omnidirectional=		"true"
+				multitarget=			"true"
+				damage=				"ion:4d6+2"
+				fireRate=			"8"
+				lifetime=			"40"
+				powerUse=			"1000"
+
+				counter=			"capacitor"
+				counterActivate=	"-5"
+				counterUpdate=		"2"
+				counterUpdateRate=	"6"
+
+				sound=				"&snLaserCannon;"
+				>
+			<Effect>
+				<Beam
+						beamType=		"lightning"
+						primaryColor=	"0xa0, 0xf0, 0xff"
+						secondaryColor=	"0x00, 0xa9, 0xff"
+						intensity=		"8"
+						/>
+			</Effect>
+			<Configuration aimTolerance="5">
+				<Shot posAngle="90" posRadius="12" angle="-1"/>
+				<Shot posAngle="270" posRadius="12" angle="1"/>
+     			</Configuration>
+		</Weapon>
+	</ItemType>
+
+	<!-- Hecates Cannon -->
+
+	<ItemType UNID="&itHecatesCannon;"
+			name=				"Hecates cannon"
+			level=				"8"
+			value=				"85000"
+			mass=				"6000"
+			frequency=			"veryrare"
+			numberAppearing=		"1"
+			attributes=			"MajorItem; Military; NotForSale; Ares; ThermoCannon; Howitzer"
+			unknownType=			"&itUnknownThermoCannon2;"
+			description=		"The Hecates cannon is a fusion howitzer used by Ares destroyers."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"thermo:8d12+8; momentum3; WMD5"
+				fireRate=			"40"
+				missileSpeed=			"50"
+				lifetime=			"120"
+				hitPoints=			"30"
+				powerUse=			"900"
+				recoil=				"2"
+
+				fireEffect=			"&efMediumCannonFlash;"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Starburst
+						style=			"morningStar"
+						spikeCount=		"2d6+10"
+						spikeLength=	"2d10"
+						primaryColor=	"0xff, 0xff, 0x80"
+						secondaryColor=	"0xd0, 0x20, 0x00"
+						/>
+			</Effect>
+
+			<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsExplosionsAG96;" 
+						imageX="0" 
+						imageY="0" 
+						imageWidth="96" 
+						imageHeight="96"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+			</HitEffect>
+		</Weapon>
+	</ItemType>
+
+<!--	NB: level -1	-->
+	
+	<!-- Hecates Cannon -->
+
+	<ItemType UNID="&itHecatesCannon4;"
+			name=				"Syrtis fusion howitzer"
+			level=				"7"
+			value=				"45000"
+			mass=				"6000"
+			frequency=			"veryrare"
+			numberAppearing=		"1"
+			attributes=			"MajorItem; Military; NotForSale; Ares; ThermoCannon; Howitzer"
+			unknownType=			"&itUnknownThermoCannon2;"
+			description=		"This antiquated weapon is seen only among third line Ares forces."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"thermo:4d12+4; momentum3; WMD5"
+				fireRate=			"40"
+				missileSpeed=			"50"
+				lifetime=			"120"
+				hitPoints=			"30"
+				powerUse=			"500"
+				recoil=				"2"
+
+				fireEffect=			"&efMediumCannonFlash;"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Starburst
+						style=			"morningStar"
+						spikeCount=		"2d6+10"
+						spikeLength=	"2d10"
+						primaryColor=	"0xff, 0xff, 0x80"
+						secondaryColor=	"0xd0, 0x20, 0x00"
+						/>
+			</Effect>
+
+			<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsExplosionsAG96;" 
+						imageX="0" 
+						imageY="0" 
+						imageWidth="96" 
+						imageHeight="96"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+			</HitEffect>
+		</Weapon>
+	</ItemType>
+
+<!--	NB: level +1	-->
+
+	<!-- Hecates Cannon -->
+
+	<ItemType UNID="&itHecatesCannon5;"
+			name=				"Trivia cannon"
+			level=				"9"
+			value=				"165000"
+			mass=				"6000"
+			frequency=			"veryrare"
+			numberAppearing=		"1"
+			attributes=			"MajorItem; Military; NotForSale; Ares; ThermoCannon; Howitzer"
+			unknownType=			"&itUnknownThermoCannon2;"
+			description=		"The Trivia cannon is a fusion howitzer used by the newest Ares destroyers."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"thermo:15d12+5; momentum1; WMD5"
+				fireRate=			"40"
+				missileSpeed=			"50"
+				lifetime=			"120"
+				hitPoints=			"30"
+				powerUse=			"1500"
+				recoil=				"2"
+
+				fireEffect=			"&efMediumCannonFlash;"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Starburst
+						style=			"morningStar"
+						spikeCount=		"2d6+10"
+						spikeLength=	"2d10"
+						primaryColor=	"0xff, 0xff, 0x80"
+						secondaryColor=	"0xd0, 0x20, 0x00"
+						/>
+			</Effect>
+
+			<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsExplosionsAG96;" 
+						imageX="0" 
+						imageY="0" 
+						imageWidth="96" 
+						imageHeight="96"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+			</HitEffect>
+		</Weapon>
+	</ItemType>
+
+	<!-- Hecates Cannon -->
+
+	<ItemType UNID="&itHecatesCannon2;"
+			name=				"Medea cannon"
+			level=				"8"
+			value=				"85000"
+			mass=				"6000"
+			frequency=			"veryrare"
+			numberAppearing=		"1"
+			attributes=			"MajorItem; Military; NotForSale; Ares; ThermoCannon; Howitzer"
+			unknownType=			"&itUnknownThermoCannon2;"
+			description=		"The Medea cannon is a light fusion howitzer used by Ares destroyers."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"thermo:4d12+4; momentum3; WMD5"
+				fireRate=			"20"
+				missileSpeed=			"75"
+				lifetime=			"80"
+				hitPoints=			"15"
+				powerUse=			"900"
+				recoil=				"2"
+
+				fireEffect=			"&efMediumCannonFlash;"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Starburst
+						style=			"morningStar"
+						spikeCount=		"2d6+10"
+						spikeLength=	"2d10"
+						radius=		"10"
+						primaryColor=	"0xff, 0xff, 0x80"
+						secondaryColor=	"0xd0, 0x20, 0x00"
+						/>
+			</Effect>
+
+			<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsExplosionsAG96;" 
+						imageX="0" 
+						imageY="0" 
+						imageWidth="96" 
+						imageHeight="96"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+			</HitEffect>
+		</Weapon>
+	</ItemType>
+
+	<!-- Hecates Cannon -->
+
+	<ItemType UNID="&itHecatesCannon3;"
+			name=				"Circe cannon"
+			level=				"8"
+			value=				"85000"
+			mass=				"6000"
+			frequency=			"veryrare"
+			numberAppearing=		"1"
+			attributes=			"MajorItem; Military; NotForSale; Ares; ThermoCannon; Howitzer"
+			unknownType=			"&itUnknownThermoCannon2;"
+			description=		"The Circe cannon is a fusion howitzer used by Ares destroyers."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"thermo:6d12+6; momentum3; WMD7"
+				fireRate=			"40"
+				missileSpeed=			"50"
+				lifetime=			"120"
+				hitPoints=			"30"
+				powerUse=			"900"
+				recoil=				"2"
+
+				maneuverability=		"16"
+
+				fireEffect=			"&efMediumCannonFlash;"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Starburst
+						style=			"morningStar"
+						spikeCount=		"2d6+10"
+						spikeLength=	"2d10"
+						radius=		"15"
+						primaryColor=	"0xff, 0xff, 0x80"
+						secondaryColor=	"0xd0, 0x20, 0x00"
+						/>
+			</Effect>
+
+			<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsExplosionsAG96;" 
+						imageX="0" 
+						imageY="0" 
+						imageWidth="96" 
+						imageHeight="96"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+			</HitEffect>
+		</Weapon>
+	</ItemType>
+
+	<!-- Ares plasma cannon -->
+
+	<ItemType UNID="&itAresPlasmaCannon;"
+			name=				"Ares plasma archcannon"
+			level=				"10"
+			value=				"500000"
+			mass=				"10000"
+			frequency=			"veryrare"
+			attributes=			"Ares; Howitzer; MajorItem; Military; NotForSale; Plasma"
+
+			description=		"The most powerful weapon in the Ares fleet. The plasma archcannon can destroy anything that's not protected by massive shields and armor."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				deviceSlots=		"2"
+
+				damage=				"plasma:24d24; WMD7"
+				fireRate=			"80"
+				missileSpeed=			"65"
+				lifetime=			"120"
+				hitPoints=			"30"
+				powerUse=			"3000"
+
+				sound=				"&snLaserCannon;"
+
+				vaporTrailLength=	"24"
+				vaporTrailWidth=	"150"
+				vaporTrailWidthInc=	"10"
+				vaporTrailColor=	"0x57, 0x38, 0x00"
+				>
+
+			<FireEffect>
+				<Flare
+						style=				"fadingBlast"
+						lifetime=			"6"
+						radius=				"80"
+						primaryColor=		"0xff, 0xff, 0xf0"
+					/>
+			</FireEffect>
+
+			<Effect>
+				<MoltenBolt
+						width=				"8"
+						growth=				"24"
+						primaryColor=		"0xff, 0xed, 0xcd"
+						secondaryColor=		"0xff, 0xb3, 0x27"
+						/>
+			</Effect>
+		</Weapon>
+	</ItemType>
+
+<!--	NB: level -1	-->
+	
+	<!-- Ares plasma cannon -->
+
+	<ItemType UNID="&itAresPlasmaCannon5;"
+			name=				"Ares plasma cannon"
+			level=				"9"
+			value=				"250000"
+			mass=				"10000"
+			frequency=			"veryrare"
+			attributes=			"Ares; Howitzer; MajorItem; Military; NotForSale; Plasma"
+
+			description=		"The most powerful weapon in the Ares fleet. The plasma archcannon can destroy anything that's not protected by massive shields and armor."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				deviceSlots=		"2"
+
+				damage=				"plasma:12d24; WMD7"
+				fireRate=			"80"
+				missileSpeed=			"65"
+				lifetime=			"120"
+				hitPoints=			"30"
+				powerUse=			"2000"
+
+				sound=				"&snLaserCannon;"
+
+				vaporTrailLength=	"24"
+				vaporTrailWidth=	"150"
+				vaporTrailWidthInc=	"10"
+				vaporTrailColor=	"0x57, 0x38, 0x00"
+				>
+
+			<FireEffect>
+				<Flare
+						style=				"fadingBlast"
+						lifetime=			"6"
+						radius=				"80"
+						primaryColor=		"0xff, 0xff, 0xf0"
+					/>
+			</FireEffect>
+
+			<Effect>
+				<MoltenBolt
+						width=				"8"
+						growth=				"24"
+						primaryColor=		"0xff, 0xed, 0xcd"
+						secondaryColor=		"0xff, 0xb3, 0x27"
+						/>
+			</Effect>
+		</Weapon>
+	</ItemType>
+
+	<!-- Ares plasma cannon -->
+
+	<ItemType UNID="&itAresPlasmaCannon2;"
+			name=				"Ares turbo plasma archcannon"
+			level=				"10"
+			value=				"500000"
+			mass=				"10000"
+			frequency=			"veryrare"
+			attributes=			"Ares; Howitzer; MajorItem; Military; NotForSale; Plasma"
+
+			description=		"The most powerful weapon in the Ares fleet. The plasma archcannon can destroy anything that's not protected by massive shields and armor."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				deviceSlots=		"2"
+
+				damage=				"plasma:5d24; WMD7"
+				fireRate=			"6"
+				missileSpeed=			"65"
+				lifetime=			"120"
+				hitPoints=			"30"
+				powerUse=			"3000"
+
+				counter=			"temperature"
+				counterActivate=	"20"
+				counterUpdate=		"-10"
+				counterUpdateRate=	"8"
+
+				sound=				"&snLaserCannon;"
+
+				vaporTrailLength=	"24"
+				vaporTrailWidth=	"150"
+				vaporTrailWidthInc=	"10"
+				vaporTrailColor=	"0x57, 0x38, 0x00"
+				>
+
+			<FireEffect>
+				<Flare
+						style=				"fadingBlast"
+						lifetime=			"6"
+						radius=				"80"
+						primaryColor=		"0xff, 0xff, 0xf0"
+					/>
+			</FireEffect>
+
+			<Effect>
+				<MoltenBolt
+						width=				"8"
+						growth=				"24"
+						primaryColor=		"0xff, 0xed, 0xcd"
+						secondaryColor=		"0xff, 0xb3, 0x27"
+						/>
+			</Effect>
+		</Weapon>
+		<Events>
+			<OnAIUpdate>
+				(if (itmIsDamaged gItem)
+					(shpRepairItem gSource gItem)
+				)
+			</OnAIUpdate>
+		</Events>
+	</ItemType>
+
+	<!-- Ares plasma cannon -->
+
+	<ItemType UNID="&itAresPlasmaCannon3;"
+			name=				"Ares advanced plasma archcannon"
+			level=				"10"
+			value=				"500000"
+			mass=				"10000"
+			frequency=			"veryrare"
+			attributes=			"Ares; Howitzer; MajorItem; Military; NotForSale; Plasma"
+
+			description=		"The most powerful weapon in the Ares fleet. The plasma archcannon can destroy anything that's not protected by massive shields and armor."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"particles"
+				deviceSlots=		"2"
+				minFireArc=		"350"
+				maxFireArc=		"10"
+
+				damage=				"plasma:300; WMD7"
+				fireRate=			"80"
+				missileSpeed=			"65"
+				lifetime=			"120"
+				hitPoints=			"30"
+				powerUse=			"3000"
+
+
+				particleCount=      "1d20+20"
+				particleSpreadAngle="4"
+
+				sound=				"&snLaserCannon;"
+
+				vaporTrailLength=	"24"
+				vaporTrailWidth=	"150"
+				vaporTrailWidthInc=	"10"
+				vaporTrailColor=	"0x57, 0x38, 0x00"
+				>
+
+			<FireEffect>
+				<Flare
+						style=				"fadingBlast"
+						lifetime=			"6"
+						radius=				"80"
+						primaryColor=		"0xff, 0xff, 0xf0"
+					/>
+			</FireEffect>
+
+			<Effect>
+				<MoltenBolt
+						width=				"4"
+						length=				"64"
+						growth=				"4"
+						primaryColor=		"0xff, 0xed, 0xcd"
+						secondaryColor=		"0xff, 0xb3, 0x27"
+						/>
+			</Effect>
+		</Weapon>
+	</ItemType>
+   
+	<!-- Ares plasma cannon -->
+
+	<ItemType UNID="&itAresPlasmaCannon4;"
+			name=				"Ares seeking plasma archcannon"
+			level=				"10"
+			value=				"500000"
+			mass=				"10000"
+			frequency=			"veryrare"
+			attributes=			"Ares; Howitzer; MajorItem; Military; NotForSale; Plasma"
+
+			description=		"The most powerful weapon in the Ares fleet. The plasma archcannon can destroy anything that's not protected by massive shields and armor."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				deviceSlots=		"2"
+
+				damage=				"plasma:20d20; WMD7"
+				fireRate=			"80"
+				missileSpeed=			"65"
+				lifetime=			"120"
+				hitPoints=			"30"
+				powerUse=			"3000"
+
+				maneuverability=		"8"
+
+				sound=				"&snLaserCannon;"
+				>
+
+			<FireEffect>
+				<Flare
+						style=				"fadingBlast"
+						lifetime=			"6"
+						radius=				"80"
+						primaryColor=		"0xff, 0xff, 0xf0"
+					/>
+			</FireEffect>
+
+			<Effect>
+				<MoltenBolt
+						width=				"8"
+						length=				"64"
+						growth=				"12"
+						primaryColor=		"0xff, 0xed, 0xcd"
+						secondaryColor=		"0xff, 0xb3, 0x27"
+						/>
+				<PlasmaSphere
+						spikeCount=		"1d6+2"
+						spikeLength=	"2d20"
+						radius=		"40"
+						primaryColor=	"0xff, 0xed, 0xcd"
+						secondaryColor=	"0xff, 0xb3, 0x27"
+							/>
+			</Effect>
+		</Weapon>
+	</ItemType>
+	
+	<!-- Ferian Cannon -->
+
+	<ItemType UNID="&itFerianCannon;"
+			name=				"Ferian plasma cannon"
+			level=				"9"
+			value=				"88000"
+			mass=				"5000"
+			frequency=			"veryrare"
+			attributes=			"Ferian; MajorItem; Military; NotForSale; Plasma"
+			unknownType=		"&itUnknownPlasmaWeapon5;"
+			description=		"Ferians have adapted their plasma torches for combat."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"particles"
+
+				damage=				"plasma:50; mining2; WMD4"
+				fireRate=			"30"
+				missileSpeed=		"60"
+				lifetime=			"40"
+				powerUse=			"2000"
+
+				particleCount=		"500"
+				particleSpreadAngle="1"
+				particleSplashChance="50"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Particle
+						style=			"flame"
+						minWidth=		"3" 
+						maxWidth=		"3-7"
+						/>
+			</Effect>
+		</Weapon>
+
+	</ItemType>
+
+<!--	NB: level -1	-->
+	
+	<!-- Ferian Cannon -->
+
+	<ItemType UNID="&itFerianCannon4;"
+			name=				"Ferian lesser plasma cannon"
+			level=				"8"
+			value=				"48000"
+			mass=				"5000"
+			frequency=			"veryrare"
+			attributes=			"Ferian; MajorItem; Military; NotForSale; Plasma"
+			unknownType=		"&itUnknownPlasmaWeapon5;"
+			description=		"Ferians have adapted their plasma torches for combat."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"particles"
+
+				damage=				"plasma:25; mining2; WMD4"
+				fireRate=			"30"
+				missileSpeed=		"60"
+				lifetime=			"40"
+				powerUse=			"2000"
+
+				particleCount=		"500"
+				particleSpreadAngle="1"
+				particleSplashChance="50"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Particle
+						style=			"flame"
+						minWidth=		"3" 
+						maxWidth=		"3-7"
+						/>
+			</Effect>
+		</Weapon>
+
+	</ItemType>
+	
+	<!-- Ferian Cannon -->
+
+	<ItemType UNID="&itFerianCannon5;"
+			name=				"Ringer plasma torch"
+			level=				"10"
+			value=				"170000"
+			mass=				"5000"
+			frequency=			"veryrare"
+			attributes=			"Ferian; Ringer; MajorItem; Military; NotForSale; Plasma"
+			unknownType=		"&itUnknownPlasmaWeapon5;"
+			description=		"This appears to be a Ringer designed upgrade of the Ferian plasma cannon."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"particles"
+
+				damage=				"plasma:80; mining2; WMD4"
+				fireRate=			"30"
+				missileSpeed=		"60"
+				lifetime=			"40"
+				powerUse=			"2000"
+
+				particleCount=		"500"
+				particleSpreadAngle="1"
+				particleSplashChance="50"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Particle
+						style=			"flame"
+						minWidth=		"3" 
+						maxWidth=		"3-7"
+						/>
+			</Effect>
+		</Weapon>
+
+	</ItemType>
+	
+	<!-- Ferian Cannon -->
+
+	<ItemType UNID="&itFerianCannon2;"
+			name=				"Ferian plasma blaster"
+			level=				"9"
+			value=				"95000"
+			mass=				"5000"
+			frequency=			"veryrare"
+			attributes=			"Ferian; MajorItem; Military; NotForSale; Plasma"
+			unknownType=		"&itUnknownPlasmaWeapon5;"
+			description=		"Ferians have adapted their plasma torches for combat."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"particles"
+
+				damage=				"plasma:55; mining2; WMD4"
+				fireRate=			"30"
+				missileSpeed=		"60"
+				lifetime=			"40"
+				powerUse=			"2000"
+
+				particleCount=		"3d20"
+				particleSpreadAngle="3"
+				particleSplashChance="90"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				
+			    
+				<Flare
+						style=				"fadingBlast"
+						lifetime=			"20"
+						radius=				"30"
+						primaryColor=		"0xff, 0xd9, 0x91"
+					/>
+			
+				
+			</Effect>
+			
+			
+		</Weapon>
+
+	</ItemType>
+	
+	<!-- Ferian Cannon -->
+
+	<ItemType UNID="&itFerianCannon3;"
+			name=				"Ferian plasma incinerator"
+			level=				"9"
+			value=				"88000"
+			mass=				"5000"
+			frequency=			"veryrare"
+			attributes=			"Ferian; MajorItem; Military; NotForSale; Plasma"
+			unknownType=		"&itUnknownPlasmaWeapon5;"
+			description=		"Ferians have adapted their plasma torches for combat."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"particles"
+
+				damage=				"plasma:45; mining2; WMD4"
+				fireRate=			"30"
+				missileSpeed=		"60"
+				lifetime=			"40"
+				powerUse=			"2000"
+
+				particleCount=		"3d30"
+				particleSpreadAngle="2"
+				
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				
+			    
+				<Particle
+						style=			"flame"
+						minWidth=		"5" 
+						maxWidth=		"5-7"
+						/>
+				<SmokeTrail
+							spread=			"4-6"
+							particleLifetime="30"
+							emitDuration=	"80"
+							emitRate=		"16-20"
+							emitSpeed=		"30-35"
+							>
+						<ParticleEffect>
+							<Particle
+									style=			"flame"
+									maxWidth=		"2-5"
+									/>
+						</ParticleEffect>
+					</SmokeTrail>
+			
+				
+			</Effect>
+		</Weapon>
+	</ItemType>
+	
+	<!-- Xenophobe lancer -->
+
+	<ItemType UNID="&itXenophobeLancer;"
+			name=				"Xenophobe ion lancer"
+			level=				"7"
+			value=				"45000"
+			mass=				"4500"
+			frequency=			"rare"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; Ion; Xenophobe"
+			unknownType=		"&itUnknownIonCannon5;"
+			description=		"The Xenophobes developed this powerful ion weapon for their Worldships."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				repeating=			"4"
+				damage=				"ion:1d10"
+				fireRate=			"15"
+				missileSpeed=		"100"
+				lifetime=			"60"
+				interaction=		"25"
+				powerUse=			"650"
+
+				sound=				"&snLaserCannon;"
+				>
+
+			<Effect>
+				<Shape
+						directional=		"true"
+						scaleLength=		"72" 
+						scaleWidth=			"6"
+
+						color=				"0x00, 0xfc, 0x00"
+						opacity=			"140"
+						>
+					<Point x="0"	y="0"/>
+					<Point x="-35"	y="50"/>
+					<Point x="-100"	y="0"/>
+					<Point x="-35"	y="-50"/>
+				</Shape>
+
+				<Shape
+						directional=		"true"
+						scaleLength=		"72" 
+						scaleWidth=			"3"
+
+						color=				"0xe0, 0xfc, 0xe0"
+						opacity=			"255"
+						>
+					<Point x="0"	y="0"/>
+					<Point x="-35"	y="50"/>
+					<Point x="-100"	y="0"/>
+					<Point x="-35"	y="-50"/>
+				</Shape>
+
+				<Shape
+						directional=		"true"
+						scaleLength=		"64" 
+						scaleWidth=			"2"
+
+						color=				"0xff, 0xff, 0xff"
+						opacity=			"255"
+						>
+					<Point x="0"	y="0"/>
+					<Point x="-25"	y="50"/>
+					<Point x="-100"	y="0"/>
+					<Point x="-25"	y="-50"/>
+				</Shape>
+			</Effect>
+		</Weapon>
+
+	</ItemType>
+
+<!--	NB: level -1	-->
+	
+	<!-- Xenophobe lancer -->
+
+	<ItemType UNID="&itXenophobeLancer2;"
+			name=				"primitive Xenophobe ion lancer"
+			level=				"6"
+			value=				"25000"
+			mass=				"4500"
+			frequency=			"rare"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; Ion; Xenophobe"
+			unknownType=		"&itUnknownIonCannon5;"
+			description=		"The Xenophobes developed this powerful ion weapon for their Worldships."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				repeating=			"3"
+				damage=				"ion:1d8"
+				fireRate=			"15"
+				missileSpeed=		"100"
+				lifetime=			"60"
+				interaction=		"25"
+				powerUse=			"650"
+
+				sound=				"&snLaserCannon;"
+				>
+
+			<Effect>
+				<Shape
+						directional=		"true"
+						scaleLength=		"72" 
+						scaleWidth=			"6"
+
+						color=				"0x00, 0xfc, 0x00"
+						opacity=			"140"
+						>
+					<Point x="0"	y="0"/>
+					<Point x="-35"	y="50"/>
+					<Point x="-100"	y="0"/>
+					<Point x="-35"	y="-50"/>
+				</Shape>
+
+				<Shape
+						directional=		"true"
+						scaleLength=		"72" 
+						scaleWidth=			"3"
+
+						color=				"0xe0, 0xfc, 0xe0"
+						opacity=			"255"
+						>
+					<Point x="0"	y="0"/>
+					<Point x="-35"	y="50"/>
+					<Point x="-100"	y="0"/>
+					<Point x="-35"	y="-50"/>
+				</Shape>
+
+				<Shape
+						directional=		"true"
+						scaleLength=		"64" 
+						scaleWidth=			"2"
+
+						color=				"0xff, 0xff, 0xff"
+						opacity=			"255"
+						>
+					<Point x="0"	y="0"/>
+					<Point x="-25"	y="50"/>
+					<Point x="-100"	y="0"/>
+					<Point x="-25"	y="-50"/>
+				</Shape>
+			</Effect>
+		</Weapon>
+
+	</ItemType>
+
+<!--	NB: level +1	-->
+
+	<!-- Xenophobe lancer -->
+
+	<ItemType UNID="&itXenophobeLancer3;"
+			name=				"Xenophobe ion streamer"
+			level=				"8"
+			value=				"85000"
+			mass=				"4500"
+			frequency=			"rare"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; Ion; Xenophobe"
+			unknownType=		"&itUnknownIonCannon5;"
+			description=		"The Xenophobes developed this powerful ion weapon for their Worldships."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"ion:1d10"
+				fireRate=			"2"
+				missileSpeed=		"100"
+				lifetime=			"60"
+				interaction=		"25"
+				powerUse=			"200"
+
+				sound=				"&snLaserCannon;"
+				>
+
+			<Effect>
+				<Shape
+						directional=		"true"
+						scaleLength=		"72" 
+						scaleWidth=			"6"
+
+						color=				"0x00, 0xfc, 0x00"
+						opacity=			"140"
+						>
+					<Point x="0"	y="0"/>
+					<Point x="-35"	y="50"/>
+					<Point x="-100"	y="0"/>
+					<Point x="-35"	y="-50"/>
+				</Shape>
+
+				<Shape
+						directional=		"true"
+						scaleLength=		"72" 
+						scaleWidth=			"3"
+
+						color=				"0xe0, 0xfc, 0xe0"
+						opacity=			"255"
+						>
+					<Point x="0"	y="0"/>
+					<Point x="-35"	y="50"/>
+					<Point x="-100"	y="0"/>
+					<Point x="-35"	y="-50"/>
+				</Shape>
+
+				<Shape
+						directional=		"true"
+						scaleLength=		"64" 
+						scaleWidth=			"2"
+
+						color=				"0xff, 0xff, 0xff"
+						opacity=			"255"
+						>
+					<Point x="0"	y="0"/>
+					<Point x="-25"	y="50"/>
+					<Point x="-100"	y="0"/>
+					<Point x="-25"	y="-50"/>
+				</Shape>
+			</Effect>
+		</Weapon>
+
+	</ItemType>
+	
+	    <!-- Iocrym Fracture cannon -->
+
+	<ItemType UNID="&itIocrymFractureCannon;"
+			name=				"Iocrym Fracture cannon"
+			level=				"10"
+			value=				"400000"
+			mass=				"5000"
+			frequency=			"veryrare"
+			attributes=			"Alien; EnergyWeapon; Military; MajorItem; NotForSale; Plasma; Iocrym"
+			unknownType=		"&itUnknownAlienDevice10;"
+
+			description=		"This is a plasma weapon used by the Iocrym gunships."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=			"particles"
+				count=			"1d4+4"
+
+				damage=			"plasma:50; WMD2"
+				fireRate=		"15"
+				missileSpeed=	"20-40"
+				lifetime=		"26-32"
+				powerUse=		"3000"
+
+				particleCount=	"5d6"
+				particleEmitTime="5-12"
+				particleSpreadWidth="25" 
+				particleSpreadAngle="0"
+
+				sound=			"&snMissileLauncher;"
+				>
+
+			<Configuration aimTolerance="5">
+				<Shot posAngle="90"  posRadius="10" angle="0"/>
+				<Shot posAngle="270" posRadius="10" angle="0"/>
+			</Configuration>
+
+			<Effect>
+				<Shape
+						directional=		"true"
+						scaleLength=		"16" 
+						scaleWidth=			"6"
+
+						scaleLengthInc=		"3" 
+
+						color=				"0xff, 0xfd, 0xad"
+						opacity=			"64"
+						>
+					<Point x="0"	y="0"/>
+					<Point x="-5"	y="29"/>
+					<Point x="-10"	y="44"/>
+					<Point x="-20"	y="50"/>
+					<Point x="-30"	y="47"/>
+					<Point x="-40"	y="44"/>
+					<Point x="-100"	y="0"/>
+					<Point x="-40"	y="-44"/>
+					<Point x="-30"	y="-47"/>
+					<Point x="-20"	y="-50"/>
+					<Point x="-10"	y="-44"/>
+					<Point x="-5"	y="-29"/>
+				</Shape>
+			</Effect>
+		</Weapon>
+
+	</ItemType>
+	
+		<!-- Iocrym Repeller -->
+
+	<ItemType UNID="&itIocrymRepeller;"
+			name=				"Iocrym repeller"
+			level=				"10"
+			value=				"400000"
+			mass=				"5000"
+			frequency=			"veryrare"
+			attributes=			"EnergyWeapon; Military; MajorItem; Alien; Plasma; NotForSale; Iocrym"
+			unknownType=		"&itUnknownAlienDevice10;"
+
+			description=		"This is a short-range weapon used by Iocrym commandships to defend their perimeter."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"plasma:4d12; momentum6; WMD3"
+				fireRate=			"10"
+				missileSpeed=		"65"
+				lifetime=			"10"
+				powerUse=			"3000"
+
+				sound=				"&snRecoillessCannon;"
+				vaporTrailLength=	"50"
+				vaporTrailWidth=	"110"
+				vaporTrailWidthInc=	"1"
+				vaporTrailColor=	"0xff, 0x65, 0x21"
+				>
+
+			<Effect>
+				<MoltenBolt
+						width=				"3"
+						length=				"16"
+						growth=				"3"
+						primaryColor=		"0xff, 0xfd, 0xad"
+						secondaryColor=		"0xff, 0x65, 0x21"
+						/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+	
+	<!-- Avalanche cannon -->
+
+	<ItemType UNID="&itPlasmaThrower;"
+			name=				"Iocrym Avalanche cannon"
+			level=				"12"
+			value=				"1000000"
+			mass=				"50000"
+			attributes=			"Alien; MajorItem; Plasma; Iocrym"
+			frequency=			"rare"
+			unknownType=		"&itUnknownAlienDevice10;"
+
+			description=		"This weapon is used on Iocrym capital ships."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		
+		<Weapon
+				type=			"particles"
+				count=			"1d4+4"
+
+				configuration=	"wall"
+				damage=			"plasma:50; WMD5"
+				fireRate=		"20"
+				missileSpeed=	"20-40"
+				lifetime=		"26-32"
+				powerUse=		"6000"
+
+				particleCount=	"5d6"
+				particleEmitTime="5-12"
+				particleSpreadWidth="25" 
+				particleSpreadAngle="0"
+
+				sound=			"&snMissileLauncher;"
+				>
+
+			<Effect>
+				<Shape
+						directional=		"true"
+						scaleLength=		"16" 
+						scaleWidth=			"6"
+
+						scaleLengthInc=		"3" 
+
+						color=				"0xff, 0xfd, 0xad"
+						opacity=			"64"
+						>
+					<Point x="0"	y="0"/>
+					<Point x="-5"	y="29"/>
+					<Point x="-10"	y="44"/>
+					<Point x="-20"	y="50"/>
+					<Point x="-30"	y="47"/>
+					<Point x="-40"	y="44"/>
+					<Point x="-100"	y="0"/>
+					<Point x="-40"	y="-44"/>
+					<Point x="-30"	y="-47"/>
+					<Point x="-20"	y="-50"/>
+					<Point x="-10"	y="-44"/>
+					<Point x="-5"	y="-29"/>
+				</Shape>
+			</Effect>
+		</Weapon>
+
+	</ItemType>
+		
+<!-- LEVEL XIII -->
+	
+	<!-- Quantumsphere disintegrator -->
+
+	<ItemType UNID="&itQuantumsphereDisintegrator;"
+			name=				"Quantumsphere disintegrator"
+			level=				"13"
+			value=				"4000000"
+			mass=				"15000"
+			frequency=			"veryrare"
+			attributes=			"Alien; MajorItem; Antimatter; Ammo; Iocrym; Launcher"
+
+			description=		"As the Iocrym abhor chaos, their weapons are designed to reduce their targets to plasma clouds of uniform density."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				fireRate=			"30"
+				powerUse=			"8000"
+				launcher= "true"
+				>
+
+			<Missiles>
+				<Missile ammoID="&itQuantumsphereShell;"
+						type=			"missile"
+
+						damage=			"antimatter:6d8; disintegration3; WMD7"
+						missileSpeed=	"15"
+						hitPoints=		"10"
+						accelerationFactor="125"
+						maxMissileSpeed="60"
+						maneuverability="6"
+						lifetime=		"360"
+
+						sound=			"&snRecoillessCannon;"
+						>
+
+					<Effect>
+						<PlasmaSphere
+								spikeCount=		"1d6+2"
+								spikeLength=	"4d20"
+								primaryColor=	"0x80, 0xff, 0xff"
+								secondaryColor=	"0x00, 0xff, 0xff"
+								/>
+					</Effect>
+				</Missile>
+				
+				<Missile ammoID="&itQuantumsphereShell2;"
+						type=			"missile"
+
+						damage=			"antimatter:6d8; disintegration3; WMD7"
+						missileSpeed=	"15"
+						hitPoints=		"10"
+						accelerationFactor="125"
+						maxMissileSpeed="60"
+						maneuverability="6"
+						lifetime=		"360"
+
+						sound=			"&snRecoillessCannon;"
+						>
+
+					<Effect>
+				<PlasmaSphere
+								spikeCount=		"1d6+2"
+								spikeLength=	"3d12"
+								primaryColor=	"0x80, 0xff, 0xff"
+								secondaryColor=	"0x00, 0xff, 0xff"
+								/>
+				<SmokeTrail
+									spread=			"15-20"
+									particleLifetime="80"
+									emitDuration=	"40"
+									emitRate=		"2-3"
+									emitSpeed=		"15-40"
+									>
+								<ParticleEffect>
+									<Flare
+								    	style=				"fadingBlast"
+								    	lifetime=			"3"
+								       	radius=				"20"
+								       	primaryColor=		"0x80, 0xff, 0xff"
+									/>
+								</ParticleEffect>
+							</SmokeTrail>
+			</Effect>
+			<Fragment
+							count=			"5d6"
+							type=			"missile"
+							lifetime=		"80"
+							damage=			"antimatter:1d6+2; WMD1"
+							missileSpeed=	"10-25"
+							>
+
+						<Effect>
+							<Flare
+								    	style=				"fadingBlast"
+								    	
+								       	radius=				"20"
+								       	primaryColor=		"0x80, 0xff, 0xff"
+									/>
+						</Effect>
+					</Fragment>
+				</Missile>
+			</Missiles>
+
+		</Weapon>
+		
+		<StaticData>
+			<WE_ammotable>
+	
+				(&trQuantumsphereAmmo;)
+			</WE_ammotable>
+		</StaticData>
+	</ItemType>
+	
+	
+	
+	<!-- Positron lancer -->
+
+	<ItemType UNID="&itPositronLancer;"
+			name=				"positron lancer"
+			level=				"10"
+			value=				"350000"
+			mass=				"2500"
+			frequency=			"rare"
+			attributes=			"EnergyWeapon; Military; MajorItem; Ringers; Positron"
+			unknownType=		"&itUnknownPositronWeapon2;"
+			description=		"This Ringer weapon fires a steady stream of high-energy positrons."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				repeating=			"4"
+				damage=				"positron:2d8"
+				fireRate=			"20"
+				missileSpeed=		"90"
+				lifetime=			"35"
+				interaction=		"25"
+				powerUse=			"3500"
+
+				sound=				"&snLaserCannon;"
+				>
+
+			<Effect>
+				<Shape
+						directional=		"true"
+						scaleLength=		"72" 
+						scaleWidth=			"6"
+
+						scaleLengthInc=		"3" 
+
+						color=				"0xf0, 0xff, 0x00"
+						opacity=			"140"
+						>
+					<Point x="0"	y="0"/>
+					<Point x="-35"	y="50"/>
+					<Point x="-100"	y="0"/>
+					<Point x="-35"	y="-50"/>
+				</Shape>
+
+				<Shape
+						directional=		"true"
+						scaleLength=		"72" 
+						scaleWidth=			"4"
+
+						scaleLengthInc=		"3" 
+
+						color=				"0xf0, 0xff, 0x00"
+						opacity=			"255"
+						>
+					<Point x="0"	y="0"/>
+					<Point x="-35"	y="50"/>
+					<Point x="-100"	y="0"/>
+					<Point x="-35"	y="-50"/>
+				</Shape>
+
+				<Shape
+						directional=		"true"
+						scaleLength=		"64" 
+						scaleWidth=			"3"
+
+						scaleLengthInc=		"3" 
+
+						color=				"0xff, 0xff, 0xff"
+						opacity=			"255"
+						>
+					<Point x="0"	y="0"/>
+					<Point x="-25"	y="50"/>
+					<Point x="-100"	y="0"/>
+					<Point x="-25"	y="-50"/>
+				</Shape>
+			</Effect>
+		</Weapon>
+
+	</ItemType>
+	
+	
+	
+	
+	<!-- ITEM TABLES !!!!-->
+	
+	<ItemTable UNID="&trDwargCnidocystAmmo;"> <!--General table for the DwargCnidocyst cannon-->
+	<Table>
+		<Item chance="25" count="2d12"	item="&itDwargCnidocystNodule;" />
+		<Item chance="25" count="2d12"	item="&itDwargCnidocystNodule2;" />
+		<Item chance="25" count="2d12"	item="&itDwargCnidocystNodule3;" />
+		<Item chance="25" count="2d12"	item="&itDwargCnidocystNodule4;" />
+	</Table>
+</ItemTable>
+
+<ItemTable UNID="&trQuantumsphereAmmo;"> <!--General table for the Quantumsphere -->
+	<Table>
+		<Item chance="50" count="50d20"	item="&itQuantumsphereShell;" />
+		<Item chance="50" count="50d20"	item="&itQuantumsphereShell2;" />
+	</Table>
+</ItemTable>
+	
+	
+</TranscendenceModule>
+

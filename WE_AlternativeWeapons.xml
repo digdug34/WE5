@@ -1,0 +1,1865 @@
+<?xml version="1.0" encoding="utf-8"?>		
+  
+
+
+<TranscendenceModule>
+
+	<!-- itGIAT1Howitzer I Howitzer -->
+
+	<ItemType UNID="&itGIAT1Howitzer;"
+			name=				"GIAT-Armalite howitzer"
+			level=				"4"
+			value=				"3000"
+			mass=				"4500"
+			frequency=			"uncommon"
+			numberAppearing=	"1"
+			attributes=			"MajorItem; BlastCannon; Howitzer; Commonwealth"
+			unknownType=		"&itUnknownBlastCannon;"
+			description=		"The GIAT-Armalite are light howitzers, they are effective both as artillery and as skirmish weapons."
+			sortName=			"howitzer, GIAT"
+			>
+
+		<Image imageID="&rsItemsRasiermesser3;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"blast:2d12; momentum2; WMD2"
+				fireRate=			"35"
+				missileSpeed=		"50"
+				lifetime=			"120"
+				powerUse=			"100"
+				hitPoints=			"10"
+				
+				recoil=				"2"
+
+				directional=		"true"
+				fireEffect=			"&efMediumCannonFlash;"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<MoltenBolt
+						width=				"4"
+						length=				"10"
+						growth=				"3"
+						primaryColor=		"0xea, 0xed, 0xae"
+						secondaryColor=		"0xc0, 0xc2, 0x85"
+						/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+	
+	<!-- itGIAT2Howitzer I Howitzer -->
+
+	<ItemType UNID="&itGIAT2Howitzer;"
+			name=				"GIAT-Armalite fragmenting howitzer"
+			level=				"4"
+			value=				"3000"
+			mass=				"4500"
+			frequency=			"uncommon"
+			numberAppearing=	"1"
+			attributes=			"MajorItem; BlastCannon; Howitzer; Commonwealth"
+			unknownType=		"&itUnknownBlastCannon;"
+			description=		"The GIAT-Armalite are light howitzers, they are effective both as artillery and as skirmish weapons. This version uses fragmenting shells for increased damage."
+			sortName=			"howitzer, GIAT"
+			>
+
+		<Image imageID="&rsItemsRasiermesser3;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"blast:1d10; momentum2; WMD2"
+				fireRate=			"35"
+				missileSpeed=		"50"
+				lifetime=			"120"
+				powerUse=			"100"
+				hitPoints=			"10"
+				
+				recoil=				"2"
+
+				directional=		"true"
+				fireEffect=			"&efMediumCannonFlash;"
+				sound=				"&snRecoillessCannon;"
+				>
+				<Fragment
+							count=			"2d6"
+							type=			"missile"
+							lifetime=		"8"
+							damage=			"blast:1d12; momentum2; WMD2"
+							missileSpeed=	"40-60"
+							>
+						<Image imageID="&rsMissiles;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
+					</Fragment>
+			
+				<Effect>
+				<MoltenBolt
+						width=				"4"
+						length=				"10"
+						growth=				"3"
+						primaryColor=		"0xea, 0xed, 0xae"
+						secondaryColor=		"0xc0, 0xc2, 0x85"
+						/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+
+	<!-- itGIAT4HowitzerI Howitzer -->
+
+	<ItemType UNID="&itGIAT4Howitzer;"
+			name=				"GIAT-Armalite speed howitzer"
+			level=				"4"
+			value=				"3000"
+			mass=				"4500"
+			frequency=			"uncommon"
+			numberAppearing=	"1"
+			attributes=			"MajorItem; BlastCannon; Howitzer; Commonwealth"
+			unknownType=		"&itUnknownBlastCannon;"
+			description=		"The GIAT-Armalite are light howitzers, they are effective both as artillery and as skirmish weapons. This version fires shells are nearly the speed of light."
+			sortName=			"howitzer, GIAT"
+			>
+
+		<Image imageID="&rsItemsRasiermesser3;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"blast:2d12; momentum2; WMD2"
+				fireRate=			"35"
+				missileSpeed=		"90"
+				lifetime=			"67"
+				powerUse=			"100"
+				hitPoints=			"10"
+				
+				recoil=				"3"
+
+				directional=		"true"
+				fireEffect=			"&efMediumCannonFlash;"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<MoltenBolt
+						width=				"4"
+						length=				"10"
+						growth=				"3"
+						primaryColor=		"0xea, 0xed, 0xae"
+						secondaryColor=		"0xc0, 0xc2, 0x85"
+						/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+	<!-- itGIAT5Howitzer I Howitzer -->
+
+	<ItemType UNID="&itGIAT5Howitzer;"
+			name=				"GIAT-Armalite light howitzer"
+			level=				"4"
+			value=				"3000"
+			mass=				"4500"
+			frequency=			"uncommon"
+			numberAppearing=	"1"
+			attributes=			"MajorItem; BlastCannon; Howitzer; Commonwealth"
+			unknownType=		"&itUnknownBlastCannon;"
+			description=		"The GIAT-Armalite are light howitzers, they are effective both as artillery and as skirmish weapons. This version fires lighter shells, at a slightly faster firerate."
+			sortName=			"howitzer, GIAT"
+			>
+
+		<Image imageID="&rsItemsRasiermesser3;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"blast:2d10; momentum3; WMD3"
+				fireRate=			"20"
+				missileSpeed=		"50"
+				lifetime=			"120"
+				powerUse=			"100"
+				hitPoints=			"10"
+				
+				recoil=				"2"
+
+				directional=		"true"
+				fireEffect=			"&efMediumCannonFlash;"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<MoltenBolt
+						width=				"4"
+						length=				"10"
+						growth=				"3"
+						primaryColor=		"0xea, 0xed, 0xae"
+						secondaryColor=		"0xc0, 0xc2, 0x85"
+						/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+	<!-- itGIAT6Howitzer I Howitzer -->
+
+	<ItemType UNID="&itGIAT6Howitzer;"
+			name=				"GIAT-Armalite repeating howitzer"
+			level=				"4"
+			value=				"3000"
+			mass=				"4500"
+			frequency=			"uncommon"
+			numberAppearing=	"1"
+			attributes=			"MajorItem; BlastCannon; Howitzer; Commonwealth"
+			unknownType=		"&itUnknownBlastCannon;"
+			description=		"The GIAT-Armalite are light howitzers, they are effective both as artillery and as skirmish weapons. This version fires light shells in short bursts."
+			sortName=			"howitzer, GIAT"
+			>
+
+		<Image imageID="&rsItemsRasiermesser3;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				repeating ="2"
+				damage=				"blast:1d8; momentum3; WMD3"
+				fireRate=			"35"
+				missileSpeed=		"50"
+				lifetime=			"120"
+				powerUse=			"100"
+				hitPoints=			"10"
+				
+				recoil=				"2"
+
+				directional=		"true"
+				fireEffect=			"&efMediumCannonFlash;"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<MoltenBolt
+						width=				"4"
+						length=				"10"
+						growth=				"3"
+						primaryColor=		"0xea, 0xed, 0xae"
+						secondaryColor=		"0xc0, 0xc2, 0x85"
+						/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+
+		<!-- itBarrettMorningstar -->
+
+	<ItemType UNID="&itBarrettScattergun;"
+			name=				"Barrett heavy scattergun"
+			level=				"6"
+			value=				"13400"
+			mass=				"4000"
+			frequency=			"uncommon"
+			attributes=			"MajorItem; Cannon; Commonwealth"
+			unknownType=		"&itUnknownKineticCannon5;"
+			description=		"Barrett's scattergun cannon is a highly improved version of the spread cannon NAMI PK25 Morningstar."
+			>
+
+		<Image imageID="&rsItemsNAMI3;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"particles"
+
+				damage=				"kinetic:50; WMD2"
+				fireRate=			"12"
+				missileSpeed=		"40"
+				lifetime=			"60"
+				powerUse=			"350"
+				 
+
+				particleCount=		"1d11+44"
+				particleSpreadAngle="20"
+				sound=				"&snRecoillessCannon;"
+				>
+		<Effect>
+				<Bolt
+						length=				"32"
+						width=				"4"
+						primaryColor=		"0xcd, 0xcd, 0xff"
+						secondaryColor=		"0xcd, 0xcd, 0xee"
+						/>
+			</Effect>
+		</Weapon>
+
+	</ItemType>
+
+
+	<!-- itBarrettMorningstar2 -->
+
+<ItemType UNID="&itBarrettScattergun2;"
+			name=				"Barrett piercing scattergun"
+			level=				"6"
+			value=				"13400"
+			mass=				"4000"
+			frequency=			"uncommon"
+			attributes=			"MajorItem; Cannon; Commonwealth"
+			unknownType=		"&itUnknownKineticCannon5;"
+			description=		"Barrett's scattergun cannon is a highly improved version of the spread cannon NAMI PK25 Morningstar. This version fires highly penetrating projectiles."
+			>
+
+		<Image imageID="&rsItemsNAMI3;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"particles"
+
+				damage=				"kinetic:50; WMD2"
+				fireRate=			"12"
+				missileSpeed=		"40"
+				lifetime=			"60"
+				powerUse=			"350"
+				passthrough=	"25"
+
+				particleCount=		"1d11+44"
+				particleSpreadAngle="15"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Bolt
+						length=				"32"
+						width=				"4"
+						primaryColor=		"0xcd, 0xcd, 0xff"
+						secondaryColor=		"0xcd, 0xcd, 0xee"
+						/>
+			</Effect>
+		</Weapon>
+
+	</ItemType>
+
+
+	<!-- itBarrettMorningstar3-->
+
+<ItemType UNID="&itBarrettScattergun3;"
+			name=				"Barrett carbide scattergun"
+			level=				"6"
+			value=				"13400"
+			mass=				"4000"
+			frequency=			"uncommon"
+			attributes=			"MajorItem; Cannon; Commonwealth"
+			unknownType=		"&itUnknownKineticCannon5;"
+			description=		"Barrett's scattergun cannon is a highly improved version of the spread cannon NAMI PK25 Morningstar. This version is optimized for dealing higher damage to large structures."
+			>
+
+		<Image imageID="&rsItemsNAMI3;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"particles"
+
+				damage=				"kinetic:50; WMD3; momentum1"
+				fireRate=			"12"
+				missileSpeed=		"40"
+				lifetime=			"60"
+				powerUse=			"350"
+				 
+
+				particleCount=		"1d11+44"
+				particleSpreadAngle="12"
+				sound=				"&snRecoillessCannon;"
+				>
+
+		<Effect>
+				<Bolt
+						length=				"32"
+						width=				"4"
+						primaryColor=		"0xcd, 0xcd, 0xff"
+						secondaryColor=		"0xcd, 0xcd, 0xee"
+						/>
+			</Effect>
+		</Weapon>
+
+	</ItemType>
+
+
+	
+		<!--Grendel Coilgun-->
+
+	<ItemType UNID="&itGrendelCoilgun;"
+			name=				"Grendel Coilgun"
+			level=				"2"
+			value=				"400"
+			mass=				"3000"
+			frequency=			"rare"
+			attributes=			"MajorItem; Cannon; Commonwealth"
+			unknownType=		"&itUnknownKineticCannon;"
+			description=		"Grendel Corporation is manifacturing coilguns since over 300 years. This magnetic driven cannon is an alternative to the NAMI recoilless technology."
+			>
+
+		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"particles"
+
+				damage=				"kinetic:10"
+				fireRate=			"15"
+				missileSpeed=		"40"
+				lifetime=			"60"
+				powerUse=			"20"
+				 
+
+				particleCount=		"1d8"
+				particleSpreadAngle="3"
+				sound=				"&snRecoillessCannon;"
+				>
+
+		<Effect>
+				<Particle
+						style=			"line"
+						minWidth=		"25" 
+						maxWidth=		"60"
+						primaryColor=	"0xff, 0xe8, 0xe8"
+						secondaryColor=	"0xdd, 0x0c, 0x0c"
+						/>
+			</Effect>
+		</Weapon>
+		
+
+	</ItemType>
+	
+			<!--Grendel Coilgun-->
+
+	<ItemType UNID="&itGrendelLightCoilgun;"
+			name=				"Grendel Light Coilgun"
+			level=				"1"
+			value=				"200"
+			mass=				"3000"
+			frequency=			"rare"
+			attributes=			"MajorItem; Cannon; Commonwealth"
+			unknownType=		"&itUnknownKineticCannon8;"
+			description=		"Grendel Corporation is manifacturing coilguns since over 300 years. This magnetic driven cannon is an alternative to the NAMI recoilless technology."
+			>
+
+		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"particles"
+
+				damage=				"kinetic:5"
+				fireRate=			"18"
+				missileSpeed=		"40"
+				lifetime=			"30"
+				powerUse=			"20"
+				 
+
+				particleCount=		"1d8"
+				particleSpreadAngle="3"
+				sound=				"&snRecoillessCannon;"
+				>
+
+		<Effect>
+				<Particle
+						style=			"line"
+						minWidth=		"25" 
+						maxWidth=		"60"
+						primaryColor=	"0xff, 0xe8, 0xe8"
+						secondaryColor=	"0xdd, 0x0c, 0x0c"
+						/>
+			</Effect>
+		</Weapon>
+		
+
+	</ItemType>
+	
+			<!--Grendel Coilgun-->
+
+	<ItemType UNID="&itGrendelHeavyCoilgun;"
+			name=				"Grendel Heavy Coilgun"
+			level=				"3"
+			value=				"1400"
+			mass=				"3000"
+			frequency=			"rare"
+			attributes=			"MajorItem; Cannon; Commonwealth"
+			unknownType=		"&itUnknownKineticCannon2;"
+			description=		"Grendel Corporation is manifacturing coilguns since over 300 years. This magnetic driven cannon is an alternative to the NAMI recoilless technology."
+			>
+
+		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"particles"
+
+				damage=				"kinetic:20; WMD1"
+				fireRate=			"18"
+				missileSpeed=		"40"
+				lifetime=			"60"
+				powerUse=			"20"
+				
+
+				particleCount=		"1d10"
+				particleSpreadAngle="3"
+				sound=				"&snRecoillessCannon;"
+				>
+
+		<Effect>
+				<Particle
+						style=			"line"
+						minWidth=		"25" 
+						maxWidth=		"60"
+						primaryColor=	"0xff, 0xe8, 0xe8"
+						secondaryColor=	"0xdd, 0x0c, 0x0c"
+						/>
+			</Effect>
+		</Weapon>
+		
+
+	</ItemType>
+	
+				<!--Grendel GaussGun-->
+
+	<ItemType UNID="&itGrendelGauss;"
+			name=				"Grendel Gauss Gun"
+			level=				"5"
+			value=				"1400"
+			mass=				"6000"
+			frequency=			"rare"
+			attributes=			"MajorItem; BlastCannon; Commonwealth"
+			unknownType=		"&itUnknownBlastCannon2;"
+			description=		"Grendel Gauss Guns are an improved version of the Coilguns. The manifacturer is trying everything to force its own technology on the market."
+			>
+
+		<Image imageID="&rsItemsNAMI3;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"particles"
+
+				damage=				"blast:20; WMD2"
+				fireRate=			"20"
+				missileSpeed=		"40"
+				lifetime=			"60"
+				powerUse=			"150"
+				 
+
+				particleCount=		"1d10"
+				particleSpreadAngle="3"
+				sound=				"&snRecoillessCannon;"
+				>
+
+		<Effect>
+				<MoltenBolt
+						width=				"5"
+						length=				"20"
+						growth=				"5"
+						primaryColor=	"0xff, 0xe8, 0xe8"
+						secondaryColor=	"0xdd, 0x0c, 0x0c"
+						/>
+			</Effect>
+		</Weapon>
+		
+
+	</ItemType>
+	
+					<!--Grendel GaussGun-->
+
+	<ItemType UNID="&itGrendelHeavyGauss;"
+			name=				"Grendel Heavy Gauss Gun"
+			level=				"7"
+			value=				"55000"
+			mass=				"6000"
+			frequency=			"rare"
+			attributes=			"MajorItem; BlastCannon; Military; Commonwealth"
+			unknownType=		"&itUnknownBlastCannon5;"
+			description=		"Grendel Gauss Guns are an improved version of the Coilguns. The manifacturer is trying everything to force its own technology on the market."
+			>
+
+		<Image imageID="&rsItemsNAMI3;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"particles"
+
+				damage=				"blast:45; momentum3; WMD3"
+				fireRate=			"20"
+				missileSpeed=		"40"
+				lifetime=			"60"
+				powerUse=			"400"
+				 
+
+				particleCount=		"1d20"
+				particleSpreadAngle="5"
+				sound=				"&snRecoillessCannon;"
+				>
+
+		<Effect>
+				<MoltenBolt
+						width=				"5"
+						length=				"20"
+						growth=				"10"
+						primaryColor=	"0xff, 0xe8, 0xe8"
+						secondaryColor=	"0xdd, 0x0c, 0x0c"
+						/>
+			</Effect>
+		</Weapon>
+		
+
+	</ItemType>
+
+
+						<!--Grendel GaussGun-->
+
+	<ItemType UNID="&itGrendelQuenchgun;"
+			name=				"Grendel quenchgun"
+			level=				"8"
+			value=				"90000"
+			mass=				"9000"
+			frequency=			"rare"
+			attributes=			"MajorItem; Military; ThermoCannon; Commonwealth"
+			unknownType=		"&itUnknownThermoCannon;"
+			description=		"The Grendel quenchgun is top of the line Grendel Firearms technology. This thermo cannon uses magnetically driven projectiles. While not a real howitzer, it achieves similar performance results."
+			>
+
+		<Image imageID="&rsItemsMakayev1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"particles"
+
+				damage=				"thermo:45; momentum5; WMD5"
+				fireRate=			"20"
+				missileSpeed=		"40"
+				lifetime=			"60"
+				powerUse=			"1250"
+				 
+
+				particleCount=		"1d8"
+				particleSpreadAngle="2"
+				sound=				"&snRecoillessCannon;"
+				>
+
+		<Effect>
+				<Flare
+									style=				"fadingBlast"
+									radius=				"30"
+									primaryColor=		"0xff, 0xff, 0xff"
+								/>
+			</Effect>
+		</Weapon>
+		
+
+	</ItemType>
+	
+
+		<!-- Laser Cannon -->
+
+	<ItemType UNID="&itBrowningLaserCannon;"
+			name=				"Browning laser cannon"
+			level=				"1"
+			value=				"200"
+			mass=				"1000"
+			frequency=			"uncommon"
+			attributes=			"EnergyWeapon; MajorItem; Laser; NotForSale; Sapiens"
+			showReference=		"true"
+			unknownType=		"&itUnknownLaserWeapon;"
+			description=		"Browning lasers are old weapons that were retired from the market beacause they used faulty capacitors."
+			>
+
+		<Image imageID="&rsItemsEI1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		
+		<Weapon
+				type=				"beam"
+
+				damage=				"laser:1d3+1"
+				fireRate=			"12"
+				lifetime=			"30"
+				powerUse=			"10"
+				 
+
+
+				sound=				"&snLaserCannon;"
+				>
+			<Effect>
+				<Beam
+						beamType=			"heavyblaster"
+						primaryColor=		"0xff, 0x33, 0x33"
+						secondaryColor=		"0x99, 0x00, 0x00"
+						intensity=			"5"
+						/>
+			</Effect>
+		</Weapon>
+		
+
+	</ItemType>
+
+
+	
+		
+		
+	
+		<!-- Linebaugh culverin -->
+
+	<ItemType UNID="&itLinebaughCulverin;"
+			name=				"Linebaugh culverin"
+			level=				"5"
+			value=				"6000"
+			mass=				"4000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"MajorItem; BlastCannon; Commonwealth"
+			unknownType=		"&itUnknownBlastCannon2;"
+			description=		"The culverin is a small caliber cannon with a high fire rate. It's a direct competitor to the Makayev slam cannon."
+			>
+
+		<Image imageID="&rsItemsMakayev1;" imageX="0" imageY="288" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"blast:2d6; momentum2; WMD2"
+				fireRate=			"12"
+				missileSpeed=		"40"
+				lifetime=			"60"
+				powerUse=			"150"
+				hitPoints=			"4"				 
+
+				directional=		"true"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+	<!-- Linebaugh culverin -->
+
+	<ItemType UNID="&itLinebaughCulverin2;"
+			name=				"Linebaugh explosive culverin"
+			level=				"5"
+			value=				"6000"
+			mass=				"4000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"MajorItem; BlastCannon; Commonwealth"
+			unknownType=		"&itUnknownBlastCannon2;"
+			description=		"The culverin is a small caliber cannon with a high fire rate. It's a direct competitor to the Makayev slam cannon. This version uses high explosive shells that are difficult to stop."
+			>
+
+		<Image imageID="&rsItemsMakayev1;" imageX="0" imageY="288" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"blast:2d6+8; momentum3; WMD3"
+				fireRate=			"12"
+				missileSpeed=		"40"
+				lifetime=			"60"
+				powerUse=			"150"
+				hitPoints=			"10"				 
+				failsafe=			"20"
+				directional=		"true"
+				sound=				"&snRecoillessCannon;"
+				>
+			<Effect>
+				<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
+			</Effect>
+</Weapon>
+	</ItemType>
+
+	<!-- Linebaugh culverin -->
+
+	<ItemType UNID="&itLinebaughCulverin3;"
+			name=				"Linebaugh heavy culverin"
+			level=				"5"
+			value=				"6000"
+			mass=				"4000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"MajorItem; BlastCannon; Commonwealth"
+			unknownType=		"&itUnknownBlastCannon2;"
+			description=		"The culverin is a small caliber cannon with a high fire rate. It's a direct competitor to the Makayev slam cannon. This version is modified to use larger projectiles."
+			>
+
+		<Image imageID="&rsItemsMakayev1;" imageX="0" imageY="288" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"blast:3d6; momentum4; WMD3"
+				fireRate=			"12"
+				missileSpeed=		"40"
+				lifetime=			"60"
+				powerUse=			"150"
+				hitPoints=			"4"				 
+
+				directional=		"true"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+
+	<!-- Linebaugh culverin -->
+
+	<ItemType UNID="&itLinebaughCulverin4;"
+			name=				"Linebaugh demi-culverin"
+			level=				"4"
+			value=				"3500"
+			mass=				"3000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"MajorItem; BlastCannon; NotForSale"
+			unknownType=		"&itUnknownBlastCannon2;"
+			description=		"The culverin is a small caliber cannon with a high fire rate. It's a direct competitor to the Makayev slam cannon. This version fires lighter projectiles at higher firerate."
+			>
+
+		<Image imageID="&rsItemsMakayev1;" imageX="0" imageY="288" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"blast:2d4; momentum1; WMD1"
+				fireRate=			"10"
+				missileSpeed=		"60"
+				lifetime=			"60"
+				powerUse=			"80"
+				hitPoints=			"4"				 
+
+				directional=		"true"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+
+	<!-- Linebaugh culverin -->
+
+	<ItemType UNID="&itLinebaughCulverin5;"
+			name=				"Linebaugh lightspeed culverin"
+			level=				"5"
+			value=				"6000"
+			mass=				"4000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"MajorItem; BlastCannon; Commonwealth"
+			unknownType=		"&itUnknownBlastCannon2;"
+			description=		"The culverin is a small caliber cannon with a high fire rate. It's a direct competitor to the Makayev slam cannon. This version launches its projectiles at 80% of lightspeed, consumes more power, but it deals more damage to structure scale objects."
+			>
+
+		<Image imageID="&rsItemsMakayev1;" imageX="0" imageY="288" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"blast:2d6; momentum3; WMD5"
+				fireRate=			"12"
+				missileSpeed=		"80"
+				lifetime=			"30"
+				powerUse=			"170"
+				hitPoints=			"4"				 
+
+				directional=		"true"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+
+	<!-- Linebaugh culverin -->
+
+	<ItemType UNID="&itLinebaughCulverin6;"
+			name=				"Linebaugh dual culverin"
+			level=				"6"
+			value=				"13000"
+			mass=				"4000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"MajorItem; BlastCannon; Commonwealth"
+			unknownType=		"&itUnknownBlastCannon3;"
+			description=		"The culverin is a small caliber cannon with a high fire rate. It's a direct competitor to the Makayev slam cannon. This version is dual."
+			>
+
+		<Image imageID="&rsItemsMakayev1;" imageX="0" imageY="288" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				configuration= "dual"
+				damage=				"blast:3d6; momentum1; WMD2"
+				fireRate=			"12"
+				missileSpeed=		"40"
+				lifetime=			"60"
+				powerUse=			"300"
+				hitPoints=			"4"				 
+
+				directional=		"true"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+		<!-- Grendel  Howitzer -->
+
+	<ItemType UNID="&itGrendelCannon;"
+			name=				"Grendel Minotaur Howitzer"
+			level=				"5"
+			value=				"7000"
+			mass=				"4000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"MajorItem; BlastCannon; Howitzer; Commonwealth; Xenophobe"
+			unknownType=		"&itUnknownBlastCannon2;"
+			description=		"Grendel produces exotic howitzers, their effectiveness is questionable."
+			sortName=			"howitzer, Minotaur"
+			>
+
+		<Image imageID="&rsItemsMakayev1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"blast:1d12; momentum5; WMD5"
+				fireRate=			"30"
+				missileSpeed=		"50"
+				lifetime=			"120"
+				powerUse=			"150"
+				hitPoints=			"10"				 
+				recoil=				"3"
+
+				directional=		"true"
+				fireEffect=			"&efMediumCannonFlash;"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<MoltenBolt
+						width=				"4"
+						length=				"10"
+						growth=				"1"
+						primaryColor=		"0x00, 0x00, 0xff"
+						secondaryColor=		"0x00, 0x00, 0xff"
+						/>
+			</Effect>
+
+			<Fragment
+							count=			"1d10+10"
+							type=			"missile"
+							lifetime=		"10"
+							damage=			"blast:1d12; WMD4"
+							missileSpeed=	"32-48"
+							>
+							
+						<Effect>
+							<Flare
+									style=				"fadingBlast"
+									radius=				"60"
+									primaryColor=		"0x00, 0x00, 0xff"
+								/>
+						</Effect>
+					</Fragment>
+			
+		</Weapon>
+
+	</ItemType>
+
+
+	<!-- Grendel  Howitzer -->
+
+	<ItemType UNID="&itGrendelCannon2;"
+			name=				"Grendel Griffin Howitzer"
+			level=				"6"
+			value=				"18000"
+			mass=				"4000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"MajorItem; BlastCannon; Howitzer; Commonwealth; Xenophobe"
+			unknownType=		"&itUnknownBlastCannon3;"
+			description=		"Grendel produces exotic howitzers, their effectiveness is questionable."
+			sortName=			"howitzer, Griffin"
+			>
+
+		<Image imageID="&rsItemsMakayev1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"blast:1d12; momentum5; WMD5"
+				fireRate=			"30"
+				missileSpeed=		"50"
+				lifetime=			"120"
+				powerUse=			"150"
+				hitPoints=			"10"				 
+				recoil=				"3"
+
+				directional=		"true"
+				fireEffect=			"&efMediumCannonFlash;"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<MoltenBolt
+						width=				"4"
+						length=				"10"
+						growth=				"1"
+						primaryColor=		"0x00, 0xff, 0x00"
+						secondaryColor=		"0x00, 0xff, 0x00"
+						/>
+			</Effect>
+
+			<Fragment
+							count=			"1d10+24"
+							type=			"missile"
+							lifetime=		"10"
+							damage=			"blast:1d6+2; WMD4"
+							missileSpeed=	"32-48"
+							>
+							
+						<Effect>
+							<Flare
+									style=				"fadingBlast"
+									radius=				"60"
+									primaryColor=		"0x00, 0xff, 0x00"
+								/>
+						</Effect>
+					</Fragment>
+			
+		</Weapon>
+
+	</ItemType>
+
+
+	<!-- Grendel  Howitzer -->
+
+	<ItemType UNID="&itGrendelCannon3;"
+			name=				"Grendel Drake Howitzer"
+			level=				"7"
+			value=				"38000"
+			mass=				"5000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"MajorItem; BlastCannon; Howitzer; Commonwealth; Xenophobe"
+			unknownType=		"&itUnknownBlastCannon5;"
+			description=		"Grendel produces exotic howitzers, their effectiveness is questionable."
+			sortName=			"howitzer, Drake"
+			>
+
+		<Image imageID="&rsItemsMakayev1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"blast:5d12; momentum5; WMD5"
+				fireRate=			"30"
+				missileSpeed=		"50"
+				lifetime=			"120"
+				powerUse=			"150"
+				hitPoints=			"10"				 
+				recoil=				"3"
+
+				directional=		"true"
+				fireEffect=			"&efMediumCannonFlash;"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<MoltenBolt
+						width=				"4"
+						length=				"10"
+						growth=				"1"
+						primaryColor=		"0xff, 0x00, 0x00"
+						secondaryColor=		"0xff, 0x00, 0x00"
+						/>
+			</Effect>
+
+			<Fragment
+							count=			"1d10+36"
+							type=			"missile"
+							lifetime=		"10"
+							damage=			"blast:2d6; WMD4"
+							missileSpeed=	"32-48"
+							>
+							
+						<Effect>
+							<Flare
+									style=				"fadingBlast"
+									radius=				"60"
+									primaryColor=		"0xff, 0x00, 0x00"
+								/>
+						</Effect>
+					</Fragment>
+			
+		</Weapon>
+
+	</ItemType>
+
+
+	<!-- Grendel  Howitzer -->
+
+	<ItemType UNID="&itGrendelCannon4;"
+			name=				"Grendel Cyclops Howitzer"
+			level=				"8"
+			value=				"88000"
+			mass=				"7500"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"MajorItem; BlastCannon; Howitzer; Commonwealth; Xenophobe"
+			unknownType=		"&itUnknownBlastCannon6;"
+			description=		"Grendel produces exotic howitzers, their effectiveness is questionable."
+			sortName=			"Were-Howitzer, Grendel"
+			>
+
+		<Image imageID="&rsItemsMakayev1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"blast:10d12; momentum5; WMD5"
+				fireRate=			"30"
+				missileSpeed=		"50"
+				lifetime=			"120"
+				powerUse=			"150"
+				hitPoints=			"10"				 
+				recoil=				"3"
+
+				directional=		"true"
+				fireEffect=			"&efMediumCannonFlash;"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<MoltenBolt
+						width=				"4"
+						length=				"10"
+						growth=				"1"
+						primaryColor=		"0xff, 0xff, 0x00"
+						secondaryColor=		"0xff, 0xff, 0x00"
+						/>
+			</Effect>
+
+			<Fragment
+							count=			"1d10+48"
+							type=			"missile"
+							lifetime=		"10"
+							damage=			"blast:2d6; WMD4"
+							missileSpeed=	"32-48"
+							>
+							
+						<Effect>
+							<Flare
+									style=				"fadingBlast"
+									radius=				"60"
+									primaryColor=		"0xff, 0xff, 0x00"
+								/>
+						</Effect>
+					</Fragment>
+			
+		</Weapon>
+
+	</ItemType>
+	
+	
+		<!-- Dreyse needle-gun -->
+
+	<ItemType UNID="&DreyseNeedleGun;"
+			name=				"Dreyse needle-gun"
+			level=				"3"
+			value=				"1000"
+			mass=				"1000"
+			frequency=			"rare"
+			attributes=			"MajorItem; Cannon; Commonwealth"
+			unknownType=		"&itUnknownKineticCannon2;"
+			description=		"Paul Dreyse the 72th opened a weapon factory and entered the weapon market like his ancestor. The weapon works like a mini-Flenser Cannon."
+			>
+
+		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				
+				damage=				"kinetic:2d8+3; momentum1"
+				fireRate=			"35"
+				missileSpeed=		"40"
+				interaction=		"50"
+				lifetime=			"60"
+				powerUse=			"50"
+				 
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Bolt
+						length=				"85"
+						width=				"2"
+						primaryColor=		"0x97, 0xff, 0xfe"
+						secondaryColor=		"0x97, 0xcc, 0xce"
+						/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+	
+	
+		<!-- Dreyse needle-gun -->
+
+	<ItemType UNID="&DreyseHeavyNeedleGun;"
+			name=				"Dreyse heavy needle-gun"
+			level=				"4"
+			value=				"5000"
+			mass=				"1000"
+			frequency=			"rare"
+			attributes=			"MajorItem; Cannon; Commonwealth"
+			unknownType=		"&itUnknownKineticCannon3;"
+			description=		"Paul Dreyse the 72th opened a weapon factory and entered the weapon market like his ancestor. The weapon works like an alternative to the Flenser Cannon."
+			>
+
+		<Image imageID="&rsItemsNAMI1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				
+				damage=				"kinetic:2d16+3; momentum3"
+				fireRate=			"35"
+				missileSpeed=		"40"
+				interaction=		"50"
+				lifetime=			"60"
+				powerUse=			"50"
+				 
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Bolt
+						length=				"100"
+						width=				"6"
+						primaryColor=		"0x97, 0xff, 0xfe"
+						secondaryColor=		"0x97, 0xcc, 0xce"
+						/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+	
+
+		<!-- Napoleon Launcher -->
+
+	<ItemType UNID="&itNapoleonLauncher;"
+			name=				"Napoleon Launcher"
+			level=				"6"
+			value=				"19000"
+			mass=				"4500"
+			frequency=			"rare"
+			attributes=			"MajorItem; Launcher; Ammo; Specialty; Commonwealth"
+
+			description=		"The Napoleon is a 6 muzzled missile launcher, each ammo cartridge contains 6 mini missiles that automatically track on the nearest target."
+			>
+
+		<Image imageID="&rsItemsMakayev2;" imageX="0" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				fireRate=			"30"
+				powerUse=			"10"
+				 
+				launcher=			"true"
+				>
+
+			<Missiles>
+				<Missile ammoID="&itNapoleonMissile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:5d6+2; WMD4"
+						missileSpeed=	"50"
+						maneuverability="2"
+						directional=	"true"
+						hitEffect=		"&efFragmentationExplosion;"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="40"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xff, 0x00, 0x00"
+						>
+
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<Fragment
+							count=			"5d6"
+							type=			"missile"
+							lifetime=		"5"
+							damage=			"blast:1d6+2; WMD4"
+							missileSpeed=	"5-48"
+							>
+							
+						<Effect>
+							<ImageAndTail 
+									imageID=			"&rsMissiles4;" 
+									imageX=				"0" 
+									imageY=				"0" 
+									imageWidth=			"16" 
+									imageHeight=		"16"
+									imageFrameCount=	"4"
+									imageTicksPerFrame=	"1"
+									
+									length=				"32"
+									width=				"4"
+									primaryColor=		"0xff, 0xff, 0xff"
+									secondaryColor=		"0xc0, 0xc2, 0x85"
+									/>
+						</Effect>
+					</Fragment>
+
+				</Missile>
+				
+				<Missile ammoID="&itNapoleonGranade;"
+						type=			"missile"
+
+						damage=			"blast:6d12+6; momentum4; WMD4"
+						missileSpeed=	"40"
+						lifetime=		"12"
+						hitPoints=		"30"
+						failsafe=		"5"
+						maneuverability="2"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="40"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xff, 0x00, 0x00"
+						>
+
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+					
+					<HitEffect 
+							sound=	"&snArmorHit1;"
+							>
+						<ParticleExplosion
+								particleCount=		"2d4"
+								particleSpeed=		"25"
+								particleLifetime=	"40"
+								>
+							<Image imageID="&rsDebris1;" imageX="0" imageY="0" imageWidth="4" imageHeight="4" imageFrameCount="8" imageTicksPerFrame="3"/>
+						</ParticleExplosion>
+					</HitEffect>
+
+					<Fragment 
+							count=				"6"
+							type=				"missile"
+
+							damage=				"blast:1d8+6; momentum3; WMD4"
+							missileSpeed=		"50"
+							lifetime=			"60"
+							maneuverability=	"4"
+							multiTarget=		"true"
+							autoAcquireTarget=	"true"
+							directional=		"true"
+							vaporTrailLength="40"
+							vaporTrailWidth="110"
+							vaporTrailWidthInc="5"
+							vaporTrailColor="0xff, 0x00, 0x00"
+							>
+							
+						<Effect>
+							<Image imageID="&rsMissiles3;" imageX="48" imageY="0" imageWidth="16" imageHeight="16" />
+						</Effect>
+						<HitEffect
+								sound="&snArmorHit1;"
+								>
+							<Image imageID="&rsMediumExplosions;" 
+									imageX="0" 
+									imageY="0" 
+									imageWidth="64" 
+									imageHeight="64"
+									imageFrameCount="16"
+									imageTicksPerFrame="2"/>
+						</HitEffect>
+					</Fragment>
+							
+				</Missile>
+				
+
+				<Missile ammoID="&itNapoleonThermoMissile;"
+						type=			"missile"
+
+						damage=			"thermo:1d8; momentum2; WMD5"
+						missileSpeed=	"60"
+						hitPoints=		"10"
+						lifetime=		"100"
+						maneuverability="2"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="40"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xff, 0x00, 0x00"
+						>
+
+					<Effect>
+						<Image imageID="&rsMissiles2;" imageX="64" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+					</Effect>
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsMediumExplosions;" 
+								imageX="0" 
+								imageY="0" 
+								imageWidth="64" 
+								imageHeight="64"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+				
+				
+				
+
+			</Missiles>
+
+			<Configuration aimTolerance="5">
+		<Shot posAngle="0" posRadius="0" angle="-27"/>
+		<Shot posAngle="0" posRadius="0" angle="27"/>
+		<Shot posAngle="0" posRadius="0" angle="-18"/>
+		<Shot posAngle="0" posRadius="0" angle="18"/>
+		<Shot posAngle="0" posRadius="0" angle="-9"/>
+		<Shot posAngle="0" posRadius="0" angle="9"/>
+		
+		
+		
+	</Configuration>
+			
+		</Weapon>
+		<StaticData>
+			<WE_ammotable>
+				(&trNapoleonAmmoTable;)
+			</WE_ammotable>
+		</StaticData>
+	</ItemType>
+	
+	<ItemTable UNID="&trNapoleonAmmoTable;"> <!--General table for the Napoleon Launcher -->
+	<Table>
+		<Item chance="33" count="10d6"	item="&itNapoleonMissile;" />
+		<Item chance="33" count="10d6"	item="&itNapoleonGranade;" />
+		<Item chance="34" count="10d6"	item="&itNapoleonThermoMissile;" />
+		
+	</Table>
+	</ItemTable>
+	
+		
+	<!-- Napoleon missile -->
+
+	<ItemType UNID="&itNapoleonMissile;"
+			name=				"Napoleon missile"
+			level=				"6"
+			value=				"250"
+			mass=				"400"
+			frequency=			"uncommon"
+			numberAppearing=	"8d20"
+			attributes=			"Consumable; Missile"
+
+			description=		"The Napoleon is a non military multi missile compatible with the Napoleon Launcher. Each cartridge contains 6 mini missiles."
+
+			sortName=			"Napoleon.20"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	<!-- Napoleon missile -->
+
+	<ItemType UNID="&itNapoleonGranade;"
+			name=				"Napoleon multifragmenting granade"
+			level=				"6"
+			value=				"350"
+			mass=				"600"
+			frequency=			"uncommon"
+			numberAppearing=	"8d20"
+			attributes=			"Consumable; Missile"
+
+			description=		"The Napoleon is a non military multi missile compatible with the Napoleon Launcher. Each cartridge contains 6 mini missiles. This version fragments in dozens of submunitions."
+
+			sortName=			"Napoleon.20"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	<!-- Napoleon missile -->
+
+	<ItemType UNID="&itNapoleonThermoMissile;"
+			name=				"Napoleon Thermo missile"
+			level=				"7"
+			value=				"350"
+			mass=				"400"
+			frequency=			"uncommon"
+			numberAppearing=	"8d20"
+			attributes=			"Consumable; Missile"
+
+			description=		"The Napoleon is a non military multi missile compatible with the Napoleon Launcher. Each cartridge contains 6 mini missiles. This version has fusion charges."
+
+			sortName=			"Napoleon.20"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+		<!-- Clustertronix High powered Lasers -->
+
+	<ItemType UNID="&itClustertronix;"
+			name=				"Clustertronix laser cannon"
+			level=				"5"
+			value=				"10000"
+			mass=				"4500"
+			frequency=			"rare"
+			attributes=			"EnergyWeapon; MajorItem; Specialty; Laser; Commonwealth"
+			unknownType=		"&itUnknownLaserWeapon4;"
+			description=		"Clustertronix specializes in uncommon high powered lasers."
+			
+			sortName=			"laser cannon, Clustertronix"
+			reverseArticle=		"true"
+			>
+
+		<Image imageID="&rsItemsEI1;" imageX="288" imageY="96" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				
+				damage=				"laser:10d6"
+				fireRate=			"15"
+				lifetime=			"30"
+				powerUse=			"140"
+
+				hitEffect=			"&efCornflowerLaserHitEffect;" 
+				sound=				"&snLaserCannon;"
+				>
+			<Effect>
+				<Beam
+						beamType=			"heavyblaster"
+						primaryColor=		"0x05, 0x75, 0xff"
+						secondaryColor=		"0x05, 0x35, 0xaa"
+						intensity=			"18"
+						/>
+			</Effect>
+		</Weapon>
+
+	</ItemType>
+	
+
+		<!-- Zastava FASOR		-->
+
+	<ItemType UNID="&itZastavaFasor;"
+			name=				"Zastava FASOR beam"
+			level=				"3"
+			value=				"2000"
+			mass=				"1500"
+			frequency=			"common"
+			attributes=			"EnergyWeapon; MajorItem; Laser; Commonwealth"
+			unknownType=        "&itUnknownLaserWeapon2;"
+			description=		"Zastava produces this long-range frequency addition laser. Besides the additional range, it's more expensive and slower than a turbolaser."
+			>
+
+		<Image imageID="&rsItemsEI1;" imageX="288" imageY="96" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				damage=				"laser:3d4"
+				fireRate=			"20"
+				lifetime=			"60"
+				powerUse=			"100"
+				hitEffect=			"&efXRayLaserHitEffect;"
+				
+				sound=				"&snLaserCannon;"
+				>
+				
+				<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0xd0, 0x9d, 0xff"
+						secondaryColor=		"0xd0, 0x9d, 0xff"
+						/>
+			</Effect>
+		</Weapon>
+
+	</ItemType>
+	
+	<!-- Zastava FASOR		-->
+
+	<ItemType UNID="&itDualZastavaFasor;"
+			name=				"dual Zastava FASOR beam"
+			level=				"4"
+			value=				"4000"
+			mass=				"2500"
+			frequency=			"common"
+			attributes=			"EnergyWeapon; MajorItem; Laser; Commonwealth"
+			unknownType=        "&itUnknownLaserWeapon2;"
+			description=		"Zastava produces this long-range frequency addition laser. Besides the additional range, it's more expensive and slower than a turbolaser."
+			>
+
+		<Image imageID="&rsItemsEI1;" imageX="288" imageY="96" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+				configuration=		"dual"
+				damage=				"laser:3d4"
+				fireRate=			"20"
+				lifetime=			"60"
+				powerUse=			"200"
+				hitEffect=			"&efXRayLaserHitEffect;"
+				
+				sound=				"&snLaserCannon;"
+				>
+				
+				<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0xd0, 0x9d, 0xff"
+						secondaryColor=		"0xd0, 0x9d, 0xff"
+						/>
+			</Effect>
+		</Weapon>
+
+	</ItemType>
+	
+	<!-- Zastava FASOR		-->
+
+	<ItemType UNID="&itOmniZastavaFasor;"
+			name=				"omni Zastava FASOR beam"
+			level=				"4"
+			value=				"4000"
+			mass=				"1500"
+			frequency=			"common"
+			attributes=			"EnergyWeapon; MajorItem; Laser; Commonwealth"
+			unknownType=        "&itUnknownLaserWeapon2;"
+			description=		"Zastava produces this long-range frequency addition laser. Besides the additional range, it's more expensive and slower than a turbolaser."
+			>
+
+		<Image imageID="&rsItemsEI1;" imageX="288" imageY="96" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+				omnidirectional=	"true"
+				damage=				"laser:3d4"
+				fireRate=			"26"
+				lifetime=			"60"
+				powerUse=			"100"
+				hitEffect=			"&efXRayLaserHitEffect;"
+				
+				sound=				"&snLaserCannon;"
+				>
+				<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0xd0, 0x9d, 0xff"
+						secondaryColor=		"0xd0, 0x9d, 0xff"
+						
+						/>
+			</Effect>
+		</Weapon>
+
+	</ItemType>
+
+
+	<!-- Ice Wave Cannon -->
+	<ItemType UNID="&itIWC;"
+		name=		 "Ice Wave Cannon"
+		value=		 "50000"
+		mass=		 "4000"
+		frequency=	 "rare"
+		level=		 "6"
+		modifiers=	 "MajorItem; Military; IceWaveCannon; Ammo; Ion"
+		description= "The ice wave cannnon infuses water with highly charged ions, launching into space like a shockwave. Ammo is automatically created from heavy water barrels and water ice."
+		reverseArticle=	"true"
+		>
+        <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				fireRate=			"15"
+				powerUse=		    "200"
+				>
+
+            <Missiles>
+                <Missile 
+				ammoID=         "&itIceMissileVirtual;"
+				type=		    "missile"
+				damage=		    "ion:8; WMD1"
+				lifetime=		"45"
+				missileSpeed=	"40"
+				hitPoints=		"10"
+				sound=		    "&snMissileLauncher;"
+				>
+					<Effect>
+				<Image imageID="&rsIceMissile;" imageX="0" imageY="0" imageWidth="25" imageHeight="25" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+				<Starburst
+						style=			"flare"
+						spikeCount=		"12"
+						spikeLength=	"20-30"
+						primaryColor=	"0x00, 0x00, 0xff"
+						secondaryColor=	"0x00, 0x00, 0x80"
+						/>
+			</Effect>
+					<Fragment
+							count=			"15d6"
+							type=			"missile"
+							lifetime=		"35-50"
+							damage=			"ion:1d6+2; WMD1"
+							missileSpeed=	"32-60"
+							>
+
+
+
+						<Effect>
+							<MoltenBolt
+								width=				"4"
+								length=				"27"
+								growth=				"3"
+								primaryColor=		"0x2b, 0x31, 0xff"
+								secondaryColor=		"0x2b, 0x31, 0xff"
+								/>
+						</Effect>
+					</Fragment>
+					<Fragment 
+							count=		    "1"
+							type=		    "radius"
+							damage=		    "ion:8; WMD1"
+							minRadius=	    "1"
+							maxRadius=	    "30"
+							missileSpeed=	"15"
+							>
+					<Effect>
+						<Flare
+						    style=		    "fadingBlast"
+							radius=		    "360"
+							primaryColor=	"0x00, 0x33, 0xcc"
+							lifetime=		"8"
+							/>
+					</Effect>
+				</Fragment>
+				<Fragment
+							count=				"1"
+							type=				"area"
+							damage=				"ion:5d6"
+							fireRate=			"30"
+							expansionSpeed=		"40"
+							missileSpeed=		"0"
+							lifetime=			"30"
+							powerUse=			"200"
+							sound=				"&snLaserCannon;"
+							>
+
+						<Effect>
+							<Shockwave>
+								<Image imageID=				"&rsIceWave;"
+										imageX=				"0" 
+										imageY=				"0" 
+										imageWidth=			"512" 
+										imageHeight=		"210"
+										imageFrameCount=	"1"
+										imageTicksPerFrame=	"1"/>
+							</Shockwave>
+						</Effect>
+					</Fragment>
+			</Missile>
+		</Missiles>
+	</Weapon>
+	
+	<Events>
+	<onFireWeapon>
+				(block (shot speed charges)
+					; check charges
+					(setq charges (itmGetCharges gItem))
+					(if (gr charges 0)
+						(shpRechargeItem gsource gItem -1)
+						; remove fuel rod and replenish charges
+						(block (ammotype)
+							(if (objHasItem gsource (itmCreate &itWaterIce; 1))
+								(setq ammotype &itWaterIce;)
+								(if (objHasItem gsource (itmCreate &itHeavyWater; 1))
+									(setq ammotype &itHeavyWater;)
+								)
+							)
+							; give charges
+							(switch
+								(eq &itHeavyWater; ammotype)
+									(shpRechargeItem gsource gItem 1)
+								(eq &itWaterIce; ammotype)
+									(shpRechargeItem gsource gItem 1)
+							)
+							(objRemoveItem gSource (itmCreate ammotype 1))
+						)
+					)
+					; and the normal shot
+					nil
+				)
+			</onFireWeapon>
+			<onUpdate>
+				(block (ice water charges shots realshots)
+					; count charges
+					(setq charges (itmGetCharges gItem))
+					; count fuel
+					(objEnumItems gSource "*" theItem
+						(switch 
+							(eq (itmGetUnid theItem) &itHeavyWater;)
+								(setq water (itmGetCount theItem))
+							(eq (itmGetUnid theItem) &itWaterIce;)
+								(setq ice (itmGetCount theItem))
+						)
+					)
+					; count shots
+					(objEnumItems gSource "*V" theItem
+						(if (eq (itmGetUnid theItem) &itIceMissileVirtual;)
+							(setq shots (itmGetCount theItem))
+						)
+					)
+					(setq realshots (add (multiply 1 ice) (multiply 1 water) charges))
+					(switch
+						(gr realshots shots)
+							(objadditem gSource (itmCreate &itIceMissileVirtual; (subtract realshots shots)))
+						(ls realshots shots)
+							(objremoveitem gSource (itmCreate &itIceMissileVirtual; (subtract shots realshots)))
+					)
+				)
+			</onUpdate>
+			</Events>
+			
+</ItemType>
+
+<!-- Ice Missile -->
+	        <ItemType 
+	        UNID=       "&itIceMissileVirtual;"
+			name=				"<virtual ammo>"
+			level=				"1"
+			virtual=			"true"
+			attributes=			"Consumable; Missile"
+			>
+	</ItemType>
+	
+
+	
+</TranscendenceModule>

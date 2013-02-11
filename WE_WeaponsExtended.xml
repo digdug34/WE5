@@ -1,0 +1,2802 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TranscendenceExtension
+	[
+	<!ENTITY unidExtension				"0xD25C4001">
+	
+	<!-- OVERRIDEN STANDARD WEAPONS -->
+	
+	<!ENTITY itLaserCannon				"0x0000400D">
+	<!ENTITY itRecoillessCannon			"0x0000400E">
+	<!ENTITY itParticleBeamWeapon		"0x0000400F">
+	<!ENTITY itNAMIMissileLauncher		"0x00004010">
+	<!ENTITY itKM100Missile				"0x00004011">
+	<!ENTITY itDualLaserCannon			"0x00004012">
+	<!ENTITY itDualRecoillessCannon		"0x00004013">
+	<!ENTITY itXM300Missile				"0x00004014">
+	<!ENTITY itKM500Missile				"0x00004015">
+	<!ENTITY itXRayLaserCannon			"0x00004016">
+	<!ENTITY itPlasmaCannon				"0x00004017">
+	<!ENTITY itXM900Missile				"0x00004019">
+	<!ENTITY itKilotonCannonShell		"0x0000401E">
+	<!ENTITY itKilotonCannon			"0x00004020">
+	
+	<!ENTITY itOmniLaserCannon			"0x00004035">
+	<!ENTITY itMiningLaser				"0x0000403D">
+	<!ENTITY itFragmentationMissile		"0x00004058">
+	<!ENTITY itSmartCannon				"0x0000405B">
+	<!ENTITY itSmartCannonShell			"0x0000405C">
+	<!ENTITY itBlaster					"0x0000405D">
+	<!ENTITY itArbalestCannon			"0x0000405E">
+	<!ENTITY itTurbolaserCannon			"0x00004063">
+	<!ENTITY itDualParticleBeamWeapon	"0x00004064">
+	<!ENTITY itDragonflyMissileSystem	"0x00004065">
+	<!ENTITY itDragonflyCartridge		"0x00004066">
+	<!ENTITY itFlenserCannon			"0x00004069">
+	<!ENTITY itMAGLauncher				"0x0000406E">
+	<!ENTITY it400HexageneMAG			"0x0000406F">
+	<!ENTITY it600HexageneMAG			"0x00004070">
+	<!ENTITY it800HexageneMAG			"0x00004071">
+	<!ENTITY itJB2ShieldBusterMAG		"0x00004198">
+	<!ENTITY itZG24ClusterMAG			"0x00004072">
+	<!ENTITY it3KSiegeMAG				"0x00004073">
+	<!ENTITY itHighFluxMAG				"0x00004074">
+	<!ENTITY itDualTurbolaserCannon		"0x00004075">
+	<!ENTITY itDualFlenserCannon		"0x00004076">
+	<!ENTITY itIonCannon				"0x00004077">
+	<!ENTITY itWasteCannon				"0x00004078">
+	<!ENTITY itBallistaCannon			"0x000041A2">
+	<!ENTITY itHeavyRecoillessCannon	"0x00004081">
+	<!ENTITY itStarCannon				"0x000040B1">
+	<!ENTITY itTridentCannon			"0x000040B2">
+	<!ENTITY itFastFireLaserCannon		"0x000040B4">
+	<!ENTITY itPartisanCannon			"0x000040B5">
+	<!ENTITY itLaserArray				"0x000040B6">
+	<!ENTITY itSlamCannon				"0x000040B7">
+	<!ENTITY itOmniPartisanCannon		"0x00004193">
+	<!ENTITY itMoskvaDualCannon			"0x000041A1">
+	<!ENTITY itAkan30Cannon				"0x000040C1">
+	<!ENTITY itAkan30CannonShell		"0x000040C2">
+	<!ENTITY itDisposableLauncher		"0x000040C4">
+	<!ENTITY itNM900MissilePod			"0x001A4007">
+	<!ENTITY itLightRecoillessCannon	"0x000040C5">
+	<!ENTITY itLancerCannon				"0x000040CA">
+	<!ENTITY itMarkIHowitzer			"0x000040CB">
+	<!ENTITY itSunflareCannon			"0x000040D1">
+	<!ENTITY itBlinderCannon			"0x000040D2">
+	<!ENTITY itNeutronBlaster			"0x000040D4">
+	<!ENTITY itParticleBoltCannon		"0x000040D7">
+	<!ENTITY itParticleBoltCartridge	"0x000040D8">
+	<!ENTITY itAkan600Turret			"0x000040D9">
+	<!ENTITY itHanzoBlaster				"0x000040DA">
+	<!ENTITY itMarkIIIHowitzer			"0x000040DB">
+	<!ENTITY itTeV9Blaster				"0x000040DC">
+	<!ENTITY itRasiermesserLauncher		"0x000040E4">
+	<!ENTITY itGotha10Missile			"0x000040E5">
+	<!ENTITY itGotha400Seeker			"0x000040E6">
+	<!ENTITY itOmniParticleCannon		"0x000040EC">
+	<!ENTITY itPlasmaTorch				"0x000040F9">
+	<!ENTITY itMorningStarCannon		"0x000040FC">
+	<!ENTITY itDualTeV9Blaster			"0x0000410C">
+	<!ENTITY itIonDisruptor				"0x0000410E">
+	<!ENTITY itThermoCannon				"0x00004110">
+	<!ENTITY itThermoCannonShell		"0x00004111">
+	<!ENTITY itOmniTurbolaserCannon		"0x00004112">
+	<!ENTITY itOmniTeV9Blaster			"0x00004113">
+	<!ENTITY itOmniThermoCannon			"0x00004114">
+	<!ENTITY itOmniIonBlaster			"0x00004115">
+	<!ENTITY itHeavySlamCannon			"0x00004116">
+	<!ENTITY itMakayevLauncher			"0x00004117">
+	<!ENTITY itStrelkaWhite				"0x00004118">
+	<!ENTITY itStrelkaGreen				"0x00004119">
+	<!ENTITY itStrelkaRed				"0x0000411A">
+	<!ENTITY itStrelkaBlack				"0x0000411B">
+	<!ENTITY itKytrynLauncher			"0x00004125">
+	<!ENTITY itKytrynPlasmaSeed			"0x00004126">
+	<!ENTITY itIonFlameCannon			"0x00004128">
+	<!ENTITY itHeavyIonBlaster			"0x00004129">
+	<!ENTITY itTritiumCannon			"0x0000412A">
+	<!ENTITY itAdvancedTritiumCannon	"0x0000412B">
+	<!ENTITY itFusionfireHowitzer		"0x0000412C">
+	<!ENTITY itNAMIMineLauncher			"0x0000412D">
+	<!ENTITY itStaticMine				"0x0000412E">
+	<!ENTITY itTrackingMine				"0x0000412F">
+	<!ENTITY itKytrynBlaster			"0x00004173">
+	<!ENTITY itTM7Cannon				"0x00004174">
+	<!ENTITY itTM7Warhead				"0x00004175">
+	<!ENTITY itIM90Blaster				"0x00004176">
+	<!ENTITY itMarkVHowitzer			"0x00004177">
+	
+	<!ENTITY itShtormRepeater			"0x00004181">
+	<!ENTITY itNAMIHeavyLauncher		"0x00004185">
+	<!ENTITY itM2Missile				"0x00004186">
+	<!ENTITY itM5Missile				"0x00004187">
+	<!ENTITY itS3Missile				"0x00004188">
+	
+	<!ENTITY itIonBlaster				"0x080200C6">
+	<!ENTITY itMoskvaLightTurret		"0x00004199">
+	
+	<!-- EXTENDED WEAPONS -->
+	
+	<!-- NAMI -->
+	
+	<!ENTITY itDisposableLauncher2		"0xD25C4002">
+	<!ENTITY itDisposableLauncher3		"0xD25C4003">
+	<!ENTITY itDisposableLauncher4		"0xD25C4004">		
+	<!ENTITY itDisposableLauncher5		"0xD25C4005">
+		
+	<!ENTITY itRecoillessCannon2			"0xD25C400A">
+	<!ENTITY itRecoillessCannon3			"0xD25C400B">
+	<!ENTITY itRecoillessCannon4			"0xD25C400C">
+	<!ENTITY itRecoillessCannon5			"0xD25C400D">
+	
+	<!ENTITY itLightRecoillessCannon2	"0xD25C400E">
+	<!ENTITY itLightRecoillessCannon3	"0xD25C400F">
+	<!ENTITY itLightRecoillessCannon4	"0xD25C4010">
+	
+	<!ENTITY itHeavyRecoillessCannon2	"0xD25C401C">
+	<!ENTITY itHeavyRecoillessCannon3	"0xD25C401D">
+	<!ENTITY itHeavyRecoillessCannon4	"0xD25C401E">
+	
+	<!ENTITY itTridentCannon2	"0xD25C401F">
+	<!ENTITY itTridentCannon3	"0xD25C4020">
+	<!ENTITY itTridentCannon4	"0xD25C4021">
+	<!ENTITY itTridentCannon5	"0xD25C4022">
+	<!ENTITY itTridentCannon6	"0xD25C4023">
+
+	
+	<!-- EI -->
+
+	<!ENTITY itLaserCannon1		"0xD25C4006">
+	<!ENTITY itLaserCannon2			"0xD25C4007">
+	<!ENTITY itLaserCannon3		"0xD25C4008">
+	<!ENTITY itLaserCannon4		"0xD25C4009">
+	
+	<!ENTITY itBlaster2	"0xD25C4011">
+	<!ENTITY itBlaster3	"0xD25C4012">
+
+	<!ENTITY itDualLaserCannon2	"0xD25C4013">
+	<!ENTITY itDualLaserCannon3	"0xD25C4014">
+	<!ENTITY itDualLaserCannon4	"0xD25C4015">
+	<!ENTITY itDualLaserCannon5	"0xD25C4016">
+	<!ENTITY itDualLaserCannon6	"0xD25C4017">
+	<!ENTITY itDualLaserCannon7	"0xD25C441E">
+	<!ENTITY itDualLaserCannon8	"0xD25C441F">
+	
+	<!ENTITY itFastFireLaserCannon2	"0xD25C4018">
+	<!ENTITY itFastFireLaserCannon3	"0xD25C4019">
+	<!ENTITY itFastFireLaserCannon4	"0xD25C401A">
+	<!ENTITY itFastFireLaserCannon5	"0xD25C401B">
+
+	<!ENTITY itMiningLaser2	"0xD25C4309">
+	<!ENTITY itMiningLaser3	"0xD25C4301">
+	<!ENTITY itMiningLaser4	"0xD25C43FA">
+	<!ENTITY itMiningLaser5	"0xD25C43FB">
+	<!ENTITY itMiningLaser6	"0xD25C43FC">
+	<!ENTITY itOmniMiningTurbolaserCannon	"0xD25C43FD">
+
+	<!-- LEVEL III-->
+	
+	<!ENTITY itBlinderCannon2	"0xD25C4025">
+	<!ENTITY itBlinderCannon3	"0xD25C4026">
+	
+	<!ENTITY itArbalestCannon2	"0xD25C4027">
+	<!ENTITY itArbalestCannon3	"0xD25C4028">
+	<!ENTITY itArbalestCannon4	"0xD25C4029">
+	
+	<!ENTITY itLaserArray2	"0xD25C402A">
+	<!ENTITY itLaserArray3	"0xD25C402B">
+	<!ENTITY itLaserArray4	"0xD25C402C">
+	<!ENTITY itLaserArray5	"0xD25C402D">
+	<!ENTITY itLaserArray6	"0xD25C402E">
+
+	<!ENTITY itMoskvaLightTurret2	"0xD25C402F">
+	<!ENTITY itMoskvaLightTurret3	"0xD25C4030">
+	<!ENTITY itMoskvaLightTurret4	"0xD25C4031">
+	
+	<!ENTITY itOmniLaserCannon2	"0xD25C4032">
+	<!ENTITY itOmniLaserCannon3	"0xD25C4033">
+	<!ENTITY itOmniLaserCannon4	"0xD25C4034">
+	<!ENTITY itOmniLaserCannon5	"0xD25C4035">
+	<!ENTITY itOmniLaserCannon6	"0xD25C4036">
+	
+	<!ENTITY itKM60Missile	"0xD25C4037">
+	<!ENTITY itKM80Missile	"0xD25C4038">
+	<!ENTITY itKM140Missile	"0xD25C4039">
+	<!ENTITY itKM510Missile	"0xD25C5056">
+	<!ENTITY itKM520Missile	"0xD25C403A">
+	<!ENTITY itPirateMissile	"0xD25C403B">
+	
+	<!-- This is the dockscreen that loads the NAMI missiles in the pod-->
+	<!ENTITY dsLoadNamiPod	"0xD25CA003">
+	<!ENTITY itNAMImissilePod	"0xD25C403C">
+	<!ENTITY itNAMImissilePodKM100	"0xD25C403D">
+	<!ENTITY itNAMImissilePodKM80	"0xD25C403E">
+	<!ENTITY itNAMImissilePodKM60	"0xD25C403F">
+	<!ENTITY itNAMImissilePodKM110	"0xD25C4040">
+	<!ENTITY itNAMImissilePodKM120	"0xD25C4041">
+	<!ENTITY itNAMImissilePodKM140	"0xD25C4042">
+	<!ENTITY itNAMImissilePodKM500	"0xD25C4043">
+	<!ENTITY itNAMImissilePodKM520	"0xD25C4044">
+	<!ENTITY itNAMImissilePodKM550	"0xD25C4045">
+	<!ENTITY itNAMImissilePodXM300	"0xD25C4046">
+	<!ENTITY itNAMImissilePodXM900	"0xD25C4047">
+	<!ENTITY itNAMImissilePodCharon	"0xD25C4048">
+	
+	
+	
+	
+	<!ENTITY itPartisanCannon2		"0xD25C4049">
+	<!ENTITY itPartisanCannon3		"0xD25C404A">
+	<!ENTITY itPartisanCannon4		"0xD25C404B">
+	
+	<!ENTITY itSmartCannon2		"0xD25C404C">
+	
+	<!ENTITY itJacketedShell	"0xD25C404D">
+	<!ENTITY itFastFireShell	"0xD25C404E">
+	<!ENTITY itExplosiveShell	"0xD25C404F">
+	
+	<!ENTITY itDualRecoillessCannon2	"0xD25C4050">
+	<!ENTITY itDualRecoillessCannon3	"0xD25C4051">
+	<!ENTITY itDualRecoillessCannon4	"0xD25C4052">
+	<!ENTITY itDualRecoillessCannon5	"0xD25C4053">
+	
+	<!ENTITY itTurbolaserCannon2	"0xD25C4054">
+	<!ENTITY itTurbolaserCannon3	"0xD25C4055">
+	<!ENTITY itTurbolaserCannon4	"0xD25C4056">
+	<!ENTITY itTurbolaserCannon5	"0xD25C4057">
+	
+	
+	<!-- LEVEL IV -->
+	
+	<!ENTITY itWasteCannon2	"0xD25C405A">
+	<!ENTITY itWasteCannon3	"0xD25C405B">
+	
+	<!ENTITY itBallistaCannon2	"0xD25C405C">
+	<!ENTITY itBallistaCannon3	"0xD25C405D">
+	<!ENTITY itBallistaCannon4	"0xD25C405E">
+	
+	<!ENTITY itFlenserCannon2	"0xD25C405F">
+	<!ENTITY itFlenserCannon3	"0xD25C4060">
+	<!ENTITY itFlenserCannon4	"0xD25C4061">
+	<!ENTITY itFlenserCannon5	"0xD25C4062">
+	<!ENTITY itFlenserCannon6	"0xD25C4063">
+	
+	<!ENTITY it500HexageneMAG	"0xD25C4064">
+	<!ENTITY it700HexageneMAG	"0xD25C4065">
+	<!ENTITY it1000ThermoMAG	"0xD25C4066">
+	<!ENTITY itZG12ClusterMAG	"0xD25C4067">
+	<!ENTITY it1KSiegeMAG	"0xD25C4068">
+	<!ENTITY it2KSiegeMAG	"0xD25C4069">
+	<!ENTITY itZG48ClusterMAG	"0xD25C406A">
+	
+	<!ENTITY itParticleBeamWeapon2	"0xD25C406B">
+	<!ENTITY itParticleBeamWeapon3	"0xD25C406C">
+	
+	<!ENTITY itMorningStarCannon2	"0xD25C406D">
+	<!ENTITY itMorningStarCannon3	"0xD25C406E">
+	<!ENTITY itMorningStarCannon4	"0xD25C406F">
+	
+	<!ENTITY itMoskvaDualCannon2		"0xD25C4070">
+	<!ENTITY itMoskvaDualCannon3		"0xD25C4071">
+	<!ENTITY itMoskvaDualCannon4		"0xD25C4058">
+	
+	<!ENTITY itOmniPartisanCannon2		"0xD25C4072">
+	<!ENTITY itOmniPartisanCannon3		"0xD25C4073">
+	
+	<!ENTITY itSlamCannon2	"0xD25C4074">
+	<!ENTITY itSlamCannon3	"0xD25C4075">
+	<!ENTITY itSlamCannon4	"0xD25C4076">
+	<!ENTITY itSlamCannon5	"0xD25C4077">
+	<!ENTITY itSlamCannon6	"0xD25C4078">
+	<!ENTITY itSlamCannon7	"0xD25C4079">
+	
+	<!ENTITY itDualTurbolaserCannon2	"0xD25C407A">
+	<!ENTITY itDualTurbolaserCannon3	"0xD25C407B">
+	<!ENTITY itDualTurbolaserCannon4	"0xD25C407C">
+	<!ENTITY itDualTurbolaserCannon5	"0xD25C407D">
+	<!ENTITY itDualTurbolaserCannon6	"0xD25C407E">
+	<!ENTITY itDualTurbolaserCannon7	"0xD25C407F">
+	
+	<!ENTITY itOmniTurbolaserCannon2	"0xD25C4080">
+	<!ENTITY itOmniTurbolaserCannon3	"0xD25C4081">
+	<!ENTITY itOmniTurbolaserCannon4	"0xD25C4082">
+	<!ENTITY itOmniTurbolaserCannon5	"0xD25C4083">
+	<!ENTITY itOmniTurbolaserCannon6	"0xD25C4084">
+	<!ENTITY itOmniTurbolaserCannon7	"0xD25C4085">
+	
+	<!-- LEVEL V -->
+	
+	<!ENTITY itAkan30Cannon2					"0xD25C4086">
+	<!ENTITY itFragmentingAkan30CannonShell		"0xD25C4087">
+	<!ENTITY itTracingAkan30CannonShell			"0xD25C4089">
+	<!ENTITY itHighMomentumAkan30CannonShell	"0xD25C408A">
+	<!ENTITY itThermoAkan30CannonShell			"0xD25C408B">
+	
+	<!ENTITY itIonCannon2	"0xD25C408C">
+	<!ENTITY itIonCannon3	"0xD25C408D">
+	<!ENTITY itIonCannon4	"0xD25C408E">
+	<!ENTITY itIonCannon5	"0xD25C408F">
+	
+	<!ENTITY itlancercannon2	"0xD25C4090">
+	<!ENTITY itlancercannon3	"0xD25C4091">
+	
+	<!ENTITY itStrelkaAzure		"0xD25C4092">
+	<!ENTITY itStrelkaBrown		"0xD25C4093">
+	<!ENTITY itStrelkaBlue		"0xD25C4094">
+	<!ENTITY itStrelkaPurple	"0xD25C4095">
+	
+	<!ENTITY itMarkIHowitzer2	"0xD25C4096">
+	<!ENTITY itMarkIHowitzer3	"0xD25C4097">
+	<!ENTITY itMarkIHowitzer4	"0xD25C4098">
+	<!ENTITY itMarkIHowitzer5	"0xD25C4099">
+	<!ENTITY itMarkIHowitzer6	"0xD25C409A">
+	
+	<!ENTITY itOmniParticleCannon2	"0xD25C409B">
+	<!ENTITY itOmniParticleCannon3	"0xD25C409C">
+	<!ENTITY itOmniParticleCannon4	"0xD25C409D">
+	
+	<!ENTITY itNeutronBlaster2	"0xD25C409E">
+	<!ENTITY itNeutronBlaster3	"0xD25C409F">
+	<!ENTITY itNeutronBlaster4	"0xD25C4100">
+	
+	<!ENTITY itShtormRepeater2	"0xD25C4101">
+	<!ENTITY itShtormRepeater3	"0xD25C4102">
+	<!ENTITY itShtormRepeater4	"0xD25C4103">
+	
+	<!ENTITY itHeavySlamCannon2	"0xD25C4104">
+	<!ENTITY itHeavySlamCannon3	"0xD25C4105">
+	<!ENTITY itHeavySlamCannon4	"0xD25C4106">
+	<!ENTITY itHeavySlamCannon5	"0xD25C4107">
+	<!ENTITY itHeavySlamCannon6	"0xD25C4108">
+	
+	<!ENTITY itXRayLaserCannon2	"0xD25C4109">
+	<!ENTITY itXRayLaserCannon3	"0xD25C410A">
+	<!ENTITY itXRayLaserCannon4	"0xD25C410B">
+	<!ENTITY itXRayLaserCannon5	"0xD25C410C">
+	<!ENTITY itXRayLaserCannon6	"0xD25C410D">
+	<!ENTITY itXRayLaserCannon7	"0xD25C410E">
+	
+		<!-- LEVEL VI -->
+		
+	<!ENTITY itAkan600Turret2			"0xD25C410F">
+	
+	<!ENTITY itDragonflyMissileSystem2			"0xD25C4110">
+	<!ENTITY itDragonflyThermoCartridge			"0xD25C4111">
+	<!ENTITY itDragonflykineticCartridge		"0xD25C4112">
+	<!ENTITY itDragonflyhighspeedCartridge		"0xD25C4113">
+	<!ENTITY itDragonflymomentumCartridge		"0xD25C4114">
+	<!ENTITY itDragonflyfragmentingCartridge	"0xD25C4115">
+	
+	<!ENTITY itDualFlenserCannon2	"0xD25C4116">
+	<!ENTITY itDualFlenserCannon3	"0xD25C4117">
+	<!ENTITY itDualFlenserCannon4	"0xD25C4118">
+	<!ENTITY itDualFlenserCannon5	"0xD25C4119">
+	
+	<!ENTITY itMarkIIIHowitzer2		"0xD25C411A">
+	<!ENTITY itMarkIIIHowitzer3		"0xD25C411B">
+	<!ENTITY itMarkIIIHowitzer4		"0xD25C411C">
+	<!ENTITY itMarkIIIHowitzer5		"0xD25C411D">
+
+	<!ENTITY itDualParticleBeamWeapon2		"0xD25C411E">
+	<!ENTITY itDualParticleBeamWeapon3		"0xD25C411F">
+	<!ENTITY itDualParticleBeamWeapon4		"0xD25C4120">
+	<!ENTITY itDualParticleBeamWeapon5		"0xD25C4121">
+	
+	<!ENTITY itParticleBoltCannon2				"0xD25C4122">
+	<!ENTITY itParticleFluxCartridge			"0xD25C4123">
+	<!ENTITY itParticleFlareCartridge			"0xD25C4124">
+	<!ENTITY itParticleFragmentingCartridge		"0xD25C4125">
+	
+	<!ENTITY itPlasmaTorch2		"0xD25C4126">
+	<!ENTITY itPlasmaTorch3		"0xD25C4127">
+	<!ENTITY itPlasmaTorch4		"0xD25C4128">
+	<!ENTITY itPlasmaTorch5			"0xD25C441A">
+	<!ENTITY itPlasmaTorch6			"0xD25C441B">
+	
+	<!ENTITY itTeV9Blaster2		"0xD25C4129">
+	<!ENTITY itTeV9Blaster3		"0xD25C412A">
+	<!ENTITY itTeV9Blaster4		"0xD25C412B">
+	<!ENTITY itTeV9Blaster5		"0xD25C412C">
+	<!ENTITY itTeV9Blaster6		"0xD25C412D">
+	
+	<!-- LEVEL VII -->
+	
+	<!ENTITY itHanzoBlaster2		"0xD25C412E">
+	<!ENTITY itHanzoBlaster3		"0xD25C412F">
+	<!ENTITY itHanzoBlaster4		"0xD25C4130">
+	
+	<!ENTITY itIonDisruptor2		"0xD25C4132">
+	<!ENTITY itIonDisruptor3		"0xD25C4133">
+	<!ENTITY itIonDisruptor4		"0xD25C4134">
+	<!ENTITY itIonDisruptor5		"0xD25C4135">
+	<!ENTITY itIonDisruptor7			"0xD25C441D">
+	
+	<!ENTITY itStarCannon2		"0xD25C4136">
+	<!ENTITY itStarCannon3		"0xD25C4137">
+	<!ENTITY itStarCannon4		"0xD25C4138">
+	<!ENTITY itStarCannon5		"0xD25C4139">
+	
+
+
+	<!ENTITY itKilotonLauncher					"0xD25C4131">	
+	<!ENTITY itLargeRadiusShell			"0xD25C413A">
+	<!ENTITY itSmallRadiusShell			"0xD25C413B">
+	<!ENTITY itLaserTrackingShell		"0xD25C413C">
+	
+	<!ENTITY itMarkVHowitzer2		"0xD25C413D">
+	<!ENTITY itMarkVHowitzer3		"0xD25C413E">
+	<!ENTITY itMarkVHowitzer4		"0xD25C413F">
+	
+	<!ENTITY itFragmentationMine		"0xD25C4140">
+	<!ENTITY itThermoMine				"0xD25C4141">
+	<!ENTITY itEMPMine					"0xD25C4142">
+	
+	<!ENTITY itDualTeV9Blaster2					"0xD25C4143">
+	<!ENTITY itDualTeV9Blaster3					"0xD25C4144">
+	<!ENTITY itDualTeV9Blaster4					"0xD25C4145">
+	<!ENTITY itDualTeV9Blaster5					"0xD25C4146">
+	<!ENTITY itDualTeV9Blaster6					"0xD25C4147">
+	<!ENTITY itDualTeV9Blaster7					"0xD25C4148">
+	<!ENTITY itDualTeV9Blaster8					"0xD25C4149">
+	
+	<!ENTITY itOmniTeV9Blaster2					"0xD25C414A">
+	<!ENTITY itOmniTeV9Blaster3					"0xD25C414B">
+	<!ENTITY itOmniTeV9Blaster4					"0xD25C414C">
+	<!ENTITY itOmniTeV9Blaster5					"0xD25C414D">
+	<!ENTITY itOmniTeV9Blaster6					"0xD25C414E">
+	
+	<!ENTITY itThermoCannon2					"0xD25C414F">
+	<!ENTITY itHighMomentumThermoShell			"0xD25C4150">
+	<!ENTITY itTrackingThermoShell				"0xD25C4152">
+	<!ENTITY itOmniThermoCannon2				"0xD25C4153">
+	
+	<!ENTITY itTritiumCannon2				"0xD25C4154">
+	<!ENTITY itTritiumCannon3				"0xD25C4155">
+	<!ENTITY itTritiumCannon4				"0xD25C4156">
+	<!ENTITY itTritiumCannon5				"0xD25C4157">
+	
+	<!-- LEVEL VIII -->
+	
+	<!ENTITY itFusionfireHowitzer2				"0xD25C4158">
+	<!ENTITY itFusionfireHowitzer3				"0xD25C4159">
+	<!ENTITY itFusionfireHowitzer4				"0xD25C415A">
+	<!ENTITY itFusionfireHowitzer5				"0xD25C415B">
+	
+	<!ENTITY itIonBlaster2				"0xD25C415C">
+	<!ENTITY itIonBlaster3				"0xD25C415D">
+	<!ENTITY itIonBlaster4				"0xD25C415E">
+	<!ENTITY itIonBlaster5				"0xD25C415F">
+	<!ENTITY itIonBlaster6				"0xD25C4160">
+	
+	<!ENTITY itIonFlameCannon2				"0xD25C4161">
+	<!ENTITY itIonFlameCannon3				"0xD25C4162">
+	<!ENTITY itIonFlameCannon4				"0xD25C4163">
+	<!ENTITY itIonFlameCannon5				"0xD25C4164">
+	<!ENTITY itIonFlameCannon6				"0xD25C4165">
+	
+	<!ENTITY itGotha600Missile				"0xD25C4166">
+	<!ENTITY itGotha20Missile				"0xD25C4167">
+	<!ENTITY itGotha30Missile				"0xD25C4168">
+	<!ENTITY itGotha42Missile				"0xD25C4169">
+	<!ENTITY itGotha8000Seeker				"0xD25C416A">
+	
+	
+	<!ENTITY itTM7CannonLauncher				"0xD25C416B">
+	<!ENTITY itTM3Warhead				"0xD25C416C">
+	<!ENTITY itTM10Warhead				"0xD25C416D">
+	<!ENTITY itTMFWarhead				"0xD25C416E">
+	
+	<!-- LEVEL IX -->
+	
+	<!ENTITY itHeavyIonBlaster2				"0xD25C416F">
+	<!ENTITY itHeavyIonBlaster3				"0xD25C4170">
+	<!ENTITY itHeavyIonBlaster4				"0xD25C4171">
+	<!ENTITY itHeavyIonBlaster5				"0xD25C4172">
+	<!ENTITY itHeavyIonBlaster6				"0xD25C4173">
+	<!ENTITY itHeavyIonBlaster7				"0xD25C4174">
+	<!ENTITY itHeavyIonBlaster8				"0xD25C4175">
+	
+	<!ENTITY itS9Missile				"0xD25C4176">
+	<!ENTITY itM1Missile				"0xD25C4177">
+	<!ENTITY itP1Missile				"0xD25C4178">
+	<!ENTITY itE1Missile				"0xD25C4179">
+	
+	<!ENTITY itOmniIonBlaster2				"0xD25C417A">
+	<!ENTITY itOmniIonBlaster3				"0xD25C417B">
+	<!ENTITY itOmniIonBlaster4				"0xD25C417C">
+	<!ENTITY itOmniIonBlaster5				"0xD25C417D">
+
+	<!ENTITY itAdvancedTritiumCannon2			"0xD25C8011">
+	<!ENTITY itAdvancedTritiumCannon3			"0xD25C4246">
+
+	<!-- LEVEL X -->
+	
+	<!ENTITY itIM90Blaster2				"0xD25C417E">
+	<!ENTITY itIM90Blaster3				"0xD25C417F">
+	<!ENTITY itIM90Blaster4				"0xD25C4180">
+
+	<!ENTITY itPlasmaCannon2			"0xD25C4251">
+	<!ENTITY itPlasmaCannon3			"0xD25C4253">
+	
+	
+	<!-- AMMO BOXES AMMO BOXES AMMO BOXES -->
+	
+	<!ENTITY itAmmoBoxAkan30			"0x0000411C">
+	<!ENTITY itAmmoBoxStrelka1			"0x0000411D">
+	<!ENTITY itAmmoBoxMAG				"0x0000411E">
+	<!ENTITY itAmmoBoxThermo			"0x0000411F">
+	<!ENTITY itAmmoBoxStrelka2			"0x00004120">
+	
+	<!ENTITY itAmmoBoxContraband		"0x00004122">
+	<!ENTITY itAmmoBoxParalysis			"0x00004123">
+	
+	<!ENTITY vtUnknownAmmoBox			"0x00005005">
+
+	<!ENTITY itAmmoBoxEmpty				"0xD25C4188">
+	<!ENTITY itAmmoBoxBlinding			"0xD25C4189">
+	
+	<!ENTITY itAmmoBoxStrelka3				"0xD25C418A">
+	<!ENTITY itAmmoBoxStrelka4				"0xD25C418B">
+	<!ENTITY itAmmoBoxStrelka5				"0xD25C418C">
+	<!ENTITY itAmmoBoxStrelka6				"0xD25C418D">
+	<!ENTITY itAmmoBoxStrelka7				"0xD25C418E">
+	<!ENTITY itAmmoBoxStrelka8				"0xD25C418F">
+	
+	<!ENTITY itAmmoBoxNAMI1			   	"0xD25C4190">
+	<!ENTITY itAmmoBoxNAMI2				"0xD25C4191">
+	<!ENTITY itAmmoBoxNAMI3				"0xD25C4192">
+	<!ENTITY itAmmoBoxNAMI4				"0xD25C4193">
+	<!ENTITY itAmmoBoxNAMI5				"0xD25C4194">
+	<!ENTITY itAmmoBoxNAMI6				"0xD25C4195">
+	<!ENTITY itAmmoBoxNAMI7				"0xD25C4196">
+	<!ENTITY itAmmoBoxNAMI8				"0xD25C4197">
+	<!ENTITY itAmmoBoxNAMI9				"0xD25C4198">
+	<!ENTITY itAmmoBoxNAMI10			"0xD25C4199">
+	<!ENTITY itAmmoBoxNAMI11			"0xD25C419A">
+	<!ENTITY itAmmoBoxNAMI12			"0xD25C419B">
+	
+	<!ENTITY itAmmoBoxMAG2				"0xD25C419C">
+	<!ENTITY itAmmoBoxMAG3				"0xD25C419D">
+	<!ENTITY itAmmoBoxMAG4				"0xD25C419E">
+	<!ENTITY itAmmoBoxMAG5				"0xD25C419F">
+	<!ENTITY itAmmoBoxMAG6				"0xD25C4200">
+	<!ENTITY itAmmoBoxMAG7				"0xD25C4201">
+	<!ENTITY itAmmoBoxMAG8				"0xD25C4202">
+	<!ENTITY itAmmoBoxMAG9				"0xD25C4203">
+	<!ENTITY itAmmoBoxMAG10				"0xD25C4204">
+	<!ENTITY itAmmoBoxMAG11				"0xD25C4205">
+	<!ENTITY itAmmoBoxMAG12				"0xD25C4206">
+	<!ENTITY itAmmoBoxMAG13				"0xD25C4207">
+	<!ENTITY itAmmoBoxMAG14				"0xD25C4208">
+
+	<!ENTITY itAmmoBoxAkan302				"0xD25C4209">
+	<!ENTITY itAmmoBoxAkan303				"0xD25C420A">
+	<!ENTITY itAmmoBoxAkan304				"0xD25C420B">
+	<!ENTITY itAmmoBoxAkan306				"0xD25C420D">
+	
+	<!ENTITY itAmmoBoxThermo2				"0xD25C420E">
+	<!ENTITY itAmmoBoxThermo4				"0xD25C4210">
+	
+	<!ENTITY itSmartCannonBox				"0xD25C4211">
+	<!ENTITY itSmartCannonBox2				"0xD25C4212">
+	<!ENTITY itSmartCannonBox3				"0xD25C4213">
+	<!ENTITY itSmartCannonBox4				"0xD25C4214">
+	
+	<!ENTITY itKilotonAmmoBox				"0xD25C4215">
+	<!ENTITY itKilotonAmmoBox2				"0xD25C4216">
+	<!ENTITY itKilotonAmmoBox3				"0xD25C4217">
+	<!ENTITY itKilotonAmmoBox4				"0xD25C4218">
+	
+	<!ENTITY TMWarheadBox				"0xD25C4219">
+	<!ENTITY TMWarheadBox2				"0xD25C421A">
+	<!ENTITY TMWarheadBox3				"0xD25C421B">
+	<!ENTITY TMWarheadBox4				"0xD25C421C">
+	
+	
+		<!-- AMMO TABLES -->
+	
+	<!ENTITY trNAMIMissiles			"0xD25C8001">
+	<!ENTITY trNAMIPirate			"0xD25C8002">
+	<!ENTITY trSmartCannonAmmo		"0xD25C8003">
+	<!ENTITY trMAGAmmo				"0xD25C8004">
+	<!ENTITY trAkanAmmo				"0xD25C8005">
+	<!ENTITY trMakayevLauncherAmmo	"0xD25C8006">
+	<!ENTITY trDragonFlyAmmo		"0xD25C8007">
+	<!ENTITY trNandaoBoltAmmo		"0xD25C8008">
+	<!ENTITY trKilotonAmmo			"0xD25C8009">
+	<!ENTITY trNAMIMineAmmo			"0xD25C800A">
+	<!ENTITY trThermoCannonAmmo		"0xD25C800B">
+	<!ENTITY trRasiermesserAmmo		"0xD25C800C">
+	<!ENTITY trTM7Ammo				"0xD25C800D">
+	<!ENTITY trNAMIHeavyAmmo		"0xD25C800E">
+	<!ENTITY trNAMIPirate2			"0xD25C800F">
+	<!ENTITY trRasiermesserAmmo2	"0xD25C8010">
+	
+	<!-- UNKNOWN WEAPONS  -->	
+	
+	   <!ENTITY itUnknownMissileRack			"0xD25C5001">
+	<!ENTITY itUnknownMissileRack2			    "0xD25C5002">
+	<!ENTITY itUnknownMissileRack3			    "0xD25C5003">
+	<!ENTITY itUnknownMissileRack4			    "0xD25C5004">
+	<!ENTITY itUnknownMissileRack5			    "0xD25C5005">
+	
+    <!ENTITY itUnknownLaserWeapon			    "0xD25C5006">
+	<!ENTITY itUnknownLaserWeapon1			"0xD25C5007">
+	<!ENTITY itUnknownLaserWeapon2			"0xD25C5008">
+	<!ENTITY itUnknownLaserWeapon3			"0xD25C5009">
+	<!ENTITY itUnknownLaserWeapon4			    "0xD25C500A">
+	<!ENTITY itUnknownLaserWeapon5			    "0xD25C500B">
+	<!ENTITY itUnknownLaserWeapon6			    "0xD25C500C">
+	<!ENTITY itOmniLaser			    "0xD25C500D">
+	<!ENTITY itOmniLaser2			    "0xD25C500E">
+	<!ENTITY itOmniLaser3			    "0xD25C500F">
+	<!ENTITY itOmniLaser4			    "0xD25C5010">
+	<!ENTITY itOmniLaser5			    "0xD25C5011">
+	
+	<!ENTITY itUnknownKineticCannon			"0xD25C5012">
+	<!ENTITY itUnknownKineticCannon2		"0xD25C5013">
+	<!ENTITY itUnknownKineticCannon3		"0xD25C5014">
+	<!ENTITY itUnknownKineticCannon4		    "0xD25C5015">
+	<!ENTITY itUnknownKineticCannon5			    "0xD25C5016">
+	<!ENTITY itUnknownKineticCannon6			    "0xD25C5017">
+	<!ENTITY itUnknownKineticCannon7			    "0xD25C5018">
+	<!ENTITY itUnknownKineticCannon8			    "0xD25C5019">
+	<!ENTITY itOmniKinetic			    "0xD25C501A">
+	<!ENTITY itOmniKinetic2			    "0xD25C501B">
+	<!ENTITY itOmniKinetic3			    "0xD25C501C">
+	<!ENTITY itOmniKinetic4			    "0xD25C501D">
+	
+	<!ENTITY itUnknownParticleCannon		"0xD25C501E">
+	<!ENTITY itUnknownParticleCannon2		"0xD25C501F">
+	<!ENTITY itUnknownParticleCannon3		   "0xD25C5020">
+	<!ENTITY itUnknownParticleCannon4		    "0xD25C5021">
+	<!ENTITY itUnknownParticleCannon5			    "0xD25C5022">
+	<!ENTITY itUnknownParticleCannon6			    "0xD25C5023">
+	<!ENTITY itOmniUnknownParticleCannon			    "0xD25C5024">
+	<!ENTITY itOmniUnknownParticleCannon2			    "0xD25C5025">
+	<!ENTITY itOmniUnknownParticleCannon3			    "0xD25C5026">
+	<!ENTITY itOmniUnknownParticleCannon4			    "0xD25C5027">
+	<!ENTITY itOmniUnknownParticleCannon5			    "0xD25C5028">
+	
+	<!ENTITY itUnknownBlastCannon			"0xD25C5029">
+	<!ENTITY itUnknownBlastCannon2			"0xD25C502A">
+	<!ENTITY itUnknownBlastCannon3		        "0xD25C502B">
+	<!ENTITY itUnknownBlastCannon4			    "0xD25C502C">
+	<!ENTITY itUnknownBlastCannon5			    "0xD25C502D">
+	<!ENTITY itUnknownBlastCannon6			    "0xD25C502E">
+	<!ENTITY itOmniBlast			    "0xD25C502F">
+	<!ENTITY itOmniBlast2			    "0xD25C5030">
+	<!ENTITY itOmniBlast3			    "0xD25C5031">
+	
+	
+	<!ENTITY itUnknownIonCannon				"0xD25C5032">
+	<!ENTITY itUnknownIonCannon2			"0xD25C5033">
+	<!ENTITY itUnknownIonCannon3			"0xD25C5034">
+	<!ENTITY itUnknownIonCannon4			    "0xD25C5035">
+	<!ENTITY itUnknownIonCannon5			    "0xD25C5036">
+	<!ENTITY itUnknownIonCannon6			    "0xD25C5037">
+	<!ENTITY itUnknownIonCannon7			    "0xD25C5038">
+	<!ENTITY itUnknownIonCannon8			    "0xD25C5039">
+	<!ENTITY itOmniIon			    "0xD25C503A">
+	<!ENTITY itOmniIon2			    "0xD25C503B">
+	<!ENTITY itOmniIon3			    "0xD25C503C">
+	<!ENTITY itOmniIon4			    "0xD25C5000">
+	
+	<!ENTITY itUnknownThermoCannon			"0xD25C503D">
+	<!ENTITY itUnknownThermoCannon2			"0xD25C503E">
+	<!ENTITY itUnknownThermoCannon3			    "0xD25C503F">
+	<!ENTITY itUnknownThermoCannon4			    "0xD25C5040">
+	<!ENTITY itUnknownThermoCannon5			    "0xD25C5041">
+	<!ENTITY itUnknownThermoCannon6			    "0xD25C5042">
+	
+	<!ENTITY itUnknownPlasmaWeapon			"0xD25C5043">
+	<!ENTITY itUnknownPlasmaWeapon2			"0xD25C5044">
+	<!ENTITY itUnknownPlasmaWeapon3			    "0xD25C5045">
+	<!ENTITY itUnknownPlasmaWeapon4			    "0xD25C5046">
+	<!ENTITY itUnknownPlasmaWeapon5			    "0xD25C5047">
+	
+	<!ENTITY itUnknownPositronWeapon			"0xD25C5048">
+	<!ENTITY itUnknownPositronWeapon2			    "0xD25C5049">
+	
+	<!ENTITY itUnknownAntimatterWeapon			"0xD25C504A">
+	
+	<!ENTITY itUnknownNanoWeapon				"0xD25C504B">
+	<!ENTITY itUnknownGravitonWeapon			"0xD25C504C">
+	<!ENTITY itUnknownSingularityWeapon			"0xD25C504D">
+	<!ENTITY itUnknownDarkAcidWeapon			"0xD25C504E">
+	<!ENTITY itUnknownDarkSteelWeapon			"0xD25C504F">
+	<!ENTITY itUnknownDarkLightiningWeapon	    "0xD25C5050">
+	<!ENTITY itUnknownDarkFireWeapon			"0xD25C5051">
+	
+		<!-- Resources-->
+	
+	<!ENTITY rsRainbow						"0xD25CF001">
+	<!ENTITY rsbigexplosions				"0xD25CF002">
+	<!ENTITY rsshots 						"0xD25CF003">
+	<!ENTITY rstorps 						"0xD25CF004">
+	<!ENTITY rsShockwave4 					"0xD25CF005">
+	                                  
+	                                                 
+	<!ENTITY rsIceShards					"0xD25CF008">
+	<!ENTITY snThermocannonBeep			    "0xD25CF009"> 
+	<!ENTITY vtThermoCannonVirtualBeep	    "0xD25CF00A">
+	<!ENTITY rsSelector					    "0xD25CF00C">
+	<!ENTITY rsEI500colours				    "0xD25CF00D">
+	<!ENTITY rsOriginal				        "0xD25CF00E">
+	<!ENTITY rsPraetorian				    "0xD25CF00F">
+	<!ENTITY rsTenhove				        "0xD25CF010">
+	<!ENTITY rsStdMissile2				    "0xD25CF011">
+	<!ENTITY rsStrelka				        "0xD25CF012">
+	<!ENTITY rsCentauriRaiderL		        "0xD25CF013">
+	<!ENTITY rsCentauriMonitor		        "0xD25CF014">
+	<!ENTITY rsEnergyAmmo	"0xD25C420C">
+	
+	
+	<!-- Dvalin weapons-->
+
+	<!ENTITY itKilotonBurst		    	"0xD25C421D">
+	<!ENTITY itKilotonBurstVirtualAmmo    	"0xD25C42A2">
+	<!ENTITY itDvalinParticle9Cannon	"0xD25C421E">
+	<!ENTITY itDvalinLancerOmni	    	"0xD25C421F">
+	<!ENTITY itDvalinAblativePlate		"0xD25C4220">
+
+	<!ENTITY itDvalinAkan90		    	"0xD25C4221">
+	<!ENTITY itDvalinAkan270	    	"0xD25C4222">
+	<!ENTITY itDvalinReflexArmor		"0xD25C4223">
+
+	<!ENTITY itDvalinIonHowitzer		"0xD25C4224">
+	<!ENTITY itDvalinBugZapper	    	"0xD25C4225">
+	<!ENTITY itDvalinFaradayArmor		"0xD25C4226">
+
+	<!--	 itDvalinIon9Cannon	    	"0x00154001" -->
+	<!ENTITY itDvalinCrippler	    	"0xD25C4227">
+	<!ENTITY itDvalinRegenerativeCeralloy	"0xD25C4228">
+
+	<!ENTITY itDvalinGraser		    	"0xD25C4229">
+	<!ENTITY itDvalinTritiumMinigun		"0xD25C422A">
+	<!ENTITY stCounterSpinUp	    	"0xD25C422B">
+	<!ENTITY itDvalinLightTransuranicArmor	"0xD25C422C">
+
+	<!ENTITY itDvalinCasabaHowitzer		"0xD25C422D">
+	<!ENTITY itDvalinOmniTritiumCannon	"0xD25C422E">
+	<!ENTITY itDvalinAdvancedReflexArmor	"0xD25C422F">
+
+	<!ENTITY itDvalinPositron9Cannon	"0xD25C4230">
+	<!ENTITY itDvalinPositronAccelerator	"0xD25C4231">
+	<!ENTITY itDvalinNanoArmor	    	"0xD25C4232">
+
+	<!ENTITY itDvalinPlasmaRepeater		"0xD25C4233">
+	<!ENTITY itDvalinPteracniumCannon	"0xD25C4234">
+	<!ENTITY itPteracniumVirtualAmmo	"0xD25C4235">
+	<!ENTITY itDvalinFluidArmor	    	"0xD25C4236">
+	
+	<!ENTITY itDvalinPlasmaRepeater		"0xD25C42A0">
+	<!ENTITY itDvalinLightTransuranicArmor	"0xD25C42A1">
+
+	<!-- ALTERNATIVE WEAPONS-->
+	
+	<!ENTITY itGIAT1Howitzer			"0xD25C4237">  
+	<!ENTITY itGIAT2Howitzer			"0xD25C4238">
+	
+	<!ENTITY itGIAT4Howitzer			"0xD25C4240">
+	<!ENTITY itGIAT5Howitzer			"0xD25C4241">
+	<!ENTITY itGIAT6Howitzer			"0xD25C4242">
+	<!ENTITY itBarrettScattergun			"0xD25C4243">
+	<!ENTITY itBarrettScattergun2			"0xD25C4244">
+	<!ENTITY itBarrettScattergun3			"0xD25C4245">
+	
+	<!ENTITY itGrendelCoilgun				"0xD25C4247">
+	<!ENTITY itGrendelLightCoilgun			"0xD25C4248">
+	<!ENTITY itGrendelHeavyCoilgun			"0xD25C4249">
+	<!ENTITY itGrendelGauss					"0xD25C424A">
+	<!ENTITY itGrendelHeavyGauss			"0xD25C424B">
+	<!ENTITY itGrendelQuenchgun			"0xD25C424C">
+	<!ENTITY itBrowningLaserCannon			"0xD25C424D">
+
+	
+
+
+	<!ENTITY itLinebaughCulverin			"0xD25C4257">
+	<!ENTITY itLinebaughCulverin2			"0xD25C4258">
+	<!ENTITY itLinebaughCulverin3			"0xD25C4259">
+	<!ENTITY itLinebaughCulverin4			"0xD25C425A">
+	<!ENTITY itLinebaughCulverin5			"0xD25C425B">
+	<!ENTITY itLinebaughCulverin6			"0xD25C425C">
+	<!ENTITY itGrendelCannon				"0xD25C425D">
+	<!ENTITY itGrendelCannon2				"0xD25C425E">
+	<!ENTITY itGrendelCannon3				"0xD25C425F">
+	<!ENTITY itGrendelCannon4				"0xD25C4260">
+	<!ENTITY DreyseNeedleGun				"0xD25C4261">
+	<!ENTITY DreyseHeavyNeedleGun			"0xD25C4262">
+	<!ENTITY itNapoleonLauncher				"0xD25C4263">
+		<!-- AMMO --> 
+	<!ENTITY itNapoleonMissile				"0xD25C4264">
+	<!ENTITY itNapoleonGranade				"0xD25C4420">
+	<!ENTITY itNapoleonThermoMissile			"0xD25C4421">
+	
+	<!ENTITY trNapoleonAmmoTable				"0xD25C8012">
+	
+	<!ENTITY itTunguska						"0xD25C4265">
+	<!ENTITY itClustertronix				"0xD25C4266">
+	<!ENTITY itZastavaFasor					"0xD25C4267">
+	<!ENTITY itDualZastavaFasor				"0xD25C420F">
+	<!ENTITY itOmniZastavaFasor				"0xD25C4151">
+		
+		
+   
+    	
+    	
+    	<!-- Digdug Weapons-->
+    <!ENTITY itBurstTurbolaser	          	"0xD25C4268">
+	<!ENTITY itOmniArray					"0xD25C4269">
+	<!ENTITY itDualTribarrelRecoilless		"0xD25C426A">
+	<!ENTITY itStellarCannon 				"0xD25C426B">
+ 	<!ENTITY itAdvStellarCannon 			"0xD25C426C">
+	<!ENTITY itExpRecoillessCannon 			"0xD25C426D">
+	<!ENTITY itmultilaser 					"0xD25C426E">
+	<!ENTITY itPlasmawelder 				"0xD25C426F">
+	<!ENTITY itblastsprayer 				"0xD25C4270">
+	<!ENTITY itmuramasa 					"0xD25C4271">
+	<!ENTITY itmasamune 					"0xD25C4272">
+	<!ENTITY itdoomsday						"0xD25C4273">
+	<!ENTITY itdustcannon 					"0xD25C4274">
+	<!ENTITY itMiniMiningLaser				"0xD25C4275">
+	<!ENTITY itneutronaccelerator			"0xD25C4276">
+	<!ENTITY itblackholegenerator 			"0xD25C4277">
+	
+	<!ENTITY iticecannon 					"0xD25C4278">
+	<!ENTITY itroninblaster 				"0xD25C4279">
+	<!ENTITY ittaucannon 					"0xD25C427A">
+	<!ENTITY itrawenergylauncher 			"0xD25C427B">
+	
+	<!ENTITY itzatoichi						"0xD25C427D">
+	
+	<!ENTITY itEMPPulse						"0xD25C427E">
+	
+	<!ENTITY itstardust						"0xD25C4280">
+	<!ENTITY itMiningAblator				"0xD25C4281">
+	
+
+	<!-- ILLEGAL WEAPONS-->
+	
+	<!ENTITY itHeavySlamCannon7					"0xD25C4283">
+	<!ENTITY itF2LaserCannon					"0xD25C4284">
+	<!ENTITY itPlasmaSolder						"0xD25C4285">
+	<!ENTITY itGrytvikenCannon					"0xD25C4286">
+	<!ENTITY itIonDevastator					"0xD25C4287">
+	<!ENTITY itWasteCannon4						"0xD25C4288">
+	<!ENTITY itDeathBloom						"0xD25C4289">
+	<!ENTITY itRainbowCannon					"0xD25C428A">
+	<!ENTITY itillegalTritiumCannon		        "0xD25C428B">
+	<!ENTITY itgamma					        "0xD25C428C">
+	<!ENTITY itMorganphotinbeam					"0xD25C428D">
+    
+    
+	<!ENTITY itBlasterarray		            	"0xD25C428E">
+	<!ENTITY itPlasmaArbalest	    		"0xD25C428F">
+	<!ENTITY itdualBlaster		            	"0xD25C4290">
+	<!ENTITY itdualFastFireLaserCannon			"0xD25C4291">
+	<!ENTITY itdualHeavyRecoillessCannon		"0xD25C4292">
+	<!ENTITY itdualLightRecoillessCannon		"0xD25C4293">
+	<!ENTITY itdualOmniLaserCannon		    	"0xD25C4294">
+	<!ENTITY itdualPartisanCannon		    	"0xD25C4295">
+	<!ENTITY itdualTridentCannon		    	"0xD25C4296">
+	<!ENTITY itFastFireLaserCannonarray			"0xD25C4297">
+	
+	<!ENTITY itHeavyRecoillessCannonarray		"0xD25C4299">
+	<!ENTITY itheavyWasteCannon		        	"0xD25C429A">
+	<!ENTITY itLightFlenserCannon		    	"0xD25C429B">
+	
+	<!ENTITY itlightTritiumCannon		    	"0xD25C429D">
+	<!ENTITY itNAMIFFMissileLauncher			"0xD25C429E">
+	<!ENTITY itomniArbalestCannon		    	"0xD25C429F">
+	<!ENTITY itomniBlasterarray		        	"0xD25C4300">
+	
+	<!ENTITY itomnidualBlaster		        	"0xD25C4302">
+	<!ENTITY itomnidualFastFireLaserCannon			"0xD25C4303">
+	<!ENTITY itomnidualFlenserCannon			"0xD25C4304">
+	
+	<!ENTITY itomnidualLightRecoillessCannon			"0xD25C4306">
+	
+	<!ENTITY itomniDualRecoillessCannon			"0xD25C4308">
+	
+	
+	<!ENTITY itomniFlenserCannon		    	"0xD25C430B">
+	
+	<!ENTITY itomniHeavyRecoillessCannonarray			"0xD25C430D">
+	<!ENTITY itOmniLaserCannonarray		        	"0xD25C430E">
+	<!ENTITY itomniLightRecoillessCannon			"0xD25C430F">
+	<!ENTITY itomniLightRecoillessCannonarray			"0xD25C4310">
+	<!ENTITY itomniNAMIMissileLauncher			"0xD25C4311">
+   
+	
+	
+	
+	<!ENTITY itomniRecoillessCannon			"0xD25C4313">
+	<!ENTITY itomniRecoillessCannonarray			"0xD25C4314">
+	<!ENTITY itOmniBallista			"0xD25C4315">
+	<!ENTITY itomniSlamCannon			"0xD25C4316">
+	<!ENTITY itomniSmartCannon			"0xD25C4317">
+	<!ENTITY itomniTridentCannon			"0xD25C4318">
+	<!ENTITY itPartisanCannonarray			"0xD25C4319">
+	<!ENTITY itPlasmaBlaster			"0xD25C4320">
+	
+	
+	<!ENTITY itRecoillessCannonarray			"0xD25C4323">
+	<!ENTITY itsingleXRayLaserCannon			"0xD25C4324">
+	<!ENTITY itSpinalLaser			"0xD25C4325">
+	
+
+	<!--	Weapons 0xDa7a0020 0xDA7A0030 borrows 0xDA7A0010 0xDA7A00C0 for this mod only-->
+
+	<!ENTITY nwiGatlingLaser	"0xD25C4326">
+	<!ENTITY nwiGatlingLaserPike		"0xD25C4327">
+	<!ENTITY nwiGatlingLaserSpiculum	"0xD25C4328">
+	<!ENTITY nwiGatlingTurbo	"0xD25C4329">
+	<!ENTITY nwiGatlingTurboKontos		"0xD25C432A">
+	<!ENTITY nwiGatlingTurboXyston		"0xD25C432B">
+	<!ENTITY nwiAtomicLance		"0xD25C432C">
+	<!ENTITY nwiAtomicLanceSpread		"0xD25C432D">
+	<!ENTITY nwiStarfire		"0xD25C432E">
+
+	<!--	The Trafalgar is now a 270 degree turret -->
+	<!ENTITY nwiTrafalgarturret	"0xD25C432F">
+
+
+	<!--	Salamis is now alternate mode for Parthian -->
+	<!ENTITY nwiSalamisMLS		"0xD25C4330">
+	<!ENTITY nwiParthianMLS		"0xD25C4331">
+
+
+	<!--	The two versions of the Claymore can be swapped by using -->
+	<!ENTITY nwiClaymore5		"0xD25C4332">
+	<!ENTITY nwiClaymore15		"0xD25C4333">
+
+	<!ENTITY nwiTrebuchet		"0xD25C4334">
+	<!ENTITY nwiCerberus		"0xD25C4335">
+	<!ENTITY nwiCerberusChimera		"0xD25C4336">
+	<!ENTITY nwiCerberusHydra		"0xD25C4337">
+	<!ENTITY nwiHvyParticleBlaster	"0xD25C4338">
+	<!ENTITY nwiHvyParticleBlasterGlaive	"0xD25C4339">
+	<!ENTITY nwiHvyParticleBlasterRhomphaia	"0xD25C433A">
+	<!ENTITY nwiScorpion		"0xD25C433B">
+	<!ENTITY nwiOxybeles		"0xD25C433C">
+	<!ENTITY nwiOxybelesArcuballista	"0xD25C433D">
+	<!ENTITY nwiOxybelesCheiroballistra	"0xD25C433E">
+	<!ENTITY nwiMangonel		"0xD25C433F">
+	<!ENTITY nwiMangonelOnager		"0xD25C4340">
+	<!ENTITY nwiMangonelLithobolos		"0xD25C4341">
+
+	<!ENTITY nwiAtgeir		"0xD25C4342">
+	<!ENTITY nwiAtgeirHalberd		"0xD25C4343">
+	<!ENTITY nwiAtgeirVoulge		"0xD25C4344">
+	<!ENTITY nwiGuisarme		"0xD25C4345">
+	<!ENTITY nwiGuisarmeBill		"0xD25C4346">
+	<!ENTITY nwiGuisarmeBardiche		"0xD25C4347">
+	<!ENTITY nwiBreacherCannon	"0xD25C4348">
+	<!ENTITY nwiBreacherCannonTurret	"0xD25C4349">
+	<!ENTITY nwiBreacherCannonHV		"0xD25C434A">
+	<!ENTITY nwiHoedhr		"0xD25C434B">
+	<!ENTITY nwiRanseur		"0xD25C434C">
+	<!ENTITY nwiRanseurSpetum		"0xD25C434D">
+	<!ENTITY nwiRanseurOxTongue		"0xD25C434E">
+	<!ENTITY nwiChainLightning	"0xD25C434F">
+	<!ENTITY nwiPolybolos		"0xD25C4350">
+	<!ENTITY nwiPolybolosRibauldequin	"0xD25C4351">
+	<!ENTITY nwiPolybolosTurret		"0xD25C4600">
+	<!ENTITY nwiHelepolis		"0xD25C4352">
+	<!ENTITY nwiHelepolisKorax		"0xD25C4353">
+	<!ENTITY nwiRepeatingBreacher	"0xD25C4354">
+	<!ENTITY nwiDualBreacher		"0xD25C4555">
+	<!ENTITY nwiSpreadBreacher		"0xD25C4356">
+	<!ENTITY nwiPlasmaCarronade	"0xD25C4357">
+	<!ENTITY nwiMinigun		"0xD25C4358">
+	<!ENTITY nwiMinigunPilum	"0xD25C4601">
+	<!ENTITY nwiIonHowitzer		"0xD25C4602">
+	<!ENTITY nwiOrthrus		"0xD25C4603">
+	<!ENTITY nwiOrthrusCharybdis	"0xD25C4604">
+	<!ENTITY nwiOrthrusDragon	"0xD25C4605">
+	<!ENTITY nwiSchiltron		"0xD25C4606">
+	<!ENTITY nwiSchiltronTestudo		"0xD25C4607">
+
+	<!--	Shields 0xDA7A0040 -->
+	<!ENTITY nwiCataphractAlpha	"0xD25C4359">
+	<!ENTITY nwiCataphractBeta	"0xD25C435A">
+	<!ENTITY nwiCataphractGamma	"0xD25C435B">
+	<!ENTITY nwiVariableShieldOn	"0xD25C435C">
+	<!ENTITY nwiVariableShieldOff	"0xD25C435D">
+	<!ENTITY nwiAgressiveShield	"0xD25C435E">
+	<!ENTITY nwiRegenerator		"0xD25C435F">
+	<!ENTITY nwiAegisDeflector	"0xD25C4360">
+	<!ENTITY nwiDirectionalShield	"0xD25C4361">
+	<!-- virtual weapon -->
+	<!ENTITY nwviAgressiveShield	"0xD25C4362">
+	<!ENTITY nwviTeslaElectron	"0xD25C4608">
+	<!ENTITY nwviCoolantVent1	"0xD25C4609">
+	<!ENTITY nwviCoolantVent2	"0xD25C460A">
+
+
+	<!--	Ammo 0xDA7A0050 0xDA7A0060 -->
+	<!--	Ammo for the Starfire Multimodal Beam System -->
+	<!ENTITY nwiSMBSLaser		"0xD25C4363">
+	<!ENTITY nwiSMBSParticle	"0xD25C4364">
+	<!ENTITY nwiSMBSEMP		"0xD25C4365">
+	<!ENTITY nwiSMBSIon		"0xD25C4366">
+	<!ENTITY nwiSMBSPositron	"0xD25C4367">
+
+	<!--	Ammo for the Claymore Variable Projectile Launcher -->
+	<!ENTITY nwiCVPLKinetic		"0xD25C4368">
+	<!ENTITY nwiCVPLRadio		"0xD25C4369">
+	<!ENTITY nwiCVPLBlast		"0xD25C436A">
+	<!ENTITY nwiCVPLThermo		"0xD25C436B">
+	<!ENTITY nwiCVPLPlasma		"0xD25C436C">
+
+	<!--	Ammo for the Salamis, Trafalgar, and Parthian launchers -->
+	<!ENTITY nwiSMShotput		"0xD25C436D">
+	<!ENTITY nwiTMHammer		"0xD25C436E">
+	<!ENTITY nwiTMJavelin		"0xD25C436F">
+	<!ENTITY nwiSMMjolnir		"0xD25C4370">
+		<!--	shockwave effect for mjolnir	-->
+	<!ENTITY rsIonShockwave			"0xD25C441C">
+	<!ENTITY nwiSMScythe		"0xD25C4371">
+	<!ENTITY nwiTMOdysseus		"0xD25C4372">
+	<!ENTITY nwiSMScythe2		"0xD25C4373">
+	<!ENTITY nwiTMMistletoe		"0xD25C4374">
+
+	<!ENTITY nwiBreacherRound	"0xD25C4375">
+	<!ENTITY nwviTeslaAmmo	"0xD25C460F">
+
+	<!--	other devices DA7A0070 -->
+	<!ENTITY nwiShieldBooster	"0xD25C4376">
+	<!ENTITY nwiMissileFeedSystem	"0xD25C4377">
+
+	<!--	Armor 0xDA7A0080 -->
+	<!ENTITY nwiMSLatticeLight	"0xD25C4378">
+	<!ENTITY nwiMSLatticeHeavy	"0xD25C4379">
+	<!ENTITY nwiMSLatticePowered	"0xD25C437A">
+
+	<!ENTITY nwiActiveArmor		"0xD25C437B">
+	<!ENTITY nwiInactiveArmor	"0xD25C437C">
+
+	<!ENTITY nwiActiveArmor2		"0xD25C460B">
+	<!ENTITY nwiInactiveArmor2	"0xD25C460C">
+	
+	<!ENTITY nwiLiquidArmor	"0xD25C4610">
+
+	<!--	Stations DA7A0090 -->
+	<!ENTITY nwtNorthwindArmory1	"0xD25C437D">
+	<!ENTITY nwtNorthwindArmory2	"0xD25C437E">
+
+	<!ENTITY nwtCounterPowerup	"0xD25C437F">
+	<!ENTITY nwtCounterSpinUp	"0xD25C4380">
+	<!ENTITY nwsOrthrusController	"0xD25C460D">
+
+	<!--	other consumables DA7A00B0-->
+	<!ENTITY nwiShieldFlash		"0xD25C4381">
+
+	<!--	virtual weapons for use with onFireWeapon 0xDA7A00A0	-->
+	<!ENTITY nwviSMShotput		"0xD25C4382">
+	<!ENTITY nwviTMHammer		"0xD25C4383">
+	<!ENTITY nwviTMJavelin		"0xD25C4384">
+	<!ENTITY nwviSMMjolnir		"0xD25C4385">
+	<!ENTITY nwviSMScythe		"0xD25C4386">
+	<!ENTITY nwviTMOdysseus		"0xD25C4387">
+	<!ENTITY nwviSMScythe2		"0xD25C4388">
+	<!ENTITY nwviTMMistletoe	"0xD25C4389">
+
+	<!--	Overlays DA7A00E0 -->
+	<!ENTITY nwoShieldBooster	"0xD25C438A">
+	<!ENTITY nwoRegenerator		"0xD25C438B">
+	<!ENTITY nwoOrthrusGUI		"0xD25C460E">
+
+	<!--	Ammo tables for compatibility with Digdug's weapon randomizer	-->
+	<!ENTITY nwwrtStarfire		"0xD25C438C"> 
+	<!ENTITY nwwrtClaymore		"0xD25C438D">
+	<!ENTITY nwwrtParthian		"0xD25C438E">
+
+
+	<!--	invoke moved from coil to shield so 'L' can be reused on other shields -->
+	<!ENTITY itSuperconductingShields	"0x0000407D">
+	<!ENTITY itSuperconductingCoil		"0x0000407E">
+	<!ENTITY rsItems1 		"0x0000F11D">	
+
+
+
+	<!ENTITY itBreacherUnknown				"0xD25C438F">
+	
+	<!--	shields 0xDA7a0040 -->
+
+	<!--	Invincible variants	-->
+	<!ENTITY itInvincible2			"0xD25C4390">
+	<!ENTITY itInvincible4			"0xD25C4391">
+
+	<!--	HPI variants	-->
+	<!ENTITY itHullPlateIonizer4		"0xD25C4392">
+	<!ENTITY itHullPlateIonizer6		"0xD25C4393">
+	<!ENTITY itHullPlateIonizer8		"0xD25C4394">
+
+	<!--	Trenton variants	-->
+	<!ENTITY itTrentonFieldGenerator5	"0xD25C4395">
+	<!ENTITY itTrentonFieldGenerator9	"0xD25C4396">
+
+	<!--	Reflectors	-->
+	<!ENTITY itLaserReflector		"0xD25C4397">
+	<!ENTITY itParticleReflector		"0xD25C4398">
+	<!ENTITY itPositronReflector		"0xD25C4399">
+
+	<!--	Lazarus variants	-->
+	<!ENTITY itLazarusShieldGenerator4	"0xD25C439A">
+
+	<!--	Solon variants	-->
+	<!ENTITY itSolonShieldGenerator4p	"0xD25C439B">
+	<!ENTITY itSolonShieldGenerator7i	"0xD25C439C">
+
+	<!--	mixed	-->
+	<!ENTITY itHullTrenton7			"0xD25C439D">
+	<!ENTITY itHullReflector3		"0xD25C439E">
+	<!ENTITY itInvincibleReflector9th	"0xD25C439F">
+	
+	 <!--   Special Weapons-->
+    <!ENTITY itDvalinIon9Cannon			"0x00154001">
+    <!ENTITY itQianlongArchcannon		"0x00194002">
+	<!ENTITY itLamplighterPrototype		"0x001A4002">
+	<!ENTITY itLamplighter				"0x001A4004">
+	
+	<!ENTITY itSlicerCannon				"0x00144001">
+	 
+     <!--   Dwarg -->
+	<!ENTITY itDwargXiphonCannon		"0x08020149">
+	<!ENTITY itDwargBehemothCannon		"0x0802014A">
+	<!ENTITY itDwargCnidocystCannon		"0x0802014E">
+
+	<!ENTITY itDwargXiphonCannon2	"0xD25C4239">
+	<!ENTITY itDwargXiphonCannon3	"0xD25C4255">
+	<!ENTITY itDwargXiphonCannon4			"0xD25C43FE">
+	<!ENTITY itDwargXiphonCannon5			"0xD25C43FF">
+
+	<!ENTITY itDwargBehemothCannon2	"0xD25C430A">
+	<!ENTITY itDwargBehemothCannon3	"0xD25C429C">
+	<!ENTITY itDwargBehemothCannon4			"0xD25C4400">
+	<!ENTITY itDwargBehemothCannon5			"0xD25C4401">
+	
+	<!ENTITY itDwargCnidocystCannon2		"0xD25C43A0">
+	
+	<!ENTITY itDwargCnidocystNodule		"0x0802014F">
+	
+	<!ENTITY itDwargCnidocystNodule2		"0xD25C43A1">
+	<!ENTITY itDwargCnidocystNodule3		"0xD25C43A2">
+	<!ENTITY itDwargCnidocystNodule4		"0xD25C43A3">
+
+	<!--	Heliotropes	-->
+
+	<!ENTITY itSunflareCannon2	"0xD25C430C">
+	<!ENTITY itSunflareCannon3	"0xD25C4305">
+	<!ENTITY itSunflareCannon4			"0xD25C4404">
+	<!ENTITY itSunflareCannon5			"0xD25C4405">
+	
+	<!--   centauri -->
+
+   <!ENTITY itCentauriCLAW         "0x08020048">
+   <!ENTITY itCentauriHeavyCLAW      "0x0802004E">
+   <!ENTITY itCentauriRecoilless      "0x08020045">
+
+
+   <!ENTITY itCentauriCLAW3      "0xD25C43A4">
+   <!ENTITY itCentauriRecoilless2      "0xD25C43A5">
+   <!ENTITY itCentauriRecoilless3      "0xD25C43A6">
+
+
+    <!--   Urak -->
+
+   
+   <!ENTITY itUrakMassDriver			"0x08030148">
+	<!ENTITY itUrakHowitzer				"0x08030149">
+	<!ENTITY itUrakMassDriverAdvanced	"0x0803014A">
+
+   <!ENTITY itUrakMassDriver2         "0xD25C43A7">
+   <!ENTITY itUrakMassDriver3         "0xD25C43A8">
+   <!ENTITY itUrakMassDriver4			"0xD25C4408">
+   <!ENTITY itUrakMassDriver5			"0xD25C4409">
+
+   <!ENTITY itUrakHowitzer2         "0xD25C43A9">
+   <!ENTITY itUrakHowitzer3         "0xD25C43AA">
+   <!ENTITY itUrakHowitzer4			"0xD25C440A">
+   <!ENTITY itUrakHowitzer5			"0xD25C440B">
+
+   <!ENTITY itUrakMassDriverAdvanced2      "0xD25C43AB">
+   <!ENTITY itUrakMassDriverAdvanced3      "0xD25C43AC">
+   <!ENTITY itUrakMassDriverAdvanced4			"0xD25C440C">
+   <!ENTITY itUrakMassDriverAdvanced5			"0xD25C440D">
+   
+   <!--   Ares -->
+ 
+	<!ENTITY itMicronukeCannon			"0x001B4004">
+	<!ENTITY itMicronuke				"0x001B4005">
+
+	<!ENTITY itAresLauncher				"0x001B4008">
+	<!ENTITY itWarhammerNuke			"0x001B4009">
+
+   <!ENTITY itLightningCannon         "0x001B4001">
+   <!ENTITY itAresArchcannon         "0x001B4006">
+   <!ENTITY itLightningTurret         "0x001B400A">
+   <!ENTITY itHecatesCannon         "0x001B400D">
+   <!ENTITY itAresPlasmaCannon         "0x001B4010">
+
+   <!ENTITY itLightningCannon2         "0xD25C43AD">
+   <!ENTITY itLightningCannon3         "0xD25C43AE">
+   <!ENTITY itLightningCannon4         "0xD25C43AF">
+   <!ENTITY itLightningCannon5         "0xD25C43B0">
+   <!ENTITY itLightningCannon6         "0xD25C43B1">
+   <!ENTITY itLightningCannon7			"0xD25C440E">
+   <!ENTITY itLightningCannon8			"0xD25C440F">
+   <!ENTITY itLightningCannon9			"0xD25C4410">
+
+   <!ENTITY itAresArchcannon2         "0xD25C43B2">
+   <!ENTITY itAresArchcannon3         "0xD25C43B3">
+   <!ENTITY itAresArchcannon4         "0xD25C43B4">
+   <!ENTITY itAresArchcannon5			"0xD25C4411">
+   <!ENTITY itAresArchcannon6			"0xD25C4412">
+
+   <!ENTITY itLightningTurret2         "0xD25C43B5">
+   <!ENTITY itLightningTurret3         "0xD25C43B6">
+   <!ENTITY itLightningTurret4         "0xD25C43B7">   
+   
+   <!ENTITY itHecatesCannon2         "0xD25C43B8">
+   <!ENTITY itHecatesCannon3         "0xD25C43B9">
+   <!ENTITY itHecatesCannon4			"0xD25C4413">
+   <!ENTITY itHecatesCannon5			"0xD25C4414">
+
+   <!ENTITY itAresPlasmaCannon2         "0xD25C43C0">
+   <!ENTITY itAresPlasmaCannon3         "0xD25C43C1">
+   <!ENTITY itAresPlasmaCannon4         "0xD25C43C2">
+   <!ENTITY itAresPlasmaCannon5			"0xD25C4415">
+   
+   <!--   Ferian -->
+   
+   <!ENTITY itFerianCannon				"0x08040104">
+   <!ENTITY itFerianCannon2				"0xD25C43C3">
+   <!ENTITY itFerianCannon3				"0xD25C43C4">
+   <!ENTITY itFerianCannon4			"0xD25C4416">
+   <!ENTITY itFerianCannon5			"0xD25C4417">
+   
+   <!ENTITY itXenophobeLancer			"0x08010087">
+   <!ENTITY itXenophobeLancer2			"0xD25C4418">
+   <!ENTITY itXenophobeLancer3			"0xD25C4419">
+   
+   <!ENTITY itGaianDemolitionCannon	"0x08040142">
+   <!ENTITY itGaianDemolitionCannon2			"0xD25C4402">
+   <!ENTITY itGaianDemolitionCannon3			"0xD25C4403">
+   
+   <!--   Oracus - Order of the Penitence -->
+   
+   <!ENTITY itAbsolutionCannon			"0x00004021">
+   <!ENTITY itAbsolutionCannon2			"0xD25C4406">
+   <!ENTITY itAbsolutionCannon3			"0xD25C4407">
+   <!ENTITY ithellfire						"0xD25C43C5">
+   <!ENTITY ittalisman						"0xD25C43C6">
+   <!ENTITY itInfernobeam				"0xD25C43C7">
+   
+   <!--   Iocrym -->
+   
+   <!ENTITY itIocrymRepeller			"0x00004179">
+   <!ENTITY itPlasmaThrower			"0x001C4002">
+   <!ENTITY itQuantumsphereDisintegrator "0x001C4003">
+   <!ENTITY itQuantumsphereShell		"0x001C4004">
+   <!ENTITY itIocrymFractureCannon		"0x001C400A">
+   
+   <!ENTITY itQuantumsphereShell2		"0xD25C43C8">
+   
+   <!--   Ringers -->
+   
+   <!ENTITY itPositronLancer			"0x001D4001">
+   
+   <!--   AMMO TABLES -->
+    <!ENTITY trDwargCnidocystAmmo	"0xD25C43C9">
+	<!ENTITY trQuantumsphereAmmo	"0xD25C43CA">
+
+	
+	<!--   RANDOMIZER -->
+	<!ENTITY WE_RandomWeaponsGlobalStation	"0xD25C5052">
+	<!ENTITY WE_ovGlobalUpdate "0xD25C5053">
+	
+	<!ENTITY dsWEConfigurator		"0xD25C5054">
+	
+	<!ENTITY itOrbOfKnowledge			"0xD25C5055">
+	<!ENTITY WE_OGPIStation			"0xD25C5057">
+
+	<!--	for multi-ammo non-launchers	-->
+	<!ENTITY WE_dsAmmoPriority		"0xD25C5058">
+	
+	<!--   ADDITIONAL ATARLOST WEAPONS -->
+	<!ENTITY itTantoHeavyLaser			"0xD25C43CB">
+	<!ENTITY itShtormRepeaterF			"0xD25C43CC">
+	<!ENTITY itOmniLaserB			"0xD25C43CD">
+	<!ENTITY itDualTanto			"0xD25C43CE">
+	<!ENTITY itMankiriRepeater			"0xD25C43CF">
+	<!ENTITY itArbalestCannonLt			"0xD25C43D0">
+	<!ENTITY itShtormRepeaterX			"0xD25C43F4">
+	<!ENTITY itMoskvaHeavyRepeater			"0xD25C43F5">
+	<!ENTITY itMoskvaHeavyRepeaterF			"0xD25C43F6">
+	<!ENTITY itMoskvaHeavyRepeaterX			"0xD25C43F7">
+	<!ENTITY itDualStarcannon			"0xD25C43F8">
+	<!ENTITY itMarkXHowitzer			"0xD25C43F9">
+
+	
+	<!--   SHIPS -->
+	<!ENTITY scEI500A			"0xD25C43D1">
+	<!ENTITY scEI500B			"0xD25C43D2">
+	<!ENTITY scEI500C			"0xD25C43D3">
+	<!ENTITY scEI500D			"0xD25C43D4">
+	<!ENTITY scEI500E			"0xD25C43D5">
+	<!ENTITY scEI500F			"0xD25C43D6">
+	<!ENTITY scEI500G			"0xD25C43D7">
+	<!ENTITY scEI500H			"0xD25C43D8">
+	<!ENTITY scEI500I			"0xD25C43D9">
+	<!ENTITY scEI500J			"0xD25C43DA">
+	<!ENTITY scEI500K			"0xD25C43DB">
+	<!ENTITY we_scPraetorian		"0xD25C43DC">
+	<!ENTITY scTenhoveSentinelA		    "0xD25C43DD">
+	<!ENTITY scTenhoveSentinelB		    "0xD25C43DE">
+    <!ENTITY scTenhoveSentinelC		    "0xD25C43DF">
+    <!ENTITY we_scCentauriMonitor		    "0xD25C43E0">
+    <!ENTITY we_scCentauriRaiderL		    "0xD25C43E1">
+    
+    <!--   EVEN MORE STUFF ADDED IN WE4 -->
+   <!ENTITY itCentauriBASH		      "0xD25C43E2"> 
+   <!ENTITY itClass4Deflector		    "0xD25C43E3">
+   
+   <!ENTITY ssPlanetNamer	    	"0xD25C43E4">
+   <!ENTITY stPlanetLabel		    "0xD25C43E5">
+   <!ENTITY WE_DSOverride		    "0xD25C43E6">
+   <!ENTITY dsWE_MiningColony		"0xD25C43E7">
+   
+   <!ENTITY itPlasmaUpgrade		           "0xD25C43E8">
+   <!ENTITY itPositronUpgrade		         "0xD25C43E9">
+   <!ENTITY itInorganicAcid		           "0xD25C43EA">
+   <!ENTITY itReflectiveArmorCoating2	   "0xD25C43EB">
+   <!ENTITY itReflectiveArmorCoating3	   "0xD25C43EC">
+   <!ENTITY itPlasmaResistCoating		     "0xD25C43ED">
+   <!ENTITY itPositronResistCoating		   "0xD25C43EE">
+   <!ENTITY itCarbonWeaver3Coating	     "0xD25C43EF">
+   <!ENTITY itSemiconductingNanos	       "0xD25C43F0">
+   <!ENTITY itHirosNanos	             	"0xD25C43F1">
+   <!ENTITY itAnyonPaste	             	"0xD25C43F2">
+   <!ENTITY itEnhanceShieldsROM2	     	"0xD25C43F3"> 
+   
+   <!ENTITY itKytrynPlasmaSeed2			"0xD25C4256">
+
+   
+   <!--	Darth Saber's icewave cannon	-->
+   <!ENTITY 	itIWC			"0xD25C4252">
+   <!ENTITY 	rsIceWave		"0xD25C424E">
+   <!ENTITY 	itIceMissileVirtual	"0xD25C424F">
+   <!ENTITY 	rsItemIM		"0xD25C4250">
+   <!ENTITY 	rsIceMissile		"0xD25C4254">
+   
+   
+
+
+<!--	NB: unlauncher stuff	-->
+	<!ENTITY dsAmmoPriority		"0xD25C600">
+	<!ENTITY itNandaoVirtualAmmo	"0xD25C6001">
+	<!ENTITY itSmartcannonVirtualAmmo	"0xD25C6002">
+	<!ENTITY itDragonflyVirtualAmmo	"0xD25C6003">
+	<!ENTITY itAkan30VirtualAmmo	"0xD25C6004">
+	<!ENTITY itThermoCannonVirtualAmmo	"0xD25C6005">
+	<!ENTITY itTM7VirtualAmmo	"0xD25C6006">
+	<!ENTITY itKilotonVirtualAmmo	"0xD25C6007">
+	<!ENTITY itDwargCnidocystNoduleVirtual	"0xD25C6008">
+	<!ENTITY itIceShardVirtualAmmo	"0xD25C6009">
+
+<!--	NB: new effects after the fashion of 1.08	-->
+	<!ENTITY efGoldLaserHitEffect			"0xD25C5059">
+	<!ENTITY efCornflowerLaserHitEffect		"0xD25C5060">
+	<!ENTITY efBlueParticleHitEffect		"0xD25C5061">
+	<!ENTITY efOrangeIonHitEffect			"0xD25C5062">
+	<!ENTITY efGreenIonHitEffect			"0xD25C5063">
+	<!ENTITY efAntimatterHitEffect	"0xD25C4321">
+	<!ENTITY efSpaceTimeHitEffect	"0xD25C4298">
+	<!ENTITY efDarkAcidHitEffect	"0xD25C4322">
+	<!ENTITY efDarkLightningHitEffect	"0xD25C4307">
+	<!ENTITY efDarkFireHitEffect	"0xD25C4312">
+	
+	<!ENTITY itICXMAutomining		"0xD25C427C">
+	<!ENTITY itEICEnhancer			"0xD25C4059">
+	<!ENTITY itAresEnhancer			"0xD25C427F">
+	
+	
+	<!ENTITY itAkan30VirtualForStation 	"0xD25C4088">
+	
+]>
+
+<TranscendenceExtension UNID="&unidExtension;" version="1.1"
+       name="Weapons Extended 5"
+       credits="Aeonic; alterecco; Atarlost; Darth Saber; digdug; Periculi; Prophet; Star Weaver; Taben; TheLastBrunnenG; Wolfy"
+>
+
+<!--	NB: UNIDS THAT CAN BE USED (DELETED RESOURCES)	
+
+	
+	<!ENTITY 					"0xD25CA001">
+	<!ENTITY 					"0xD25CF006">
+	<!ENTITY 					"0xD25CF007">
+	
+	NEXT FREE UNID IS  <!ENTITY 			"0xD25C4422">
+
+-->
+
+
+<Modules>
+		<Module fileName="WE_AlternativeWeapons.xml"/>
+		<Module fileName="WE_AmmoBoxes.xml"/>
+		<Module fileName="WE_Ammunitions.xml"/>
+		<Module fileName="WE_Blackmarket.xml"/>
+		<Module fileName="WE_Digdugweapons.xml"/>
+		<Module fileName="WE_Dockscreens.xml"/>
+		<Module fileName="WE_IllegalWeapons.xml"/>
+		<Module fileName="WE_Miscfixes.xml"/>
+		<Module fileName="WE_MiscItems.xml"/>	
+		<Module fileName="WE_NewWeapons.xml"/>
+		<Module fileName="WE_NorthwindEquipmentPack.xml"/>
+		<Module fileName="WE_RanxWeapons.xml"/>
+		<Module fileName="WE_Rasiermesser.xml"/>
+		<Module fileName="WE_Shields.xml"/>
+		<Module fileName="WE_Ships.xml"/>
+		<Module fileName="WE_SovereignWeapons.xml"/>
+		<Module fileName="WE_UnknownWeapons.xml"/>
+		<Module fileName="WE_WeaponRandomizer.xml"/>
+		<Module fileName="WE_CorporateWeapons.xml"/>
+		<Module fileName="WE_NAMIMissiles.xml"/>
+		<Module fileName="WE_PointJuno.xml"/>
+	</Modules>
+
+	<!--  RESOURCES  -->
+	<Image UNID="&rsRainbow;"	bitmap="WE/rainbow.jpg"		bitmask="WE/rainbowmask.bmp"/>
+	<Image UNID="&rsbigexplosions;"	bitmap="WE/bigexplosions.bmp"		bitmask="WE/bigexplosionsmask.bmp"/>
+	<Image UNID="&rsshots;"			bitmap="WE/largeprojectiles.bmp"		bitmask="WE/largeprojectilesmask.bmp"/>
+	<Image UNID="&rstorps;"			bitmap="WE/smallprojectiles.bmp"			bitmask="WE/smallprojectilesmask.bmp"/>
+	
+	<Image UNID="&rsShockwave4;"	bitmap="WE/shockwave4.jpg"		bitmask="WE/shockwave4mask.bmp"/>
+	<Image UNID="&rsIceShards;"		bitmap="WE/iceshards.jpg"		bitmask="WE/iceshardsmask.bmp"/>
+	<Image UNID="&rsSelector;"	bitmap="WE/selector.jpg"		bitmask="WE/selectormask.bmp"/>
+	<Image UNID="&rsEI500colours;"	bitmap="WE/EI500colours.jpg"		bitmask="WE/EI500colours.bmp"/>
+	<Image UNID="&rsOriginal;"	bitmap="WE/original.jpg"		bitmask="WE/originalmask.bmp"/>
+	<Sound UNID="&snThermocannonBeep;"			filename="WE/alarm.wav"/>
+	<Image UNID="&rsPraetorian;" bitmap="WE/Praetorian.jpg" bitmask="WE/PraetorianMask.bmp" backColor="0x00000000"/>
+	<Image UNID="&rsTenhove;" bitmap="WE/tenhove.jpg" bitmask="WE/tenhovemask.bmp" backColor="0x00000000"/>
+	<Image UNID="&rsStdMissile2;"			bitmap="WE/StdMissile2.jpg" bitmask="WE/StdMissile2Mask.bmp" loadOnUse="true"/>
+	<Image UNID="&rsStrelka;"			bitmap="WE/strelka.jpg" bitmask="WE/strelkamask.bmp" loadOnUse="true"/>
+	<Image UNID="&rsCentauriRaiderL;"	bitmap="WE/centauriraidernew.jpg" bitmask="WE/centauriraidernewmask.bmp" loadOnUse="true"/>
+	<Image UNID="&rsCentauriMonitor;"	bitmap="WE/centaurimonitor.jpg" bitmask="WE/centaurimonitormask.bmp" loadOnUse="true"/>
+	<Image UNID="&rsIceMissile;" bitmap="WE/IceB.jpg" bitmask="WE/IceM.bmp"/>
+	<Image UNID="&rsIceWave;" bitmap="WE/IceWave.jpg" bitmask="WE/IceWaveM.bmp"/>
+	<Image UNID="&rsItemIM;" bitmap="WE/Ice1.jpg" bitmask="WE/Ice1m.bmp"/>
+	<Image UNID="&rsEnergyAmmo;" bitmap="WE/MBS_Opq.jpg" bitmask="WE/MBS_Mask.bmp"/>
+	<Image UNID="&rsIonShockwave;" bitmap="WE/IonShockwave.jpg" bitmask="WE/IonShockwaveMask.bmp"/>
+
+<Globals>
+   
+  (block Nil
+  	  
+  	  (setq screenshot (lambda Nil
+  	  		  (block (startingUNID fireUNID)
+  	  		  	(setq startingUNID 0xD25C4001)
+  	  		  	(for i 1 2000
+  	  		  		(block Nil
+  	  		  		(setq fireUNID (add i startingUNID))
+  	  		  		;(dbgOutput startingUNID)
+  	  		  		;(dbgOutput fireUNID)
+  	  		  		(if (isError (sysCreateWeaponFire fireUNID gplayership (objGetPos gPLayership) (multiply i 2) 
+  	  		  				(switch
+  	  		  					(ls i 360)
+  	  		  					40
+  	  		  					(ls i 720)
+  	  		  					60
+  	  		  					80
+  	  		  				)
+  	  		  				Nil))
+  	  		  			Nil
+  	  		  			(sysCreateWeaponFire fireUNID gplayership (objGetPos gPLayership) (multiply i 2) 
+  	  		  				(switch
+  	  		  					(ls (multiply i 2) 360)
+  	  		  					40
+  	  		  					(ls (multiply i 2) 720)
+  	  		  					60
+  	  		  					(ls (multiply i 2) 1080)
+  	  		  					80
+  	  		  				)
+  	  		  				Nil)
+  	  		  		)
+  	  		  		))
+  	  )))
+  	  
+  	  ;this function is run every time a dark weapon hits a shield, skipping or not skipping it depending on the configuration.
+  	  (setq WE_DarkWeaponsOnShieldsHitCheck (lambda Nil
+  	  		  (block Nil
+  	  		  	  (if (eq (typGetGlobalData &svPlayer; "WE_DarkWeapons") 1)
+  	  		  	  	  (eval aShieldDamageHP)
+  	  		  	  	  (eval Nil)
+  	  		  	  	  )
+  	  		  	  )
+  	  		  )
+  	  	  )
+  	  
+  	  
+  	  
+		; Define the function for switching weapon.  (NB-- This function is an update to 0.99c of a function of Digdug's, renamed to avoid conflicts.)
+(setq nwfswitchweapon (lambda (theweapon)
+			(block (nil)			
+				(if (eq (itmIsDamaged theitem) Nil)
+					(block (status enhweapon theitem)
+						(setq theitem gItem)
+						(setq status (ItmIsEnhanced theitem))
+						(setq enhweapon (itmSetEnhanced theweapon status))
+						(objAddItem gSource enhweapon)
+						; even worse kludge to handle launchers
+						(if(itmMatches theitem "l")
+							(block (nil)
+								(objEnumItems gSource "Il" variable 
+									(block (nil)
+										(shpEnhanceItem gSource theitem status)
+									))
+						))
+
+						(shpInstallDevice gSource enhweapon)
+
+						; kludge for new item weirdness
+						(shpEnhanceItem gSource theitem status)
+
+						; Remove previous weapon
+						(shpRemoveDevice gSource (itmSetEnhanced theitem status))
+						(objRemoveItem gSource (itmSetEnhanced (itmCreate (itmGetUNID theitem) 1) status) 1)
+					)
+					(objSendMessage gSource Nil "Device non-functional: Error!")
+				)
+			)
+  
+		))
+
+		; Define the function for switching shields.  
+(setq nwfswitchshield (lambda (theshield)
+			(block (nil)			
+				(if (eq (itmIsDamaged theitem) Nil)
+					(block (status enhshield theitem shieldHP)
+						(setq theitem gItem)
+						(setq shieldHP (subtract (shpGetShieldMaxHitPoints gSource) (shpGetShieldDamage gSource)))
+						(setq status (ItmIsEnhanced theitem))
+						(setq enhshield (itmSetEnhanced theshield status))
+						(objAddItem gSource enhshield)
+
+						; shields require the same kludge as launchers
+						(if(itmMatches theitem "s")
+							(block (nil)
+								(objEnumItems gSource "Is" variable 
+									(block (nil)
+										(shpEnhanceItem gSource theitem status)
+									))
+						))
+
+						; Install shield and set HP
+						(shpInstallDevice gSource enhshield)
+						(shpRechargeShield gSource shieldHP)
+
+
+						; Remove previous shield
+						(shpRemoveDevice gSource (itmSetEnhanced theitem status))
+						(objRemoveItem gSource (itmSetEnhanced (itmCreate (itmGetUNID theitem) 1) status) 1)
+					)
+					(objSendMessage gSource Nil "Device non-functional: Error!")
+				)
+			)
+  
+		))
+
+		; Define the function for switching armor
+(setq nwfswitcharmor (lambda (thearmor)
+			(block (oldinventory newinventory count)
+				(setq count 0)
+				; list the inventory
+				(setq oldinventory (objGetItems gsource "*U"))
+				(setq armorcount (shpGetArmorCount gsource))
+				(for armorposition 0 (subtract armorcount 1)
+				(block (armoriterator)
+					(setq armoriterator (shpGetArmor gsource armorposition))
+					(if (eq (itmGetUnid gitem) (itmGetUnid armoriterator))
+					(block (status enharmor armordamage armorhp)
+						(setq count (add count 1))
+						; get HP
+						(setq armorHP (subtract (shpGetArmorMaxHitPoints gSource armorposition) (objGetArmorDamage gSource armorposition)))
+						; store enhancements
+						(setq status (itmIsEnhanced armoriterator))
+						; enhance the new armor
+						(setq enharmor (itmSetEnhanced thearmor status))
+						(objAddItem gSource enharmor 1)
+						; install the armor
+						(shpInstallArmor gsource enharmor armorposition)
+						; damage the new armor to 0 HP
+						(shpDamageArmor gsource armorposition 15 (multiply (shpGetArmorMaxHitPoints gsource armorposition) 10) 'noSRSFlash)
+						; repair the armor
+						(objRepairArmor gsource armorposition armorHP)
+					))
+				))
+				
+				; get the inventory again
+				(setq newinventory (objGetItems gsource "*U"))
+				; remove anything new.  May remove items that match the old armor, but I don't see a way to avoid that.  It shouldn't come up much anyways.  
+				(enum newinventory outeriterator
+				(block (isitold)
+					(setq isitold nil)
+					(enum oldinventory inneriterator
+						(if (eq inneriterator outeriterator) (setq isitold TRUE))
+					)
+					(if (not isitold) (objRemoveItem gSource outeriterator count))
+				))
+			)
+  
+		))
+
+(setq probabilisticDivide (lambda (dividend divisor)
+			(add
+				(divide dividend divisor)
+				(if (leq (modulo dividend divisor) (random 1 divisor))
+					0
+					1
+				)
+			)
+		))
+
+(setq angleNormalize (lambda (angle)
+			(block nil
+				(loop (ls angle 0) (setq angle (add 360 angle)))
+				(modulo (add 360 angle) 360)
+			)
+		))
+
+(setq angleBisect (lambda (angle1 angle2)
+			(block (nil)
+				(setq angle1 (angleNormalize angle1))
+				(setq angle2 (angleNormalize angle2))
+				(if (leq (abs (subtract angle1 angle2)) 180)
+					(angleNormalize (add (min angle1 angle2) (divide (abs (subtract angle1 angle2)) 2)))
+					(angleNormalize (add 180 (min angle1 angle2) (divide (abs (subtract angle1 angle2)) 2)))
+				)
+			)
+		))
+
+(setq reorderAction (lambda (direction)
+	(block (ammolist ammo index)
+		(setq ammolist (itmGetData weItem "ammolist"))
+		(setq ammo (item (scrGetListEntry gScreen) 3))
+		;; save for keeping out position in the list
+		(setq weItem (objSetItemData weSource weItem "current-ammo" ammo))
+
+		(setq index (find ammolist ammo))
+		(lnkRemove ammolist index)
+		(setq index (add index direction))
+		(setq ammolist (append (subset ammolist 0 index) (list ammo) (subset ammolist index)))
+
+		;; update ammolist
+		(setq weItem (objSetItemData weSource weItem "ammolist" ammolist))
+	)
+))
+
+    ;when the screen is refreshed between switching ammo this is evaluated for each item
+    ;it will keep the cursor on the ammo type that it was on before changing the list order
+(setq dsInitialAmmo (lambda nil
+	(block (entry ammo)
+		(setq entry (scrGetListEntry gScreen))
+		(setq ammo (itmGetData weItem "current-ammo"))
+		(or (not ammo) (eq (item entry 3) ammo))
+	)
+))
+
+(setq WE_VirtualAmmoUpdate (lambda nil
+	(block (ammolist realshots shots virtualUNID)
+		(setq ammolist (itmGetData gItem "ammolist"))
+		(setq virtualUnid (typGetDataField (itmgettype gItem) "ammoType"))
+
+		(setq realshots 0)
+		; count ammo
+		(objEnumItems gSource "m" ammo
+			(if (find ammolist (itmGetType ammo))
+				(setq realshots (add realshots (itmGetCount ammo)))
+			)
+		)
+		; count shots
+		(objEnumItems gSource "*V" theItem
+			(if (eq (itmGetType theItem) virtualUNID)
+				(setq shots (itmGetCount theItem))
+			)
+		)
+		(switch
+			(gr realshots shots)
+				(objAddItem gSource (itmCreate virtualUNID (subtract realshots shots)))
+			(ls realshots shots)
+				(objRemoveItem gSource (itmCreate virtualUNID (subtract shots realshots)))
+		)
+	)
+))
+
+(setq WE_fireUnlauncher (lambda nil
+	(block (ammolist launcher shot speed munition lastMunition fireCount maxCount)
+		(setq maxCount (typGetStaticData (itmGetUnid gItem) 'TotalShots))
+		(if (not maxCount) (setq maxCount 1))
+		(setq fireCount (itmGetData gItem "fireCount"))
+		(setq ammolist (itmGetData gItem "ammolist"))
+		(setq launcher (typGetStaticData (itmGetUnid gItem) 'VirtualLauncher))
+		(setq lastMunition (objGetData gSource (cat "lastMunition" (itmGetType gItem))))
+		(if (or (not fireCount) (gr fireCount maxCount))
+			(setq fireCount 1)
+		)
+		; determine ammo type
+		(if (eq 1 fireCount)
+			(enum ammolist ammo
+				(if (not munition)
+					(if (objHasItem gSource (itmCreate ammo 1))
+						(setq munition ammo)
+					)
+				)
+			)
+			(setq munition lastMunition)
+		)
+		(if munition
+			(block nil
+				(setq speed (typGetDataField munition "speed"))
+				(if (if (eq 1 fireCount) (objRemoveItem gSource (itmCreate munition 1)) True) 
+					(block nil
+						(setq shot (sysCreateWeaponFire munition gSource aFirePos aFireAngle speed aTargetObj nil aWeaponBonus))
+						(objIncVel shot (objGetVel gSource))
+					)
+				)
+			)
+			;; else don't fire!
+		)
+		(objsetitemData gSource gItem "fireCount" (add 1 fireCount))
+		(objsetData gSource (cat "lastMunition" (itmGetType gItem)) munition)
+		true
+	)
+))
+
+(setq WE_initializeUnlauncher (lambda nil
+	(block (launcher ammonumber ammolist)
+		; construct ammo list
+		(setq launcher (typGetStaticData (itmGetType gItem) 'VirtualLauncher))
+		(setq ammonumber (typGetDataField launcher 'variantCount))
+		(setq ammolist (list))
+		(for i 0 ammonumber
+			(setq ammolist (append (typGetDataField launcher (cat "ammoType:" i)) ammolist))
+		)
+		; store ammo list
+		(objSetItemData gSource gItem "ammolist" ammolist)
+	)
+))
+
+(setq ConvertStringToList (lambda (stringtobeconverted)
+	(block (convertedString LoopIndex currentChar)
+
+
+		(setq LoopIndex 0)
+		(setq convertedString nil)
+
+		;loop if you haven't already found the whole string
+		(loop (setq currentChar (CharAt stringtobeconverted LoopIndex))
+
+			(block nil
+				
+				;found the char so add to the list
+				(setq convertedString (lnkAppend convertedString currentChar))
+				(setq LoopIndex (add LoopIndex 1))
+				
+			)
+		)
+
+		convertedString
+
+	)))
+
+(setq CharAt (lambda (string index)
+	(subset string index 1)
+))
+
+(setq SubString (lambda (string index1 index2)
+	(block (Output)
+		(setq Output "")
+		
+		(for i 0 (subtract index2 index1)
+			(setq Output (cat Output (item (ConvertStringToList string) (add i index1))))
+			
+		)
+	Output
+	
+	)))
+
+
+	
+(setq tokenize (lambda (stringToTokenize delimiter)
+	(block (Buffer Output)
+		(setq Buffer "")
+		(enum (ConvertStringToList stringToTokenize) currentChar
+			(if (eq currentChar delimiter)
+			
+				(block Nil
+				(setq Output (lnkAppend Output Buffer))
+				(setq Buffer "")
+				)
+				
+				(setq Buffer (cat Buffer currentChar))
+			)
+		)
+		(lnkAppend Output Buffer)
+		
+)))
+
+; Alterecco's via DSF
+(setq unique (lambda (source)
+	(block ((tmp (list)))
+		(enum source itm
+			(if (not (find tmp itm))
+				(setq tmp (append tmp itm))
+			)
+		)
+		tmp
+	)
+))
+
+(setq cleanCriteria (lambda (initialCriteria flag)
+	(block (tokenList tokenSublistA prefixA tokenSublistB prefixB TokenSublistOther finalCriteria)
+		; set prefix priority.  The sublist handled last in unique (tokenSublistB) will take priority.
+		(switch
+			(eq flag "+")
+				(block nil
+					(setq prefixA "-")
+					(setq prefixB "+")
+				)
+			(eq flag "-")
+				(block nil
+					(setq prefixA "+")
+					(setq prefixB "-")
+				)
+			; default case
+				(block nil
+					(setq prefixA "-")
+					(setq prefixB "+")
+				)
+		)
+		(setq tokenList (tokenize initialCriteria " "))
+		; split the lists and strip the prefixes
+		(enum tokenList element (block nil
+			(switch
+				(eq (CharAt element 0) prefixA)
+					(setq tokenSublistA (append tokenSublistA (subset element 1)))
+				(eq (CharAt element 0) prefixB)
+					(setq tokenSublistB (append tokenSublistB (subset element 1)))
+				; default case
+					(setq tokenSublistOther (append element tokenSublistOther))
+			)
+		))
+		; unique tokenSublistOther into tokenList
+		(setq tokenList (unique tokenSublistOther))
+		; check tokenSublistA against both itself and tokenSublistB with modified Unique
+		(block ((tmp (list)))
+			(enum tokenSublistA element
+				(if (not (or (find tmp element) (find tokenSublistB element)))
+					(setq tmp (append tmp element))
+				)
+			)
+			(setq tokenSublistA tmp)
+		)
+		; unique tokenSublistB
+		(setq tokenSublistB (unique tokenSublistB))
+		; restore prefixes to tokenSublistA
+		(block ((tmp (list)))
+			(enum tokenSublistA element
+				(setq tmp (append tmp (cat prefixA element)))
+			)
+			(setq tokenSublistA tmp)
+		)
+		; restore prefixes to tokenSublistB
+		(block ((tmp (list)))
+			(enum tokenSublistB element
+				(setq tmp (append tmp (cat prefixB element)))
+			)
+			(setq tokenSublistB tmp)
+		)
+		(setq tokenList (append tokenList tokenSublistA tokenSublistB))
+		; add spaces to tokens
+		(block ((tmp (list)))
+			(enum tokenList element
+				(setq tmp (append tmp (cat " " element)))
+			)
+			(setq tokenList tmp)
+		)
+		; detokenize
+		(setq finalCriteria (apply cat tokenList))
+		; remove initial space
+		(setq finalCriteria (subset finalCriteria 1))
+		; return
+		finalCriteria
+	)
+))
+
+)
+
+</Globals>
+	
+  <DockScreen UNID="&WE_dsAmmoPriority;"
+    name=             "ammo list"
+    type=             "customPicker"
+    backgroundID=     "&rsItemListScreen;"
+    >
+    <List   initialItem="=(dsInitialAmmo)">
+      (block (ammolist (custom (list)))
+        (setq ammolist (itmGetData weItem "ammolist"))
+
+        (enum ammolist ammo
+          (block (itm)
+            (setq itm (itmCreate ammo 1))
+            (lnkAppend custom (list
+              (itmGetName itm 4)
+              (itmGetImageDesc itm)
+              "item description (perhaps an amount here as well?)"
+              ammo
+            ))
+          )
+        )
+        custom
+      )
+    </List>
+    <Panes>
+      <Default>
+        <OnPaneInit>
+          (block (ammolist index length)
+            (setq ammolist (itmGetData weItem "ammolist"))
+            (setq length (count ammolist))
+            (setq index (find ammolist (item (scrGetListEntry gScreen) 3)))
+
+            (if (eq length 1) (block nil
+              (scrEnableAction gScreen 0 nil)
+              (scrEnableAction gScreen 1 nil)
+            ))
+
+            (if (eq index 0) (scrEnableAction gScreen 0 nil))
+            (if (eq (add index 1) length) (scrEnableAction gScreen 1 nil))
+
+            (scrSetDesc gScreen "Choose the priority of your ammo")
+          )
+        </OnPaneInit>
+        <Actions>
+          <Action name="Higher" key="H">
+            (block nil
+              (reorderAction -1)
+
+              ;refresh the screen so any changes are immediately visible
+              (scrShowScreen gScreen &WE_dsAmmoPriority;)
+            )
+          </Action>
+
+          <!-- same as move up, but add instead of subtract -->
+          <Action name="Lower" key="L">
+            (block nil
+              (reorderAction 1)
+
+              ;refresh the screen so any changes are immediately visible
+              (scrShowScreen gScreen &WE_dsAmmoPriority;)
+            )
+          </Action>
+
+          <Action name="Done" key="d" cancel="1">
+            (block (uid ammolist)
+              ;; clear our globals vars
+              (objSetItemData weSource weItem "current-ammo" nil)
+              (setq weSource nil)
+              (setq weItem nil)
+
+              (scrExitScreen gScreen)
+            )
+          </Action>
+        </Actions>
+      </Default>
+    </Panes>
+  </DockScreen>
+
+	<Effect UNID="&efGoldLaserHitEffect;"
+			sound="&snArmorHit1;">
+		<Variants>
+			<Effect maxValue="0">
+				<Flare
+						style=			"fadingBlast"
+						radius=			"6"
+						primaryColor=	"0xff, 0x99, 0x00"
+						lifetime=		"4"
+						/>
+			</Effect>
+			
+			<Effect maxValue="4" 
+					sound="&snArmorHit1;">
+				<Flare
+						style=			"fadingBlast"
+						radius=			"20"
+						primaryColor=		"0xff, 0x99, 0x00"
+						secondaryColor=		"0x99, 0xff, 0x00"
+						lifetime=		"8"
+						/>
+			</Effect>
+			
+			<Effect maxValue="6" 
+					sound="&snArmorHit1;">
+				<Flare
+						style=			"fadingBlast"
+						radius=			"30"
+						primaryColor=		"0xff, 0x99, 0x00"
+						secondaryColor=		"0x99, 0xff, 0x00"
+						lifetime=		"12"
+						/>
+			</Effect>
+			
+			<Effect maxValue="8" 
+					sound="&snArmorHit1;">
+				<Flare
+						style=			"fadingBlast"
+						radius=			"40"
+						primaryColor=		"0xff, 0x99, 0x00"
+						secondaryColor=		"0x99, 0xff, 0x00"
+						lifetime=		"12"
+						/>
+			</Effect>
+			
+			<Effect
+					sound="&snArmorHit1;">
+				<Flare
+						style=			"fadingBlast"
+						radius=			"50"
+						primaryColor=		"0xff, 0x99, 0x00"
+						secondaryColor=		"0x99, 0xff, 0x00"
+						lifetime=		"12"
+						/>
+			</Effect>
+		</Variants>
+	</Effect>
+
+
+	<Effect UNID="&efCornflowerLaserHitEffect;"
+			sound="&snArmorHit1;">
+		<Variants>
+			<Effect maxValue="0">
+				<Flare
+						style=			"fadingBlast"
+						radius=			"6"
+						primaryColor=		"0x97, 0xc0, 0xdf"
+						lifetime=		"4"
+						/>
+			</Effect>
+			
+			<Effect maxValue="4" 
+					sound="&snArmorHit1;">
+				<Flare
+						style=			"fadingBlast"
+						radius=			"20"
+						primaryColor=		"0x97, 0xc0, 0xdf"
+						secondaryColor=		"0x01, 0xaf, 0xff"
+						lifetime=		"8"
+						/>
+			</Effect>
+			
+			<Effect maxValue="6" 
+					sound="&snArmorHit1;">
+				<Flare
+						style=			"fadingBlast"
+						radius=			"30"
+						primaryColor=		"0x97, 0xc0, 0xdf"
+						secondaryColor=		"0x01, 0xaf, 0xff"
+						lifetime=		"12"
+						/>
+			</Effect>
+			
+			<Effect maxValue="8" 
+					sound="&snArmorHit1;">
+				<Flare
+						style=			"fadingBlast"
+						radius=			"40"
+						primaryColor=		"0x97, 0xc0, 0xdf"
+						secondaryColor=		"0x01, 0xaf, 0xff"
+						lifetime=		"12"
+						/>
+			</Effect>
+			
+			<Effect
+					sound="&snArmorHit1;">
+				<Flare
+						style=			"fadingBlast"
+						radius=			"50"
+						primaryColor=		"0x97, 0xc0, 0xdf"
+						secondaryColor=		"0x01, 0xaf, 0xff"
+						lifetime=		"12"
+						/>
+			</Effect>
+		</Variants>
+	</Effect>
+	
+		<Effect UNID="&efBlueParticleHitEffect;">
+		<Variants>
+			<Effect maxValue="0">
+				<ParticleCloud
+						style=				"splash"
+						lifetime=			"15"
+						emitDuration=		"5"
+						emitRate=			"10"
+						emitSpeed=			"5-10"
+						particleLifetime=	"10"
+						>
+					<ParticleEffect>
+						<Particle
+								style=			"plain"
+								minWidth=		"1"
+								maxWidth=		"3"
+								primaryColor=	"0x2b, 0x8a, 0xff"
+								secondaryColor=	"0x2b, 0x8a, 0xff"
+								/>
+					</ParticleEffect>
+				</ParticleCloud>
+			</Effect>
+			
+			<Effect maxValue="9" 
+					sound="&snArmorHit1;">
+				<ParticleCloud
+						style=			"splash" 
+						lifetime=		"20" 
+						emitDuration=	"60"
+						emitRate=		"20-25"
+						emitSpeed=		"1-6"
+						particleLifetime="4"
+						>
+					<ParticleEffect>
+						<Particle
+								style=			"plain"
+								maxWidth=		"1-2"
+								primaryColor=	"0x2b, 0x8a, 0xff"
+								secondaryColor=	"0x2b, 0x8a, 0xff"
+								/>
+					</ParticleEffect>
+				</ParticleCloud>
+			</Effect>
+			
+			<Effect maxValue="13" 
+					sound="&snArmorHit1;">
+				<ParticleCloud
+						style=			"splash" 
+						lifetime=		"20" 
+						emitDuration=	"60"
+						emitRate=		"30-37"
+						emitSpeed=		"1-6"
+						particleLifetime="5"
+						>
+					<ParticleEffect>
+						<Particle
+								style=			"plain"
+								maxWidth=		"1-2"
+								primaryColor=	"0x2b, 0x8a, 0xff"
+								secondaryColor=	"0x2b, 0x8a, 0xff"
+								/>
+					</ParticleEffect>
+				</ParticleCloud>
+			</Effect>
+
+			<Effect
+					sound="&snArmorHit1;">
+				<ParticleCloud
+						style=			"splash" 
+						lifetime=		"20" 
+						emitDuration=	"60"
+						emitRate=		"40-50"
+						emitSpeed=		"1-6"
+						particleLifetime="5"
+						>
+					<ParticleEffect>
+						<Particle
+								style=			"plain"
+								maxWidth=		"1-2"
+								primaryColor=	"0x2b, 0x8a, 0xff"
+								secondaryColor=	"0x2b, 0x8a, 0xff"
+								/>
+					</ParticleEffect>
+				</ParticleCloud>
+			</Effect>
+		</Variants>
+	</Effect>
+
+<!--	Antimatter recolored positron effect	-->
+
+	<Effect UNID="&efAntimatterHitEffect;">
+		<Variants>
+			<Effect maxValue="0">
+				<ParticleCloud
+						style=				"splash"
+						lifetime=			"15"
+						emitDuration=		"5"
+						emitRate=			"10"
+						emitSpeed=			"5-10"
+						particleLifetime=	"10"
+						>
+					<ParticleEffect>
+						<Particle
+								style=			"plain"
+								minWidth=		"1"
+								maxWidth=		"3"
+								primaryColor=	"0xff, 0xff, 0xa0"
+								secondaryColor=	"0xff, 0xff, 0x00"
+								/>
+					</ParticleEffect>
+				</ParticleCloud>
+			</Effect>
+			
+			<Effect maxValue="46" 
+					sound="&snArmorHit1;">
+				<ParticleCloud
+						style=			"splash" 
+						lifetime=		"20" 
+						emitDuration=	"60"
+						emitRate=		"20-25"
+						emitSpeed=		"1-6"
+						particleLifetime="4"
+						>
+					<ParticleEffect>
+						<Particle
+								style=			"plain"
+								maxWidth=		"1-2"
+								primaryColor=	"0xff, 0xff, 0xa0"
+								secondaryColor=	"0xff, 0xff, 0x00"
+								/>
+					</ParticleEffect>
+				</ParticleCloud>
+			</Effect>
+			
+			<Effect maxValue="69" 
+					sound="&snArmorHit1;">
+				<ParticleCloud
+						style=			"splash" 
+						lifetime=		"20" 
+						emitDuration=	"60"
+						emitRate=		"30-37"
+						emitSpeed=		"1-6"
+						particleLifetime="5"
+						>
+					<ParticleEffect>
+						<Particle
+								style=			"plain"
+								maxWidth=		"1-2"
+								primaryColor=	"0xff, 0xff, 0xa0"
+								secondaryColor=	"0xff, 0xff, 0x00"
+								/>
+					</ParticleEffect>
+				</ParticleCloud>
+			</Effect>
+
+			<Effect
+					sound="&snArmorHit1;">
+				<ParticleCloud
+						style=			"splash" 
+						lifetime=		"20" 
+						emitDuration=	"60"
+						emitRate=		"40-50"
+						emitSpeed=		"1-6"
+						particleLifetime="5"
+						>
+					<ParticleEffect>
+						<Particle
+								style=			"plain"
+								maxWidth=		"1-2"
+								primaryColor=	"0xff, 0xff, 0xa0"
+								secondaryColor=	"0xff, 0xff, 0x00"
+								/>
+					</ParticleEffect>
+				</ParticleCloud>
+			</Effect>
+		</Variants>
+	</Effect>
+
+<!--	Nano not yet used	-->
+
+<!--	Shared by Graviton and Singularity	-->
+
+	<Effect UNID="&efSpaceTimeHitEffect;"
+			sound="&snArmorHit1;">
+		<Variants>
+			<Effect maxValue="0">
+				<Flare
+						style=			"fadingBlast"
+						radius=			"6"
+						primaryColor=	"0x00, 0x00, 0x00"
+						lifetime=		"4"
+						/>
+			</Effect>
+			
+			<Effect maxValue="4" 
+					sound="&snArmorHit1;">
+				<Flare
+						style=			"fadingBlast"
+						radius=			"20"
+						primaryColor=	"0x00, 0x20, 0x00"
+						secondaryColor=	"0x00, 0x00, 0x20"
+						lifetime=		"8"
+						/>
+			</Effect>
+			
+			<Effect maxValue="6" 
+					sound="&snArmorHit1;">
+				<Flare
+						style=			"fadingBlast"
+						radius=			"30"
+						primaryColor=	"0x00, 0x20, 0x00"
+						secondaryColor=	"0x00, 0x00, 0x20"
+						lifetime=		"12"
+						/>
+			</Effect>
+			
+			<Effect maxValue="8" 
+					sound="&snArmorHit1;">
+				<Flare
+						style=			"fadingBlast"
+						radius=			"40"
+						primaryColor=	"0x00, 0x20, 0x00"
+						secondaryColor=	"0x00, 0x00, 0x20"
+						lifetime=		"12"
+						/>
+			</Effect>
+			
+			<Effect
+					sound="&snArmorHit1;">
+				<Flare
+						style=			"fadingBlast"
+						radius=			"50"
+						primaryColor=	"0x00, 0x20, 0x00"
+						secondaryColor=	"0x00, 0x00, 0x20"
+						lifetime=		"12"
+						/>
+			</Effect>
+		</Variants>
+	</Effect>
+
+<!--	Dark Acid recolored particle effect; colors from missiles4 line 4	-->
+
+	<Effect UNID="&efDarkAcidHitEffect;">
+		<Variants>
+			<Effect maxValue="0">
+				<ParticleCloud
+						style=				"splash"
+						lifetime=			"15"
+						emitDuration=		"5"
+						emitRate=			"10"
+						emitSpeed=			"5-10"
+						particleLifetime=	"10"
+						>
+					<ParticleEffect>
+						<Particle
+								style=			"plain"
+								minWidth=		"1"
+								maxWidth=		"3"
+								primaryColor=	"0x05, 0xb8, 0xa5"
+								secondaryColor=	"0x00, 0x6e, 0x63"
+								/>
+					</ParticleEffect>
+				</ParticleCloud>
+			</Effect>
+			
+			<Effect maxValue="9" 
+					sound="&snArmorHit1;">
+				<ParticleCloud
+						style=			"splash" 
+						lifetime=		"20" 
+						emitDuration=	"60"
+						emitRate=		"20-25"
+						emitSpeed=		"1-6"
+						particleLifetime="4"
+						>
+					<ParticleEffect>
+						<Particle
+								style=			"plain"
+								maxWidth=		"1-2"
+								primaryColor=	"0x05, 0xb8, 0xa5"
+								secondaryColor=	"0x00, 0x6e, 0x63"
+								/>
+					</ParticleEffect>
+				</ParticleCloud>
+			</Effect>
+			
+			<Effect maxValue="13" 
+					sound="&snArmorHit1;">
+				<ParticleCloud
+						style=			"splash" 
+						lifetime=		"20" 
+						emitDuration=	"60"
+						emitRate=		"30-37"
+						emitSpeed=		"1-6"
+						particleLifetime="5"
+						>
+					<ParticleEffect>
+						<Particle
+								style=			"plain"
+								maxWidth=		"1-2"
+								primaryColor=	"0x05, 0xb8, 0xa5"
+								secondaryColor=	"0x00, 0x6e, 0x63"
+								/>
+					</ParticleEffect>
+				</ParticleCloud>
+			</Effect>
+
+			<Effect
+					sound="&snArmorHit1;">
+				<ParticleCloud
+						style=			"splash" 
+						lifetime=		"20" 
+						emitDuration=	"60"
+						emitRate=		"40-50"
+						emitSpeed=		"1-6"
+						particleLifetime="5"
+						>
+					<ParticleEffect>
+						<Particle
+								style=			"plain"
+								maxWidth=		"1-2"
+								primaryColor=	"0x05, 0xb8, 0xa5"
+								secondaryColor=	"0x00, 0x6e, 0x63"
+								/>
+					</ParticleEffect>
+				</ParticleCloud>
+			</Effect>
+		</Variants>
+	</Effect>
+
+<!--	Dark Steel not used	-->
+
+<!--	Dark Lightning recolored ion effect; colors from smallprojectiles line 4	-->
+
+	<Effect UNID="&efDarkLightningHitEffect;">
+		<Variants>
+			<Effect maxValue="0">
+				<ParticleCloud
+						style=				"splash"
+						lifetime=			"15"
+						emitDuration=		"5"
+						emitRate=			"10"
+						emitSpeed=			"5-10"
+						particleLifetime=	"10"
+						>
+					<ParticleEffect>
+						<Particle
+								style=			"plain"
+								minWidth=		"1"
+								maxWidth=		"3"
+								primaryColor=	"0xf9, 0xbe, 0xff"
+								secondaryColor=	"0x5a, 0x79, 0xbb"
+								/>
+					</ParticleEffect>
+				</ParticleCloud>
+			</Effect>
+			
+			<Effect maxValue="21" 
+					sound="&snArmorHit1;">
+				<ParticleCloud
+						style=			"splash" 
+						lifetime=		"20" 
+						emitDuration=	"60"
+						emitRate=		"20-25"
+						emitSpeed=		"1-6"
+						particleLifetime="4"
+						>
+					<ParticleEffect>
+						<Particle
+								style=			"plain"
+								maxWidth=		"1-2"
+								primaryColor=	"0xf9, 0xbe, 0xff"
+								secondaryColor=	"0x5a, 0x79, 0xbb"
+								/>
+					</ParticleEffect>
+				</ParticleCloud>
+			</Effect>
+			
+			<Effect maxValue="31" 
+					sound="&snArmorHit1;">
+				<ParticleCloud
+						style=			"splash" 
+						lifetime=		"20" 
+						emitDuration=	"60"
+						emitRate=		"30-37"
+						emitSpeed=		"1-6"
+						particleLifetime="5"
+						>
+					<ParticleEffect>
+						<Particle
+								style=			"plain"
+								maxWidth=		"1-2"
+								primaryColor=	"0xf9, 0xbe, 0xff"
+								secondaryColor=	"0x5a, 0x79, 0xbb"
+								/>
+					</ParticleEffect>
+				</ParticleCloud>
+			</Effect>
+
+			<Effect
+					sound="&snArmorHit1;">
+				<ParticleCloud
+						style=			"splash" 
+						lifetime=		"20" 
+						emitDuration=	"60"
+						emitRate=		"40-50"
+						emitSpeed=		"1-6"
+						particleLifetime="5"
+						>
+					<ParticleEffect>
+						<Particle
+								style=			"plain"
+								maxWidth=		"1-2"
+								primaryColor=	"0xf9, 0xbe, 0xff"
+								secondaryColor=	"0x5a, 0x79, 0xbb"
+								/>
+					</ParticleEffect>
+				</ParticleCloud>
+			</Effect>
+		</Variants>
+	</Effect>
+
+<!--	Dark Fire experimental; colors from inferno beam	-->
+
+	<Effect UNID="&efDarkFireHitEffect;">
+		<Variants>
+			<Effect maxValue="0">
+				<ParticleCloud
+						style=				"splash"
+						lifetime=			"15"
+						emitDuration=		"5"
+						emitRate=			"10"
+						emitSpeed=			"5-10"
+						particleLifetime=	"10"
+						>
+					<ParticleEffect>
+						<Particle
+								style=			"flame"
+								minWidth=		"1" 
+								maxWidth=		"2-3"
+								/>
+					</ParticleEffect>
+				</ParticleCloud>
+			</Effect>
+			
+			<Effect maxValue="46" 
+					sound="&snArmorHit1;">
+				<ParticleCloud
+						style=			"splash" 
+						lifetime=		"20" 
+						emitDuration=	"60"
+						emitRate=		"20-25"
+						emitSpeed=		"1-6"
+						particleLifetime="4"
+						>
+					<ParticleEffect>
+						<Particle
+								style=			"flame"
+								minWidth=		"2" 
+								maxWidth=		"2-4"
+								/>
+					</ParticleEffect>
+				</ParticleCloud>
+			</Effect>
+			
+			<Effect maxValue="69" 
+					sound="&snArmorHit1;">
+				<ParticleCloud
+						style=			"splash" 
+						lifetime=		"20" 
+						emitDuration=	"60"
+						emitRate=		"30-37"
+						emitSpeed=		"1-6"
+						particleLifetime="5"
+						>
+					<ParticleEffect>
+						<Particle
+								style=			"flame"
+								minWidth=		"3" 
+								maxWidth=		"3-4"
+								/>
+					</ParticleEffect>
+				</ParticleCloud>
+			</Effect>
+
+			<Effect
+					sound="&snArmorHit1;">
+				<ParticleCloud
+						style=			"splash" 
+						lifetime=		"20" 
+						emitDuration=	"60"
+						emitRate=		"40-50"
+						emitSpeed=		"1-6"
+						particleLifetime="5"
+						>
+					<ParticleEffect>
+						<Particle
+								style=			"flame"
+								minWidth=		"3" 
+								maxWidth=		"3-5"
+								/>
+					</ParticleEffect>
+				</ParticleCloud>
+			</Effect>
+		</Variants>
+	</Effect>
+	
+	<Effect UNID="&efOrangeIonHitEffect;">
+		<Variants>
+			<Effect maxValue="0">
+				<ParticleCloud
+						style=				"splash"
+						lifetime=			"15"
+						emitDuration=		"5"
+						emitRate=			"10"
+						emitSpeed=			"5-10"
+						particleLifetime=	"10"
+						>
+					<ParticleEffect>
+						<Particle
+								style=			"plain"
+								minWidth=		"1"
+								maxWidth=		"3"
+								primaryColor=	"0xff, 0xc7, 0xa0"
+								secondaryColor=	"0x95, 0xff, 0x00"
+								/>
+					</ParticleEffect>
+				</ParticleCloud>
+			</Effect>
+			
+			<Effect maxValue="21" 
+					sound="&snArmorHit1;">
+				<ParticleCloud
+						style=			"splash" 
+						lifetime=		"20" 
+						emitDuration=	"60"
+						emitRate=		"20-25"
+						emitSpeed=		"1-6"
+						particleLifetime="4"
+						>
+					<ParticleEffect>
+						<Particle
+								style=			"plain"
+								maxWidth=		"1-2"
+								primaryColor=	"0xff, 0xc7, 0xa0"
+								secondaryColor=	"0x95, 0xff, 0x00"
+								/>
+					</ParticleEffect>
+				</ParticleCloud>
+			</Effect>
+			
+			<Effect maxValue="31" 
+					sound="&snArmorHit1;">
+				<ParticleCloud
+						style=			"splash" 
+						lifetime=		"20" 
+						emitDuration=	"60"
+						emitRate=		"30-37"
+						emitSpeed=		"1-6"
+						particleLifetime="5"
+						>
+					<ParticleEffect>
+						<Particle
+								style=			"plain"
+								maxWidth=		"1-2"
+								primaryColor=	"0xff, 0xc7, 0xa0"
+								secondaryColor=	"0x95, 0xff, 0x00"
+								/>
+					</ParticleEffect>
+				</ParticleCloud>
+			</Effect>
+
+			<Effect
+					sound="&snArmorHit1;">
+				<ParticleCloud
+						style=			"splash" 
+						lifetime=		"20" 
+						emitDuration=	"60"
+						emitRate=		"40-50"
+						emitSpeed=		"1-6"
+						particleLifetime="5"
+						>
+					<ParticleEffect>
+						<Particle
+								style=			"plain"
+								maxWidth=		"1-2"
+								primaryColor=	"0xff, 0xc7, 0xa0"
+								secondaryColor=	"0x95, 0xff, 0x00"
+								/>
+					</ParticleEffect>
+				</ParticleCloud>
+			</Effect>
+		</Variants>
+	</Effect>
+	
+	<Effect UNID="&efGreenIonHitEffect;">
+		<Variants>
+			<Effect maxValue="0">
+				<ParticleCloud
+						style=				"splash"
+						lifetime=			"15"
+						emitDuration=		"5"
+						emitRate=			"10"
+						emitSpeed=			"5-10"
+						particleLifetime=	"10"
+						>
+					<ParticleEffect>
+						<Particle
+								style=			"plain"
+								minWidth=		"1"
+								maxWidth=		"3"
+								primaryColor=		"0xf0, 0xff, 0xa0"
+								secondaryColor=		"0xa9, 0xff, 0x00"
+								/>
+					</ParticleEffect>
+				</ParticleCloud>
+			</Effect>
+			
+			<Effect maxValue="21" 
+					sound="&snArmorHit1;">
+				<ParticleCloud
+						style=			"splash" 
+						lifetime=		"20" 
+						emitDuration=	"60"
+						emitRate=		"20-25"
+						emitSpeed=		"1-6"
+						particleLifetime="4"
+						>
+					<ParticleEffect>
+						<Particle
+								style=			"plain"
+								maxWidth=		"1-2"
+								primaryColor=		"0xf0, 0xff, 0xa0"
+								secondaryColor=		"0xa9, 0xff, 0x00"
+								/>
+					</ParticleEffect>
+				</ParticleCloud>
+			</Effect>
+			
+			<Effect maxValue="31" 
+					sound="&snArmorHit1;">
+				<ParticleCloud
+						style=			"splash" 
+						lifetime=		"20" 
+						emitDuration=	"60"
+						emitRate=		"30-37"
+						emitSpeed=		"1-6"
+						particleLifetime="5"
+						>
+					<ParticleEffect>
+						<Particle
+								style=			"plain"
+								maxWidth=		"1-2"
+								primaryColor=		"0xf0, 0xff, 0xa0"
+								secondaryColor=		"0xa9, 0xff, 0x00"
+								/>
+					</ParticleEffect>
+				</ParticleCloud>
+			</Effect>
+
+			<Effect
+					sound="&snArmorHit1;">
+				<ParticleCloud
+						style=			"splash" 
+						lifetime=		"20" 
+						emitDuration=	"60"
+						emitRate=		"40-50"
+						emitSpeed=		"1-6"
+						particleLifetime="5"
+						>
+					<ParticleEffect>
+						<Particle
+								style=			"plain"
+								maxWidth=		"1-2"
+								primaryColor=		"0xf0, 0xff, 0xa0"
+								secondaryColor=		"0xa9, 0xff, 0x00"
+								/>
+					</ParticleEffect>
+				</ParticleCloud>
+			</Effect>
+		</Variants>
+	</Effect>
+	
+</TranscendenceExtension>

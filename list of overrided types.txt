@@ -1,0 +1,67 @@
+Full list of overrided types in Weapons Extended 5
+==================================================
+
+STATIONS
+========
+stAsteroidMineTitanium
+stAsteroidMinePalladium
+stAsteroidMineCeralloy
+stAsteroidMineDuralloy
+stAsteroidMinePteracnium
+
+stCentauriCamp
+stCentauriStronghold
+
+stNavBeacon
+stCommonwealthTurret
+
+stBlackMarketStation
+stBlackMarketShipyard
+
+stPointJuno
+stCSCEuropaWreck
+stCenturionWreck
+stSandstormWreck
+ssPointJuno
+
+stArmsDealerRasiermesser
+stRasiermesserFactory
+
+
+DOCKSCREENS
+===========
+dsExchangeSell
+dsUseArmorCoating
+
+
+TABLES
+======
+tbCommDefenders
+tbCommEliteDefenders
+tbCommPrivateCrafts
+tbCommTraffic
+
+tbCentauriEncounters
+
+
+DEVICES-ITEMS
+=============
+ALL THE WEAPONS OF THE GAME, INCLUDING VIRTUALS, BUT EXCLUDING DOMINA POWERS AND ORACUS HARASS
+ALL UNKNOWN WEAPONS
+ALL OF THE AMMO BOXES
+ALL OF THE AMMO
+
+itSuperconductingCoil
+
+
+GLOBAL FUNCTIONS
+================
+intComputeSellPrice
+intComputeBuyPrice
+
+
+COMPATIBILITY ISSUES WITH OTHER MODS (RESOURCES ADDED FROM OTHER MODS)
+======================================================================
+scPraetorian
+scCentauriMonitor
+scCentauriRaiderL
