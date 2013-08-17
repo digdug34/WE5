@@ -1478,7 +1478,7 @@
    
   (block Nil
   	  
-  	  (setq screenshot (lambda Nil
+  	  (setq we_screenshot (lambda Nil
   	  		  (block (startingUNID fireUNID)
   	  		  	(setq startingUNID 0xD25C4001)
   	  		  	(for i 1 2000
