@@ -1253,12 +1253,6 @@
                            ; )
                        ; )) 
                         
-                        
-                        ;; new addition, function now handles secondary weapons since 1.08e
-                        ;(if (geq (count weaponList) 2)
-                        	;(setq secondaryweapontrue "True")
-                        	;)
-                        	
                         ;; Handle the weapons (new code, randomizes all the weapons on the ship and handles fireArcs and DevicePos)
                         (enum weaponList weapon
                         	(block Nil
@@ -1480,8 +1474,10 @@
                                 ;; looks like we can install the shield.... let's attempt that
                                 (block Nil
                                     (if (we_InstallItem ship shield 'noCreate)
+									<!--
                                     ;(objAddItem ship shield)
                                     ;(if (shpInstallDevice ship shield)
+									-->
                                         (block Nil
                                             ;; lets be nice and recharge the shield
                                             (shpRechargeShield ship 5000)
@@ -1565,7 +1561,7 @@
 
 
     ;;
-    ;; HELPERS HELPERS HELPERS HELPERS HELPERS HELPERS HELPERS HELPERS HELPERS HELPERS
+    ;; HELPERS
     ;;
 
     
