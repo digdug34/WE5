@@ -1634,6 +1634,7 @@
 
 		<Weapon
 				type=				"beam"
+				omnidirectional=	"true"
 				damage=				"laser:1d5"
 				fireRate=			"18"
 				lifetime=			"30"
@@ -3083,6 +3084,7 @@
 				fireRate=			"45"
 				missileSpeed=		"45"
 				interaction=		"90"
+				hitPoints=			"5"
 				lifetime=			"67"
 				powerUse=			"160"
 
@@ -3125,6 +3127,7 @@
 				fireRate=			"40"
 				missileSpeed=		"50"
 				interaction=		"90"
+				hitPoints=			"5"
 				lifetime=			"67"
 				powerUse=			"150"
 
@@ -3167,6 +3170,7 @@
 				fireRate=			"45"
 				missileSpeed=		"45"
 				interaction=		"90"
+				hitPoints=			"5"
 				lifetime=			"67"
 				powerUse=			"140"
 
@@ -3206,6 +3210,7 @@
 				fireRate=			"45"
 				missileSpeed=		"45"
 				interaction=		"90"
+				hitPoints=			"5"
 				lifetime=			"67"
 				powerUse=			"160"
 
@@ -4477,7 +4482,7 @@
 			numberAppearing=	"1"
 			attributes=			"MajorItem; Makayev; BlastCannon; Commonwealth; Huari"
 			unknownType=		"&itUnknownBlastCannon;"
-			description=		"The slam cannon fires high-explosive shells."
+			description=		"The slam cannon fires high-explosive shells. This is a standard version."
 			>
 
 		<Image imageID="&rsItemsMakayev1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
@@ -4492,12 +4497,12 @@
 				powerUse=			"100"
 				 
 				hitPoints=			"3"
-				directional=		"true"
+				
 				sound=				"&snRecoillessCannon;"
 				>
 
 			<Effect>
-				<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
+				<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" rotationCount="20"/>
 			</Effect>
 		</Weapon>
 	</ItemType>
@@ -4515,10 +4520,10 @@
 			numberAppearing=	"1"
 			attributes=			"MajorItem; Makayev; BlastCannon; Huari; Commonwealth"
 			unknownType=		"&itUnknownBlastCannon2;"
-			description=		"The slam cannon fires high-explosive shells."
+			description=		"The slam cannon fires high-explosive shells. Shells fragments on impact for extra damage."
 			>
 
-<Image imageID="&rsItemsMakayev1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+			<Image imageID="&rsItemsMakayev1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 		<Weapon
 				type=				"missile"
 
@@ -4529,11 +4534,11 @@
 				powerUse=			"120"
 				 
 				hitPoints=			"3"
-				directional=		"true"
+				
 				sound=				"&snRecoillessCannon;"
 				>
 			<Effect>
-				<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
+				<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" rotationCount="20"/>
 			</Effect>
 			<HitEffect
 					sound="&snArmorHit1;"
@@ -4582,7 +4587,7 @@
 			numberAppearing=	"1"
 			attributes=			"MajorItem; Makayev; BlastCannon; Commonwealth; Huari"
 			unknownType=		"&itUnknownBlastCannon;"
-			description=		"The slam cannon fires high-explosive shells."
+			description=		"The slam cannon fires high-explosive shells. This version fires shells with high momentum."
 			>
 
 		<Image imageID="&rsItemsMakayev1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
@@ -4597,12 +4602,12 @@
 				powerUse=			"120"
 				hitPoints=			"3"				 
 
-				directional=		"true"
+				
 				sound=				"&snRecoillessCannon;"
 				>
 
 			<Effect>
-				<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
+				<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" rotationCount="20"/>
 			</Effect>
 		</Weapon>
 	</ItemType>
@@ -4620,7 +4625,7 @@
 			numberAppearing=	"1"
 			attributes=			"MajorItem; Makayev; BlastCannon; Commonwealth; Huari"
 			unknownType=		"&itUnknownBlastCannon;"
-			description=		"The slam cannon fires high-explosive shells."
+			description=		"The slam cannon fires high-explosive shells. This version fires lighter shells at higher firerate."
 			>
 
 		<Image imageID="&rsItemsMakayev1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
@@ -4635,12 +4640,12 @@
 				powerUse=			"110"
 				hitPoints=			"1"				 
 
-				directional=		"true"
+				
 				sound=				"&snRecoillessCannon;"
 				>
 
 			<Effect>
-				<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
+				<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" rotationCount="20"/>
 			</Effect>
 
 		</Weapon>
@@ -4649,7 +4654,7 @@
 
 <!--	NB:standard	-->
 
-<!--	TODO: describe without reference to linked fire	-->
+
 
 	<!-- Dual Turbolaser Cannon -->
 
@@ -4661,7 +4666,7 @@
 			frequency=			"uncommon"
 			attributes=			"EnergyWeapon; MajorItem; EI; Laser; Commonwealth; Heliotrope"
 			unknownType=		"&itUnknownLaserWeapon3;"
-			description=		"Twin turbolaser cannons with linked fire controls."
+			description=		"Twin turbolaser cannons, manifactured by Earth Industries Conglomerate."
 
 			sortName=			"turbolaser cannon, dual"
 			>
@@ -4693,7 +4698,7 @@
 
 <!--	NB:light	-->
 
-<!--	TODO: describe without reference to linked fire	-->
+
 
 	<!-- Dual Tanto Cannon-->
 
@@ -4705,7 +4710,7 @@
 			frequency=			"uncommon"
 			attributes=			"EnergyWeapon; MajorItem; Bushido; Laser; Commonwealth; Heliotrope"
 			unknownType=		"&itUnknownLaserWeapon3;"
-			description=		"Twin turbolaser cannons with linked fire controls."
+			description=		"Twin turbolaser cannons, manifactured by Bushido."
 
 			sortName=			"turbolaser cannon, dual"
 			>
@@ -4869,7 +4874,7 @@
 			frequency=			"uncommon"
 			attributes=			"EnergyWeapon; MajorItem; Bushido; Laser; OmniWeapon; Commonwealth"
 			unknownType=		"&itUnknownLaserWeapon3;"
-			description=		"A single Tanto heavy laser mounted on an automated turret."
+			description=		"A single Tanto heavy laser mounted on an automated turret manifactured by Bushido."
 
 			sortName=			"turbolaser cannon, dual"
 			>
@@ -5024,7 +5029,7 @@
 						missileSpeed=	"50"
 						lifetime=		"120"
 						hitPoints=		"4"
-						directional=	"true"
+						
 						sound=			"&snRecoillessCannon;"
 						>
 
@@ -5070,7 +5075,7 @@
 						missileSpeed=	"50"
 						lifetime=		"120"
 
-						directional=	"true"
+						
 						sound=			"&snRecoillessCannon;"
 						>
 					<Fragment
@@ -5110,7 +5115,7 @@
 						missileSpeed=	"50"
 						lifetime=		"120"
 
-						directional=	"true"
+						
 						sound=			"&snRecoillessCannon;"
 						>
 					<Fragment
@@ -5158,7 +5163,7 @@
 						missileSpeed=	"50"
 						lifetime=		"120"
 
-						directional=	"true"
+						
 						sound=			"&snRecoillessCannon;"
 						>
 
@@ -5178,7 +5183,7 @@
 
 <!--	NB:standard	-->
 
-<!--	TODO: rename once the lame colored EMP weapons are replaced	-->
+
 	
 	<!-- Ion Cannon -->
 
@@ -5365,7 +5370,7 @@
 			frequency=			"rare"
 			attributes=			"EnergyWeapon; MajorItem; Ion; EMP; EI; Commonwealth; Ventari"
 			unknownType=		"&itUnknownIonCannon3;"
-			description=		"This cannon shoots out a stream of ionized particles that disrupts the control systems on most starships. This version has a variable focus ion generator as its source, enabling the weapon to fire random ion particles."
+			description=		"This cannon shoots out a stream of ionized particles that disrupts the control systems on most starships. This version has a variable focus ion generator at its source, enabling the weapon to fire random ion particles."
 			>
 
 		<Image imageID="&rsItemsEI2;" imageX="96" imageY="192" imageWidth="96" imageHeight="96"/>
@@ -5533,7 +5538,7 @@
 	<ItemType UNID="&itMakayevLauncher;"
 			name=				"Makayev launcher"
 			level=				"5"
-			value=				"1000"
+			value=				"5000"
 			mass=				"1000"
 			frequency=			"common"
 			attributes=			"MajorItem; Makayev; Launcher; Ammo; Commonwealth"
@@ -7145,12 +7150,12 @@
 						damage=			"blast:4d6; momentum2; WMD4"
 						missileSpeed=	"50"
 						hitPoints=		"3"
-						directional=	"true"
+						
 						sound=			"&snRecoillessCannon;"
 						>
 
 					<Effect>
-						<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
+						<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" rotationCount="20"/>
 					</Effect>
 					<HitEffect
 							sound="&snArmorHit1;"
@@ -7171,12 +7176,12 @@
 						damage=			"thermo:2d6; momentum2; radiation1; WMD4"
 						missileSpeed=	"50"
 						hitPoints=		"3"
-						directional=	"true"
+						
 						sound=			"&snRecoillessCannon;"
 						>
 
 					<Effect>
-						<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
+						<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" rotationCount="20"/>
 					</Effect>
 					<HitEffect
 							sound="&snArmorHit1;"
@@ -7196,12 +7201,12 @@
 						damage=			"blast:4d6; momentum2; WMD4"
 						missileSpeed=	"100"
 						hitPoints=		"3"
-						directional=	"true"
+						
 						sound=			"&snRecoillessCannon;"
 						>
 
 					<Effect>
-						<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
+						<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" rotationCount="20"/>
 					</Effect>
 					<HitEffect
 							sound="&snArmorHit1;"
@@ -7222,12 +7227,12 @@
 						damage=			"blast:4d6; momentum4; WMD4"
 						missileSpeed=	"50"
 						hitPoints=		"3"
-						directional=	"true"
+						
 						sound=			"&snRecoillessCannon;"
 						>
 
 					<Effect>
-						<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
+						<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" rotationCount="20"/>
 					</Effect>
 					<HitEffect
 							sound="&snArmorHit1;"
@@ -7247,12 +7252,12 @@
 						damage=			"kinetic:8d8; momentum4; WMD4"
 						missileSpeed=	"40"
 						hitPoints=		"3"
-						directional=	"true"
+						
 						sound=			"&snRecoillessCannon;"
 						>
 
 					<Effect>
-						<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
+						<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" rotationCount="20"/>
 					</Effect>
 					<HitEffect
 							sound="&snArmorHit1;"
@@ -7273,7 +7278,7 @@
 						damage=			"blast:4d6; momentum2; WMD4"
 						missileSpeed=	"40"
 						hitPoints=		"3"
-						directional=	"true"
+						
 						sound=			"&snRecoillessCannon;"
 						>
 				<Fragment
@@ -7302,7 +7307,7 @@
 						</Effect>
 					</Fragment>
 					<Effect>
-						<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
+						<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" rotationCount="20"/>
 					</Effect>
 					<HitEffect
 							sound="&snArmorHit1;"
@@ -7353,7 +7358,7 @@
 				interaction=		"20"
 				 
 
-				directional=		"true"
+				
 				sound=				"&snRecoillessCannon;"
 				>
 
@@ -7400,7 +7405,7 @@
 				powerUse=			"300"
 				interaction=		"20"
 
-				directional=		"true"
+				
 				sound=				"&snRecoillessCannon;"
 				>
 
@@ -7417,7 +7422,7 @@
 
 <!--	NB:light	-->
 
-<!--	TODO: describe without reference to linked fire	-->
+
 
 	<!-- Dual Flenser Cannon -->
 
@@ -7448,7 +7453,7 @@
 				interaction=		"20"
 				 
 
-				directional=		"true"
+				
 				sound=				"&snRecoillessCannon;"
 				>
 
@@ -7495,7 +7500,7 @@
 				hitPoints=			"6"				 
 				recoil=				"2"
 
-				directional=		"true"
+				
 				fireEffect=			"&efMediumCannonFlash;"
 				sound=				"&snRecoillessCannon;"
 				>
@@ -7553,7 +7558,7 @@
 				hitPoints=			"20"				 
 				recoil=				"2"
 
-				directional=		"true"
+				
 				fireEffect=			"&efMediumCannonFlash;"
 				sound=				"&snRecoillessCannon;"
 				>
@@ -7612,7 +7617,7 @@
 				hitPoints=			"12"				 
 				recoil=				"3"
 
-				directional=		"true"
+				
 				fireEffect=			"&efMediumCannonFlash;"
 				sound=				"&snRecoillessCannon;"
 				>
@@ -7670,7 +7675,7 @@
 				hitPoints=			"10"				 
 				recoil=				"2"
 
-				directional=		"true"
+				
 				fireEffect=			"&efMediumCannonFlash;"
 				sound=				"&snRecoillessCannon;"
 				>
@@ -7754,7 +7759,7 @@
 				hitPoints=			"10"				 
 				recoil=				"2"
 
-				directional=		"true"
+				
 				fireEffect=			"&efMediumCannonFlash;"
 				sound=				"&snRecoillessCannon;"
 				>
@@ -8108,7 +8113,7 @@
 			frequency=			"common"
 			attributes=			"MajorItem; Ferian; Plasma; NotForSale; lightWeapon"
 			unknownType=		"&itUnknownPlasmaWeapon;"
-			description=		"Plasma torches are used for large-scale asteroid mining. This model has problem with the plasma ignition."
+			description=		"Plasma torches are used for large-scale asteroid mining. This model has a smaller plasma ignitor."
 
 			esPlural=			"true"
 			>
@@ -8293,7 +8298,7 @@
 			frequency=			"common"
 			attributes=			"EnergyWeapon; MajorItem; Military; EI; sungSlavers; Particle; Kobol; Ventari; Commonwealth; CWFleet"
 			unknownType=		"&itUnknownParticleCannon3;"
-			description=		"This heavy particle beam weapon was developed by the Earth Industries Conglomerate. This versatile weapon has been adopted by the Commonwealth Fleet. The particle packets of this weapon are energeric enough to penetrate most armors."
+			description=		"This heavy particle beam weapon was developed by the Earth Industries Conglomerate. This versatile weapon has been adopted by the Commonwealth Fleet. The particle packets of this weapon are energetic enough to penetrate most armors."
 
 			sortName=			"TeV 9 blaster"
 			>
@@ -8367,7 +8372,7 @@
 
 <!--	NB:light (compare to dual TEV)	-->
 
-<!--	TODO: describe without reference to linked fire	-->
+
 
 	<!-- Hanzo Blaster -->
 
@@ -9798,12 +9803,12 @@
 						hitPoints=		"10"
 						lifetime=		"100"
 
-						directional=	"true"
+						
 						sound=			"&snRecoillessCannon;"
 						>
 
 					<Effect>
-						<Image imageID="&rsMissiles2;" imageX="64" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+						<Image imageID="&rsMissiles2;" imageX="64" imageY="0" imageWidth="32" imageHeight="32" rotationCount="20"/>
 					</Effect>
 					<HitEffect
 							sound="&snArmorHit1;"
@@ -9825,12 +9830,12 @@
 						hitPoints=		"10"
 						lifetime=		"100"
 						recoil="3"
-						directional=	"true"
+						
 						sound=			"&snRecoillessCannon;"
 						>
 
 					<Effect>
-						<Image imageID="&rsMissiles2;" imageX="64" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+						<Image imageID="&rsMissiles2;" imageX="64" imageY="0" imageWidth="32" imageHeight="32" rotationCount="20"/>
 					</Effect>
 					<HitEffect
 							sound="&snArmorHit1;"
@@ -9852,12 +9857,12 @@
 						hitPoints=		"10"
 						lifetime=		"100"
 						maneuverability="6"
-						directional=	"true"
+						
 						sound=			"&snRecoillessCannon;"
 						>
 
 					<Effect>
-						<Image imageID="&rsMissiles2;" imageX="64" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+						<Image imageID="&rsMissiles2;" imageX="64" imageY="0" imageWidth="32" imageHeight="32" rotationCount="20"/>
 					</Effect>
 					<HitEffect
 							sound="&snArmorHit1;"
@@ -11272,7 +11277,7 @@
 						hitPoints=		"30"
 						failsafe=		"5"
 
-						directional=	"true"
+						
 						sound=			"&snMissileLauncher;"
 						vaporTrailLength="24"
 						vaporTrailWidth="150"
@@ -11281,7 +11286,7 @@
 						>
 
 					<Effect>
-						<Image imageID="&rsWeapons8DB32;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" />
+						<Image imageID="&rsWeapons8DB32;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" rotationCount="20"/>
 					</Effect>
 					
 					<HitEffect 
@@ -11306,11 +11311,11 @@
 							maneuverability=	"4"
 							multiTarget=		"true"
 							autoAcquireTarget=	"true"
-							directional=		"true"
+							
 							>
 							
 						<Effect>
-							<Image imageID="&rsMissiles3;" imageX="48" imageY="0" imageWidth="16" imageHeight="16" />
+							<Image imageID="&rsMissiles3;" imageX="48" imageY="0" imageWidth="16" imageHeight="16" rotationCount="20"/>
 						</Effect>
 						<HitEffect
 								sound="&snArmorHit1;"
@@ -11335,7 +11340,7 @@
 						hitPoints=		"30"
 						failsafe=		"5"
 
-						directional=	"true"
+						
 						sound=			"&snMissileLauncher;"
 						vaporTrailLength="24"
 						vaporTrailWidth="150"
@@ -11344,7 +11349,7 @@
 						>
 
 					<Effect>
-						<Image imageID="&rsWeapons8DB32;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" />
+						<Image imageID="&rsWeapons8DB32;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" rotationCount="20"/>
 					</Effect>
 					<HitEffect 
 							sound=	"&snArmorHit1;"
@@ -11368,11 +11373,11 @@
 							maneuverability=	"4"
 							multiTarget=		"true"
 							autoAcquireTarget=	"true"
-							directional=		"true"
+							
 							>
 							
 						<Effect>
-							<Image imageID="&rsMissiles3;" imageX="48" imageY="0" imageWidth="16" imageHeight="16" />
+							<Image imageID="&rsMissiles3;" imageX="48" imageY="0" imageWidth="16" imageHeight="16" rotationCount="20"/>
 						</Effect>
 						<HitEffect
 								sound="&snArmorHit1;"
@@ -11397,7 +11402,7 @@
 						hitPoints=		"30"
 						failsafe=		"5"
 
-						directional=	"true"
+						
 						sound=			"&snMissileLauncher;"
 						vaporTrailLength="24"
 						vaporTrailWidth="150"
@@ -11406,7 +11411,7 @@
 						>
 
 					<Effect>
-						<Image imageID="&rsWeapons8DB32;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" />
+						<Image imageID="&rsWeapons8DB32;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" rotationCount="20"/>
 					</Effect>
 					<HitEffect 
 							sound=	"&snArmorHit1;"
@@ -11430,11 +11435,11 @@
 							maneuverability=	"4"
 							multiTarget=		"true"
 							autoAcquireTarget=	"true"
-							directional=		"true"
+							
 							>
 							
 						<Effect>
-							<Image imageID="&rsMissiles3;" imageX="48" imageY="0" imageWidth="16" imageHeight="16" />
+							<Image imageID="&rsMissiles3;" imageX="48" imageY="0" imageWidth="16" imageHeight="16" rotationCount="20"/>
 						</Effect>
 						<HitEffect
 								sound="&snArmorHit1;"
@@ -11459,7 +11464,7 @@
 						hitPoints=		"30"
 						failsafe=		"5"
 
-						directional=	"true"
+						
 						sound=			"&snMissileLauncher;"
 						vaporTrailLength="24"
 						vaporTrailWidth="150"
@@ -11468,7 +11473,7 @@
 						>
 
 					<Effect>
-						<Image imageID="&rsWeapons8DB32;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" />
+						<Image imageID="&rsWeapons8DB32;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" rotationCount="20"/>
 					</Effect>
 					<HitEffect
 							sound="&snArmorHit1;"
@@ -11491,11 +11496,11 @@
 							maneuverability=	"4"
 							multiTarget=		"true"
 							autoAcquireTarget=	"true"
-							directional=		"true"
+							
 							>
 							
 						<Effect>
-							<Image imageID="&rsMissiles3;" imageX="48" imageY="0" imageWidth="16" imageHeight="16" />
+							<Image imageID="&rsMissiles3;" imageX="48" imageY="0" imageWidth="16" imageHeight="16" rotationCount="20"/>
 						</Effect>
 						<HitEffect
 								sound="&snArmorHit1;"

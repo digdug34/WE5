@@ -631,7 +631,7 @@
 			numberAppearing=	"1"
 			attributes=			"EnergyWeapon; MajorItem; Specialty; Ion; Ventari; Illegal"
 			unknownType=		"&itUnknownIonCannon6;"
-			description=		"A specially developed ammoless launcher that can shot dense packs of ions able to destroy internal devices."
+			description=		"A specially developed Ventari weapon can shot dense packs of ions able to destroy internal devices."
 			>
 
 		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
@@ -640,11 +640,7 @@
 		
 				fireRate=			"45"
 				powerUse=			"800"
-				launcher=			"true"
-				>
-			<Missiles>
-				<Missile 
-					type=				"missile"
+				type=				"missile"
 					damage=				"ion:18d10; device3; WMD3"
 					lifetime=			"30"
 					hitpoints = "15"
@@ -659,8 +655,6 @@
 							drag=			"80">
 						<Image imageID="&rsMissiles4;" imageX="0" imageY="32" imageWidth="16" imageHeight="16" imageFrameCount="8" imageTicksPerFrame="10"/>
 					</Exhaust>
-				</Missile>
-			</Missiles>
 		</Weapon>
 	</ItemType>
 	

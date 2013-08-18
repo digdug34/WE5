@@ -33,7 +33,7 @@
 				
 				recoil=				"2"
 
-				directional=		"true"
+			 
 				fireEffect=			"&efMediumCannonFlash;"
 				sound=				"&snRecoillessCannon;"
 				>
@@ -81,7 +81,7 @@
 				
 				recoil=				"2"
 
-				directional=		"true"
+			 
 				fireEffect=			"&efMediumCannonFlash;"
 				sound=				"&snRecoillessCannon;"
 				>
@@ -139,7 +139,7 @@
 				
 				recoil=				"3"
 
-				directional=		"true"
+			 
 				fireEffect=			"&efMediumCannonFlash;"
 				sound=				"&snRecoillessCannon;"
 				>
@@ -186,7 +186,7 @@
 				
 				recoil=				"2"
 
-				directional=		"true"
+			 
 				fireEffect=			"&efMediumCannonFlash;"
 				sound=				"&snRecoillessCannon;"
 				>
@@ -233,7 +233,7 @@
 				
 				recoil=				"2"
 
-				directional=		"true"
+			 
 				fireEffect=			"&efMediumCannonFlash;"
 				sound=				"&snRecoillessCannon;"
 				>
@@ -719,7 +719,7 @@
 				powerUse=			"150"
 				hitPoints=			"4"				 
 
-				directional=		"true"
+			 
 				sound=				"&snRecoillessCannon;"
 				>
 
@@ -756,7 +756,7 @@
 				powerUse=			"150"
 				hitPoints=			"10"				 
 				failsafe=			"20"
-				directional=		"true"
+			 
 				sound=				"&snRecoillessCannon;"
 				>
 			<Effect>
@@ -791,7 +791,7 @@
 				powerUse=			"150"
 				hitPoints=			"4"				 
 
-				directional=		"true"
+			 
 				sound=				"&snRecoillessCannon;"
 				>
 
@@ -830,7 +830,7 @@
 				powerUse=			"80"
 				hitPoints=			"4"				 
 
-				directional=		"true"
+			 
 				sound=				"&snRecoillessCannon;"
 				>
 
@@ -869,7 +869,7 @@
 				powerUse=			"170"
 				hitPoints=			"4"				 
 
-				directional=		"true"
+			 
 				sound=				"&snRecoillessCannon;"
 				>
 
@@ -908,7 +908,7 @@
 				powerUse=			"300"
 				hitPoints=			"4"				 
 
-				directional=		"true"
+			 
 				sound=				"&snRecoillessCannon;"
 				>
 
@@ -948,7 +948,7 @@
 				hitPoints=			"10"				 
 				recoil=				"3"
 
-				directional=		"true"
+			 
 				fireEffect=			"&efMediumCannonFlash;"
 				sound=				"&snRecoillessCannon;"
 				>
@@ -1013,7 +1013,7 @@
 				hitPoints=			"10"				 
 				recoil=				"3"
 
-				directional=		"true"
+			 
 				fireEffect=			"&efMediumCannonFlash;"
 				sound=				"&snRecoillessCannon;"
 				>
@@ -1078,7 +1078,7 @@
 				hitPoints=			"10"				 
 				recoil=				"3"
 
-				directional=		"true"
+			 
 				fireEffect=			"&efMediumCannonFlash;"
 				sound=				"&snRecoillessCannon;"
 				>
@@ -1143,7 +1143,7 @@
 				hitPoints=			"10"				 
 				recoil=				"3"
 
-				directional=		"true"
+			 
 				fireEffect=			"&efMediumCannonFlash;"
 				sound=				"&snRecoillessCannon;"
 				>
@@ -1377,7 +1377,7 @@
 							maneuverability=	"4"
 							multiTarget=		"true"
 							autoAcquireTarget=	"true"
-							directional=		"true"
+						 
 							vaporTrailLength="40"
 							vaporTrailWidth="110"
 							vaporTrailWidthInc="5"
@@ -1853,7 +1853,7 @@
 <!-- Ice Missile -->
 	        <ItemType 
 	        UNID=       "&itIceMissileVirtual;"
-			name=				"<virtual ammo>"
+			name=				"Ice Wave Missile"
 			level=				"1"
 			virtual=			"true"
 			attributes=			"Consumable; Missile"

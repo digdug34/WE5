@@ -1014,7 +1014,7 @@ sound=				"&snLaserCannon;"
 	</ItemType>
 
 	<ItemType UNID="&itIceShardVirtualAmmo;"
-			name=				"<virtual ammo>"
+			name=				"Ice"
 			level=				"1"
 			virtual=			"true"
 			attributes=			"Consumable; Missile"

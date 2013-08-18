@@ -2,7 +2,7 @@ WEAPONS EXTENDED 5
 ==================
 
 Weapons Extended 5 Extension for Transcendence
-https://github.com/digdug34/Weapons-Extended
+https://github.com/digdug34/WE5
 
 
 USAGE
@@ -40,6 +40,8 @@ All the weapons are unknown, for an additional challenge.
 Planets have random name labels.
 Some vanilla bugfixes/changes are included in Point Juno, Dvalin's Factory, Black market stations and Miner stations.
 
+The mod also includes: Wolfy's Centurion ships, Aeonic's Praetorian, PKOdon's NoDockNavBeacons
+
 
 COMPATIBILITY
 =============
@@ -59,7 +61,7 @@ Attribution: When adapting or using parts of this mod, you must attribute the or
 
 Noncommercial: You may not sell or profit from this mod or parts of it. Except as contained in this notice, the name(s) of the following copyright holders shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Software without prior written authorization.
 
-The following players have contributed to the mod and are its authors:
+The following players/modders have contributed to the mod and are its authors:
 Aeonic; alterecco; Atarlost; Darth Saber; digdug; Periculi; Prophet; Star Weaver; Taben; TheLastBrunnenG; Wolfy
 The mod curator is digdug.
 
