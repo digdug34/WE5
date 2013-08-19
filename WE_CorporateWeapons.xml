@@ -5338,7 +5338,7 @@
 		<Weapon
 				type=				"beam"
 
-				damage=				"ion:2d6+12; EMP1"
+				damage=				"ion:2d6+12; EMP1; shield8"
 				fireRate=			"20"
 				lifetime=			"30"
 				powerUse=			"200"

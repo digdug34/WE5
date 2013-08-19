@@ -11,27 +11,34 @@
 		<OnUpdate>
 			;update every 10 secs:
 			(block Nil
-				;(PrintTo 'log "WE Overlay!")
+				;(printTo 'log "WE Overlay!")
+				;(printTo 'log "Checking checks!")
+				;(printTo 'log (geq (objGetOverlayData gSource aOverlayID "Time") (multiply 15 (objGetOverlayData gSource aOverlayID "UpdateInstance"))))
+				;(printTo 'log (ls (ObjGetDistance gPlayer (SysFindObject gPlayer "GN")) 30))
 				(if
 					(and
 						(geq (objGetOverlayData gSource aOverlayID "Time") (multiply 15 (objGetOverlayData gSource aOverlayID "UpdateInstance")))
 						;player will not gate:
-						(ObjGetDistance gPlayer (SysFindObject gPlayer "GN"))
+						(ls (ObjGetDistance gPlayer (SysFindObject gPlayer "GN")) 30)
 						)
 						(block Nil
-							(PrintTo 'log "Check Update Time!")
+							;(printTo 'log "Check Update Time!")
 							;(dbgoutput "Running OnUpdate...")
 							<!--
-							(if (eq (typGetGlobalData &svPlayer; "WE_RandomizerOnSwitch") 1)
+							(if (eq (typGetData &svPlayer; "WE_RandomizerOnSwitch") 1)
 								(we_RandomizeShip)
 							)-->
-							(switch
-								;if there are 40 ships:
-								(gr (count (filter (sysFindObject gPlayerShip "s") temporaryShip (not (objGetData temporaryShip "WE_RandomizerDone")))) 40)
+							(if (eq (typGetData &svPlayer; "WE_RandomizerOnSwitch") 1)
+								(if (gr (count (we_findTheShips)) 40)
 									(objFireOverlayEvent gSource aOverlayID "LagFix")
-								(eq (typGetGlobalData &svPlayer; "WE_RandomizerOnSwitch") 1)
 									(objFireOverlayEvent gSource aOverlayID "WERandomize")
 								)
+							)
+							
+							
+							;randomization without the lagfix
+							;(objFireOverlayEvent gSource aOverlayID "WERandomize")
+							
 						)
 						(objIncOverlayData gSource aOverlayID "Time" 1)
 					)
@@ -42,38 +49,41 @@
 			
 			;update overlay:
 			(objIncOverlayData gSource aOverlayID "UpdateInstance" 1)
-			(setq Small_List (List Nil))
-				(for i 0 2 (block Nil
-					(Setq Small_List 
-						(lnkAppend 
-						Small_List
-						(random (filter (sysFindObject gPlayerShip "s") temporaryShip (not (objGetData temporaryShip "WE_RandomizerDone"))))
-						))
-					Small_List
-					)
-					)
-			(setq Small_List (lnkRemoveNil Small_List))
-			(PrintTo 'log Small_List)
+			;(setq Small_List (List Nil))
+			;	(for i 0 2 (block Nil
+			;		(Setq Small_List 
+			;			(lnkAppend 
+			;			Small_List
+			;			(we_findTheShips)
+			;			))
+			;		Small_List
+			;		)
+			;		)
+			;(setq Small_List (lnkRemoveNil Small_List))
+			;;(printTo 'log Small_List)
+			
+			(setq Small_List (subset (we_findTheShips) 0 38))
+			
             (enum Small_List ship
                         (block (unid weapon shield ammoWeapon)
 
-                        ;(dbgLog "Randomizing Ship: " (objGetName ship 1))
-                        ;(dbgLog "ID: " (objGetID ship) " --- Obj: " (cat ship))
+                        ;(printTo 'log "Randomizing Ship: " (objGetName ship 1))
+                        ;(printTo 'log "ID: " (objGetID ship) " --- Obj: " (cat ship))
                         
                                              
 
                         ;; get the unid of the current ship
-                        (setq unid (shpGetClass ship))
+                        (setq unid (objGetType ship))
                         ;; get main weapon
-                        (setq weapon (item (objGetItems ship "wI -Launcher; -Ammo;") 0))
+                        (setq weapon (@ (objGetItems ship "wI -Launcher; -Ammo;") 0))
                         
                         ;; get weapon list
                         (setq weaponList (objGetItems ship "wI -Launcher; -Ammo;"))
                         
                         ;; get shield
-                        (setq shield (item (objGetItems ship "sI") 0))
+                        (setq shield (@ (objGetItems ship "sI") 0))
                         ;; get eventual launcher/ammo weapon
-                        (setq ammoWeapon (item (objGetItems ship "wI +Ammo;") 0))
+                        (setq ammoWeapon (@ (objGetItems ship "wI +Ammo;") 0))
                         
                         ;we hold the AI ship for 1 tick
                         ;so that eventual attack orders are not going to crash the game
@@ -88,7 +98,7 @@
                             ;; randomize this ships weapons unless they are in the skip list
                             ;(if (not (find we_WeaponShipSkipList unid))
                                ; (we_RandomizeWeapon level modifier ship weapon)
-                                ;(dbgLog "weapon randomization skipped!")
+                                ;(printTo 'log "weapon randomization skipped!")
                            ; )
                        ; )) 
                         
@@ -100,18 +110,18 @@
                         			(setq modifier (WE_ConvertDamageTypeToString (itmGetDamageType weapon)))
                         				
                         				;returns a number 0,1,2,3,4... useful for debugging
-                        				;(dbgLog (itmGetInstallPos weapon))
+                        				;(printTo 'log (itmGetInstallPos weapon))
                         				
-                        			(setq devicePos (objGetDevicePos ship weapon))
-                        			(setq fireArc (objGetDeviceFireArc ship weapon))
-                        				;(dbgLog "devicepos " devicePos)
-                        				;(dbgLOg "firearc " firearc)
+                        			(setq devicePos (objGetItemProperty ship weapon 'pos))
+                        			(setq fireArc (objGetItemProperty ship weapon 'fireArc))
+                        				;(printTo 'log "devicepos " devicePos)
+                        				;(printTo 'log "firearc " firearc)
                         			
                         			
                         			;; randomize this ships weapons unless they are in the skip list
                         			(if (not (find we_WeaponShipSkipList unid))
                         				(we_RandomizeWeapon level modifier ship weapon devicePos fireArc)
-                        				;(dbgLog "weapon randomization skipped!")
+                        				;(printTo 'log "weapon randomization skipped!")
                         			)
                         	))
                         	)
@@ -127,7 +137,7 @@
                             )
                             (if (not (find we_ShieldShipSkipList unid))
                                 (we_RandomizeShield (list level 'a) ship shield)
-                                ;(dbgLog "shield randomization skipped!")
+                                ;(printTo 'log "shield randomization skipped!")
                             )
                         )
 
@@ -139,8 +149,8 @@
                         ;; mark the ship so it's not going to be randomized a second time
                         (objSetData ship "WE_RandomizerDone" True)
 
-                        ;(dbgLog "Done Randomizing")
-                        ;(dbgLog "================")
+                        ;(printTo 'log "Done Randomizing")
+                        ;(printTo 'log "================")
                     )
                 )
             )
@@ -149,26 +159,26 @@
 			(block Nil
 			;update the overlay 
 			(objIncOverlayData gSource aOverlayID "UpdateInstance" 1)
-            (enum (filter (sysFindObject gPlayerShip "s") temporaryShip (not (objGetData temporaryShip "WE_RandomizerDone"))) ship
+            (enum (we_findTheShips) ship
                         (block (unid weapon shield ammoWeapon)
 
-                        ;(dbgLog "Randomizing Ship: " (objGetName ship 1))
-                        ;(dbgLog "ID: " (objGetID ship) " --- Obj: " (cat ship))
+                        ;(printTo 'log "Randomizing Ship: " (objGetName ship 1))
+                        ;(printTo 'log "ID: " (objGetID ship) " --- Obj: " (cat ship))
                         
                                              
 
                         ;; get the unid of the current ship
-                        (setq unid (shpGetClass ship))
+                        (setq unid (objGetType ship))
                         ;; get main weapon
-                        (setq weapon (item (objGetItems ship "wI -Launcher; -Ammo;") 0))
+                        (setq weapon (@ (objGetItems ship "wI -Launcher; -Ammo;") 0))
                         
                         ;; get weapon list
                         (setq weaponList (objGetItems ship "wI -Launcher; -Ammo;"))
                         
                         ;; get shield
-                        (setq shield (item (objGetItems ship "sI") 0))
+                        (setq shield (@ (objGetItems ship "sI") 0))
                         ;; get eventual launcher/ammo weapon
-                        (setq ammoWeapon (item (objGetItems ship "wI +Ammo;") 0))
+                        (setq ammoWeapon (@ (objGetItems ship "wI +Ammo;") 0))
                         
                         ;we hold the AI ship for 1 tick
                         ;so that eventual attack orders are not going to crash the game
@@ -183,7 +193,7 @@
                             ;; randomize this ships weapons unless they are in the skip list
                             ;(if (not (find we_WeaponShipSkipList unid))
                                ; (we_RandomizeWeapon level modifier ship weapon)
-                                ;(dbgLog "weapon randomization skipped!")
+                                ;(printTo 'log "weapon randomization skipped!")
                            ; )
                        ; )) 
                         
@@ -195,18 +205,18 @@
                         			(setq modifier (WE_ConvertDamageTypeToString (itmGetDamageType weapon)))
                         				
                         				;returns a number 0,1,2,3,4... useful for debugging
-                        				;(dbgLog (itmGetInstallPos weapon))
+                        				;(printTo 'log (itmGetInstallPos weapon))
                         				
-                        			(setq devicePos (objGetDevicePos ship weapon))
-                        			(setq fireArc (objGetDeviceFireArc ship weapon))
-                        				;(dbgLog "devicepos " devicePos)
-                        				;(dbgLOg "firearc " firearc)
+                        			(setq devicePos (objGetItemProperty ship weapon 'pos))
+                        			(setq fireArc (objGetItemProperty ship weapon 'fireArc))
+                        				;(printTo 'log "devicepos " devicePos)
+                        				;(printTo 'log "firearc " firearc)
                         			
                         			
                         			;; randomize this ships weapons unless they are in the skip list
                         			(if (not (find we_WeaponShipSkipList unid))
                         				(we_RandomizeWeapon level modifier ship weapon devicePos fireArc)
-                        				;(dbgLog "weapon randomization skipped!")
+                        				;(printTo 'log "weapon randomization skipped!")
                         			)
                         	))
                         	)
@@ -222,7 +232,7 @@
                             )
                             (if (not (find we_ShieldShipSkipList unid))
                                 (we_RandomizeShield (list level 'a) ship shield)
-                                ;(dbgLog "shield randomization skipped!")
+                                ;(printTo 'log "shield randomization skipped!")
                             )
                         )
 
@@ -234,8 +244,8 @@
                         ;; mark the ship so it's not going to be randomized a second time
                         (objSetData ship "WE_RandomizerDone" True)
 
-                        ;(dbgLog "Done Randomizing")
-                        ;(dbgLog "================")
+                        ;(printTo 'log "Done Randomizing")
+                        ;(printTo 'log "================")
                     )
                 )
             )
@@ -264,44 +274,44 @@
 				;setq a couple of global variables to be used in the switch item and that will be used to compute the difficulty level
 				;prepare them for Normal Difficulty and VanillaMode
 				(block (WE_Difficulty)
-					(setq WE_Difficulty (typGetGlobalData &svPlayer; "WE_Difficulty"))
+					(setq WE_Difficulty (typGetData &svPlayer; "WE_Difficulty"))
 					(if (not WE_Difficulty) 
 						(block Nil
-							(typSetGlobalData &svPlayer; "WE_Difficulty" 1)
+							(typSetData &svPlayer; "WE_Difficulty" 1)
 				)))
 
 				(block (WE_shieldPercentModifier)
-					(setq WE_shieldPercentModifier (typGetGlobalData &svPlayer; "WE_ShieldPercentModifier"))
+					(setq WE_shieldPercentModifier (typGetData &svPlayer; "WE_ShieldPercentModifier"))
 					(if (not WE_shieldPercentModifier) 
 						(block Nil
-							(typSetGlobalData &svPlayer; "WE_ShieldPercentModifier" 25)
+							(typSetData &svPlayer; "WE_ShieldPercentModifier" 25)
 				)))
 
 				(block (WE_Mode)
-					(setq WE_Mode (typGetGlobalData &svPlayer; "WE_Mode"))
+					(setq WE_Mode (typGetData &svPlayer; "WE_Mode"))
 						(if (not WE_Mode) 
 							(block Nil
-								(typSetGlobalData &svPlayer; "WE_Mode" 1)
+								(typSetData &svPlayer; "WE_Mode" 1)
 				)))
 				
 				(block (WE_DarkWeapons)
-					(setq WE_DarkWeapons (typGetGlobalData &svPlayer; "WE_DarkWeapons"))
+					(setq WE_DarkWeapons (typGetData &svPlayer; "WE_DarkWeapons"))
 						(if (not WE_DarkWeapons) 
 							(block Nil
-								(typSetGlobalData &svPlayer; "WE_DarkWeapons" 1)
+								(typSetData &svPlayer; "WE_DarkWeapons" 1)
 				)))
 				
 				(block (WE_RandomizerOnSwitch)
-					(setq WE_RandomizerOnSwitch (typGetGlobalData &svPlayer; "WE_RandomizerOnSwitch"))
+					(setq WE_RandomizerOnSwitch (typGetData &svPlayer; "WE_RandomizerOnSwitch"))
 						(if (not WE_RandomizerOnSwitch) 
 							(block Nil
 								;you can set this value to 0 to turn off the randomizer for testing purposes.
-								(typSetGlobalData &svPlayer; "WE_RandomizerOnSwitch" 1)
+								(typSetData &svPlayer; "WE_RandomizerOnSwitch" 1)
 				)))
 				
 				
                 ;-----------------------------------------------------------------------------------	
-                ;(dbgLog "Kickstart finished !")
+                ;(printTo 'log "Kickstart finished !")
                 ;DEBUG! let's make all the weapons known to debug better :D
                 ;(itmEnumTypes "w" itemType
 				;(itmSetKnown itemType)
@@ -319,12 +329,12 @@
     			(objSetData aOldPlayerShip "WE_RandomizerDone" True)
     			
     			;we also create and update a list so that we can follow the changed ships.
-                        (if (not (find (typGetGlobalData &svPlayer; "WE_IDList") (objGetID gPlayership)))
+                        (if (not (find (typGetData &svPlayer; "WE_IDList") (objGetID gPlayership)))
                          (block Nil
-                          (typSetGlobalData &svPlayer; "WE_IDList" (lnkAppend (typGetGlobalData &svPlayer; "WE_IDList") (objGetID gPlayership)))
+                          (typSetData &svPlayer; "WE_IDList" (lnkAppend (typGetData &svPlayer; "WE_IDList") (objGetID gPlayership)))
 
-                          ;(dbgLog "SHIP CHANGED!")
-                         ;(dbgLOg (enum (objGetData gPlayership "WE_IDList") tempID (objGetName (objGetObjByID tempID) 1)))
+                          ;(printTo 'log "SHIP CHANGED!")
+                         ;(printTo 'log (enum (objGetData gPlayership "WE_IDList") tempID (objGetName (objGetObjByID tempID) 1)))
                           )
                          )
     )
@@ -332,49 +342,49 @@
     
     			<GetGlobalAchievements>
 				(block (theList status)
-					(setq status (typGetGlobalData &svPlayer; "leftEridani"))
+					(setq status (typGetData &svPlayer; "leftEridani"))
 
 					(if status
 						(setq theList (list
 							(list
 								"Randomizer Status"
-								(if (typGetGlobalData &dsWEConfigurator; "onSwitchDescription")
-								(typGetGlobalData &dsWEConfigurator; "onSwitchDescription")
+								(if (typGetData &dsWEConfigurator; "onSwitchDescription")
+								(typGetData &dsWEConfigurator; "onSwitchDescription")
 								"ON")
 
-								"Weapons Extended 5"
+								"Weapons Extended 6"
 								)
 							(list
 								"Difficulty"
-								(if (typGetGlobalData &dsWEConfigurator; "DifficultyDescription")
-								(typGetGlobalData &dsWEConfigurator; "DifficultyDescription")
+								(if (typGetData &dsWEConfigurator; "DifficultyDescription")
+								(typGetData &dsWEConfigurator; "DifficultyDescription")
 								"NORMAL")
 
-								"Weapons Extended 5"
+								"Weapons Extended 6"
 								)
 							(list
 								"Mode"
-								(if (typGetGlobalData &dsWEConfigurator; "ModeDescription")
-								(typGetGlobalData &dsWEConfigurator; "ModeDescription")
+								(if (typGetData &dsWEConfigurator; "ModeDescription")
+								(typGetData &dsWEConfigurator; "ModeDescription")
 								"VANILLA")
 
-								"Weapons Extended 5"
+								"Weapons Extended 6"
 								)
 							(list
 								"Dark Weapons"
-								(if (typGetGlobalData &dsWEConfigurator; "darkWeaponsDescription")
-								(typGetGlobalData &dsWEConfigurator; "darkWeaponsDescription")
+								(if (typGetData &dsWEConfigurator; "darkWeaponsDescription")
+								(typGetData &dsWEConfigurator; "darkWeaponsDescription")
 								"SKIP SHIELDS")
 
-								"Weapons Extended 5"
+								"Weapons Extended 6"
 								)
 							(list
 								
-								(if (typGetGlobalData &svPLayer; "IdentifiedWeapons")
+								(if (typGetData &svPLayer; "IdentifiedWeapons")
 								"Player Identified all the weapons"
 								"Player honored unknown weapons")
 								Nil
-								"Weapons Extended 5"
+								"Weapons Extended 6"
 								)
 
 							))
@@ -387,7 +397,7 @@
 			<OnGlobalPlayerLeftSystem>
 			(block Nil
 				(if (eq (sysGetName) "Eridani")
-					(typSetGlobalData &svPlayer; "leftEridani" True)
+					(typSetData &svPlayer; "leftEridani" True)
 					)
 			)
 			</OnGlobalPlayerLeftSystem>
@@ -410,9 +420,9 @@
 			(eq aScreenUNID &dsShipInterior;)
 				(scrAddAction
 					gScreen
-					'WE5
+					'WE6
 					-1
-					"WE5 Configurator"
+					"WE6 Configurator"
 					"w"
 					(block Nil
 						(setq prevScreen &dsShipInterior;)
@@ -434,35 +444,35 @@
 
     <OnScreenInit>
         (block (diff mode diffDesc modeDesc)
-            (setq diff (or (typGetGlobalData &svPlayer; "WE_Difficulty") 1))
-            (setq mode (or (typGetGlobalData &svPlayer; "WE_Mode") 1))
-            (setq darkWeapons (or (typGetGlobalData &svPlayer; "WE_DarkWeapons") 1))
-            (setq onSwitch (or (typGetGlobalData &svPlayer; "WE_RandomizerOnSwitch") 1))
+            (setq diff (or (typGetData &svPlayer; "WE_Difficulty") 1))
+            (setq mode (or (typGetData &svPlayer; "WE_Mode") 1))
+            (setq darkWeapons (or (typGetData &svPlayer; "WE_DarkWeapons") 1))
+            (setq onSwitch (or (typGetData &svPlayer; "WE_RandomizerOnSwitch") 1))
 
-            (setq diffDesc (item (list "EASY" "NORMAL" "HARD") diff))
-            (setq modeDesc (item (list
+            (setq diffDesc (@ (list "EASY" "NORMAL" "HARD") diff))
+            (setq modeDesc (@ (list
                 "Periculi's RANDOM WEAPONS MODE!"
                 "VANILLA MODE"
             ) mode))
-            (setq darkWeaponsDesc (item (list "VANILLA" "SKIP SHIELDS") darkWeapons))
-            (setq onSwitchDesc (item (list "OFF" "ON") onSwitch))
+            (setq darkWeaponsDesc (@ (list "VANILLA" "SKIP SHIELDS") darkWeapons))
+            (setq onSwitchDesc (@ (list "OFF" "ON") onSwitch))
             
             ;; store the values on the type (so we don't have to recalculate it)
-            (typSetGlobalData &dsWEConfigurator; "Difficulty" diff)
-            (typSetGlobalData &dsWEConfigurator; "DifficultyDescription" diffDesc)
-            (typSetGlobalData &dsWEConfigurator; "Mode" mode)
-            (typSetGlobalData &dsWEConfigurator; "ModeDescription" modeDesc)
-            (typSetGlobalData &dsWEConfigurator; "darkWeapons" darkWeapons)
-            (typSetGlobalData &dsWEConfigurator; "darkWeaponsDescription" darkWeaponsDesc)
-            (typSetGlobalData &dsWEConfigurator; "onSwitch" onSwitch)
-            (typSetGlobalData &dsWEConfigurator; "onSwitchDescription" onSwitchDesc)
+            (typSetData &dsWEConfigurator; "Difficulty" diff)
+            (typSetData &dsWEConfigurator; "DifficultyDescription" diffDesc)
+            (typSetData &dsWEConfigurator; "Mode" mode)
+            (typSetData &dsWEConfigurator; "ModeDescription" modeDesc)
+            (typSetData &dsWEConfigurator; "darkWeapons" darkWeapons)
+            (typSetData &dsWEConfigurator; "darkWeaponsDescription" darkWeaponsDesc)
+            (typSetData &dsWEConfigurator; "onSwitch" onSwitch)
+            (typSetData &dsWEConfigurator; "onSwitchDescription" onSwitchDesc)
             
         )
     </OnScreenInit>
 
     <InitialPane>
         (or
-            (typGetGlobalData &dsWEConfigurator; "InitialPane")
+            (typGetData &dsWEConfigurator; "InitialPane")
             "Default"
         )
     </InitialPane>
@@ -471,23 +481,23 @@
         <Default>
             <OnPaneInit>
                 (block (initialDesc)
-                    (setq initialDesc (or (typGetGlobalData &dsWEConfigurator; "InitialDesc") ""))
+                    (setq initialDesc (or (typGetData &dsWEConfigurator; "InitialDesc") ""))
                     ;; nil it so it does not stick around
-                    (typSetGlobalData &dsWEConfigurator; "InitialDesc" nil)
+                    (typSetData &dsWEConfigurator; "InitialDesc" nil)
                     (scrSetDesc gScreen (cat
                         initialDesc
                         "Welcome to the Weapons Extended Configurator!\nThe Randomizer is "
-                        (typGetGlobalData &dsWEConfigurator; "onSwitchDescription")
+                        (typGetData &dsWEConfigurator; "onSwitchDescription")
                         "\nThe difficulty is "
-                        (typGetGlobalData &dsWEConfigurator; "DifficultyDescription")
+                        (typGetData &dsWEConfigurator; "DifficultyDescription")
                         "\nThe weapons mode is "
-                        (typGetGlobalData &dsWEConfigurator; "ModeDescription")
+                        (typGetData &dsWEConfigurator; "ModeDescription")
                         "\nDark weapons behaviour is "
-                        (typGetGlobalData &dsWEConfigurator; "darkWeaponsDescription")
+                        (typGetData &dsWEConfigurator; "darkWeaponsDescription")
                         "\n\nTHIS MENU WILL SELF-DEACTIVATE AFTER YOU LEAVE ERIDANI"
-                        "\nSO CONFIGURE YOUR WE5 EXPERIENCE NOW!"
+                        "\nSO CONFIGURE YOUR WE6 EXPERIENCE NOW!"
                     ))
-                   (if (typGetGlobalData &svPlayer; "leftEridani")
+                   (if (typGetData &svPlayer; "leftEridani")
                    	 (block Nil
                    	 	 (scrEnableAction gScreen 0 nil)
                    	 	 (scrEnableAction gScreen 1 nil)
@@ -501,48 +511,48 @@
             <Actions>
                 <Action name="Change Difficulty" key="D">
                     (block Nil
-                        (typSetGlobalData &dsWEConfigurator; "InitialPane" "Difficulty")
-                        (typSetGlobalData &dsWEConfigurator; "Title" "Difficulty Selector")
+                        (typSetData &dsWEConfigurator; "InitialPane" "Difficulty")
+                        (typSetData &dsWEConfigurator; "Title" "Difficulty Selector")
                         (scrShowScreen gScreen &dsWEConfigurator;)
                     )
                 </Action>
 
                 <Action name="Change Weapons mode" key="W">
                     (block Nil
-                        (typSetGlobalData &dsWEConfigurator; "InitialPane" "Mode")
-                        (typSetGlobalData &dsWEConfigurator; "Title" "Weapons Mode Selector")
+                        (typSetData &dsWEConfigurator; "InitialPane" "Mode")
+                        (typSetData &dsWEConfigurator; "Title" "Weapons Mode Selector")
                         (scrShowScreen gScreen &dsWEConfigurator;)
                     )
                 </Action>
                 
                 <Action name="Change Dark Weapons mode" key="A">
                     (block Nil
-                        (typSetGlobalData &dsWEConfigurator; "InitialPane" "Dark")
-                        (typSetGlobalData &dsWEConfigurator; "Title" "Dark Weapons Mode Selector")
+                        (typSetData &dsWEConfigurator; "InitialPane" "Dark")
+                        (typSetData &dsWEConfigurator; "Title" "Dark Weapons Mode Selector")
                         (scrShowScreen gScreen &dsWEConfigurator;)
                     )
                 </Action>
                 
                 <Action name="Identify weapons" key="I">
                     (block Nil
-                        (typSetGlobalData &dsWEConfigurator; "InitialPane" "Identify")
-                        (typSetGlobalData &dsWEConfigurator; "Title" "Identify Weapons")
+                        (typSetData &dsWEConfigurator; "InitialPane" "Identify")
+                        (typSetData &dsWEConfigurator; "Title" "Identify Weapons")
                         (scrShowScreen gScreen &dsWEConfigurator;)
                     )
                 </Action>
                 
                 <Action name="Turn ON/OFF Randomizer" key="T">
                     (block Nil
-                        (typSetGlobalData &dsWEConfigurator; "InitialPane" "Switch")
-                        (typSetGlobalData &dsWEConfigurator; "Title" "Randomizer ON/OFF switch")
+                        (typSetData &dsWEConfigurator; "InitialPane" "Switch")
+                        (typSetData &dsWEConfigurator; "Title" "Randomizer ON/OFF switch")
                         (scrShowScreen gScreen &dsWEConfigurator;)
                     )
                 </Action>
 
                 <Action name="Exit" cancel="1" key="X">
                     (block nil
-                        (typSetGlobalData &dsWEConfigurator; "InitialPane" nil)
-                        (typSetGlobalData &dsWEConfigurator; "Title" nil)
+                        (typSetData &dsWEConfigurator; "InitialPane" nil)
+                        (typSetData &dsWEConfigurator; "Title" nil)
                         (scrExitScreen gScreen)
                     )
                 </Action>
@@ -554,50 +564,50 @@
                 (block nil
                     (scrSetDesc gScreen (cat
                         "You are playing in "
-                        (typGetGlobalData &dsWEConfigurator; "DifficultyDescription")
+                        (typGetData &dsWEConfigurator; "DifficultyDescription")
                         " mode" "\n\nPlease select the difficulty level:"
                     ))
-                    (scrEnableAction gScreen (typGetGlobalData &dsWEConfigurator; "Difficulty") nil)
+                    (scrEnableAction gScreen (typGetData &dsWEConfigurator; "Difficulty") nil)
                 )
             </OnPaneInit>
             <Actions>
                 <Action name="Easy mode" key="E">
                     (block nil
-                        (typSetGlobalData &svPlayer; "WE_Difficulty" 0)
-                        (typSetGlobalData &svPlayer; "WE_ShieldPercentModifier" -25)
+                        (typSetData &svPlayer; "WE_Difficulty" 0)
+                        (typSetData &svPlayer; "WE_ShieldPercentModifier" -25)
 
-                        (typSetGlobalData &dsWEConfigurator; "InitialDesc" "The difficulty has been changed to EASY\n")
-                        (typSetGlobalData &dsWEConfigurator; "InitialPane" nil)
-                        (typSetGlobalData &dsWEConfigurator; "Title" nil)
+                        (typSetData &dsWEConfigurator; "InitialDesc" "The difficulty has been changed to EASY\n")
+                        (typSetData &dsWEConfigurator; "InitialPane" nil)
+                        (typSetData &dsWEConfigurator; "Title" nil)
                         (scrShowScreen gScreen &dsWEConfigurator;)
                     )
                 </Action>
                 <Action name="Normal" key="N">
                     (block nil
-                        (typSetGlobalData &svPlayer; "WE_Difficulty" 1)
-                        (typSetGlobalData &svPlayer; "WE_ShieldPercentModifier" 0)
+                        (typSetData &svPlayer; "WE_Difficulty" 1)
+                        (typSetData &svPlayer; "WE_ShieldPercentModifier" 0)
 
-                        (typSetGlobalData &dsWEConfigurator; "InitialDesc" "The difficulty has been changed to NORMAL\n")
-                        (typSetGlobalData &dsWEConfigurator; "InitialPane" nil)
-                        (typSetGlobalData &dsWEConfigurator; "Title" nil)
+                        (typSetData &dsWEConfigurator; "InitialDesc" "The difficulty has been changed to NORMAL\n")
+                        (typSetData &dsWEConfigurator; "InitialPane" nil)
+                        (typSetData &dsWEConfigurator; "Title" nil)
                         (scrShowScreen gScreen &dsWEConfigurator;)
                     )
                 </Action>
                 <Action name="Hard mode" key="H">
                     (block nil
-                        (typSetGlobalData &svPlayer; "WE_Difficulty" 2)
-                        (typSetGlobalData &svPlayer; "WE_ShieldPercentModifier" 25)
+                        (typSetData &svPlayer; "WE_Difficulty" 2)
+                        (typSetData &svPlayer; "WE_ShieldPercentModifier" 25)
 
-                        (typSetGlobalData &dsWEConfigurator; "InitialDesc" "The difficulty has been changed to HARD\n")
-                        (typSetGlobalData &dsWEConfigurator; "InitialPane" nil)
-                        (typSetGlobalData &dsWEConfigurator; "Title" nil)
+                        (typSetData &dsWEConfigurator; "InitialDesc" "The difficulty has been changed to HARD\n")
+                        (typSetData &dsWEConfigurator; "InitialPane" nil)
+                        (typSetData &dsWEConfigurator; "Title" nil)
                         (scrShowScreen gScreen &dsWEConfigurator;)
                     )
                 </Action>
                 <Action name="Return to main" cancel="1" key="U">
                     (block nil
-                        (typSetGlobalData &dsWEConfigurator; "InitialPane" nil)
-                        (typSetGlobalData &dsWEConfigurator; "Title" nil)
+                        (typSetData &dsWEConfigurator; "InitialPane" nil)
+                        (typSetData &dsWEConfigurator; "Title" nil)
                         (scrShowScreen gScreen &dsWEConfigurator;)
                     )
                 </Action>
@@ -609,39 +619,39 @@
                 (block nil
                     (scrSetDesc gScreen (cat
                         "You are playing in "
-                        (typGetGlobalData &dsWEConfigurator; "ModeDescription")
+                        (typGetData &dsWEConfigurator; "ModeDescription")
                         " mode" "\n\nPlease select the weapons mode:"
                     ))
-                    (scrEnableAction gScreen (typGetGlobalData &dsWEConfigurator; "Mode") nil)
+                    (scrEnableAction gScreen (typGetData &dsWEConfigurator; "Mode") nil)
                 )
             </OnPaneInit>
             <Actions>
                 <Action name="Periculi's random weapons mode!" key="P">
                     (block nil
-                        (typSetGlobalData &svPlayer; "WE_Mode" 0)
+                        (typSetData &svPlayer; "WE_Mode" 0)
 
-                        (typSetGlobalData &dsWEConfigurator; "InitialDesc" "The weapons mode has been changed to Periculi's RANDOM WEAPONS MODE!\n")
-                        (typSetGlobalData &dsWEConfigurator; "InitialPane" nil)
-                        (typSetGlobalData &dsWEConfigurator; "Title" nil)
+                        (typSetData &dsWEConfigurator; "InitialDesc" "The weapons mode has been changed to Periculi's RANDOM WEAPONS MODE!\n")
+                        (typSetData &dsWEConfigurator; "InitialPane" nil)
+                        (typSetData &dsWEConfigurator; "Title" nil)
                         (scrShowScreen gScreen &dsWEConfigurator;)
                     )
                 </Action>
                 
                 <Action name="Vanilla mode" key="V">
                     (block nil
-                        (typSetGlobalData &svPlayer; "WE_Mode" 1)
+                        (typSetData &svPlayer; "WE_Mode" 1)
 
-                        (typSetGlobalData &dsWEConfigurator; "InitialDesc" "The weapons mode has been changed to VANILLA MODE\n")
-                        (typSetGlobalData &dsWEConfigurator; "InitialPane" nil)
-                        (typSetGlobalData &dsWEConfigurator; "Title" nil)
+                        (typSetData &dsWEConfigurator; "InitialDesc" "The weapons mode has been changed to VANILLA MODE\n")
+                        (typSetData &dsWEConfigurator; "InitialPane" nil)
+                        (typSetData &dsWEConfigurator; "Title" nil)
                         (scrShowScreen gScreen &dsWEConfigurator;)
                     )
                 </Action>
 
                 <Action name="Return to main" cancel="1" key="U">
                     (block nil
-                        (typSetGlobalData &dsWEConfigurator; "InitialPane" nil)
-                        (typSetGlobalData &dsWEConfigurator; "Title" nil)
+                        (typSetData &dsWEConfigurator; "InitialPane" nil)
+                        (typSetData &dsWEConfigurator; "Title" nil)
                         (scrShowScreen gScreen &dsWEConfigurator;)
                     )
                 </Action>
@@ -653,39 +663,39 @@
                 (block nil
                     (scrSetDesc gScreen (cat
                         "Dark weapons behaviour is "
-                        (typGetGlobalData &dsWEConfigurator; "darkWeaponsDescription")
+                        (typGetData &dsWEConfigurator; "darkWeaponsDescription")
                         " mode" "\n\nPlease select the weapons mode:"
                     ))
-                    (scrEnableAction gScreen (typGetGlobalData &dsWEConfigurator; "darkWeapons") nil)
+                    (scrEnableAction gScreen (typGetData &dsWEConfigurator; "darkWeapons") nil)
                 )
             </OnPaneInit>
             <Actions>
                 <Action name="Dark Weapons behave normally (VANILLA)" key="n">
                     (block nil
-                        (typSetGlobalData &svPlayer; "WE_DarkWeapons" 0)
+                        (typSetData &svPlayer; "WE_DarkWeapons" 0)
 
-                        (typSetGlobalData &dsWEConfigurator; "InitialDesc" "The weapons mode has been changed to VANILLA\n")
-                        (typSetGlobalData &dsWEConfigurator; "InitialPane" nil)
-                        (typSetGlobalData &dsWEConfigurator; "Title" nil)
+                        (typSetData &dsWEConfigurator; "InitialDesc" "The weapons mode has been changed to VANILLA\n")
+                        (typSetData &dsWEConfigurator; "InitialPane" nil)
+                        (typSetData &dsWEConfigurator; "Title" nil)
                         (scrShowScreen gScreen &dsWEConfigurator;)
                     )
                 </Action>
                 
                 <Action name="Dark Weapons skip shields" key="h">
                     (block nil
-                        (typSetGlobalData &svPlayer; "WE_DarkWeapons" 1)
+                        (typSetData &svPlayer; "WE_DarkWeapons" 1)
 
-                        (typSetGlobalData &dsWEConfigurator; "InitialDesc" "The weapons mode has been changed to SKIP SHIELDS\n")
-                        (typSetGlobalData &dsWEConfigurator; "InitialPane" nil)
-                        (typSetGlobalData &dsWEConfigurator; "Title" nil)
+                        (typSetData &dsWEConfigurator; "InitialDesc" "The weapons mode has been changed to SKIP SHIELDS\n")
+                        (typSetData &dsWEConfigurator; "InitialPane" nil)
+                        (typSetData &dsWEConfigurator; "Title" nil)
                         (scrShowScreen gScreen &dsWEConfigurator;)
                     )
                 </Action>
 
                 <Action name="Return to main" cancel="1" key="U">
                     (block nil
-                        (typSetGlobalData &dsWEConfigurator; "InitialPane" nil)
-                        (typSetGlobalData &dsWEConfigurator; "Title" nil)
+                        (typSetData &dsWEConfigurator; "InitialPane" nil)
+                        (typSetData &dsWEConfigurator; "Title" nil)
                         (scrShowScreen gScreen &dsWEConfigurator;)
                     )
                 </Action>
@@ -697,39 +707,39 @@
                 (block nil
                     (scrSetDesc gScreen (cat
                         "The Randomizer is "
-                        (typGetGlobalData &dsWEConfigurator; "onSwitchDescription")
+                        (typGetData &dsWEConfigurator; "onSwitchDescription")
                         "\n\nPlease select an option:"
                     ))
-                    (scrEnableAction gScreen (typGetGlobalData &dsWEConfigurator; "onSwitch") nil)
+                    (scrEnableAction gScreen (typGetData &dsWEConfigurator; "onSwitch") nil)
                 )
             </OnPaneInit>
             <Actions>
                 <Action name="Turn OFF Randomizer!" key="F">
                     (block nil
-                        (typSetGlobalData &svPlayer; "WE_RandomizerOnSwitch" 0)
+                        (typSetData &svPlayer; "WE_RandomizerOnSwitch" 0)
 
-                        (typSetGlobalData &dsWEConfigurator; "InitialDesc" "The Randomizer has been turned OFF!\n")
-                        (typSetGlobalData &dsWEConfigurator; "InitialPane" nil)
-                        (typSetGlobalData &dsWEConfigurator; "Title" nil)
+                        (typSetData &dsWEConfigurator; "InitialDesc" "The Randomizer has been turned OFF!\n")
+                        (typSetData &dsWEConfigurator; "InitialPane" nil)
+                        (typSetData &dsWEConfigurator; "Title" nil)
                         (scrShowScreen gScreen &dsWEConfigurator;)
                     )
                 </Action>
                 
                 <Action name="Turn ON Randomizer!" key="N">
                     (block nil
-                        (typSetGlobalData &svPlayer; "WE_RandomizerOnSwitch" 1)
+                        (typSetData &svPlayer; "WE_RandomizerOnSwitch" 1)
 
-                        (typSetGlobalData &dsWEConfigurator; "InitialDesc" "The Randomizer has been turned ON!\n")
-                        (typSetGlobalData &dsWEConfigurator; "InitialPane" nil)
-                        (typSetGlobalData &dsWEConfigurator; "Title" nil)
+                        (typSetData &dsWEConfigurator; "InitialDesc" "The Randomizer has been turned ON!\n")
+                        (typSetData &dsWEConfigurator; "InitialPane" nil)
+                        (typSetData &dsWEConfigurator; "Title" nil)
                         (scrShowScreen gScreen &dsWEConfigurator;)
                     )
                 </Action>
 
                 <Action name="Return to main" cancel="1" key="U">
                     (block nil
-                        (typSetGlobalData &dsWEConfigurator; "InitialPane" nil)
-                        (typSetGlobalData &dsWEConfigurator; "Title" nil)
+                        (typSetData &dsWEConfigurator; "InitialPane" nil)
+                        (typSetData &dsWEConfigurator; "Title" nil)
                         (scrShowScreen gScreen &dsWEConfigurator;)
                     )
                 </Action>
@@ -755,10 +765,10 @@
                         ;    )
                         ;)
 
-                        (typSetGlobalData &dsWEConfigurator; "InitialDesc" "Done! All the weapons ingame will now have their proper name\n")
-                        (typSetGlobalData &dsWEConfigurator; "InitialPane" nil)
-                        (typSetGlobalData &dsWEConfigurator; "Title" nil)
-                        (typSetGlobalData &svPlayer; "IdentifiedWeapons" True)
+                        (typSetData &dsWEConfigurator; "InitialDesc" "Done! All the weapons ingame will now have their proper name\n")
+                        (typSetData &dsWEConfigurator; "InitialPane" nil)
+                        (typSetData &dsWEConfigurator; "Title" nil)
+                        (typSetData &svPlayer; "IdentifiedWeapons" True)
                         (scrShowScreen gScreen &dsWEConfigurator;)
                     )
                 </Action>
@@ -769,17 +779,17 @@
                             (itmSetKnown itemType nil)
                         )
 
-                        (typSetGlobalData &dsWEConfigurator; "InitialDesc" "Done! All the non-launcher weapons ingame are now unidentified\n")
-                        (typSetGlobalData &dsWEConfigurator; "InitialPane" nil)
-                        (typSetGlobalData &dsWEConfigurator; "Title" nil)
+                        (typSetData &dsWEConfigurator; "InitialDesc" "Done! All the non-launcher weapons ingame are now unidentified\n")
+                        (typSetData &dsWEConfigurator; "InitialPane" nil)
+                        (typSetData &dsWEConfigurator; "Title" nil)
                         (scrShowScreen gScreen &dsWEConfigurator;)
                     )
                 </Action>
                         
                 <Action name="Return to main" cancel="1" key="U">
                     (block nil
-                        (typSetGlobalData &dsWEConfigurator; "InitialPane" nil)
-                        (typSetGlobalData &dsWEConfigurator; "Title" nil)
+                        (typSetData &dsWEConfigurator; "InitialPane" nil)
+                        (typSetData &dsWEConfigurator; "Title" nil)
                         (scrShowScreen gScreen &dsWEConfigurator;)
                     )
                 </Action>
@@ -1108,33 +1118,39 @@
 					(Setq Small_List 
 						(lnkAppend 
 						Small_List
-						(random (filter (sysFindObject gPlayerShip "s") temporaryShip (not (objGetData temporaryShip "WE_RandomizerDone"))))
+						(filter (sysFindObject gPlayerShip "s") temporaryShip 
+            		    (not (or 
+            		    		 (objGetData temporaryShip "WE_RandomizerDone")
+            		    		 (objHasAttribute temporaryShip "gladiator")
+            		    		 (objHasAttribute temporaryShip "auton")
+            		    	 ))
+            		    )
 						))
 					Small_List
 					)
 					)
 			(setq Small_List (lnkRemoveNil Small_List))
-			(PrintTo 'log Small_List)
+			;(printTo 'log Small_List)
             (enum Small_List ship
                         (block (unid weapon shield ammoWeapon)
 
-                        ;(dbgLog "Randomizing Ship: " (objGetName ship 1))
-                        ;(dbgLog "ID: " (objGetID ship) " --- Obj: " (cat ship))
+                        ;(printTo 'log "Randomizing Ship: " (objGetName ship 1))
+                        ;(printTo 'log "ID: " (objGetID ship) " --- Obj: " (cat ship))
                         
                                              
 
                         ;; get the unid of the current ship
-                        (setq unid (shpGetClass ship))
+                        (setq unid (objGetType ship))
                         ;; get main weapon
-                        (setq weapon (item (objGetItems ship "wI -Launcher; -Ammo;") 0))
+                        (setq weapon (@ (objGetItems ship "wI -Launcher; -Ammo;") 0))
                         
                         ;; get weapon list
                         (setq weaponList (objGetItems ship "wI -Launcher; -Ammo;"))
                         
                         ;; get shield
-                        (setq shield (item (objGetItems ship "sI") 0))
+                        (setq shield (@ (objGetItems ship "sI") 0))
                         ;; get eventual launcher/ammo weapon
-                        (setq ammoWeapon (item (objGetItems ship "wI +Ammo;") 0))
+                        (setq ammoWeapon (@ (objGetItems ship "wI +Ammo;") 0))
                         
                         ;we hold the AI ship for 1 tick
                         ;so that eventual attack orders are not going to crash the game
@@ -1149,7 +1165,7 @@
                             ;; randomize this ships weapons unless they are in the skip list
                             ;(if (not (find we_WeaponShipSkipList unid))
                                ; (we_RandomizeWeapon level modifier ship weapon)
-                                ;(dbgLog "weapon randomization skipped!")
+                                ;(printTo 'log "weapon randomization skipped!")
                            ; )
                        ; )) 
                         
@@ -1161,18 +1177,18 @@
                         			(setq modifier (WE_ConvertDamageTypeToString (itmGetDamageType weapon)))
                         				
                         				;returns a number 0,1,2,3,4... useful for debugging
-                        				;(dbgLog (itmGetInstallPos weapon))
+                        				;(printTo 'log (itmGetInstallPos weapon))
                         				
-                        			(setq devicePos (objGetDevicePos ship weapon))
-                        			(setq fireArc (objGetDeviceFireArc ship weapon))
-                        				;(dbgLog "devicepos " devicePos)
-                        				;(dbgLOg "firearc " firearc)
+                        			(setq devicePos (objGetItemProperty ship weapon 'pos))
+                        			(setq fireArc (objGetItemProperty ship weapon 'fireArc))
+                        				;(printTo 'log "devicepos " devicePos)
+                        				;(printTo 'log "firearc " firearc)
                         			
                         			
                         			;; randomize this ships weapons unless they are in the skip list
                         			(if (not (find we_WeaponShipSkipList unid))
                         				(we_RandomizeWeapon level modifier ship weapon devicePos fireArc)
-                        				;(dbgLog "weapon randomization skipped!")
+                        				;(printTo 'log "weapon randomization skipped!")
                         			)
                         	))
                         	)
@@ -1188,7 +1204,7 @@
                             )
                             (if (not (find we_ShieldShipSkipList unid))
                                 (we_RandomizeShield (list level 'a) ship shield)
-                                ;(dbgLog "shield randomization skipped!")
+                                ;(printTo 'log "shield randomization skipped!")
                             )
                         )
 
@@ -1200,8 +1216,8 @@
                         ;; mark the ship so it's not going to be randomized a second time
                         (objSetData ship "WE_RandomizerDone" True)
 
-                        ;(dbgLog "Done Randomizing")
-                        ;(dbgLog "================")
+                        ;(printTo 'log "Done Randomizing")
+                        ;(printTo 'log "================")
                     )
                 )
             )))
@@ -1215,26 +1231,34 @@
             (setq we_RandomizeShip (lambda Nil (block Nil
 			;update the overlay 
 			;(objIncOverlayData gSource aOverlayID "UpdateInstance" 1)
-            (enum (filter (sysFindObject gPlayerShip "s") temporaryShip (not (objGetData temporaryShip "WE_RandomizerDone"))) ship
+			
+			;let's sysFindObject the ships we want to randomize, we filter out the autons, gladiators and already randomized ships.
+            (enum (filter (sysFindObject gPlayerShip "s") temporaryShip 
+            		    (not (or 
+            		    		 (objGetData temporaryShip "WE_RandomizerDone")
+            		    		 (objHasAttribute temporaryShip "gladiator")
+            		    		 (objHasAttribute temporaryShip "auton")
+            		    	 ))
+            		    ) ship
                         (block (unid weapon shield ammoWeapon)
 
-                        ;(dbgLog "Randomizing Ship: " (objGetName ship 1))
-                        ;(dbgLog "ID: " (objGetID ship) " --- Obj: " (cat ship))
+                        ;(printTo 'log "Randomizing Ship: " (objGetName ship 1))
+                        ;(printTo 'log "ID: " (objGetID ship) " --- Obj: " (cat ship))
                         
                                              
 
                         ;; get the unid of the current ship
-                        (setq unid (shpGetClass ship))
+                        (setq unid (objGetType ship))
                         ;; get main weapon
-                        (setq weapon (item (objGetItems ship "wI -Launcher; -Ammo;") 0))
+                        (setq weapon (@ (objGetItems ship "wI -Launcher; -Ammo;") 0))
                         
                         ;; get weapon list
                         (setq weaponList (objGetItems ship "wI -Launcher; -Ammo;"))
                         
                         ;; get shield
-                        (setq shield (item (objGetItems ship "sI") 0))
+                        (setq shield (@ (objGetItems ship "sI") 0))
                         ;; get eventual launcher/ammo weapon
-                        (setq ammoWeapon (item (objGetItems ship "wI +Ammo;") 0))
+                        (setq ammoWeapon (@ (objGetItems ship "wI +Ammo;") 0))
                         
                         ;we hold the AI ship for 1 tick
                         ;so that eventual attack orders are not going to crash the game
@@ -1249,7 +1273,7 @@
                             ;; randomize this ships weapons unless they are in the skip list
                             ;(if (not (find we_WeaponShipSkipList unid))
                                ; (we_RandomizeWeapon level modifier ship weapon)
-                                ;(dbgLog "weapon randomization skipped!")
+                                ;(printTo 'log "weapon randomization skipped!")
                            ; )
                        ; )) 
                         
@@ -1267,18 +1291,18 @@
                         			(setq modifier (WE_ConvertDamageTypeToString (itmGetDamageType weapon)))
                         				
                         				;returns a number 0,1,2,3,4... useful for debugging
-                        				;(dbgLog (itmGetInstallPos weapon))
+                        				;(printTo 'log (itmGetInstallPos weapon))
                         				
-                        			(setq devicePos (objGetDevicePos ship weapon))
-                        			(setq fireArc (objGetDeviceFireArc ship weapon))
-                        				;(dbgLog "devicepos " devicePos)
-                        				;(dbgLOg "firearc " firearc)
+                        			(setq devicePos (objGetItemProperty ship weapon 'pos))
+                        			(setq fireArc (objGetItemProperty ship weapon 'fireArc))
+                        				;(printTo 'log "devicepos " devicePos)
+                        				;(printTo 'log "firearc " firearc)
                         			
                         			
                         			;; randomize this ships weapons unless they are in the skip list
                         			(if (not (find we_WeaponShipSkipList unid))
                         				(we_RandomizeWeapon level modifier ship weapon devicePos fireArc)
-                        				;(dbgLog "weapon randomization skipped!")
+                        				;(printTo 'log "weapon randomization skipped!")
                         			)
                         	))
                         	)
@@ -1294,7 +1318,7 @@
                             )
                             (if (not (find we_ShieldShipSkipList unid))
                                 (we_RandomizeShield (list level 'a) ship shield)
-                                ;(dbgLog "shield randomization skipped!")
+                                ;(printTo 'log "shield randomization skipped!")
                             )
                         )
 
@@ -1306,8 +1330,8 @@
                         ;; mark the ship so it's not going to be randomized a second time
                         (objSetData ship "WE_RandomizerDone" True)
 
-                        ;(dbgLog "Done Randomizing")
-                        ;(dbgLog "================")
+                        ;(printTo 'log "Done Randomizing")
+                        ;(printTo 'log "================")
                     )
                 )
             )))
@@ -1319,8 +1343,8 @@
             ;;
             (setq we_RandomizeWeapon (lambda (level modifier ship oldWeapon devicePos fireArc)
                 (block (criteria weapon)
-                    ;(dbgLog "Level: " level)
-                    ;(dbgLog "Modifier: " modifier)
+                    ;(printTo 'log "Level: " level)
+                    ;(printTo 'log "Modifier: " modifier)
                     ;; If we have an oldWeapon, uninstall it and remove it from the cargo.
                     ;; There should always be a oldWeapon, unless called externally, so
                     ;; if we don't have one, use a default (to prevent bugs)
@@ -1331,41 +1355,41 @@
 
                     ;; generate the level string used in creating the weapon
                     (setq level (we_WeaponLevelString level we_WeaponPatterns))
-                    ;(dbgLog "Weapon Level String: " level)
+                    ;(printTo 'log "Weapon Level String: " level)
 
                     ;; generate the criteria used in creating the weapon
                     (setq criteria (we_WeaponCriteriaString oldWeapon modifier ship))
-                    ;(dbgLog "Weapon Criteria: " criteria)
+                    ;(printTo 'log "Weapon Criteria: " criteria)
 
                     (setq weapon (itmCreateRandom criteria level))
-                    ;(dbgLog "Weapon Chosen: " weapon " Name: " (itmGetName weapon 1) " *Level: " (itmGetLevel weapon) "*")
+                    ;(printTo 'log "Weapon Chosen: " weapon " Name: " (itmGetName weapon 1) " *Level: " (itmGetLevel weapon) "*")
                     
 
                     ;; if no weapon is found, let's install back the original one
                     (if (not weapon) 
                      (block Nil
-                     ;(dbgLog "ERROR! I'll reinstall the old weapon")
+                     ;(printTo 'log "ERROR! I'll reinstall the old weapon")
                      (setq weapon oldWeapon)
                     ))
                     
                     ;;Little hack for Gaian Terraformers
-                    ;;if the ship is a Gaian Terraformer and the weapon is a Gaian Demo Cannon, then we want it omnidirectional
+                    ;;if the ship is a Gaian Terraformer and the weapon is a Gaian Demo Cannon, and we want it omnidirectional
                     (if (and (eq (objGetSovereign ship) &svGaianTerraformers;) (eq weapon (or (itmCreate &itGaianDemolitionCannon; 1) (itmCreate &itGaianDemolitionCannon2; 1) (itmCreate &itGaianDemolitionCannon3; 1) (itmCreate &itTunguska; 1))))
                     	   (setq fireArc 'omnidirectional)
                     	   )
                     
                     ;firearcs on a CSC seem that are not working properly, probably because weapons are not installed in the right slot with the right firearc ?
                     ;we try this little hack and install everything on a CSC as omnidirectional.
-                    (if (eq (shpGetClassName ship 32) "Commonwealth Star Carrier")
+                    (if (eq (objGetName ship 32) "Commonwealth Star Carrier")
                     	   (block Nil
                     	   	   (setq fireArc 'omnidirectional)
-                    	   	   ;(dbgLog "Found CSC, installing OMNI!")
+                    	   	   ;(printTo 'log "Found CSC, installing OMNI!")
                     	   	   )
                     	   )
                     
                     ;; enhance the weapon with a variable probability of 0%-20%
                     ;; depending on the difficulty level.
-                    (if (leq (random 1 100) (multiply (typGetGlobalData &svPlayer; "WE_Difficulty") 10))
+                    (if (leq (random 1 100) (multiply (typGetData &svPlayer; "WE_Difficulty") 10))
                         (setq weapon (itmSetEnhanced weapon (random we_WeaponEnhancements)))
                     )
 
@@ -1383,7 +1407,7 @@
                 (block (unid roll probability difficulty)
                     
                     ;; get the unid of the ship
-                    (setq unid (shpGetClass ship))
+                    (setq unid (objGetType ship))
                     ;; roll right away
                     (setq roll (random 1 100))
 
@@ -1405,7 +1429,7 @@
                         )
                     )
 
-                    (setq difficulty (typGetGlobalData &svPlayer; "WE_Difficulty"))
+                    (setq difficulty (typGetData &svPlayer; "WE_Difficulty"))
                     ;; now we modify the probability by the difficulty. (easy-25%, hard+25%)
                     ;; if the old probability was -1 skip
                     (switch
@@ -1420,11 +1444,11 @@
                     ;;ships that don't have a shield won't get one in systemLevels 1 and 2
                     (if (and (eq (sysGetLevel) (or 1 2)) (eq oldShield Nil))
                     	    (block Nil
-                    	    	    ;(dbglog "probability: " probability)
+                    	    	    ;(printTo 'log "probability: " probability)
                     	    	    (setq probability -1)
-                    	    	    ;(dbglog "too early, ship won't have a shield")
+                    	    	    ;(printTo 'log "too early, ship won't have a shield")
                     	    	    
-                    	    	    ;(dbgLOg (objGetName ship 1))
+                    	    	    ;(printTo 'log (objGetName ship 1))
                     	    	    )
                     	    )
                     
@@ -1469,7 +1493,7 @@
                             ;; make sure to check for them
                             (switch
                                 ;; the shield is a solon, and the weapon is a lazar ^_^ == pass
-                                (and (eq (itmGetUNID shield) &itSolonShieldGenerator;) (eq (itmGetDamageType weapon) 0))
+                                (and (eq (itmGetType shield) &itSolonShieldGenerator;) (eq (itmGetDamageType weapon) 0))
                                     Nil ;; do nothing
 
                                 ;; if the shield has suppress set in it's staticdata and 
@@ -1486,7 +1510,7 @@
                                             ;; lets be nice and recharge the shield
                                             (shpRechargeShield ship 5000)
                                             ;; if the shield is superconducting, add some coils
-                                            (if (eq (itmGetUNID shield) &itSuperconductingShields;)
+                                            (if (eq (itmGetType shield) &itSuperconductingShields;)
                                                 (objAddItem ship (itmCreate &itSuperconductingCoil; (random 5 50)))
                                             )
                                             ;; notify the loop that we found a shield
@@ -1507,7 +1531,7 @@
                 (block (unid shipData ammoCount tableIndex)
 
                     ;; get the unid of the ship
-                    (setq unid (shpGetClass ship))
+                    (setq unid (objGetType ship))
 
                     ;; get the amount of calls and itemTable
                     ;; we start by looking if we have a hardcoded definition for this ship.
@@ -1515,8 +1539,8 @@
                     (setq shipData (lookup we_AmmoShipTables unid 2))
                     (if shipData
                         (block Nil
-                            (setq ammoCount (item shipData 0))
-                            (setq tableIndex (item shipData 1))
+                            (setq ammoCount (@ shipData 0))
+                            (setq tableIndex (@ shipData 1))
                         )
                         (block Nil
                             (setq ammoCount 1)
@@ -1544,7 +1568,7 @@
                         ;; If the weapon is a launcher, let's remove the ammo and randomize it
                         ;; If the weapon uses ammo but it's not a launcher, then do nothing :D
                         (block (launcher tables)
-                            (setq launcher (item (objGetItems ship "wI +Ammo;") 0))
+                            (setq launcher (@ (objGetItems ship "wI +Ammo;") 0))
                             (if launcher (block Nil
                                 ;; get the staticdata from the launcher, remove the ammo and put the random one
                                 (setq tables (itmGetStaticData launcher "WE_AmmoTables"))
@@ -1555,7 +1579,7 @@
                                         (objRemoveItem ship ammo)
                                     )
                                     ;; add the correct amount of the correct ammo
-                                    (objAddRandomItems ship (item tabels tableIndex) ammoCount)
+                                    (objAddRandomItems ship (@ tabels tableIndex) ammoCount)
                                 ))
                             ))
                         )
@@ -1609,7 +1633,7 @@
                 ;in the worst case, the weapon will fire in the wrong position, but since 95% of the weapons
                 ;in Transcendence fire from '(0 0 0) then it's not so bad. :-/
                 (if (itmIsInstalled tempItm)
-                (objSetDevicePos ship tempItm (append devicePos '(0)))
+                (objSetItemProperty ship tempItm 'pos (append devicePos '(0)))
                 )
 				
                 ;;fire arcs are worse if they don't work, however it seems that some ships are giving errors with them.
@@ -1622,15 +1646,15 @@
 					;if it returns errors:
 					(and
 						(itmIsInstalled tempItm)
-						(iserror (objSetDeviceFireArc ship tempItm fireArc))
+						(iserror (objSetItemProperty ship tempItm 'fireArc fireArc))
 						)
 						;do nothing, hope it works:
 						Nil
 					;if okay, do normal operation:
 					(itmIsInstalled tempItm)
-						(objSetDeviceFireArc ship tempItm fireArc)
+						(objSetItemProperty ship tempItm 'fireArc fireArc)
 					)
-                ;(dbgLog "itm installed: " (itmGetName itm 1))
+                ;(printTo 'log "itm installed: " (itmGetName itm 1))
             )))
             
             ;alterecco's itm remover, commented out as it's not working (let's keep it here as a reminder)
@@ -1650,13 +1674,13 @@
                     (objEnumItems ship "wU" theUninstalledWeapon
                         (block Nil	
                          (objremoveItem ship theUninstalledWeapon)
-                         ;(dbgLog "removed weapon: " (itmGetName itm 1))
+                         ;(printTo 'log "removed weapon: " (itmGetName itm 1))
                          ))
                      (eq (itmGetCategory itm) 128)
                      (objEnumItems ship "sU" theUninstalledShield
                         (block Nil	
                          (objremoveItem ship theUninstalledShield)
-                         ;(dbgLog "removed shield: " (itmGetName itm 1))
+                         ;(printTo 'log "removed shield: " (itmGetName itm 1))
                          ))
                      )
             )))
@@ -1671,14 +1695,14 @@
             ;;
             (setq we_WeaponLevelString (lambda (level patterns)
                 (block (difficulty)
-                    (setq difficulty (typGetGlobalData &svPlayer; "WE_Difficulty"))
+                    (setq difficulty (typGetData &svPlayer; "WE_Difficulty"))
                     ;; modify the level by the dificulty 
                     (switch
                         ;; EASY
                         ;; subtract one from the level
                         (eq difficulty 0)
                             (block (tmpLevel)
-                                (setq tmpLevel (subtract (item level 0) 1))
+                                (setq tmpLevel (subtract (@ level 0) 1))
                                 (if (ls tmpLevel 1) (setq tmpLevel 1))
                                 (setq level (list tmpLevel "a"))
                             )
@@ -1687,16 +1711,16 @@
                         ;; force pattern b and bump it up a level (not above 10)
                         (eq difficulty 2)
                             (block (tmpLevel)
-                                (setq tmpLevel (add (item level 0) 1))
+                                (setq tmpLevel (add (@ level 0) 1))
                                 (if (gr tmpLevel 10) (setq tmpLevel 10))
                                 (setq level (list tmpLevel "b"))
                             )
                     )
 
-                    ;; make sure we are not trying to get outside the pattern
-                    (if (and (not (gr (item level 0) 19)) (find '(a b) (item level 1)))
+                    ;; make sure we are not trying to get outside the pattern (this was damn difficult to debug !)
+                    (if (and (not (gr (@ level 0) 19)) (find '(a b) (@ level 1)))
                         ;; get the level string
-                        (item (item patterns (subtract (item level 0) 1)) (if (eq (item level 1) 'a)
+                        (@ (@ patterns (subtract (@ level 0) 1)) (if (eq (@ level 1) 'a)
                                                                            0 
                                                                            1 
                                                                            )
@@ -1718,14 +1742,14 @@
             ;;the difference is that the shield won't get a level bump in hard mode.
             (setq we_ShieldLevelString (lambda (level patterns)
                 (block (difficulty)
-                    (setq difficulty (typGetGlobalData &svPlayer; "WE_Difficulty"))
+                    (setq difficulty (typGetData &svPlayer; "WE_Difficulty"))
                     ;; modify the level by the dificulty 
                     (switch
                         ;; EASY
                         ;; subtract one from the level
                         (eq difficulty 0)
                             (block (tmpLevel)
-                                (setq tmpLevel (subtract (item level 0) 1))
+                                (setq tmpLevel (subtract (@ level 0) 1))
                                 (if (ls tmpLevel 1) (setq tmpLevel 1))
                                 (setq level (list tmpLevel "a"))
                             )
@@ -1734,16 +1758,16 @@
                         ;; force pattern b and bump it up a level (not above 10)
                         (eq difficulty 2)
                             (block (tmpLevel)
-                                (setq tmpLevel (item level 0))
+                                (setq tmpLevel (@ level 0))
                                 (if (gr tmpLevel 10) (setq tmpLevel 10))
                                 (setq level (list tmpLevel "b"))
                             )
                     )
 
-                    ;; make sure we are not trying to get outside the pattern
-                    (if (and (not (gr (item level 0) 19)) (find '(a b) (item level 1)))
+                    ;; make sure we are not trying to get outside the pattern (this was damn difficult to debug !)
+                    (if (and (not (gr (@ level 0) 19)) (find '(a b) (@ level 1)))
                         ;; get the level string
-                        (item (item patterns (subtract (item level 0) 1)) (if (eq (item level 1) 'a)
+                        (@ (@ patterns (subtract (@ level 0) 1)) (if (eq (@ level 1) 'a)
                                                                            0 
                                                                            1 
                                                                            )
@@ -1775,11 +1799,11 @@
 
                     ;; handle the weapon attributes
                     (enum we_WeaponAttributeModifierList element (block (attr chance)
-                        (setq attr (item element 0))
+                        (setq attr (@ element 0))
                         ;; if we have more than one element, we have a specific chance
                         ;; else we are certain
                         (if (gr (count element) 1)
-                            (setq chance (item element 1))
+                            (setq chance (@ element 1))
                             (setq chance 100)
                         )
 
@@ -1790,8 +1814,8 @@
                                 ;; if we have more than 2 elements we have a modifier,
                                 ;; else we use the attribte
                                 (if (gr (count element) 2)
-                                    (setq mod (item element 2))
-                                    (setq mod (cat " +" (item element 0) ";"))
+                                    (setq mod (@ element 2))
+                                    (setq mod (cat " +" (@ element 0) ";"))
                                 )
                                 (setq criteria (cat criteria mod))
                             )
@@ -1800,34 +1824,34 @@
 
                     ;; handle ship attributes
                     (enum we_ShipAttributeModifierList element (block (attr chance)
-                        (setq attr (item element 0))
+                        (setq attr (@ element 0))
                         (if (gr (count element) 2)
-                            (setq chance (item element 2))
+                            (setq chance (@ element 2))
                             (setq chance 100)
                         )
                         ;; if the chance is good and the attribute matches
                         ;; then add the modifier
                         (if (and (leq (random 1 100) chance) (objHasAttribute ship attr))
-                            (setq criteria (cat criteria (item element 1)))
+                            (setq criteria (cat criteria (@ element 1)))
                         )
                     ))
 
                     ;; handle generic sovereign attributes
                     (enum we_SovereignAttributeModifierList element (block (sovereign)
-                        (setq attr (item element 0))
+                        (setq attr (@ element 0))
                         (if (gr (count element) 2)
-                            (setq chance (item element 2))
+                            (setq chance (@ element 2))
                             (setq chance 100)
                         )
                         ;; if the attribute matches then add the modifier
                         (if(and (leq (random 1 100) chance) (eq sovereign (objGetSovereign ship)))
-                            (setq criteria (cat criteria (item element 1)))
+                            (setq criteria (cat criteria (@ element 1)))
                         )
                     ))
                     
                     
                     ;; if we are in Random Weapons mode, then we remove all the criteria
-                    (if (eq (typGetGlobalData &svPlayer; "WE_Mode") 0)
+                    (if (eq (typGetData &svPlayer; "WE_Mode") 0)
                         (setq criteria "w~m -Launcher; -Ammo;")
                     )
                     
@@ -1903,11 +1927,25 @@
             (setq we_GetConfiguratorTitle (lambda nil
             (block nil
                 (or
-                    (typGetGlobalData &dsWEConfigurator; "Title")
+                    (typGetData &dsWEConfigurator; "Title")
                     "Weapons Extended Configurator"
                 )
             )
         ))
+            
+            
+            (setq we_findTheShips (lambda Nil
+            	(block (theShipsList)
+            	(setq theShipsList (filter (sysFindObject gPlayerShip "s") temporaryShip 
+            		    (not (or 
+            		    		 (objGetData temporaryShip "WE_RandomizerDone")
+            		    		 (objHasAttribute temporaryShip "gladiator")
+            		    		 (objHasAttribute temporaryShip "auton")
+            		    	 ))
+            		    )
+            		)
+            	theShipsList
+            	)))
             
         )
     </Globals>

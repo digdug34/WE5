@@ -599,7 +599,7 @@ sound=				"&snLaserCannon;"
 	<ItemType UNID="&itdoomsday;"
 			name=				"doomsday thermocannon"
 			level=				"10"
-			value=				"380000"
+			value=				"100000"
 			mass=				"14000"
 			frequency=			"rare"
 			attributes=			"MajorItem; DigdugWeapons; Military; Specialty"
@@ -624,7 +624,7 @@ sound=				"&snLaserCannon;"
 						charges=			"true"
 						hitPoints=		"55"
 						maneuverability = "10"
-						hitEffect=		"&efFragmentationExplosion;"
+						
 						sound=			"&snMissileLauncher;"
 						
 						>
@@ -674,7 +674,7 @@ sound=				"&snLaserCannon;"
 									style=			"fadingBlast"
 									radius=			"2500"
 									primaryColor=	"0xff, 0xff, 0xf0"
-									lifetime=		"10"
+									lifetime=		"30"
 									/>
 						</Effect>
 					</Fragment>
