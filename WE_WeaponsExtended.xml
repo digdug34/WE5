@@ -1692,6 +1692,10 @@
 
 (setq WE_VirtualAmmoUpdate (lambda nil
 	(block (ammolist realshots shots virtualUNID)
+		;only if the playership is not docked to anything then we run this code, otherwise we skip at the next onUpdate
+		(if (not (objIsDockedAt gPlayership (@ (sysFindObject gPlayership "sN:3") 0)))
+			(block Nil
+		;(printTo 'log "We are not docked and we update the ammo")
 		(setq ammolist (itmGetData gItem "ammolist"))
 		(setq virtualUnid (typGetDataField (itmgettype gItem) "ammoType"))
 
@@ -1713,6 +1717,10 @@
 				(objAddItem gSource (itmCreate virtualUNID (subtract realshots shots)))
 			(ls realshots shots)
 				(objRemoveItem gSource (itmCreate virtualUNID (subtract shots realshots)))
+		)
+		)
+		;gplayership is docked to something, so we don't run the ammo update to avoid the dockscreen to continuosly reset. :P
+		;(printTo 'log "Ammo update off, we are docked!")
 		)
 	)
 ))
